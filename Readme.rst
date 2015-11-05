@@ -1,6 +1,6 @@
 Hitchhiker的Python指南
 ============================
-**翻译自`Hitchhiker's Guide to Python <https://github.com/kennethreitz/python-guide>`_.**
+翻译自 `Hitchhiker's Guide to Python <https://github.com/kennethreitz/python-guide>`_.
 
 **Python 最佳实践指导书**
 
@@ -8,8 +8,8 @@ Hitchhiker的Python指南
 
 **在过程中工作。如果你愿意帮助，欢迎贡献你的力量。这里有很多工作要做。**
 
-这份指南目前处于大量的发展阶段。这份自我风格的指南旨在为Python新手和专家提供
-一个关于Python安装、配置、和日常使用的最佳实践手册。
+这份指南目前处于大量的发展阶段。这份颇具自我风格的指南旨在为Python新手和
+专家提供一个关于Python安装、配置、和日常使用的最佳实践手册。
 
 
 话题包括:
