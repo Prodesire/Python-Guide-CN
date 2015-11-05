@@ -1,4 +1,4 @@
-Hitchhiker's Python指南
+Hitchhiker的Python指南
 ============================
 **翻译自`Hitchhiker's Guide to Python <http://https://github.com/kennethreitz/python-guide>`_.**
 
