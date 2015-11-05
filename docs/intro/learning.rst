@@ -1,10 +1,10 @@
-Learning Python
+学习Python
 ===============
 
-Beginner
+初学者
 --------
 
-The Python Tutorial
+Python教程
 ~~~~~~~~~~~~~~~~~~~~
 
 This is the official tutorial. It covers all the basics, and offers a tour of
@@ -14,7 +14,7 @@ quick-start guide to the language.
     `The Python Tutorial <http://docs.python.org/tutorial/index.html>`_
 
 
-Learn Python Interactive Tutorial
+学习Python交互式教程
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Learnpython.org is an easy non-intimidating way to get introduced to Python.
@@ -31,7 +31,7 @@ resource for learning all aspects of the language.
 
     `Python for You and Me <http://pymbook.readthedocs.org/>`_
 
-Online Python Tutor
+在线Python辅导
 ~~~~~~~~~~~~~~~~~~~
 
 Online Python Tutor gives you a visual step by step 
@@ -42,7 +42,7 @@ executes each line of a program's source code.
 
     `Online Python Tutor <http://pythontutor.com/>`_
 
-Invent Your Own Computer Games with Python
+用Python创造你自己的游戏
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This beginner's book is for those with no programming experience at all. Each
@@ -53,7 +53,7 @@ programs "look like".
     `Invent Your Own Computer Games with Python <http://inventwithpython.com/>`_
 
 
-Hacking Secret Ciphers with Python
+用Python破解神秘的密码
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This book teaches Python programming and basic cryptography for absolute
@@ -63,7 +63,7 @@ as programs that can break them.
     `Hacking Secret Ciphers with Python <http://inventwithpython.com/hacking/>`_
 
 
-Learn Python the Hard Way
+笨方法学Python
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This is an excellent beginner programmer's guide to Python. It covers "hello
@@ -147,7 +147,7 @@ A Codeacademy course for the absolute Python beginner. This free and interactive
     `Learn to Program in Python with Codeacademy <http://www.codecademy.com/en/tracks/python>`_
 
 
-Advanced
+进阶者
 --------
 
 Pro Python
@@ -187,7 +187,7 @@ and can make classes and objects behave in different and magical ways.
     `A Guide to Python's Magic Methods <http://www.rafekettler.com/magicmethods.html>`_
 
 
-For Engineers and Scientists
+工程师和科学家
 ----------------------------
 
 A Primer on Scientific Programming with Python
@@ -207,7 +207,7 @@ puts the emphasis on numerical methods and how to implement them in Python.
 
     `Numerical Methods in Engineering with Python <http://www.cambridge.org/us/academic/subjects/engineering/engineering-mathematics-and-programming/numerical-methods-engineering-python-2nd-edition>`_
 
-Miscellaneous topics
+各种各样的话题
 --------------------
 
 Problem Solving with Algorithms and Data Structures
@@ -241,7 +241,7 @@ through a series of code transformations, "When you see this, do that instead."
     `Transforming Code into Beautiful, Idiomatic Python <https://www.youtube.com/watch?v=OSGv2VnC0go>`_
 
 
-References
+参考
 ----------
 
 Python in a Nutshell

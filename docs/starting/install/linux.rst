@@ -1,6 +1,6 @@
 .. _install-linux:
 
-Installing Python on Linux
+在Linux上安装Python
 ==========================
 
 The latest versions of CentOS, Fedora, Redhat Enterprise (RHEL) and Ubuntu 

@@ -1,5 +1,5 @@
 ================
-Web Applications
+Web 应用
 ================
 
 As a powerful scripting language adapted to both fast prototyping
@@ -21,7 +21,7 @@ can be deployed in any :ref:`WSGI-compliant web server <wsgi-servers-ref>`.
 WSGI is documented in :pep:`3333`.
 
 
-Frameworks
+框架
 ::::::::::
 
 Broadly speaking, a web framework consists of a set of libraries and a main
@@ -133,7 +133,7 @@ a running web application in the browser.
 `documentation <http://docs.pylonsproject.org/en/latest/index.html#support-desc>`__.
 
 
-Web Servers
+Web 服务端
 :::::::::::
 
 .. _nginx-ref:
@@ -151,7 +151,7 @@ to serve high-load websites, Nginx is gradually becoming quite popular.
 
 .. _wsgi-servers-ref:
 
-WSGI Servers
+WSGI 服务端
 ::::::::::::
 
 Stand-alone WSGI servers typically use less resources than traditional web
@@ -193,7 +193,7 @@ variables <https://uwsgi-docs.readthedocs.org/en/latest/Vars.html>`_.
 .. _server-best-practices-ref:
 
 
-Server Best Practices
+服务端最佳实践
 :::::::::::::::::::::
 
 The majority of self-hosted Python applications today are hosted with a WSGI
@@ -275,7 +275,7 @@ information.
 Gondor has a guide on deploying `Django projects <https://gondor.io/support/django/setup/>`_.
 
 
-Templating
+模板
 ::::::::::
 
 Most WSGI applications are responding to HTTP requests to serve content in HTML

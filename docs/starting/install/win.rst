@@ -1,6 +1,6 @@
 .. _install-windows:
 
-Installing Python on Windows
+在Windows上安装Python
 ============================
 
 First, download the `latest version <https://www.python.org/ftp/python/2.7.10/python-2.7.10.msi>`_

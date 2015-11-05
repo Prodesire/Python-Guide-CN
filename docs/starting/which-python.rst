@@ -1,9 +1,9 @@
-Picking an Interpreter
+选择一个解释器
 ======================
 
 .. _which-python:
 
-The State of Python (2 vs 3)
+当前的Python (2 vs 3)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 When choosing a Python interpreter, one looming question is always present:
@@ -21,7 +21,7 @@ The basic gist of the state of things is as follows:
 So, you can now see why this is not such an easy decision.
 
 
-Recommendations
+推荐
 ~~~~~~~~~~~~~~~
 
 I'll be blunt:
@@ -42,7 +42,7 @@ I'll be blunt:
 - Software that you depend on requires it.
 
 
-So.... 3?
+所以.... 3？
 ~~~~~~~~~
 
 If you're choosing a Python interpreter to use, and aren't opinionated, then I
@@ -64,7 +64,7 @@ ranges from trivial to hard depending upon the kind of software
 you are writing; if you're a beginner there are far more important things to
 worry about.
 
-Implementations
+实现
 ~~~~~~~~~~~~~~~
 
 When people speak of *Python* they often mean not just the language but also

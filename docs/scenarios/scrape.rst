@@ -1,7 +1,7 @@
-HTML Scraping
+HTML 抓取
 =============
 
-Web Scraping
+网页抓取
 ------------
 
 Web sites are written using HTML, which means that each web page is a
@@ -14,7 +14,7 @@ computer program to sift through a web page and gather the data that you need
 in a format most useful to you while at the same time preserving the structure
 of the data.
 
-lxml and Requests
+lxml和Requests
 -----------------
 
 `lxml <http://lxml.de/>`_ is a pretty extensive library written for parsing

@@ -1,7 +1,7 @@
 .. _packaging-your-code-ref:
 
 ===================
-Packaging Your Code
+打包你的代码
 ===================
 
 Package your code to share it with other developers. For example
@@ -28,7 +28,7 @@ makes this method unsuitable for distributing applications to end-users.
 The `Python Packaging Guide <https://python-packaging-user-guide.readthedocs.org/en/latest/>`_
 provides an extensive guide on creating and maintaining Python packages.
 
-Alternatives to Packaging
+打包的多种方式
 :::::::::::::::::::::::::
 
 To distribute applications to end-users, you should
@@ -38,7 +38,7 @@ On Linux, you may also want to consider
 :ref:`creating a Linux distro package <packaging-for-linux-distributions-ref>`
 (e.g. a .deb file for Debian or Ubuntu.)
 
-For Python Developers
+对于Python开发者
 :::::::::::::::::::::
 
 If you're writing an open source Python module, `PyPI <http://pypi.python.org>`_
@@ -53,7 +53,7 @@ Use `pip <http://pypi.python.org/pypi/pip>`_.  More details
 `here <http://stackoverflow.com/questions/3220404/why-use-pip-over-easy-install>`_
 
 
-Personal PyPI
+个人的PyPI
 -------------
 
 If you want to install packages from a source other than PyPI, (say, if
@@ -179,7 +179,7 @@ Having said all that, here's how to do it:
 * `Debian and Ubuntu <http://www.debian.org/doc/packaging-manuals/python-policy/>`_
 * `Arch <https://wiki.archlinux.org/index.php/Python_Package_Guidelines>`_
 
-Useful Tools
+有用的工具
 ------------
 
 - `fpm <https://github.com/jordansissel/fpm>`_

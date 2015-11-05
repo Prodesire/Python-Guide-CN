@@ -1,4 +1,4 @@
-Virtual Environments
+虚拟环境
 ====================
 
 A Virtual Environment is a tool to keep the dependencies required by different

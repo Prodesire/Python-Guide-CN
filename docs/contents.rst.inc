@@ -1,14 +1,14 @@
-Getting Started
+开始吧
 ---------------
 
-This part of the guide focuses on setting up your Python environment.
+这部分指南关注搭建你的Python环境。
 
 .. toctree::
    :maxdepth: 2
 
    starting/which-python
 
-- Properly Install Python
+- 正确地安装Python
 
  .. toctree::
     :maxdepth: 1
@@ -20,10 +20,10 @@ This part of the guide focuses on setting up your Python environment.
 
 
 
-Writing Great Code
+写出好的代码
 ------------------
 
-This part of the guide focuses on best practices for writing Python code.
+这部分指南关注编写Python代码的最佳实践。
 
 .. toctree::
    :maxdepth: 2
@@ -39,11 +39,10 @@ This part of the guide focuses on best practices for writing Python code.
 
 
 
-Scenario Guide
+场景/方案指南
 --------------
 
-This part of the guide focuses on tool and module advice based on
-different scenarios.
+这部分指南关注基于不同场景的工具和模块推荐。
 
 .. toctree::
    :maxdepth: 2
@@ -66,10 +65,10 @@ different scenarios.
    scenarios/clibs
 
 
-Shipping Great Code
+部署好的代码
 -------------------
 
-This part of the guide focuses on deploying your Python code.
+这部分指南关注部署你的Python代码。
 
 .. toctree::
    :maxdepth: 2
@@ -78,7 +77,7 @@ This part of the guide focuses on deploying your Python code.
    shipping/freezing
 
 
-Development Environment
+开发环境
 -----------------------
 
 .. toctree::
@@ -91,11 +90,10 @@ Development Environment
 
 
 
-Additional Notes
+额外关注
 ----------------
 
-This part of the guide, which is mostly prose, begins with some
-background information about Python, then focuses on next steps.
+这部分指南比较零散，先了解一些Python的背景知识，再关注下一步。
 
 .. toctree::
    :maxdepth: 2
@@ -111,7 +109,7 @@ background information about Python, then focuses on next steps.
 
 --------------------------------------
 
-Contribution notes and legal information are here (for those interested).
+贡献注意点和法律信息如下：
 
 .. toctree::
    :maxdepth: 2
@@ -119,8 +117,3 @@ Contribution notes and legal information are here (for those interested).
    notes/contribute
    notes/license
    notes/styleguide
-
-
-
-
-

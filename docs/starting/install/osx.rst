@@ -1,6 +1,6 @@
 .. _install-osx:
 
-Installing Python on Mac OS X
+在Mac OS X上安装Python
 =============================
 
 The latest version of Mac OS X, El Capitan, **comes with Python 2.7 out of the box**.

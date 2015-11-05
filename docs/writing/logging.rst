@@ -1,4 +1,4 @@
-Logging
+日志（Logging）
 =======
 
 The :mod:`logging` module has been a part of Python's Standard Library since
@@ -15,7 +15,7 @@ Logging serves two purposes:
   reports or to optimize a business goal.
 
 
-... or Print?
+... 或者用 Print?
 -------------
 
 The only time that ``print`` is a better option than logging is when
@@ -32,7 +32,7 @@ Other reasons why logging is better than ``print``:
   :attr:`logging.Logger.disabled` to ``True``.
 
 
-Logging in a Library
+库中的Logging
 --------------------
 
 Notes for `configuring logging for a library`_ are in the 
@@ -68,7 +68,7 @@ this in your ``__init__.py``
 
 
 
-Logging in an Application
+应用程序中的Logging
 -------------------------
 
 The `twelve factor app <http://12factor.net>`_, an authoritative reference

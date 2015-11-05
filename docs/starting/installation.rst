@@ -1,4 +1,4 @@
-Properly Installing Python
+正确地安装Python
 ==========================
 
 There's a good chance that you already have Python on your operating system.
@@ -10,7 +10,7 @@ applications for real-world use. In particular, you should always install
 Setuptools, Pip, and Virtualenv — they make it much easier for you to use
 other third-party Python libraries.
 
-Installation Guides
+安装指南
 -------------------
 
 These guides go over the proper installation of :ref:`Python 2.7 <which-python>`

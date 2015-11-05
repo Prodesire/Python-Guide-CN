@@ -1,5 +1,5 @@
 =======================
-Scientific Applications
+科学应用
 =======================
 
 Context
@@ -18,7 +18,7 @@ Python ecosystem can be found in the `Python Scientific Lecture Notes
 <http://scipy-lectures.github.com/>`_
 
 
-Tools
+工具
 :::::
 
 IPython
@@ -34,7 +34,7 @@ store chunks of Python code along side the results and additional comments
 file formats.
 
 
-Libraries
+库
 :::::::::
 
 NumPy
@@ -109,7 +109,7 @@ The library handles presentation of stimuli, scripting of experimental design
 and data collection.
 
 
-Resources
+资源
 :::::::::
 
 Installation of scientific Python packages can be troublesome, as many of

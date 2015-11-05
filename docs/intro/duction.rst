@@ -1,4 +1,4 @@
-Introduction
+介绍
 ============
 
 From the `official Python website <http://python.org/about/>`_:
@@ -54,7 +54,7 @@ include:
 
 .. _about-ref:
 
-About This Guide
+关于这份指南
 ----------------
 
 Purpose

@@ -1,4 +1,4 @@
-News
+新闻
 ====
 
 Planet Python

@@ -1,4 +1,4 @@
-Structuring Your Project
+结构化你的工程
 ========================
 
 By "structure" we mean the decisions you make concerning
@@ -19,7 +19,7 @@ project. We then discuss various perspectives on how to build code which
 can be extended and tested reliably.
 
 
-Structure is Key
+结构是一把钥匙
 ----------------
 
 Thanks to the way imports and modules are handled in Python, it is
@@ -71,7 +71,7 @@ include:
   task at hand, you might be swimming in ravioli code.
 
 
-Modules
+模块
 -------
 
 Python modules are one of the main abstraction layers available and probably the
@@ -171,7 +171,7 @@ Being able to tell immediately where a class or function comes from, as in the
 all but the simplest single file projects.
 
 
-Packages
+包
 --------
 
 Python provides a very straightforward packaging system, which is simply an
@@ -204,7 +204,7 @@ Lastly, a convenient syntax is available for importing deeply nested packages:
 ``import very.deep.module as mod``. This allows you to use `mod` in place of the
 verbose repetition of ``very.deep.module``.
 
-Object-oriented programming
+面向对象编程
 ---------------------------
 
 Python is sometimes described as an object-oriented programming language. This
@@ -282,7 +282,7 @@ things that are manipulated (windows, buttons, avatars, vehicles) have a
 relatively long life of their own in the computer's memory.
 
 
-Decorators
+装饰器
 ----------
 
 The Python language provides a simple yet powerful syntax called 'decorators'.
@@ -316,7 +316,7 @@ expensive function in a table and use them directly instead of recomputing
 them when they have already been computed. This is clearly not part
 of the function logic.
 
-Dynamic typing
+动态类型
 --------------
 
 Python is dynamically typed, which means that variables do not have a fixed
@@ -380,7 +380,7 @@ a `final` keyword and it would be against its philosophy anyway. However, it may
 be a good discipline to avoid assigning to a variable more than once, and it
 helps in grasping the concept of mutable and immutable types.
 
-Mutable and immutable types
+可变和不可变类型
 ---------------------------
 
 Python has two kinds of built-in or user-defined types.
@@ -481,16 +481,7 @@ like above or in cases where you are adding to an existing string, using
     foobar = '{0}{1}'.format(foo, bar) # It is better
     foobar = '{foo}{bar}'.format(foo=foo, bar=bar) # It is best
 
-
-Vendorizing Dependencies
-------------------------
-
-
-Runners
--------
-
-
-Further Reading
+更多阅读
 ---------------
 
 - http://docs.python.org/2/library/

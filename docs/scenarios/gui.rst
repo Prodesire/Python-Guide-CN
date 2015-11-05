@@ -1,4 +1,4 @@
-GUI Applications
+GUI应用
 ================
 
 Alphabetical list of GUI Applications.

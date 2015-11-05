@@ -1,6 +1,6 @@
 .. _the-community:
 
-The Community
+社区
 =============
 
 BDFL
@@ -11,7 +11,7 @@ Benevolent Dictator For Life.
 
 
 
-Python Software Foundation
+Python软件基金会
 --------------------------
 
 The mission of the Python Software Foundation is to promote, protect, and
@@ -68,7 +68,7 @@ Here's an overview of the PEP acceptance workflow:
 .. image:: ../_static/pep-0001-1.png
 
 
-Python Conferences
+Python会议
 --------------------------
 
 The major events for the Python community are developer conferences. The two
@@ -78,7 +78,7 @@ sibling, EuroPython.
 A comprehensive list of conferences is maintained at `pycon.org <http://www.pycon.org/>`_.
 
 
-Python User Groups
+Python用户组
 --------------------------
 
 User Groups are where a bunch of Python developers meet to present or talk

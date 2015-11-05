@@ -1,9 +1,9 @@
 .. _pip-virtualenv:
 
-Further Configuration of Pip and Virtualenv
+Pip和Virtualenv的更多配置
 ===========================================
 
-Requiring an active virtual environment for ``pip``
+用 ``pip`` 获得一个活跃的虚拟环境
 ---------------------------------------------------
 
 By now it should be clear that using virtual environments is a great way to
@@ -85,7 +85,7 @@ install packages globally by running ``gpip install``. You can change the name
 of the function to anything you like, just keep in mind that you will have to
 use that name when trying to install packages globally with pip.
 
-Caching packages for future use
+存下包以供将来使用
 -------------------------------
 
 Every developer has preferred libraries and when you are working on a lot of

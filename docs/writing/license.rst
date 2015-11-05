@@ -1,4 +1,4 @@
-Choosing a License
+选择一个许可证
 ==================
 
 Your source publication *needs* a license. In the US, if no license is

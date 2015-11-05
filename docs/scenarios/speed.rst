@@ -1,4 +1,4 @@
-Speed
+速度
 =====
 
 CPython, the most commonly used implementation of Python, is slow for CPU bound

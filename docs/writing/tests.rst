@@ -1,4 +1,4 @@
-Testing Your Code
+测试你的代码
 =================
 
 Testing your code is very important.
@@ -69,11 +69,11 @@ Some general rules of testing:
   means, ensure the new functionality is not already a working path that has not
   been plugged into the interface.
 
-The Basics
+基本
 ::::::::::
 
 
-Unittest
+单元测试
 --------
 
 :mod:`unittest` is the batteries-included test module in the Python standard
@@ -98,7 +98,7 @@ As of Python 2.7 unittest also includes its own test discovery mechanisms.
     `unittest in the standard library documentation <http://docs.python.org/library/unittest.html>`_
 
 
-Doctest
+文档测试
 -------
 
 The :mod:`doctest` module searches for pieces of text that look like interactive
@@ -134,7 +134,7 @@ When running this module from the command line as in ``python module.py``, the
 doctests will run and complain if anything is not behaving as described in the
 docstrings.
 
-Tools
+工具
 :::::
 
 

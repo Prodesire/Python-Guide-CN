@@ -1,8 +1,8 @@
-Your Development Environment
+你的开发环境
 ============================
 
 
-Text Editors
+文本编辑器
 ::::::::::::
 
 Just about anything that can edit plain text will work for writing Python code,
@@ -221,11 +221,11 @@ is an open-source software project (GPLv3 licence) with more than ten years of
 active development.
 
 
-Interpreter Tools
+解释器工具
 :::::::::::::::::
 
 
-Virtual Environments
+虚拟环境
 --------------------
 
 Virtual Environments provide a powerful way to isolate project package dependencies. This means that you can use packages particular to a Python project without installing them system wide and thus avoiding potential version conflicts.
@@ -258,7 +258,7 @@ the creation of different environments, and also makes it possible to use the
 existing pyenv tools to switch to different environments based on environment
 variables or ``.python-version`` files.
 
-Other Tools
+其他工具
 :::::::::::
 
 IDLE

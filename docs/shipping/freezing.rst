@@ -1,7 +1,7 @@
 .. _freezing-your-code-ref:
 
 ==================
-Freezing Your Code
+Freezing你的代码
 ==================
 
 To 'Freeze' your code is to distribute to end-users as an executable which
@@ -20,7 +20,7 @@ Another problem is that your application will not receive any security updates
 to the version of Python it uses unless you freeze a new version and get
 users to download it.
 
-Alternatives to Freezing
+Freezing的多种方式
 ------------------------
 
 :ref:`Packaging your code <packaging-your-code-ref>` is for distributing

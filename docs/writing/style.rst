@@ -1,6 +1,6 @@
 .. _code_style:
 
-Code Style
+代码风格
 ==========
 
 If you ask Python programmers what they like most in Python, they will
@@ -19,10 +19,10 @@ what is considered the best (hear: most readable) way.
 On some border cases, no best way has been agreed upon on how to express
 an intent in Python code, but these cases are rare.
 
-General concepts
+一般概念
 ----------------
 
-Explicit code
+明确的代码
 ~~~~~~~~~~~~~
 
 While any kind of black magic is possible with Python, the
@@ -48,7 +48,7 @@ the caller, and an explicit dictionary is returned. The developer
 using this function knows exactly what to do by reading the
 first and last lines, which is not the case with the bad example.
 
-One statement per line
+每行一个声明
 ~~~~~~~~~~~~~~~~~~~~~~
 
 While some compound statements such as list comprehensions are
@@ -81,7 +81,7 @@ it is bad practice to have two disjoint statements on the same line of code.
     if cond1 and cond2:
         # do something
 
-Function arguments
+函数参数
 ~~~~~~~~~~~~~~~~~~
 
 Arguments can be passed to functions in four different ways.
@@ -190,7 +190,7 @@ them is very important.
 Like a kung fu master, a Pythonista knows how to kill with a single finger, and
 never to actually do it.
 
-We are all responsible users
+我们都是负责任的用户
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 As seen above, Python allows many tricks, and some of them are potentially
@@ -217,7 +217,7 @@ This will guarantee a better separation of duties and easier modification of
 existing code; it will always be possible to publicize a private property,
 but making a public property private might be a much harder operation.
 
-Returning values
+返回值
 ~~~~~~~~~~~~~~~~
 
 When a function grows in complexity it is not uncommon to use multiple return
@@ -258,7 +258,7 @@ is needed.
        return x  # One single exit point for the returned value x will help
                  # when maintaining the code.
 
-Idioms
+行话
 ------
 
 A programming idiom, put simply, is a *way* to write code. The notion of
@@ -413,7 +413,7 @@ hashtable will often be greater than the time saved by the improved search
 speed.
 
 
-Zen of Python
+Python之禅
 -------------
 
 Also known as :pep:`20`, the guiding principles for Python's design.
@@ -494,7 +494,7 @@ Excluding the ``--in-place`` flag will cause the program to output the modified
 code directly to the console for review. The ``--aggressive`` flag will perform
 more substantial changes and can be applied multiple times for greater effect.
 
-Conventions
+约定
 ----------------
 
 Here are some conventions you should follow to make your code easier to read.

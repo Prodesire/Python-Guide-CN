@@ -1,7 +1,7 @@
-Documentation
+文档
 =============
 
-Official Documentation
+官方文档
 ----------------------
 
 The official Python Language and Library documentation can be found here:

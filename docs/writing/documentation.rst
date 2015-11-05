@@ -1,11 +1,11 @@
-Documentation
+文档
 =============
 
 Readability is a primary focus for Python developers, in both project
 and code documentation. Following some simple best practices can save
 both you and others a lot of time.
 
-Project Documentation
+项目文档
 ---------------------
 
 A :file:`README` file at the root directory should give general information
@@ -30,7 +30,7 @@ planned development for the code.
 A :file:`CHANGELOG` file or section in :file:`README` should compile a short
 overview of the changes in the code base for the latest versions.
 
-Project Publication
+项目发布
 -------------------
 
 Depending on the project, your documentation might include some or all
@@ -90,7 +90,7 @@ Reference`_ should help you familiarize yourself with its syntax.
 .. _reStructuredText Quick Reference: http://docutils.sourceforge.net/docs/user/rst/quickref.html
 
 
-Code Documentation Advice
+代码文档建议
 -------------------------
 
 Comments clarify the code and they are added with purpose of making the
@@ -144,7 +144,7 @@ comment block is a programmer's note. The docstring describes the
 .. see also:: Further reading on docstrings: :pep:`257`
 
 
-Other Tools
+其他工具
 -----------
 
 You might see these in the wild. Use :ref:`sphinx-ref`.

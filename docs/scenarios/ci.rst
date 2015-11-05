@@ -1,8 +1,8 @@
-Continuous Integration
+持续集成
 ======================
 
 
-Why?
+为什么?
 ----
 
 Martin Fowler, who first wrote about `Continuous Integration <http://martinfowler.com/articles/continuousIntegration.html>`_

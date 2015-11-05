@@ -1,7 +1,7 @@
 .. _guide-style-guide:
 
 =====================
-The Guide Style Guide
+风格指南指引
 =====================
 
 As with all documentation, having a consistent format helps make the
@@ -17,7 +17,7 @@ The Guide is written as :ref:`restructuredtext-ref`.
 .. note:: On any page of the rendered HTML you can click "Show Source" to
    see how authors have styled the page.
 
-Relevancy
+关联
 ---------
 
 Strive to keep any contributions relevant to the :ref:`purpose of The Guide
@@ -34,7 +34,7 @@ Strive to keep any contributions relevant to the :ref:`purpose of The Guide
   resources, and describe why it's useful to Python.
 * When in doubt, ask.
 
-Headings
+标题
 --------
 
 Use the following styles for headings.
@@ -69,7 +69,7 @@ Sub section headings:
     Very Deep
     ~~~~~~~~~
 
-Prose
+散点
 -----
 
 Wrap text lines at 78 characters. Where necessary, lines may exceed 78
@@ -77,7 +77,7 @@ characters, especially if wrapping would make the source text more difficult
 to read.
 
 
-Code Examples
+代码例子
 -------------
 
 Wrap all code examples at 70 characters to avoid horizontal scrollbars.
@@ -114,7 +114,7 @@ Python examples:
         def get_answer():
             return 42
 
-Externally Linking
+外部链接
 ------------------
 
 * Prefer labels for well known subjects (ex: proper nouns) when linking:
@@ -135,7 +135,7 @@ Externally Linking
 * Avoid using labels such as "click here", "this", etc. preferring
   descriptive labels (SEO worthy) instead.
 
-Linking to Sections in The Guide
+指向指南内部章节的链接
 --------------------------------
 
 To cross-reference other parts of this documentation, use the `:ref:
@@ -151,13 +151,13 @@ To make reference labels more clear and unique, always add a ``-ref`` suffix:
     Some Section
     ------------
 
-Notes and Warnings
+注意和警告
 ------------------
 
 Make use of the appropriate `admonitions directives
 <http://sphinx.pocoo.org/rest.html#directives>`_ when making notes.
 
-Notes:
+注意:
 
 .. code-block:: rest
 
@@ -166,13 +166,13 @@ Notes:
         on the subject of towels. A towel, it says, is about the most
         massively useful thing an interstellar hitch hiker can have.
 
-Warnings:
+警告:
 
 .. code-block:: rest
 
     .. warning:: DON'T PANIC
 
-TODOs
+要做的事
 -----
 
 Please mark any incomplete areas of The Guide with a `todo directive

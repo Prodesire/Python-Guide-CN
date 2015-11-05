@@ -1,4 +1,4 @@
-Network Applications
+网络应用
 ====================
 
 
@@ -29,7 +29,7 @@ Requests.
 - `GitHub <https://github.com/kennethreitz/requests>`_
 
 
-Distributed Systems
+分布式系统
 ::::::::::::::::::::
 
 

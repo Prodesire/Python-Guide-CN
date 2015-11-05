@@ -1,5 +1,5 @@
 ==================
-Image Manipulation
+图像处理
 ==================
 
 Most image processing and manipulation techniques can be carried out
@@ -8,7 +8,7 @@ Computer Vision (OpenCV).
 
 A brief description of both is given below.
 
-Python Imaging Library
+Python 图形库
 ----------------------
 
 The `Python Imaging Library <http://www.pythonware.com/products/pil/>`_, or PIL
@@ -19,7 +19,7 @@ Luckily for you, there's an actively-developed fork of PIL called
 `Pillow <http://python-pillow.github.io/>`_ - it's easier to install, runs on
 all operating systems, and supports Python 3.
 
-Installation
+安装
 ~~~~~~~~~~~~
 
 Before installing Pillow, you'll have to install Pillow's prerequisites. Find
@@ -32,7 +32,7 @@ After that, it's straightforward:
 
     $ pip install Pillow
 
-Example
+例子
 ~~~~~~~
 
 .. code-block:: python
@@ -60,14 +60,14 @@ There are more examples of the Pillow library in the
 `Pillow tutorial <http://pillow.readthedocs.org/en/3.0.x/handbook/tutorial.html>`_.
 
 
-OpenSource Computer Vision
+开源计算机视觉
 --------------------------
 
 OpenSource Computer Vision, more commonly known as OpenCV, is a more advanced
 image manipulation and processing software than PIL. It has been implemented
 in several languages and is widely used.
 
-Installation
+安装
 ~~~~~~~~~~~~
 
 In Python, image processing using OpenCV is implemented using the ``cv2`` and
@@ -82,7 +82,7 @@ NumPy can be downloaded from the Python Package Index(PyPI):
     $ pip install numpy
 
 
-Example
+例子
 ~~~~~~~
 
 .. code-block:: python

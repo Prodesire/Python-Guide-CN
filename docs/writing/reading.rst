@@ -1,4 +1,4 @@
-Reading Great Code
+阅读好的代码
 ==================
 
 One of the core tenants behind the design of Python is creating

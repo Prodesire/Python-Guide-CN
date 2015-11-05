@@ -1,4 +1,4 @@
-Common Gotchas
+常见陷阱
 ==============
 
 For the most part, Python aims to be a clean and consistent language that
@@ -14,7 +14,7 @@ the surprise.
 
 .. _default_args:
 
-Mutable Default Arguments
+可变默认参数
 -------------------------
 
 Seemingly the *most* common surprise new Python programmers encounter is
@@ -85,7 +85,7 @@ to maintain state between calls of a function. This is often done when writing
 a caching function.
 
 
-Late Binding Closures
+迟绑定闭包
 ---------------------
 
 Another common source of confusion is the way Python binds its variables in
