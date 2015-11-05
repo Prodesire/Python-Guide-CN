@@ -1,6 +1,6 @@
 Hitchhiker的Python指南
 ============================
-**翻译自`Hitchhiker's Guide to Python <http://https://github.com/kennethreitz/python-guide>`_.**
+**翻译自`Hitchhiker's Guide to Python <https://github.com/kennethreitz/python-guide>`_.**
 
 **Python 最佳实践指导书**
 
@@ -14,7 +14,7 @@ Hitchhiker的Python指南
 
 话题包括:
 
-- 平台- 和 特定版本 的安装
+- 平台和特定版本的安装
 - Py2app, Py2exe, bbfreeze, pyInstaller
 - Pip
 - Numpy, scipy, statpy, pylot, matlib
@@ -25,7 +25,7 @@ Hitchhiker的Python指南
 - 服务器配置 & 多种多样的web框架工具
 - 文档: 写文档
 - 测试: Jenkins & tox 指南
-- 如何从``git``到``hg``进行交互
+- 如何从 ``git`` 到 ``hg`` 进行交互
 
-如果你不喜欢阅读reStructuredText形式的文档, 这里有一份几乎最新的文档 `HTML版，请戳在docs.python-guide.org
-<http://docs.python-guide.org>`_.
+如果你不喜欢阅读reStructuredText形式的文档, 这里有一份几乎最新的文档 
+`HTML版，请戳docs.python-guide.org <http://docs.python-guide.org>`_.
