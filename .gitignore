@@ -1,0 +1,12 @@
+docs/_build
+.idea
+
+# 忽略不相关文件，编辑自Sublime Text编辑器
+*.sublime-workspace
+*.sublime-project
+
+# 忽略贡献者使用Mercurial产生的.hgignore文件
+.hgignore
+
+# 忽略build产生的文件
+build/
