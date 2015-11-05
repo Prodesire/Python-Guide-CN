@@ -29,3 +29,9 @@ Hitchhiker的Python指南
 
 如果你不喜欢阅读reStructuredText形式的文档, 这里有一份几乎最新的文档 
 `HTML版，请戳docs.python-guide.org <http://docs.python-guide.org>`_.
+
+安装指南
+============================
+1. 下载zip文件或clone到本地
+2. 打开cmd，进入根目录，输入命令: make html
+3. 上述步骤自动在根目录下生成build文件夹，打开./build/html/index.html即可浏览文档
