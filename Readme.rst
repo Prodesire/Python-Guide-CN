@@ -1,8 +1,8 @@
 Python最佳实践指南中文版
 ============================
-项目翻译自 `Hitchhiker's Guide to Python <https://github.com/kennethreitz/python-guide>`_.
+项目翻译自 `Hitchhiker's Guide to Python <https://github.com/kennethreitz/python-guide>`_。
 
-Readthedocs文档地址 `Python最佳实践指南中文版 <http://pythonguidecn.readthedocs.org/>`_.
+Readthedocs文档地址 `Python最佳实践指南中文版 <http://pythonguidecn.readthedocs.org/>`_。
 
 **项目还在进行中，如果你有意一起翻译，欢迎贡献你的力量。这里还有很多工作要做~**
 
