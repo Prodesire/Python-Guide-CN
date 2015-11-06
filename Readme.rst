@@ -5,6 +5,7 @@ Python最佳实践指南中文版
 Readthedocs文档地址 `Python最佳实践指南中文版 <http://pythonguidecn.readthedocs.org/>`_.
 
 **项目还在进行中，如果你有意一起翻译，欢迎贡献你的力量。这里还有很多工作要做~**
+
 -----------
 
 本指南目前持续不断地更新与完善。这份主要是自我见解的指南旨在为Python初学者和
