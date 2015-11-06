@@ -1,12 +1,11 @@
-Hitchhiker的Python指南
+Python最佳实践指南中文版
 ============================
 项目翻译自 `Hitchhiker's Guide to Python <https://github.com/kennethreitz/python-guide>`_.
 
-**Python 最佳实践指导书**
+Readthedocs文档地址 `Python最佳实践指南中文版 <http://pythonguidecn.readthedocs.org/>`_.
 
+**项目还在进行中，如果你有意一起翻译，欢迎贡献你的力量。这里还有很多工作要做~**
 -----------
-
-**项目还在进行，如果你有意一起翻译，欢迎贡献你的力量。这里还有很多工作要做~**
 
 本指南目前持续不断地更新与完善。这份主要是自我见解的指南旨在为Python初学者和
 专家提供一个关于Python安装、配置、和日常使用的最佳实践手册。
@@ -27,11 +26,14 @@ Hitchhiker的Python指南
 - 测试: Jenkins & tox 指南
 - 如何更方便地通过 ``git`` 连接 ``hg``
 
-如果你不习惯阅读reStructuredText形式的文档, 这里有一份同步更新的文档 
-`HTML版，请戳docs.python-guide.org <http://docs.python-guide.org>`_.
+如果你不习惯阅读reStructuredText形式的文档, 这里有一份同步更新的
+`HTML版文档，请戳它<http://docs.python-guide.org>`_.
 
 使用指南
 ============================
 1. 下载zip文件或clone到本地
 2. 打开cmd，进入根目录，输入命令: make html 或者进入根目录，运行makehtml.bat
 3. 上述步骤自动在根目录下生成build文件夹，打开./build/html/index.html即可浏览文档
+或者
+---------------------------
+直接访问 `Python最佳实践指南中文版 <http://pythonguidecn.readthedocs.org/>`_.
