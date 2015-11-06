@@ -27,8 +27,7 @@ Readthedocs文档地址 `Python最佳实践指南中文版 <http://pythonguidecn
 - 测试: Jenkins & tox 指南
 - 如何更方便地通过 ``git`` 连接 ``hg``
 
-如果你不习惯阅读reStructuredText形式的文档, 这里有一份同步更新的
-`HTML版文档，请戳它<http://docs.python-guide.org>`_.
+如果你不习惯阅读reStructuredText形式的文档, 这里有一份同步更新的 `HTML版文档，请戳它 <http://pythonguidecn.readthedocs.org/>`_。
 
 使用指南
 ============================
@@ -38,4 +37,4 @@ Readthedocs文档地址 `Python最佳实践指南中文版 <http://pythonguidecn
 
 或者
 ---------------------------
-直接访问 `Python最佳实践指南中文版 <http://pythonguidecn.readthedocs.org/>`_.
+- 直接访问 `Python最佳实践指南中文版 <http://pythonguidecn.readthedocs.org/>`_.
