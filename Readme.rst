@@ -37,4 +37,4 @@ Readthedocs文档地址 `Python最佳实践指南中文版 <http://pythonguidecn
 
 或者
 ---------------------------
-- 直接访问 `Python最佳实践指南中文版 <http://pythonguidecn.readthedocs.org/>`_.
+- 直接访问 `Python最佳实践指南中文版 <http://pythonguidecn.readthedocs.org/>`_。
