@@ -3,10 +3,10 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Hitchhiker的Python指南！
+Python最佳实践指南！
 =================================
 
-欢迎来到Hitchhiker的Python指南。
+欢迎来到Python最佳实践指南。
 
 **本指南目前持续不断地更新与完善。**  如果你有意一起翻译, 
 `在GitHub fork 我 <https://github.com/Prodesire/Python-Guide-CN>`_!
