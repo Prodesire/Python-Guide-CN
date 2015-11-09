@@ -31,9 +31,10 @@ Readthedocs文档地址 `Python最佳实践指南中文版 <http://pythonguidecn
 
 使用指南
 ============================
-1. 下载zip文件或clone到本地
-2. 打开cmd，进入根目录，输入命令: make html 或者进入根目录，运行makehtml.bat
-3. 上述步骤自动在根目录下生成build文件夹，打开./build/html/index.html即可浏览文档
+1. 打开cmd，运行 `pip install sphinx` 安装sphinx
+2. 下载zip文件或clone到本地
+3. 打开cmd，进入根目录，输入命令: make html 或者进入根目录，运行makehtml.bat
+4. 上述步骤自动在根目录下生成build文件夹，打开./build/html/index.html即可浏览文档
 
 或者
 ---------------------------
