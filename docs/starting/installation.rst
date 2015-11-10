@@ -8,7 +8,7 @@
 安装指南
 -------------------
 
-这份指南重温了:ref:`Python 2.7 <which-python>`作为开发工具的正确安装方法，也包括Setuptools, Pip和Virtualevn等工具的安装。
+这份指南重温了 :ref:`Python 2.7 <which-python>` 作为开发工具的正确安装方法，也包括Setuptools, Pip和Virtualevn等工具的安装。
 
 - :ref:`Mac OS X <install-osx>`.
 - :ref:`Microsoft Windows <install-windows>`.
