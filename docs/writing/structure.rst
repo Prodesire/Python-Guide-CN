@@ -1,22 +1,18 @@
 结构化你的工程
 ========================
 
-By "structure" we mean the decisions you make concerning
-how your project best meets its objective. We need to consider how to
-best leverage Python's features to create clean, effective code.
-In practical terms, "structure" means making clean code whose logic and
-dependencies are clear as well as how the files and folders are organized
-in the filesystem.
+我们对于“结构化”的定义是你关注于怎样使你的项目最好地满足它的对象性，我们
+需要去考虑如何更好地利用Python的特性来创造简洁、高效的代码。在实践层面，
+“结构化”意味着通过编写简洁的代码，并且正如文件系统中文件和目录的组织一样，
+代码应该使逻辑和依赖清晰。
 
-Which functions should go into which modules? How does data flow through
-the project? What features and functions can be grouped together and
-isolated? By answering questions like these you can begin to plan, in
-a broad sense, what your finished product will look like.
+哪个函数应该深入到哪个模块？数据在项目中如何流转？什么功能和函数应该组合
+或独立？要解决这些问题，你可以开始做个一计划，大体来说，即是你的最终产品
+看起来会是怎样的。
 
-In this section we take a closer look at Python's module and import
-systems as they are the central elements to enforcing structure in your
-project. We then discuss various perspectives on how to build code which
-can be extended and tested reliably.
+在这一章节中，我们更深入地去观察Python的模块和导入系统，因为它们是加强你
+的项目结构化的关键因素，接着我们会从不同层面去讨论如何去构建可扩展且测试
+可靠的的代码。
 
 
 结构是一把钥匙

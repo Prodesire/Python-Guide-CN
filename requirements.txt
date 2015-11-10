@@ -1,2 +1,2 @@
-要求：
-安装sphinx（pip install sphinx）
+requests
+sphinx
