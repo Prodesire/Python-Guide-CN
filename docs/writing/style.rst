@@ -3,21 +3,19 @@
 代码风格
 ==========
 
-If you ask Python programmers what they like most in Python, they will
-often say its high readability.  Indeed, a high level of readability
-is at the heart of the design of the Python language, following the
-recognized fact that code is read much more often than it is written.
+如果你问Python程序员最喜欢Python的什么，他们总会说是Python的高可读性。
+事实上，高度的可读性是Python语言的设计核心。这基于这样的事实：代码的
+阅读比编写更加频繁。
 
-One reason for Python code to be easily read and understood is its relatively
-complete set of Code Style guidelines and "Pythonic" idioms.
+Python代码易读和易懂的其中一个原因是它的相对完整的代码风格指引和 “Pythonic” 
+的风格。
 
-Moreover, when a veteran Python developer (a Pythonista) points to portions of
-code and says they are not "Pythonic", it usually means that these lines
-of code do not follow the common guidelines and fail to express the intent in
-what is considered the best (hear: most readable) way.
+此外，当一位富有经验的Python开发者（Pythonista）指出某段代码并不 “Pythonic”，
+这通常意味着这些代码并没有遵循通用的指导方针，也没有用最佳的（最可读的）方式
+来表达意图。
 
-On some border cases, no best way has been agreed upon on how to express
-an intent in Python code, but these cases are rare.
+在某些边缘情况下，Python代码中并没有大家都认同的表达意图的最佳方式，但这些情况
+都很少见。
 
 一般概念
 ----------------
@@ -25,10 +23,9 @@ an intent in Python code, but these cases are rare.
 明确的代码
 ~~~~~~~~~~~~~
 
-While any kind of black magic is possible with Python, the
-most explicit and straightforward manner is preferred.
+在存在各种黑魔法的Python中，我们提倡最明确和直接的编码方式。
 
-**Bad**
+**糟糕**
 
 .. code-block:: python
 
@@ -36,26 +33,24 @@ most explicit and straightforward manner is preferred.
         x, y = args
         return dict(**locals())
 
-**Good**
+**优雅**
 
 .. code-block:: python
 
     def make_complex(x, y):
         return {'x': x, 'y': y}
 
-In the good code above, x and y are explicitly received from
-the caller, and an explicit dictionary is returned. The developer
-using this function knows exactly what to do by reading the
-first and last lines, which is not the case with the bad example.
+在上述优雅的代码中，x和y以明确的字典形式返回给调用者。开发者在使用
+这个函数的时候通过阅读第一和最后一行，能够正确地知道该做什么。而在
+糟糕的例子中则没有那么明确。
 
 每行一个声明
 ~~~~~~~~~~~~~~~~~~~~~~
 
-While some compound statements such as list comprehensions are
-allowed and appreciated for their brevity and their expressiveness,
-it is bad practice to have two disjoint statements on the same line of code.
+复合语句（比如说列表推导）因其简洁和表达性受到推崇，但在同一行代码中写
+两条独立的语句是糟糕的。
 
-**Bad**
+**糟糕**
 
 .. code-block:: python
 
@@ -63,10 +58,10 @@ it is bad practice to have two disjoint statements on the same line of code.
 
     if x == 1: print 'one'
 
-    if <complex comparison> and <other complex comparison>:
-        # do something
+    if <复杂的比较> and <其他复杂的比较>:
+        # 做一些工作
 
-**Good**
+**优雅**
 
 .. code-block:: python
 
@@ -76,93 +71,72 @@ it is bad practice to have two disjoint statements on the same line of code.
     if x == 1:
         print 'one'
 
-    cond1 = <complex comparison>
-    cond2 = <other complex comparison>
+    cond1 = <复杂的比较>
+    cond2 = <其他复杂的比较>
     if cond1 and cond2:
-        # do something
+        # 做一些工作
 
 函数参数
 ~~~~~~~~~~~~~~~~~~
 
-Arguments can be passed to functions in four different ways.
+将参数传递给函数有四种不同的方式：
 
-1. **Positional arguments** are mandatory and have no default values. They are
-   the simplest form of arguments and they can be used for the few function
-   arguments that are fully part of the function's meaning and their order is
-   natural. For instance, in ``send(message, recipient)`` or ``point(x, y)``
-   the user of the function has no difficulty remembering that those two
-   functions require two arguments, and in which order.
+1. **位置参数** 是强制的，且没有默认值。 它们是最简单的参数形式，而且能被用在
+   一些这样的函数参数中：它们是函数意义的完整部分，其顺序是自然的。比如说：对
+   函数的使用者而言，记住 ``send(message, recipient)`` 或 ``point(x, y)`` 需要
+   两个参数以及它们的参数顺序并不困难。
 
-In those two cases, it is possible to use argument names when calling the
-functions and, doing so, it is possible to switch the order of arguments,
-calling for instance ``send(recipient='World', message='Hello')`` and
-``point(y=2, x=1)`` but this reduces readability and is unnecessarily verbose,
-compared to the more straightforward calls to ``send('Hello', 'World')`` and
-``point(1, 2)``.
+在这两种情况下，当调用函数的时候可以使用参数名称，也可以改变参数的顺序，比如说
+``send(recipient='World', message='Hello')`` 和 ``point(y=2, x=1)``。但和 ``send(
+'Hello', 'World')`` 和 ``point(1, 2)`` 比起来，这降低了可读性，而且带来了
+不必要的冗长。
 
-2. **Keyword arguments** are not mandatory and have default values. They are
-   often used for optional parameters sent to the function. When a function has
-   more than two or three positional parameters, its signature is more difficult
-   to remember and using keyword arguments with default values is helpful. For
-   instance, a more complete ``send`` function could be defined as
-   ``send(message, to, cc=None, bcc=None)``. Here ``cc`` and ``bcc`` are
-   optional, and evaluate to ``None`` when they are not passed another value.
+2. **关键字参数** 是非强制的，且有默认值。它们经常被用在传递给函数的可选参数中。
+   当一个函数有超过两个或三个位置参数时，函数签名会变得难以记忆，使用带有默认参数
+   的关键字参数将会带来帮助。比如，一个更完整的 ``send`` 函数可以被定义为
+   ``send(message, to, cc=None, bcc=None)``。这里的 ``cc`` 和 ``bcc`` 是可选的，
+   当没有传递给它们其他值的时候，它们的值就是None。
 
-Calling a function with keyword arguments can be done in multiple ways in
-Python, for example it is possible to follow the order of arguments in the
-definition without explicitly naming the arguments, like in
-``send('Hello', 'World', 'Cthulhu', 'God')``, sending a blind carbon copy to
-God. It would also be possible to name arguments in another order, like in
-``send('Hello again', 'World', bcc='God', cc='Cthulhu')``. Those two
-possibilities are better avoided without any strong reason to not follow the
-syntax that is the closest to the function definition:
-``send('Hello', 'World', cc='Cthulhu', bcc='God')``.
+Python中有多种方式调用带关键字参数的函数。比如说，我们可以按定义中的参数顺序而无需
+明确的命名参数来调用函数，就像 ``send('Hello', 'World', 'Cthulhu', 'God')`` 是将密件
+发送给上帝。我们也可以使用命名参数而无需遵循参数顺序来调用函数，就像 
+``send('Hello again', 'World', bcc='God', cc='Cthulhu')`` 。如果没有任何强有力的理由
+不去遵循最接近函数定义的语法：``send('Hello', 'World', cc='Cthulhu', bcc='God')`` 那么
+这两种方式都应该是要极力避免的。
 
-As a side note, following `YAGNI <http://en.wikipedia.org/wiki/You_ain't_gonna_need_it>`_
-principle, it is often harder to remove an optional argument (and its logic
-inside the function) that was added "just in case" and is seemingly never used,
-than to add a new optional argument and its logic when needed.
+作为附注，请遵循 `YAGNI <http://en.wikipedia.org/wiki/You_ain't_gonna_need_it>`_ 原则。
+通常，移除一个用作“以防万一”但却看起来从未使用的可选参数（以及它在函数中的逻辑），比
+添加一个所需的新的可选参数和它的逻辑要来的困难。
 
-3. The **arbitrary argument list** is the third way to pass arguments to a
-function.  If the function intention is better expressed by a signature with an
-extensible number of positional arguments, it can be defined with the ``*args``
-constructs.  In the function body, ``args`` will be a tuple of all the
-remaining positional arguments. For example, ``send(message, *args)`` can be
-called with each recipient as an argument: ``send('Hello', 'God', 'Mom',
-'Cthulhu')``, and in the function body ``args`` will be equal to ``('God',
-'Mom', 'Cthulhu')``.
+3. **任意参数列表** 是第三种给函数传参的方式。如果函数的目的通过带有数目可扩展的
+   位置参数的签名能够更好的表达，该函数可以被定义成 ``*args``的结构。在这个函数体中， 
+   ``args``是一个元组，它包含所有剩余的位置参数。举个例子， 我们可以用任何容器作为参数去
+   调用 ``send(message, *args)`` ，比如 ``send('Hello', 'God', 'Mom', 'Cthulhu')``。
+   在此函数体中， ``args`` 相当于 ``('God','Mom', 'Cthulhu')``。
 
-However, this construct has some drawbacks and should be used with caution. If a
-function receives a list of arguments of the same nature, it is often more
-clear to define it as a function of one argument, that argument being a list or
-any sequence. Here, if ``send`` has multiple recipients, it is better to define
-it explicitly: ``send(message, recipients)`` and call it with ``send('Hello',
-['God', 'Mom', 'Cthulhu'])``. This way, the user of the function can manipulate
-the recipient list as a list beforehand, and it opens the possibility to pass
-any sequence, including iterators, that cannot be unpacked as other sequences.
+尽管如此，这种结构有一些缺点，使用时应该予以注意。如果一个函数接受的参数列表具有
+相同的性质，通常把它定义成一个参数，这个参数是一个列表或者其他任何序列会更清晰。
+在这里，如果 ``send`` 参数有多个容器（recipients），将之定义成 ``send(message, recipients)``
+会更明确，调用它时就使用 ``send('Hello', ['God', 'Mom', 'Cthulhu'])``。这样的话，
+函数的使用者可以事先将容器列表维护成列表（list）形式，这为传递各种不能被转变成
+其他序列的序列（包括迭代器）带来了可能。
 
-4. The **arbitrary keyword argument dictionary** is the last way to pass
-   arguments to functions. If the function requires an undetermined series of
-   named arguments, it is possible to use the ``**kwargs`` construct. In the
-   function body, ``kwargs`` will be a dictionary of all the passed named
-   arguments that have not been caught by other keyword arguments in the
-   function signature.
 
-The same caution as in the case of *arbitrary argument list* is necessary, for
-similar reasons: these powerful techniques are to be used when there is a
-proven necessity to use them, and they should not be used if the simpler and
-clearer construct is sufficient to express the function's intention.
+4. **任意关键字参数字典** 是最后一种给函数传参的方式。如果函数要求一系列待定的
+   命名参数，我们可以使用 ``**kwargs`` 的结构。在函数体中， ``kwargs`` 是一个
+   字典，它包含所有传递给函数但没有被其他关键字参数捕捉的命名参数。
 
-It is up to the programmer writing the function to determine which arguments
-are positional arguments and which are optional keyword arguments, and to
-decide whether to use the advanced techniques of arbitrary argument passing. If
-the advice above is followed wisely, it is possible and enjoyable to write
-Python functions that are:
+和 *任意参数列表*中所需注意的一样，相似的原因是：这些强大的技术是用在被证明确实
+需要用到它们的时候，它们不应该被用在能用更简单和更明确的结构，来足够表达函数意图
+的情况中。
 
-* easy to read (the name and arguments need no explanations)
+编写函数的时候采用何种参数形式，是用位置参数，还是可选关键字参数，是否使用形如任意参数
+的高级技术，这些都由程序员自己决定。如果能明智地遵循上述建议，就可能且非常享受地写出
+这样的Python函数：
 
-* easy to change (adding a new keyword argument does not break other parts of
-  the code)
+* 易读（名字和参数无需解释）
+
+* 易改（添加新的关键字参数不会破坏代码的其他部分）
 
 Avoid the magical wand
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -194,7 +168,7 @@ never to actually do it.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 As seen above, Python allows many tricks, and some of them are potentially
-dangerous. A good example is that any client code can override an object's
+dangerous. A 优雅 example is that any client code can override an object's
 properties and methods: there is no "private" keyword in Python. This
 philosophy, very different from highly defensive languages like Java, which
 give a lot of mechanisms to prevent any misuse, is expressed by the saying: "We
@@ -269,7 +243,7 @@ Idiomatic Python code is often referred to as being *Pythonic*.
 
 Although there usually is one --- and preferably only one --- obvious way to do
 it; *the* way to write idiomatic Python code can be non-obvious to Python
-beginners. So, good idioms must be consciously acquired.
+beginners. So, 优雅 idioms must be consciously acquired.
 
 Some common Python idioms follow:
 
@@ -285,7 +259,7 @@ a tuple of two elements for each item in list:
 .. code-block:: python
 
     for index, item in enumerate(some_list):
-        # do something with index and item
+        # 做一些工作 with index and item
 
 You can use this to swap variables as well:
 
@@ -398,7 +372,7 @@ page. For detailed information on the amount of time various common operations
 take on each of these data structures, see 
 `this page <https://wiki.python.org/moin/TimeComplexity?>`_.
 
-Because of these differences in performance, it is often a good idea to use 
+Because of these differences in performance, it is often a 优雅 idea to use 
 sets or dictionaries instead of lists in cases where: 
 
 * The collection will contain a large number of items
@@ -416,7 +390,7 @@ speed.
 Python之禅
 -------------
 
-Also known as :pep:`20`, the guiding principles for Python's design.
+又名 :pep:`20`, Python设计的指导原则。
 
 .. code-block:: pycon
 
@@ -443,15 +417,33 @@ Also known as :pep:`20`, the guiding principles for Python's design.
     If the implementation is easy to explain, it may be a good idea.
     Namespaces are one honking great idea -- let's do more of those!
 
-For some examples of good Python style, see `these slides from a Python user
-group <http://artifex.org/~hblanks/talks/2011/pep20_by_example.pdf>`_.
+    Python之禅 by Tim Peters
+ 
+    优美胜于丑陋（Python以编写优美的代码为目标）
+    明了胜于晦涩（优美的代码应当是明了的，命名规范，风格相似）
+    简洁胜于复杂（优美的代码应当是简洁的，不要有复杂的内部实现）
+    复杂胜于凌乱（如果复杂不可避免，那代码间也不能有难懂的关系，要保持接口简洁）
+    扁平胜于嵌套（优美的代码应当是扁平的，不能有太多的嵌套）
+    间隔胜于紧凑（优美的代码有适当的间隔，不要奢望一行代码解决问题）
+    可读性很重要（优美的代码是可读的）
+    即便假借特例的实用性之名，也不可违背这些规则（这些规则至高无上）
+    不要包容所有错误，除非你确定需要这样做（精准地捕获异常，不写 except:pass 风格的代码）
+    当存在多种可能，不要尝试去猜测
+    而是尽量找一种，最好是唯一一种明显的解决方案（如果不确定，就用穷举法）
+    虽然这并不容易，因为你不是 Python 之父（这里的 Dutch 是指 Guido ）
+    做也许好过不做，但不假思索就动手还不如不做（动手之前要细思量）
+    如果你无法向人描述你的方案，那肯定不是一个好方案；反之亦然（方案测评标准）
+    命名空间是一种绝妙的理念，我们应当多加利用（倡导与号召）
+
+想要了解一些Python优雅风格的例子，请见 `这些来自于Python用户的幻灯片 
+<http://artifex.org/~hblanks/talks/2011/pep20_by_example.pdf>`_.
 
 PEP 8
 -----
 
 :pep:`8` is the de-facto code style guide for Python.
 
-Conforming your Python code to PEP 8 is generally a good idea and helps make
+Conforming your Python code to PEP 8 is generally a 优雅 idea and helps make
 code more consistent when working on projects with other developers. There
 is a command-line program, `pep8 <https://github.com/jcrocholl/pep8>`_,
 that can check your code for conformance. Install it by running the following
@@ -507,7 +499,7 @@ just add it to the if statement. See `Truth Value Testing
 <http://docs.python.org/library/stdtypes.html#truth-value-testing>`_ for a
 list of what is considered false.
 
-**Bad**:
+**糟糕**:
 
 .. code-block:: python
 
@@ -517,7 +509,7 @@ list of what is considered false.
     if attr == None:
         print 'attr is None!'
 
-**Good**:
+**优雅**:
 
 .. code-block:: python
 
@@ -539,7 +531,7 @@ Access a Dictionary Element
 Don't use the :py:meth:`dict.has_key` method. Instead, use ``x in d`` syntax,
 or pass a default argument to :py:meth:`dict.get`.
 
-**Bad**:
+**糟糕**:
 
 .. code-block:: python
 
@@ -549,7 +541,7 @@ or pass a default argument to :py:meth:`dict.get`.
     else:
         print 'default_value'
 
-**Good**:
+**优雅**:
 
 .. code-block:: python
 
@@ -571,7 +563,7 @@ provide a powerful, concise way to work with lists. Also, the :py:func:`map` and
 :py:func:`filter` functions can perform operations on lists using a different,
 more concise syntax.
 
-**Bad**:
+**糟糕**:
 
 .. code-block:: python
 
@@ -582,7 +574,7 @@ more concise syntax.
         if i > 4:
             b.append(i)
 
-**Good**:
+**优雅**:
 
 .. code-block:: python
 
@@ -591,7 +583,7 @@ more concise syntax.
     # Or:
     b = filter(lambda x: x > 4, a)
 
-**Bad**:
+**糟糕**:
 
 .. code-block:: python
 
@@ -600,7 +592,7 @@ more concise syntax.
     for i in range(len(a)):
         a[i] += 3
 
-**Good**:
+**优雅**:
 
 .. code-block:: python
 
@@ -630,7 +622,7 @@ Read From a File
 Use the ``with open`` syntax to read from files. This will automatically close
 files for you.
 
-**Bad**:
+**糟糕**:
 
 .. code-block:: python
 
@@ -639,7 +631,7 @@ files for you.
     print a
     f.close()
 
-**Good**:
+**优雅**:
 
 .. code-block:: python
 
@@ -665,7 +657,7 @@ unclosed parenthesis on an end-of-line the Python interpreter will join the
 next line until the parentheses are closed. The same behavior holds for curly
 and square braces.
 
-**Bad**:
+**糟糕**:
 
 .. code-block:: python
 
@@ -676,7 +668,7 @@ and square braces.
     from some.deep.module.inside.a.module import a_nice_function, another_nice_function, \
         yet_another_nice_function
 
-**Good**:
+**优雅**:
 
 .. code-block:: python
 
