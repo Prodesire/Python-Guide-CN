@@ -138,99 +138,78 @@ Python中有多种方式调用带关键字参数的函数。比如说，我们�
 
 * 易改（添加新的关键字参数不会破坏代码的其他部分）
 
-Avoid the magical wand
+避免魔法方法
 ~~~~~~~~~~~~~~~~~~~~~~
 
-A powerful tool for hackers, Python comes with a very rich set of hooks and
-tools allowing you to do almost any kind of tricky tricks. For instance, it is
-possible to do each of the following:
+Python 对骇客来说是一个强有力的工具，它拥有非常丰富的钩子（hook）和工具，允许
+你施展几乎任何形式的技巧。比如说，它能够做以下每件事：
 
-* change how objects are created and instantiated
 
-* change how the Python interpreter imports modules
+* 改变对象创建和实例化的方式
 
-* it is even possible (and recommended if needed) to embed C routines in Python.
+* 改变Python解释器导入模块的方式
 
-However, all these options have many drawbacks and it is always better to use
-the most straightforward way to achieve your goal. The main drawback is that
-readability suffers greatly when using these constructs. Many code analysis
-tools, such as pylint or pyflakes, will be unable to parse this "magic" code.
+* 甚至可能（如果需要的话也是被推荐的）在Python中嵌入C程序
 
-We consider that a Python developer should know about these nearly infinite
-possibilities, because it instills confidence that no impassable problem will
-be on the way. However, knowing how and particularly when **not** to use
-them is very important.
+尽管如此，所有的这些选择都有许多缺点。使用更加直接的方式来达成目标通常是更好的
+方法。它们最主要的缺点是可读性不高。许多代码分析工具，比如说 pylint 或者 
+pyflakes，将无法解析这种“魔法”代码。
 
-Like a kung fu master, a Pythonista knows how to kill with a single finger, and
-never to actually do it.
+我们认为Python开发者应该知道这些近乎无限的可能性，因为它为我们灌输了没有不可能
+完成的任务的信心。然而，知道如何，尤其是何时 **不能** 使用它们是非常重要的。
+
+就像一位功夫大师，一个Pythonista知道如何用一个手指杀死对方，但从不会那么去做。
 
 我们都是负责任的用户
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-As seen above, Python allows many tricks, and some of them are potentially
-dangerous. A 优雅 example is that any client code can override an object's
-properties and methods: there is no "private" keyword in Python. This
-philosophy, very different from highly defensive languages like Java, which
-give a lot of mechanisms to prevent any misuse, is expressed by the saying: "We
-are all responsible users".
+如前所述，Python允许很多技巧，其中一些具有潜在的危险。一个好的例子是：任何客户端
+代码能够重写一个对象的属性和方法（Python中没有 “private” 关键字）。这种哲学
+是在说：“我们都是负责任的用户”，它和高度防御性的语言（如Java，拥有很多机制来预防
+错误的使用）有着非常大的不同。
 
-This doesn't mean that, for example, no properties are considered private, and
-that no proper encapsulation is possible in Python. Rather, instead of relying
-on concrete walls erected by the developers between their code and other's, the
-Python community prefers to rely on a set of conventions indicating that these
-elements should not be accessed directly.
+这并不意味着，比如说，Python中没有属性是私有的，也不意味着没有合适的封装方法。
+与其依赖在开发者的代码之间树立起的一道道隔墙，Python社区更愿意依靠一组约定，来
+表明这些元素不应该被直接访问。
 
-The main convention for private properties and implementation details is to
-prefix all "internals" with an underscore. If the client code breaks this rule
-and accesses these marked elements, any misbehavior or problems encountered if
-the code is modified is the responsibility of the client code.
+私有属性的主要约定和实现细节是在所有的“内部”变量前加一个下划线。如果客户端代码
+打破了这条规则并访问了带有下划线的变量，那么因内部代码的改变而出现的任何不当的行为或问题，都是客户端代码的责任。
 
-Using this convention generously is encouraged: any method or property that is
-not intended to be used by client code should be prefixed with an underscore.
-This will guarantee a better separation of duties and easier modification of
-existing code; it will always be possible to publicize a private property,
-but making a public property private might be a much harder operation.
+鼓励“慷慨地”使用此约定：任何不开放给客户端代码使用的方法或属性，应该有一个下划线
+前缀。这将保证更好的职责划分以及更容易对已有代码进行修改。将一个私有属性公开化
+总是可能的，但是把一个公共属性私有化可能是一个更难的选择。
 
 返回值
 ~~~~~~~~~~~~~~~~
 
-When a function grows in complexity it is not uncommon to use multiple return
-statements inside the function's body. However, in order to keep a clear intent
-and a sustainable readability level, it is preferable to avoid returning
-meaningful values from many output points in the body.
+当一个函数变得复杂，在函数体中使用多返回值的语句并不少见。然而，为了保持函数
+的明确意图以及一个可持续的可读水平，更建议在函数体中避免使用返回多个有意义的值。
 
-There are two main cases for returning values in a function: the result of the
-function return when it has been processed normally, and the error cases that
-indicate a wrong input parameter or any other reason for the function to not be
-able to complete its computation or task.
+在函数中返回结果主要有两种情况：函数正常运行并返回它的结果，以及错误的情况，要么
+因为一个错误的输入参数，要么因为其他导致函数无法完成计算或任务的原因。
 
-If you do not wish to raise exceptions for the second case, then returning a
-value, such as None or False, indicating that the function could not perform
-correctly might be needed. In this case, it is better to return as early as the
-incorrect context has been detected. It will help to flatten the structure of
-the function: all the code after the return-because-of-error statement can
-assume the condition is met to further compute the function's main result.
-Having multiple such return statements is often necessary.
+如果你在面对第二种情况时不想抛出异常，返回一个值（比如说None或False）来表明
+函数无法正确运行，可能是需要的。在这种情况下，越早返回所发现的不正确上下文越好。
+这将帮助扁平化函数的结构：在“因为错误而返回”的语句后的所有代码能够假定条件满足
+接下来的函数主要结果的运算。有多个这样的返回结果通常是需要的。
 
-However, when a function has multiple main exit points for its normal course,
-it becomes difficult to debug the returned result, so it may be preferable to
-keep a single exit point. This will also help factoring out some code paths,
-and the multiple exit points are a probable indication that such a refactoring
-is needed.
+尽管如此，当一个函数在其正常过程中有多个主要出口点时，它会变得难以调试和返回其
+结果，所以保持单个出口点可能会更好。这也将有助于提取某些代码路径，而且多个出口点
+很有可能意味着这里需要重构。
 
 .. code-block:: python
 
    def complex_function(a, b, c):
        if not a:
-           return None  # Raising an exception might be better
+           return None  # 抛出一个异常可能会更好
        if not b:
-           return None  # Raising an exception might be better
-       # Some complex code trying to compute x from a, b and c
-       # Resist temptation to return x if succeeded
+           return None  # 抛出一个异常可能会更好
+       
+       # 一些复杂的代码试着用a,b,c来计算x 
+       # 如果成功了，抵制住返回x的诱惑
        if not x:
-           # Some Plan-B computation of x
-       return x  # One single exit point for the returned value x will help
-                 # when maintaining the code.
+           # 一些关于x的计算的Plan-B
+       return x  # 返回值x只有一个出口点有利于维护代码
 
 行话
 ------
