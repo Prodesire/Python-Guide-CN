@@ -109,8 +109,8 @@ Python中有多种方式调用带关键字参数的函数。比如说，我们�
 添加一个所需的新的可选参数和它的逻辑要来的困难。
 
 3. **任意参数列表** 是第三种给函数传参的方式。如果函数的目的通过带有数目可扩展的
-   位置参数的签名能够更好的表达，该函数可以被定义成 ``*args``的结构。在这个函数体中， 
-   ``args``是一个元组，它包含所有剩余的位置参数。举个例子， 我们可以用任何容器作为参数去
+   位置参数的签名能够更好的表达，该函数可以被定义成 ``*args`` 的结构。在这个函数体中， 
+   ``args`` 是一个元组，它包含所有剩余的位置参数。举个例子， 我们可以用任何容器作为参数去
    调用 ``send(message, *args)`` ，比如 ``send('Hello', 'God', 'Mom', 'Cthulhu')``。
    在此函数体中， ``args`` 相当于 ``('God','Mom', 'Cthulhu')``。
 
@@ -211,49 +211,47 @@ pyflakes，将无法解析这种“魔法”代码。
            # 一些关于x的计算的Plan-B
        return x  # 返回值x只有一个出口点有利于维护代码
 
-行话
+习语（Idiom）
 ------
 
-A programming idiom, put simply, is a *way* to write code. The notion of
-programming idioms is discussed amply at `c2 <http://c2.com/cgi/wiki?ProgrammingIdiom>`_
-and at `Stack Overflow <http://stackoverflow.com/questions/302459/what-is-a-programming-idiom>`_.
+编程习语，说得简单些，就是写代码的 *方式*。编程习语的概念在 `c2 <http://c2.
+com/cgi/wiki?ProgrammingIdiom>`_ 和 `Stack Overflow <http://stackoverflow.
+com/questions/302459/what-is-a-programming-idiom>`_ 上有充足的讨论。
 
-Idiomatic Python code is often referred to as being *Pythonic*.
+采用习语的Python代码通常被称为 *Pythonic*。
 
-Although there usually is one --- and preferably only one --- obvious way to do
-it; *the* way to write idiomatic Python code can be non-obvious to Python
-beginners. So, 优雅 idioms must be consciously acquired.
+尽管通常有一种 --- 而且最好只有一种 --- 明显的方式去写得Pythonic；对Python
+初学者来说，写出习语式的Python代码的 *方式* 并不明显。所以，好的习语必须
+有意识地获取。
 
-Some common Python idioms follow:
+如下有一些常见的Python习语：
 
 .. _unpacking-ref:
 
-Unpacking
+解包（Unpacking）
 ~~~~~~~~~
 
-If you know the length of a list or tuple, you can assign names to its
-elements with unpacking. For example, since ``enumerate()`` will provide
-a tuple of two elements for each item in list:
+如果你知道一个列表或者元组的长度，你可以将其解包并为它的元素取名。比如，
+``enumerate()`` 会对list中的每个项提供包含两个元素的元组：
 
 .. code-block:: python
 
     for index, item in enumerate(some_list):
-        # 做一些工作 with index and item
+        # 使用index和item做一些工作
 
-You can use this to swap variables as well:
+你也能通过这种方式交换变量：
 
 .. code-block:: python
 
     a, b = b, a
 
-Nested unpacking works too:
+嵌套解包也能工作：
 
 .. code-block:: python
 
    a, (b, c) = 1, (2, 3)
 
-In Python 3, a new method of extended unpacking was introduced by
-:pep:`3132`:
+在Python 3中，扩展解包的新方法在 :pep:`3132` 有介绍：
 
 .. code-block:: python
 
@@ -262,69 +260,61 @@ In Python 3, a new method of extended unpacking was introduced by
    a, *middle, c = [1, 2, 3, 4]
    # a = 1, middle = [2, 3], c = 4
 
-Create an ignored variable
+创建一个被忽略的变量
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you need to assign something (for instance, in :ref:`unpacking-ref`) but
-will not need that variable, use ``__``:
+如果你需要赋值（比如，在 :ref:`unpacking-ref` ）但不需要这个变量，请使用
+``__``:
 
 .. code-block:: python
 
     filename = 'foobar.txt'
     basename, __, ext = filename.rpartition('.')
 
-.. note::
+.. 注意::
 
-   Many Python style guides recommend the use of a single underscore "``_``"
-   for throwaway variables rather than the double underscore "``__``"
-   recommended here. The issue is that "``_``" is commonly used as an alias
-   for the :func:`~gettext.gettext` function, and is also used at the
-   interactive prompt to hold the value of the last operation. Using a
-   double underscore instead is just as clear and almost as convenient,
-   and eliminates the risk of accidentally interfering with either of
-   these other use cases.
+   许多Python风格指南建议使用单下划线的 "``_``" 而不是这里推荐的双下划线 "``__``" 来
+   指示废弃变量。问题是， "``_``" 常用在作为 :func:`~gettext.gettext` 函数
+   的别名，也被用在交互式命令行中记录最后一次操作的值。相反，使用双下划线
+   十分清晰和方便，而且能够消除使用其他这些用例所带来的意外干扰的风险。
 
-Create a length-N list of the same thing
+创建一个含N个对象的列表
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Use the Python list ``*`` operator:
+使用Python列表中的 ``*`` 操作符：
 
 .. code-block:: python
 
     four_nones = [None] * 4
 
-Create a length-N list of lists
+创建一个含N个列表的列表
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Because lists are mutable, the ``*`` operator (as above) will create a list
-of N references to the `same` list, which is not likely what you want.
-Instead, use a list comprehension:
+因为列表是可变的，所以 ``*`` 操作符（如上）将会创建一个包含N个且指向 *同一个* 
+列表的列表，这可能不是你想用的。取而代之，请使用列表解析：
 
 .. code-block:: python
 
     four_lists = [[] for __ in xrange(4)]
 
-Create a string from a list
+根据列表来创建字符串
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-A common idiom for creating strings is to use :py:meth:`str.join` on an empty
-string.
+创建字符串的一个常见习语是在空的字符串上使用 :py:meth:`str.join` 。
 
 .. code-block:: python
 
     letters = ['s', 'p', 'a', 'm']
     word = ''.join(letters)
 
-This will set the value of the variable *word* to 'spam'. This idiom can be
-applied to lists and tuples.
+这会将 *word* 变量赋值为 'spam'。这个习语可以用在列表和元组中。
 
-Searching for an item in a collection
+在集合体（collection）中查找一个项
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Sometimes we need to search through a collection of things. Let's look at two
-options: lists and sets.
+有时我们需要在集合体中查找。让我们看看这两个选择：列表和集合（set）。
 
-Take the following code for example:
+用如下代码举个例子：
 
 .. code-block:: python
 
@@ -337,33 +327,24 @@ Take the following code for example:
     def lookup_list(l):
         return 's' in l
 
-Even though both functions look identical, because *lookup_set* is utilizing
-the fact that sets in Python are hashtables, the lookup performance
-between the two is very different. To determine whether an item is in a list,
-Python will have to go through each item until it finds a matching item. 
-This is time consuming, especially for long lists. In a set, on the other
-hand, the hash of the item will tell Python where in the set to look for
-a matching item. As a result, the search can be done quickly, even if the
-set is large. Searching in dictionaries works the same way. For 
-more information see this
-`StackOverflow <http://stackoverflow.com/questions/513882/python-list-vs-dict-for-look-up-table>`_
-page. For detailed information on the amount of time various common operations
-take on each of these data structures, see 
-`this page <https://wiki.python.org/moin/TimeComplexity?>`_.
+即使两个函数看起来完全一样，但因为 *查找集合* 是利用了Python中的集合是可哈希的
+特性，两者的查询性能是非常不同的。为了判断一个项是否在列表中，Python将会查看
+每个项直到它找到匹配的项。这是耗时的，尤其是对长列表而言。另一方面，在集合中，
+想的哈希值将会告诉Python在集合的哪里去查找匹配的项。结果是，即使集合很大，查询
+的速度也很快。在字典中查询也是同样的原理。想了解更多内容，请见
+`StackOverflow <http://stackoverflow.com/questions/513882/python-list-vs-dict-for-look-up-table>`_ 。想了解在每种数据结构上的多种常见操作的花费时间的详细内容，
+请见 `此页面 <https://wiki.python.org/moin/TimeComplexity?>`_。
 
-Because of these differences in performance, it is often a 优雅 idea to use 
-sets or dictionaries instead of lists in cases where: 
+因为这些性能上的差异，在下列场合在使用集合或者字典而不是列表，通常会是个好主意：
 
-* The collection will contain a large number of items
+* 集合体中包含大量的项
 
-* You will be repeatedly searching for items in the collection
+* 你将在集合体中重复地查找项
 
-* You do not have duplicate items. 
+* 你没有重复的项
 
-For small collections, or collections which you will not frequently be 
-searching through, the additional time and memory required to set up the 
-hashtable will often be greater than the time saved by the improved search 
-speed.
+对于小的集合体，或者你不会频繁查找的集合体，建立哈希带来的额外时间和内存的
+开销经常会大过改进搜索速度所节省的时间。
 
 
 Python之禅
@@ -420,21 +401,19 @@ Python之禅
 PEP 8
 -----
 
-:pep:`8` is the de-facto code style guide for Python.
+:pep:`8` 是Python事实上的代码风格指南。
 
-Conforming your Python code to PEP 8 is generally a 优雅 idea and helps make
-code more consistent when working on projects with other developers. There
-is a command-line program, `pep8 <https://github.com/jcrocholl/pep8>`_,
-that can check your code for conformance. Install it by running the following
-command in your terminal:
 
+你的Python代码遵循 PEP 8 通常是个好主意，当和其他开发者一起维护项目时，
+这帮助使代码更加具有可持续性。这个命令行程序，`pep8 <https://github.com/jcrocholl/pep8>`_,
+能够检查你的代码的一致性。在你的终端中运行下列命令：
 
 .. code-block:: console
 
     $ pip install pep8
 
 
-Then run it on a file or series of files to get a report of any violations.
+然后，对一个文件或者一系列的文件运行它，来获得任何违规行为的报告。
 
 .. code-block:: console
 
@@ -448,35 +427,33 @@ Then run it on a file or series of files to get a report of any violations.
     optparse.py:472:29: E221 multiple spaces before operator
     optparse.py:544:21: W601 .has_key() is deprecated, use 'in'
 
-The program `autopep8 <https://pypi.python.org/pypi/autopep8/>`_ can be used to
-automatically reformat code in the PEP 8 style. Install the program with:
+程序 `autopep8 <https://pypi.python.org/pypi/autopep8/>`_ 能自动将代码格式化
+成 PEP 8 风格。用以下指令安装此程序：
 
 .. code-block:: console
 
     $ pip install autopep8
 
-Use it to format a file in-place with:
+用以下指令格式化一个文件：
 
 .. code-block:: console
 
     $ autopep8 --in-place optparse.py
 
-Excluding the ``--in-place`` flag will cause the program to output the modified
-code directly to the console for review. The ``--aggressive`` flag will perform
-more substantial changes and can be applied multiple times for greater effect.
+不包含 ``--in-place`` 标志将会使得程序直接将更改的代码输出到控制台，以供审查。
+``--aggressive`` 标志则会执行更多实质性的变化，而且可以多次使用以达到更佳的效果。
 
 约定
 ----------------
 
-Here are some conventions you should follow to make your code easier to read.
+这里有一些你应该遵循的约定，以让你的代码更加易读。
 
-Check if variable equals a constant
+检查变量是否等于常量
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You don't need to explicitly compare a value to True, or None, or 0 - you can
-just add it to the if statement. See `Truth Value Testing
-<http://docs.python.org/library/stdtypes.html#truth-value-testing>`_ for a
-list of what is considered false.
+你不需要明确地比较一个值是True，或者None，或者0 - 你可以仅仅把它放在if语句中。
+参阅 `真值测试 <http://docs.python.org/library/stdtypes.html#truth-value-testing>`_ 来了解什么被认为是false。
+
 
 **糟糕**:
 
@@ -492,11 +469,11 @@ list of what is considered false.
 
 .. code-block:: python
 
-    # Just check the value
+    # 检查值
     if attr:
         print 'attr is truthy!'
 
-    # or check for the opposite
+    # 或者做相反的检查
     if not attr:
         print 'attr is falsey!'
 
@@ -504,11 +481,13 @@ list of what is considered false.
     if attr is None:
         print 'attr is None!'
 
-Access a Dictionary Element
+访问字典元素
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Don't use the :py:meth:`dict.has_key` method. Instead, use ``x in d`` syntax,
 or pass a default argument to :py:meth:`dict.get`.
+不要使用 :py:meth:`dict.has_key` 方法。取而代之，使用 ``x in d`` 语法，或者
+将一个默认参数传递给 :py:meth:`dict.get`。
 
 **糟糕**:
 
@@ -516,7 +495,7 @@ or pass a default argument to :py:meth:`dict.get`.
 
     d = {'hello': 'world'}
     if d.has_key('hello'):
-        print d['hello']    # prints 'world'
+        print d['hello']    # 打印 'world'
     else:
         print 'default_value'
 
@@ -526,27 +505,27 @@ or pass a default argument to :py:meth:`dict.get`.
 
     d = {'hello': 'world'}
 
-    print d.get('hello', 'default_value') # prints 'world'
-    print d.get('thingy', 'default_value') # prints 'default_value'
+    print d.get('hello', 'default_value') # 打印 'world'
+    print d.get('thingy', 'default_value') # 打印 'default_value'
 
     # Or:
     if 'hello' in d:
         print d['hello']
 
-Short Ways to Manipulate Lists
+维护列表的捷径
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`List comprehensions
+`列表推导
 <http://docs.python.org/tutorial/datastructures.html#list-comprehensions>`_
-provide a powerful, concise way to work with lists. Also, the :py:func:`map` and
-:py:func:`filter` functions can perform operations on lists using a different,
-more concise syntax.
+提供了一个强大的而又简洁的方式来处理列表。而且， :py:func:`map` 和 
+:py:func:`filter` 函数用用一种不同且更简洁的语法处理列表。
+
 
 **糟糕**:
 
 .. code-block:: python
 
-    # Filter elements greater than 4
+    # 过滤大于 4 的元素
     a = [3, 4, 5]
     b = []
     for i in a:
@@ -566,7 +545,7 @@ more concise syntax.
 
 .. code-block:: python
 
-    # Add three to all list members.
+    # 所有的列表成员都加 3
     a = [3, 4, 5]
     for i in range(len(a)):
         a[i] += 3
@@ -580,26 +559,25 @@ more concise syntax.
     # Or:
     a = map(lambda i: i + 3, a)
 
-Use :py:func:`enumerate` keep a count of your place in the list.
+使用 :py:func:`enumerate` 获得列表中的当前位置的计数。
 
 .. code-block:: python
 
     a = [3, 4, 5]
     for i, item in enumerate(a):
         print i, item
-    # prints
+    # 打印
     # 0 3
     # 1 4
     # 2 5
 
-The :py:func:`enumerate` function has better readability than handling a
-counter manually. Moreover, it is better optimized for iterators.
+使用 :py:func:`enumerate` 函数比手动维护计数有更好的可读性。而且，它对迭代器
+进行了更好的优化。
 
-Read From a File
+读取文件
 ~~~~~~~~~~~~~~~~
 
-Use the ``with open`` syntax to read from files. This will automatically close
-files for you.
+使用 ``with open`` 语法来读取文件。它将会为你自动关闭文件。
 
 **糟糕**:
 
@@ -618,23 +596,20 @@ files for you.
         for line in f:
             print line
 
-The ``with`` statement is better because it will ensure you always close the
-file, even if an exception is raised inside the ``with`` block.
+``with`` 语句会更好，因为它能确保你总是关闭文件，及时是在 ``with`` 的区块中
+抛出一个异常。
 
-Line Continuations
+行的延续
 ~~~~~~~~~~~~~~~~~~
 
-When a logical line of code is longer than the accepted limit, you need to
-split it over multiple physical lines. The Python interpreter will join
-consecutive lines if the last character of the line is a backslash. This is
-helpful in some cases, but should usually be avoided because of its fragility:
-a white space added to the end of the line, after the backslash, will break the
-code and may have unexpected results.
+当一个代码逻辑行的长度超过可接受的限度时，你需要将之分为多个物理行。如果行的结尾
+是一个反斜杠（\），Python解释器会把这些连续行拼接在一起。这在某些情况下很有帮助，
+但我们总是应该避免使用，因为它的脆弱性：如果在行的结尾，在反斜杠后加了空格，这会
+破坏代码，而且可能有意想不到的结果。
 
-A better solution is to use parentheses around your elements. Left with an
-unclosed parenthesis on an end-of-line the Python interpreter will join the
-next line until the parentheses are closed. The same behavior holds for curly
-and square braces.
+一个更好的解决方案是在元素周围使用括号。左边以一个未闭合的括号开头，Python
+解释器会把行的结尾和下一行连接起来直到遇到闭合的括号。同样的行为适用中括号
+和大括号。
 
 **糟糕**:
 
@@ -660,6 +635,5 @@ and square braces.
     from some.deep.module.inside.a.module import (
         a_nice_function, another_nice_function, yet_another_nice_function)
 
-However, more often than not, having to split a long logical line is a sign that
-you are trying to do too many things at the same time, which may hinder
-readability.
+尽管如此，通常情况下，必须去分割一个长逻辑行意味着你同时想做太多的事，这
+可能影响可读性。
