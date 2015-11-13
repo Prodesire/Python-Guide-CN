@@ -3,7 +3,7 @@
 在Mac OS X上安装Python
 =============================
 
-最新版本的Mac OX X, E1 Captian上 **自带 Python 2.7 **。
+最新版本的Mac OX X, E1 Captian上 **自带 Python 2.7**。
 
 不必安装和配置即可直接使用Python进行开发。
 话虽如此，我还是强烈建议各位，在正式开始Python应用开发前，安装接下来教程中所介绍的工具和库。
@@ -15,8 +15,7 @@ OS X自带的Python版本更适合用于学习而不是开发。因为版本与P
 现在就开始吧！
 --------------
 
-Let's install a real version of Python.
-跟着我一起安装真正的Python吧。
+跟着我一起安装合适的Python吧。
 
 在正式安装之前，应先安装GCC。GCC的获取方式包括：下载安装 `XCode <http://developer.apple.com/xcode/>`_, 或安装小巧一些的 `Command Line Tools <https://developer.apple.com/downloads/>`_ (需要一个Apple账号)
 或者更轻巧的 `OSX-GCC-Installer <https://github.com/kennethreitz/osx-gcc-installer#readme>`_ 。
@@ -29,7 +28,7 @@ Let's install a real version of Python.
 	
 尽管OS X系统附带了大量UNIX工具，熟悉Linux系统的人员使用时会发现缺少一个重要的组件——合适的包管理工具， `Homebrew <http://brew.sh>` 正好填补了这个空缺。
 
- `安装 Homebrew <http://brew.sh/#install>`_ 只需打开 :file:`终端` 或个人常用的终端模拟器并运行
+`安装 Homebrew <http://brew.sh/#install>`_ 只需打开 :file:`终端` 或个人常用的终端模拟器并运行
 
 .. code-block:: console
 
@@ -59,7 +58,7 @@ Setuptools提供 ``easy_install`` 命令，实现通过网络（通常Internet�
 
 
 ``pip`` 是一款方便安装和管理Python 包的工具，
-在 `一些方面 <https://python-packaging-user-guide.readthedocs.org/en/latest/pip_easy_install/#pip-vs-easy-install>`_ ，它更优于 ``easy_install`` 故更推荐它。
+在 `一些方面 <https://python-packaging-user-guide.readthedocs.org/en/latest/pip_easy_install/#pip-vs-easy-install>`_ ，它更优于 ``easy_install`` ，故更推荐它。
 
 
 
