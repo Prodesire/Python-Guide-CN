@@ -1,61 +1,39 @@
 日志（Logging）
 =======
 
-The :mod:`logging` module has been a part of Python's Standard Library since
-version 2.3.  It is succinctly described in :pep:`282`.  The documentation
-is notoriously hard to read, except for the `basic logging tutorial`_.
-
-Logging serves two purposes:
-
-- **Diagnostic logging** records events related to the application's
-  operation. If a user calls in to report an error, for example, the logs
-  can be searched for context.
-- **Audit logging** records events for business analysis. A user's
-  transactions can be extracted and combined with other user details for
-  reports or to optimize a business goal.
+`日志 <https://docs.python.org/2/library/logging.html#module-logging>`_ 模块自2.3版本开始便是Python标准库的一部分。它被简洁的描述在 :pep:`282`。众所周知，除了 `基础日志指南`_ 部分，该文档并不容易阅读。
 
 
-... 或者用 Print?
+日志的两个目的：
+
+- **诊断日志**  纪录与应用程序操作相关的日志。例如，用户遇到的报错信息，可通过搜索诊断日志获得。
+- **审计日志**  为商业分析而记录的日志。从审计日志中，可提取用户的交易信息，并结合其他用户资料构成用户报告或者用来优化商业目标。
+
+... 或者用打印(Print)?
 -------------
 
-The only time that ``print`` is a better option than logging is when
-the goal is to display a help statement for a command line application.
-Other reasons why logging is better than ``print``:
+命令行应用需要显示帮助文档时， ``打印`` 是一个相对于日志更好的选择。而在其他时候，日志总能优于 ``打印`` ，理由如下：
 
-- The `log record`_, which is created with every logging event, contains
-  readily available diagnostic information such as the file name, full path,
-  function, and line number of the logging event.
-- Events logged in included modules are automatically accessible via the root
-  logger to your application's logging stream, unless you filter them out.
-- Logging can be selectively silenced by using the method
-  :meth:`logging.Logger.setLevel` or disabled by setting the attribute
-  :attr:`logging.Logger.disabled` to ``True``.
+- 日志事件产生的 `日志记录`_ ，包含清晰可用的诊断信息，如文件名称、路径、函数名和行数等。
+- 包含日志模块的应用，默认可通过根记录器对应用的日志流进行访问，除非你将日志过滤了。
+- 可通过 `logging.Logger.setLevel <https://docs.python.org/2/library/logging.html#logging.Logger.setLevel>`_ 方法进行有选择的日志记录，或可通过设置 ``logging.Logger.disabled`` 属性为 ``True`` 来屏蔽日志记录。
 
 
-库中的Logging
+库中的日志
 --------------------
 
-Notes for `configuring logging for a library`_ are in the 
-`logging tutorial`_.  Because the *user*, not the library, should
-dictate what happens when a logging event occurs, one admonition bears
-repeating:
+`日志指南`_ 中含 `库日志配置`_ 的说明。由于是 *用户* ，而非库来指明如何响应日志事件，因此这里有一个值得反复说明的忠告：
 
 .. note::
-    It is strongly advised that you do not add any handlers other than
-    NullHandler to your library’s loggers.  
+    强烈建议不要向你的库日志中加入除NullHandler外的其它处理程序。
 
+在库中，声明日志的最佳方式是通过 ``__name__`` 全局变量：`日志 <https://docs.python.org/2/library/logging.html#module-logging>`_ 模块通过点(dot)运算符创建层级排列的日志，因此，用 ``__name__`` 可以避免名字冲突。
 
-Best practice when instantiating loggers in a library is to only create them
-using the ``__name__`` global variable: the :mod:`logging` module creates a
-hierarchy of loggers using dot notation, so using ``__name__`` ensures
-no name collisions.
-
-Here is an example of best practice from the `requests source`_ -- place
-this in your ``__init__.py``
+以下是来自 `资源请求`_ 的一个例子--把它放置在你的 ``__init__.py`` 文件中
 
 .. code-block:: python
 
-    # Set default logging handler to avoid "No handler found" warnings.
+    # 设置默认日志处理方式，避免“未找到处理方法”的警告。
     import logging
     try:  # Python 2.7+
         from logging import NullHandler
@@ -68,67 +46,54 @@ this in your ``__init__.py``
 
 
 
-应用程序中的Logging
+应用程序中的日志
 -------------------------
 
-The `twelve factor app <http://12factor.net>`_, an authoritative reference
-for good practice in application development, contains a section on
-`logging best practice <http://12factor.net/logs>`_. It emphatically
-advocates for treating log events as an event stream, and for
-sending that event stream to standard output to be handled by the
-application environment.
+应用程序开发的权威指南， `应用的12要素 <http://12factor.net>`_ ，也在其中一节描述了 `日志的作用 <http://12factor.net/logs>`_ 。它特别强调将日志视为事件流，并将其发送至由应用环境所处理的标准输出中。
+
+配置日志至少有以下三种方式：
+ - 使用INI格式文件：
+  - **优点**: 使用 :func:`logging.config.listen` 函数监听socket，可在运行过程中更新配置
+  - **缺点**: 通过源码控制日志配置较少（ *例如* 子类化定制的过滤器或记录器）。
+ - 使用字典或JASON格式文件：
+  - **优点**: 除了可在运行时动态更新，在Python 2.6之后，还可通过 :mod:`json` 模块从其它文件中导入配置。
+  - **缺点**: 很难通过源码控制日志配置。
+ - 使用源码：
+  - **优点**: 对配置绝对的控制。
+  - **缺点**: 对配置的更改需要对源码进行修改。
 
 
-There are at least three ways to configure a logger:
-
-- Using an INI-formatted file:
-    - **Pro**: possible to update configuration while running using the
-      function :func:`logging.config.listen` to listen on a socket.
-    - **Con**: less control (*e.g.* custom subclassed filters or loggers)
-      than possible when configuring a logger in code.
-- Using a dictionary or a JSON-formatted file:
-    - **Pro**: in addition to updating while running, it is possible to load
-      from a file using the :mod:`json` module, in the standard library since
-      Python 2.6.
-    - **Con**: less control than when configuring a logger in code.
-- Using code:
-    - **Pro**: complete control over the configuration.
-    - **Con**: modifications require a change to source code.
-
-
-Example Configuration via an INI File
+通过INI文件进行配置的例子
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Let us say the file is named ``logging_config.ini``.
-More details for the file format are in the `logging configuration`_
-section of the `logging tutorial`_.
+我们假设文件名为 ``logging_config.ini`` 。关于文件格式的更多细节，请参见 `日志指南`_ 中的 `日志配置`_ 部分。
 
 .. code-block:: ini
 
     [loggers]
     keys=root
-    
+
     [handlers]
     keys=stream_handler
-    
+
     [formatters]
     keys=formatter
-    
+
     [logger_root]
     level=DEBUG
     handlers=stream_handler
-    
+
     [handler_stream_handler]
     class=StreamHandler
     level=DEBUG
     formatter=formatter
     args=(sys.stderr,)
-    
+
     [formatter_formatter]
     format=%(asctime)s %(name)-12s %(levelname)-8s %(message)s
 
 
-Then use :meth:`logging.config.fileConfig` in the code:
+然后在源码中调用 :meth:`logging.config.fileConfig` 方法：
 
 .. code-block:: python
 
@@ -138,14 +103,13 @@ Then use :meth:`logging.config.fileConfig` in the code:
     fileConfig('logging_config.ini')
     logger = logging.getLogger()
     logger.debug('often makes a very good meal of %s', 'visiting tourists')
-    
 
-Example Configuration via a Dictionary
+
+通过字典进行配置的例子
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-As of Python 2.7, you can use a dictionary with configuration details.
-:pep:`391` contains a list of the mandatory and optional elements in
-the configuration dictionary.
+Python 2.7中，你可以使用字典实现详细配置。:pep:`391` 包含了一系列字典配置的强制和
+非强制的元素。
 
 .. code-block:: python
 
@@ -175,7 +139,7 @@ the configuration dictionary.
     logger.debug('often makes a very good meal of %s', 'visiting tourists')
 
 
-Example Configuration Directly in Code
+通过源码直接配置的例子
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: python
@@ -193,9 +157,9 @@ Example Configuration Directly in Code
     logger.debug('often makes a very good meal of %s', 'visiting tourists')
 
 
-.. _basic logging tutorial: http://docs.python.org/howto/logging.html#logging-basic-tutorial
-.. _logging configuration: https://docs.python.org/howto/logging.html#configuring-logging
-.. _logging tutorial: http://docs.python.org/howto/logging.html
-.. _configuring logging for a library: https://docs.python.org/howto/logging.html#configuring-logging-for-a-library
-.. _log record: https://docs.python.org/library/logging.html#logrecord-attributes
-.. _requests source: https://github.com/kennethreitz/requests
+.. _基础日志指南: http://docs.python.org/howto/logging.html#logging-basic-tutorial
+.. _日志配置: https://docs.python.org/howto/logging.html#configuring-logging
+.. _日志指南: http://docs.python.org/howto/logging.html
+.. _库日志配置: https://docs.python.org/howto/logging.html#configuring-logging-for-a-library
+.. _日志记录: https://docs.python.org/library/logging.html#logrecord-attributes
+.. _资源请求: https://github.com/kennethreitz/requests
