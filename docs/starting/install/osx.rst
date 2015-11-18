@@ -58,7 +58,7 @@ Setuptools & Pip
 
 Homebrew会自动安装好Setuptools和 ``pip`` 。
 Setuptools提供 ``easy_install`` 命令，实现通过网络（通常Internet）下载和安装第三方Python包。
-还可以简单地使用该命令将自己开发的Python应用加入到这种包管理方式中。
+还可以轻松地将这种网络安装的方式加入到自己开发的Python应用中。
 
 
 ``pip`` 是一款方便安装和管理Python 包的工具，
