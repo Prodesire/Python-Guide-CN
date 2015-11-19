@@ -34,7 +34,7 @@ Setuptools + Pip
 ----------------
 
 Setuptools是一款非常重要的Python第三方工具，它是标准包自带的distutils工具的增强版。一旦安装Setuptools后，
-就可以通过一行指令下载和安装任何可获取到的Python工具，还可以轻松地将这种网络安装的方式加入到自己开发
+就可以通过一行指令下载和安装任何可获取到的Python应用包，还可以轻松地将这种网络安装的方式加入到自己开发
 的Python应用中。
 
 通过运行Python脚本 `ez_setup.py <https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py>`_ 获取最新
