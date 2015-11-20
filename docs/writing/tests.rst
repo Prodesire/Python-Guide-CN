@@ -1,73 +1,33 @@
 测试你的代码
 =================
 
-Testing your code is very important.
+测试你的代码非常重要。
 
-Getting used to writing the testing code and the running code in parallel is
-now considered a good habit. Used wisely, this method helps you define more
-precisely your code's intent and have a more decoupled architecture.
+常常将测试代码和运行代码一起写是一种非常好的习惯。聪明地使用这种方法将会帮助你更加精确地定义代码的含义，并且代码的耦合性更低。
 
-Some general rules of testing:
+测试的通用规则：
 
-- A testing unit should focus on one tiny bit of functionality and prove it
-  correct.
+- 测试单元应该集中于小部分的功能，并且证明它是对的。
 
-- Each test unit must be fully independent. Each of them must be able to run
-  alone, and also within the test suite, regardless of the order they are
-  called. The implication of this rule is that each test must be loaded with
-  a fresh dataset and may have to do some cleanup afterwards. This is
-  usually handled by :meth:`setUp()` and :meth:`tearDown()` methods.
+- 每个测试单元应该完全独立。每个都能够单独运行，除了调用的命令，都需在测试套件中。要想实现这个规则，测试单元应该加载最新的数据集，之后再做一些清理。这通常用方法 :meth:`setUp()` 和 :meth:`tearDown()` 处理。 
 
-- Try hard to make tests that run fast. If one single test needs more than a
-  few milliseconds to run, development will be slowed down or the tests will
-  not be run as often as is desirable. In some cases, tests can't be fast
-  because they need a complex data structure to work on, and this data structure
-  must be loaded every time the test runs. Keep these heavier tests in a
-  separate test suite that is run by some scheduled task, and run all other
-  tests as often as needed.
+- 尽量使测试单元快速运行。如果一个单独的测试单元需要较长的时间去运行，开发进度将会延迟，测试单元将不能如期常态性运行。有时候，因为测试单元需要复杂的数据结构，并且当它运行时每次都要加载，所以其运行时间较长。把运行吃力的测试单元放在单独的测试组件中，并且按照需要运行其它测试单元。
 
-- Learn your tools and learn how to run a single test or a test case. Then,
-  when developing a function inside a module, run this function's tests very
-  often, ideally automatically when you save the code.
+- 学习使用工具，学习如何运行一个单独的测试用例。然后，当在一个模块中开发了一个功能时，经常运行这个功能的测试用例，理想情况下，一切都将自动。
 
-- Always run the full test suite before a coding session, and run it again
-  after. This will give you more confidence that you did not break anything
-  in the rest of the code.
+- 在编码会话前后，要常常运行完整的测试组件。只有这样，你才会坚信剩余的代码不会中断。
 
-- It is a good idea to implement a hook that runs all tests before pushing
-  code to a shared repository.
+- 实现钩子（hook）是一个非常好的主意。因为一旦把代码放入分享仓库中，这个钩子可以运行所有的测试单元。
 
-- If you are in the middle of a development session and have to interrupt
-  your work, it is a good idea to write a broken unit test about what you
-  want to develop next. When coming back to work, you will have a pointer
-  to where you were and get back on track faster.
+- 如果你在开发期间不得不打断自己的工作，写一个被打断的单元测试，它关于下一步要开发的东西。当回到工作时，你将更快地回到原先被打断的地方，并且步入正轨。
 
-- The first step when you are debugging your code is to write a new test
-  pinpointing the bug. While it is not always possible to do, those bug
-  catching tests are among the most valuable pieces of code in your project.
+- 当你调试代码的时候，首先需要写一个精确定位bug的测试单元。尽管这样做很难，但是捕捉bug的单元测试在项目中很重要。
 
-- Use long and descriptive names for testing functions. The style guide here
-  is slightly different than that of running code, where short names are
-  often preferred. The reason is testing functions are never called explicitly.
-  ``square()`` or even ``sqr()`` is ok in running code, but in testing code you
-  would have names such as ``test_square_of_number_2()``,
-  ``test_square_negative_number()``. These function names are displayed when
-  a test fails, and should be as descriptive as possible.
+- 测试函数使用长且描述性的名字。这边的样式指导与运行代码有点不一样，运行代码更倾向于使用短的名字，而测试函数不会直接被调用。在运行代码中，square()或者甚至sqr()这样的命名都是可以的，但是在测试代码中，你应该这样取名test_square_of_number_2()，test_square_negative_number()。当测试单元失败时，函数名应该显示，而且尽可能具有描述性。
 
-- When something goes wrong or has to be changed, and if your code has a
-  good set of tests, you or other maintainers will rely largely on the
-  testing suite to fix the problem or modify a given behavior. Therefore
-  the testing code will be read as much as or even more than the running
-  code. A unit test whose purpose is unclear is not very helpful in this
-  case.
+- 当发生了一些问题，或者不得不改变时，如果代码中有一套不错的测试单元，维护将很大一部分依靠测试组件解决问题，或者修改确定的行为。因此测试代码应该尽可能多读，甚至多于运行代码。目的不明确的测试单元在这种情况下没有多少用处。
 
-- Another use of the testing code is as an introduction to new developers. When
-  someone will have to work on the code base, running and reading the related
-  testing code is often the best they can do. They will or should discover the
-  hot spots, where most difficulties arise, and the corner cases. If they have
-  to add some functionality, the first step should be to add a test and, by this
-  means, ensure the new functionality is not already a working path that has not
-  been plugged into the interface.
+- 测试代码的另外一个用处是作为新开发人员的入门。当工作基于代码，运行并且阅读相关的测试代码是一个非常好的做法。开发人员将会或者应该发现热点，而这将引起困难和其它情况，如果他们一定要加一些功能，第一步应该是要增加一个测试单元，通过这种方法，确保新功能不再是一个没有被嵌入到接口中的工作路径。
 
 基本
 ::::::::::
@@ -76,11 +36,9 @@ Some general rules of testing:
 单元测试
 --------
 
-:mod:`unittest` is the batteries-included test module in the Python standard
-library. Its API will be familiar to anyone who has used any of the
-JUnit/nUnit/CppUnit series of tools.
+:mod:`unittest` 包括Python标准库中的测试模型。任何一个使用过Junit，nUnit,或CppUnit工具的人对它的API都会比较熟悉。
 
-Creating test cases is accomplished by subclassing :class:`unittest.TestCase`.
+创建测试用例通过继承 :class:`unittest.TestCase` 来实现.
 
 .. code-block:: python
 
@@ -93,25 +51,19 @@ Creating test cases is accomplished by subclassing :class:`unittest.TestCase`.
         def test(self):
             self.assertEqual(fun(3), 4)
 
-As of Python 2.7 unittest also includes its own test discovery mechanisms.
+因为Python 2.7单元测试也包括自己的发现机制。
 
-    `unittest in the standard library documentation <http://docs.python.org/library/unittest.html>`_
+    `在标准库文档中单元测试 <http://docs.python.org/library/unittest.html>`_
 
 
 文档测试
 -------
 
-The :mod:`doctest` module searches for pieces of text that look like interactive
-Python sessions in docstrings, and then executes those sessions to verify that
-they work exactly as shown.
+ :mod:`doctest` 模块查找零碎文本，就像在Python中docstrings内的交互式会话，执行那些会话以证实工作正常。
 
-Doctests have a different use case than proper unit tests: they are usually
-less detailed and don't catch special cases or obscure regression bugs. They
-are useful as an expressive documentation of the main use cases of a module and
-its components. However, doctests should run automatically each time the full
-test suite runs.
+doctest模块的用例相比之前的单元测试有所不同：它们通常不是很详细，并且不会用特别的用例或者处理模糊的回归bug。作为模块和其部件主要用例的表述性文档，doctest模块非常有用。
 
-A simple doctest in a function:
+在函数中一个简单的doctest:
 
 .. code-block:: python
 
@@ -130,9 +82,7 @@ A simple doctest in a function:
         import doctest
         doctest.testmod()
 
-When running this module from the command line as in ``python module.py``, the
-doctests will run and complain if anything is not behaving as described in the
-docstrings.
+从命令行中运行这个模块时，doctest模块将会运行并且细述是否一切如docstrings中描述一样工作良好。
 
 工具
 :::::
@@ -141,15 +91,13 @@ docstrings.
 py.test
 -------
 
-py.test is a no-boilerplate alternative to Python's standard unittest module.
+相比于Python标准的单元测试模块,py.test是一个没有模板的选择。
 
 .. code-block:: console
 
     $ pip install pytest
 
-Despite being a fully-featured and extensible test tool, it boasts a simple
-syntax. Creating a test suite is as easy as writing a module with a couple of
-functions:
+尽管这个测试工具功能完备，并且可扩展，但是它语法很简单。创建一个测试组件和写一个带有诸多函数的模块一样容易：
 
 .. code-block:: python
 
@@ -160,7 +108,7 @@ functions:
     def test_answer():
         assert func(3) == 5
 
-and then running the `py.test` command
+运行命令py.test
 
 .. code-block:: console
 
@@ -182,8 +130,7 @@ and then running the `py.test` command
     test_sample.py:5: AssertionError
     ========================= 1 failed in 0.02 seconds =========================
 
-is far less work than would be required for the equivalent functionality with
-the unittest module!
+要比单元测试模型中相同功能所要求的工作量少得多。
 
     `py.test <http://pytest.org/latest/>`_
 
@@ -191,16 +138,14 @@ the unittest module!
 Nose
 ----
 
-nose extends unittest to make testing easier.
+nose继承测试单元，能够使测试更加容易。
 
 
 .. code-block:: console
 
     $ pip install nose
 
-nose provides automatic test discovery to save you the hassle of manually
-creating test suites. It also provides numerous plugins for features such as
-xUnit-compatible test output, coverage reporting, and test selection.
+nose自动化测试发现并节省人工创建测试组件的麻烦。它也提供各种插件，例如xUnit兼容性测试输出，覆盖度报告和测试选择。
 
     `nose <http://readthedocs.org/docs/nose/en/latest/>`_
 
@@ -208,32 +153,28 @@ xUnit-compatible test output, coverage reporting, and test selection.
 tox
 ---
 
-tox is a tool for automating test environment management and testing against
-multiple interpreter configurations
+tox是自动化测试管理和针对多种解释器配置测试工具。
 
 .. code-block:: console
 
     $ pip install tox
 
-tox allows you to configure complicated multi-parameter test matrices via a
-simple ini-style configuration file.
+tox允许通过简单的初始化样式配置文件，配置复杂的多参数测试矩阵。
 
     `tox <http://testrun.org/tox/latest/>`_
 
 Unittest2
 ---------
 
-unittest2 is a backport of Python 2.7's unittest module which has an improved
-API and better assertions over the one available in previous versions of Python.
+Unittest2是Python2.7中unittest模型的补丁，它的API有所改善，并且对Python之前版本中已有的内容有了更好的说明。
 
-If you're using Python 2.6 or below, you can install it with pip
+如果使用Python2.6版本或者以下，需要使用pip安装unittest2。
 
 .. code-block:: console
 
     $ pip install unittest2
 
-You may want to import the module under the name unittest to make porting code
-to newer versions of the module easier in the future
+将来你可能想要以unittest之名导入模块，目的是更容易地把代码移植到新的版本中。
 
 .. code-block:: python
 
@@ -242,9 +183,7 @@ to newer versions of the module easier in the future
     class MyTest(unittest.TestCase):
         ...
 
-This way if you ever switch to a newer Python version and no longer need the
-unittest2 module, you can simply change the import in your test module without
-the need to change any other code.
+如果切换到新的Python版本，并且不再需要unittest2模块，你只需要在测试模块中改变import内容，而不必改变其它代码。
 
     `unittest2 <http://pypi.python.org/pypi/unittest2>`_
 
@@ -252,20 +191,19 @@ the need to change any other code.
 mock
 ----
 
-:mod:`unittest.mock` is a library for testing in Python. As of Python 3.3, it is
-available in the
-`standard library <https://docs.python.org/dev/library/unittest.mock>`_.
+:mod:`unittest.mock` 是Python中用于测试的一个库。在Python3.3版本中，标准库中就有。
+`标准库 <https://docs.python.org/dev/library/unittest.mock>`_.
 
-For older versions of Python:
+对于Python相对早的版本，如下操作：
 
 .. code-block:: console
 
     $ pip install mock
 
-It allows you to replace parts of your system under test with mock objects and
-make assertions about how they have been used.
+在测试环境下，使用mock对象能够替换部分系统，并且对它们如何被使用做了声明。
+例如，你可以对一个方法打猴子补丁：
 
-For example, you can monkey-patch a method:
+例如，你可以对一个方法打猴子补丁：
 
 .. code-block:: python
 
@@ -276,9 +214,7 @@ For example, you can monkey-patch a method:
 
     thing.method.assert_called_with(3, 4, 5, key='value')
 
-To mock classes or objects in a module under test, use the ``patch`` decorator.
-In the example below, an external search system is replaced with a mock that
-always returns the same result (but only for the duration of the test).
+在测试环境下，对于模型中的mock类或对象，使用补丁修饰器。在下面这个例子中，一直返回相同结果的外部查询系统使用mock替换（但仅用在测试期间）。
 
 .. code-block:: python
 
@@ -295,7 +231,7 @@ always returns the same result (but only for the duration of the test).
         # get_search_results runs a search and iterates over the result
         self.assertEqual(len(myapp.get_search_results(q="fish")), 3)
 
-Mock has many other ways you can configure it and control its behavior.
+mock有许多其它方法，你可以配置它，并且控制它的动作。
 
     `mock <http://www.voidspace.org.uk/python/mock/>`_
 
