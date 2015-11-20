@@ -1,4 +1,3 @@
-Test
 Python最佳实践指南中文版
 ============================
 项目翻译自 `Hitchhiker's Guide to Python <https://github.com/kennethreitz/python-guide>`_。
