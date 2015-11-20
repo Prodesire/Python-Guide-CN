@@ -1,26 +1,21 @@
 常见陷阱
 ==============
 
-For the most part, Python aims to be a clean and consistent language that
-avoids surprises. However, there are a few cases that can be confusing to
-newcomers.
+大多数情况下，Python的目标是成为一门简洁和一致的语言，同时避免意外情况。
+然而，有些情况可能会使新人困惑。
 
-Some of these cases are intentional but can be potentially surprising. Some
-could arguably be considered language warts. In general, what follows
-is a collection of potentially tricky behavior that might seem strange at first
-glance, but is generally sensible once you're aware of the underlying cause for
-the surprise.
-
+其中一些情况是有意为之的，但可能有潜在的风险。而另一些可以说是语言的缺陷。
+总的来说，下面是一些乍看起来很取巧的行为，不过只要你注意了强调的事项，
+这些行为通常是可取的。
 
 .. _default_args:
 
 可变默认参数
 -------------------------
 
-Seemingly the *most* common surprise new Python programmers encounter is
-Python's treatment of mutable default arguments in function definitions.
+看起来，*最* 让Python程序员感到惊奇的是Python对函数定义中可变默认参数的处理。
 
-What You Wrote
+你所写的
 ~~~~~~~~~~~~~~
 
 .. code-block:: python
@@ -29,7 +24,7 @@ What You Wrote
         to.append(element)
         return to
 
-What You Might Have Expected to Happen
+你所期望的
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: python
@@ -40,13 +35,12 @@ What You Might Have Expected to Happen
     my_other_list = append_to(42)
     print my_other_list
 
-A new list is created each time the function is called if a second argument
-isn't provided, so that the output is::
+每次调用函数时，如果不提供第二个参数，就会创建一个新的列表，所以结果应是这样的：
 
     [12]
     [42]
 
-What Does Happen
+而事实是
 ~~~~~~~~~~~~~~~~
 
 .. testoutput::
@@ -54,19 +48,17 @@ What Does Happen
     [12]
     [12, 42]
 
-A new list is created *once* when the function is defined, and the same list is
-used in each successive call.
+当函数被定义时，一个新的列表就被创建 *一次* ，而且同一个列表在每次成功的调用中都被使用。
 
-Python's default arguments are evaluated *once* when the function is defined,
-not each time the function is called (like it is in say, Ruby). This means that
-if you use a mutable default argument and mutate it, you *will* and have
-mutated that object for all future calls to the function as well.
+当函数被定义时，Python的默认参数就被创建 *一次*，而不是每次调用函数的时候创建。
+这意味着，如果你使用一个可变默认参数并改变了它，你 *将会* 在未来所有对此函数的
+调用中改变这个对象。
 
-What You Should Do Instead
+你应该做的
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Create a new object each time the function is called, by using a default arg to
-signal that no argument was provided (:py:data:`None` is often a good choice).
+在每次函数调用中，通过使用指示没有提供参数的默认参数（:py:data:`None` 通常是
+个好选择），来创建一个新的对象。
 
 .. code-block:: python
 
@@ -77,21 +69,20 @@ signal that no argument was provided (:py:data:`None` is often a good choice).
         return to
 
 
-When the Gotcha Isn't a Gotcha
+什么情况下陷阱不是陷阱
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Sometimes you can specifically "exploit" (read: use as intended) this behavior
-to maintain state between calls of a function. This is often done when writing
-a caching function.
+有时你可以专门“利用”（或者说特地使用）这种行为来维护函数调用间的状态。这通常用于
+编写缓存函数。
 
 
 迟绑定闭包
 ---------------------
 
-Another common source of confusion is the way Python binds its variables in
-closures (or in the surrounding global scope).
+另一个常见的困惑是Python在闭包(或在周围全局作用域（surrounding global scope）)中
+绑定变量的方式。
 
-What You Wrote
+你所写的
 ~~~~~~~~~~~~~~
 
 .. testcode::
@@ -99,7 +90,7 @@ What You Wrote
     def create_multipliers():
         return [lambda x : i * x for i in range(5)]
 
-What You Might Have Expected to Happen
+你所期望的
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. testcode::
@@ -107,8 +98,7 @@ What You Might Have Expected to Happen
     for multiplier in create_multipliers():
         print multiplier(2)
 
-A list containing five functions that each have their own closed-over ``i``
-variable that multiplies their argument, producing::
+一个包含五个函数的列表，每个函数有它们自己的封闭变量 ``i`` 乘以它们的参数，得到::
 
     0
     2
@@ -116,7 +106,7 @@ variable that multiplies their argument, producing::
     6
     8
 
-What Does Happen
+而事实是
 ~~~~~~~~~~~~~~~~
 
 .. testoutput::
@@ -127,21 +117,17 @@ What Does Happen
     8
     8
 
-Five functions are created; instead all of them just multiply ``x`` by 4.
+五个函数被创建了，它们全都用4乘以 ``x`` 。
 
-Python's closures are *late binding*.
-This means that the values of variables used in closures are looked
-up at the time the inner function is called.
+Python的闭包是 *迟绑定* 。
+这意味着闭包中用到的变量的值，是在内部函数被调用时查询得到的。
 
-Here, whenever *any* of the returned functions are called, the value of ``i``
-is looked up in the surrounding scope at call time. By then, the loop has
-completed and ``i`` is left with its final value of 4.
+这里，不论 *任何* 返回的函数是如何被调用的， ``i`` 的值是调用时在周围作用域中查询到的。
+接着，循环完成， ``i`` 的值最终变成了4。
 
-What's particularly nasty about this gotcha is the seemingly prevalent
-misinformation that this has something to do with :ref:`lambdas <python:lambda>`
-in Python. Functions created with a ``lambda`` expression are in no way special,
-and in fact the same exact behavior is exhibited by just using an ordinary
-``def``:
+关于这个陷阱有一个普遍严重的误解，它被认为是和Python的 
+:ref:`lambdas <python:lambda>` 有关。 由 ``lambda`` 表达式创建的函数并没什么特别，
+而且事实上，同样的问题也出现在使用普通的 ``定义`` 上：
 
 .. code-block:: python
 
@@ -155,20 +141,18 @@ and in fact the same exact behavior is exhibited by just using an ordinary
 
         return multipliers
 
-What You Should Do Instead
+你应该做的
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The most general solution is arguably a bit of a hack. Due to Python's
-aforementioned behavior concerning evaluating default arguments to functions
-(see :ref:`default_args`), you can create a closure that binds immediately to
-its arguments by using a default arg like so:
+最一般的解决方案可以说是有点取巧（hack）。由于Python拥有在前文提到的为函数默认参数
+赋值的行为（参见 :ref:`default_args` ）,你可以创建一个立即绑定参数的闭包,像下面这样：
 
 .. code-block:: python
 
     def create_multipliers():
         return [lambda x, i=i : i * x for i in range(5)]
 
-Alternatively, you can use the functools.partial function:
+或者，你可以使用 functools.partial 函数：
 
 .. code-block:: python
 
@@ -178,9 +162,8 @@ Alternatively, you can use the functools.partial function:
     def create_multipliers():
         return [partial(mul, i) for i in range(5)]
 
-When the Gotcha Isn't a Gotcha
+什么情况下陷阱不是陷阱
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Sometimes you want your closures to behave this way. Late binding is good in
-lots of situations. Looping to create unique functions is unfortunately a case
-where they can cause hiccups.
+有时你就想要闭包有如此表现，迟绑定在很多情况下是不错的。不幸的是，循环创建
+独特的函数是一种会使它们出差错的情况。
