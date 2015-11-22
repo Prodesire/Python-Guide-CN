@@ -4,66 +4,56 @@ HTML 抓取
 网页抓取
 ------------
 
-Web sites are written using HTML, which means that each web page is a
-structured document. Sometimes it would be great to obtain some data from
-them and preserve the structure while we're at it. Web sites don't always
-provide their data in comfortable formats such as ``csv`` or ``json``.
+Web站点使用HTML描述，这意味着每个web页面是一个结构化的文档。有时从中
+获取数据同时保持它的结构是有用的。web站点不是总是提供它们的数据以
+容易处理的格式，如``csv`` 或者 ``json``.
 
-This is where web scraping comes in. Web scraping is the practice of using a
-computer program to sift through a web page and gather the data that you need
-in a format most useful to you while at the same time preserving the structure
-of the data.
+这正是web抓取的出场时机。web抓取是使用计算机程序将web页面数据进行收集
+并整理成所需格式并同时保持其结构的过程。
 
 lxml和Requests
 -----------------
 
-`lxml <http://lxml.de/>`_ is a pretty extensive library written for parsing
-XML and HTML documents very quickly, even handling messed up tags in the
-process. We will also be using the
-`Requests <http://docs.python-requests.org/en/latest/>`_ module instead of the
-already built-in urllib2 module due to improvements in speed and readability.
-You can easily install both using ``pip install lxml`` and
-``pip install requests``.
+`lxml <http://lxml.de/>`_ 是一个漂亮的扩展库，用来快速解析XML以及HTML文档
+即使所处理的标签非常混乱。我们也将使用 `Requests <http://docs.python-requests.org/en/latest/>`_ 
+模块取代内建的urllib2模块因为其速度更快而且可读性更好。你可以安装着两个通过使用 ``pip install lxml`` 
+与 ``pip install requests`` 命令。
 
-Let's start with the imports:
+让我们以下面的导入开始：
 
 .. code-block:: python
 
     from lxml import html
     import requests
 
-Next we will use ``requests.get`` to retrieve the web page with our data,
-parse it using the ``html`` module and save the results in ``tree``:
+下一步我们将使用 ``requests.get`` 来从web页面中收集我们的数据，解析它
+通过使用 ``html`` 模块保存结果到 ``tree`` 中。
 
 .. code-block:: python
 
     page = requests.get('http://econpy.pythonanywhere.com/ex/001.html')
     tree = html.fromstring(page.text)
 
-``tree`` now contains the whole HTML file in a nice tree structure which
-we can go over two different ways: XPath and CSSSelect. In this example, we
-will focus on the former.
+``tree`` 现在包含了整个HTML文件到一个优雅的树结构中，我们可以使用两种
+方法访问：XPath以及CSS选择器。在这个例子中，我们将选择前者。
 
-XPath is a way of locating information in structured documents such as
-HTML or XML documents. A good introduction to XPath is on
-`W3Schools <http://www.w3schools.com/xpath/default.asp>`_ .
+XPath是一种在结构化文档（如HTML或XML）中定位信息的方法。一个不错的关于
+XPath的介绍参见 `W3Schools <http://www.w3schools.com/xpath/default.asp>`_ .
 
-There are also various tools for obtaining the XPath of elements such as
-FireBug for Firefox or the Chrome Inspector. If you're using Chrome, you
-can right click an element, choose 'Inspect element', highlight the code,
-right click again and choose 'Copy XPath'.
+有很多工具可以获取一个元素的XPath，如Firefox的FireBug或者chrome的
+Inspector. 如果你正在使用Chrome，你可以右键元素，选择 'Inspect element'，
+高亮这段代码，再次右击并且选择 'Copy XPath'.
 
-After a quick analysis, we see that in our page the data is contained in
-two elements - one is a div with title 'buyer-name' and the other is a
-span with class 'item-price':
+在进行一次快速分析后，我们看到所需数据在页面的两个元素里，一个是
+一个div，其具有title 'buyer-name' 另一个是一个span 其具有class 'item-price':
 
 .. code-block:: html
 
     <div title="buyer-name">Carson Busses</div>
     <span class="item-price">$29.95</span>
 
-Knowing this we can create the correct XPath query and use the lxml
-``xpath`` function like this:
+知道这个后我们可以创建完美的XPath查询并且使用lxml ``xpath`` 函数
+像这样：
 
 .. code-block:: python
 
@@ -72,7 +62,7 @@ Knowing this we can create the correct XPath query and use the lxml
     #This will create a list of prices
     prices = tree.xpath('//span[@class="item-price"]/text()')
 
-Let's see what we got exactly:
+让我们看看我们得到了什么：
 
 .. code-block:: python
 
@@ -92,11 +82,10 @@ Let's see what we got exactly:
     '$15.98', '$16.27', '$7.50', '$50.85', '$14.26', '$5.68',
     '$15.00', '$114.07', '$10.09']
 
-Congratulations! We have successfully scraped all the data we wanted from
-a web page using lxml and Requests. We have it stored in memory as two
-lists. Now we can do all sorts of cool stuff with it: we can analyze it
-using Python or we can save it to a file and share it with the world.
+恭喜！我们已经成功抓取了所有我们想要的数据从一个web页面中通过使用
+lxml与Requests.我们将它们以列表的形式存在内存中。现在我们可以对它做
+所有酷酷的事情了：我们可以分析它通过Python或者我们可以保存它为一个
+文件并在分享出去。
 
-Some more cool ideas to think about are modifying this script to iterate
-through the rest of the pages of this example dataset, or rewriting this
-application to use threads for improved speed.
+可以考虑一些更酷的事情，如修改这个脚本来获取这个例子数据集中其余
+页面的数据，或者通过多线程化提升这个应用的速度。
