@@ -18,291 +18,208 @@
 结构是一把钥匙
 ----------------
 
-Thanks to the way imports and modules are handled in Python, it is
-relatively easy to structure a Python project. Easy, here, means
-that you do not have many constraints and that the module
-importing model is easy to grasp. Therefore, you are left with the
-pure architectural task of crafting the different parts of your
-project and their interactions.
+得益于Python提供的导入与管理模块的方式，结构化Python项目变得相对简单。
+这里说的简单，指的是结构化过程没有太多约束限制而且模块导入功能容易掌握。
+因而你只剩下架构性的工作，包括设计、实现项目各个模块，并整理清他们之间
+的交互关系。
 
-Easy structuring of a project means it is also easy
-to do it poorly. Some signs of a poorly structured project
-include:
+容易结构化的项目同样意味着它的结构化容易做得糟糕。糟糕结构的特征包括：
 
-- Multiple and messy circular dependencies: if your classes
-  Table and Chair in :file:`furn.py` need to import Carpenter from
-  :file:`workers.py` to answer a question such as ``table.isdoneby()``,
-  and if conversely the class Carpenter needs to import Table and Chair,
-  to answer the question ``carpenter.whatdo()``, then you
-  have a circular dependency. In this case you will have to resort to
-  fragile hacks such as using import statements inside
-  methods or functions.
+- 多重且混乱的循环依赖关系：假如在 :file:`furn.py` 内的Table与Chair类需要
+  导入 :file:`workers.py` 中的Carpenter类以回答类似 ``table.isdoneby()``
+  的问题，并且Carpenter类需要引入Table和Chair类以回答 ``carpenter.whatdo()``
+  这类问题，这就是一种循环依赖的情况。在这种情况下,你得借助一些不怎么靠谱的
+  小技巧，比如在方法或函数内部使用import语句。
+  
+- 隐含耦合：Table类实现代码中每一个改变都会打破20个不相关的测试用例，由于它
+  影响了Carpenter类的代码，这要求谨慎地操作以适应改变。这样的情况意味着
+  Carpenter类代码中包含了太多关于Table类的假设关联（或相反）。
 
-- Hidden coupling: each and every change in Table's implementation
-  breaks 20 tests in unrelated test cases because it breaks Carpenter's code,
-  which requires very careful surgery to adapt the change. This means
-  you have too many assumptions about Table in Carpenter's code or the
-  reverse.
+- 大量使用全局变量或上下文：如果Table和Carpenter类使用不仅能被修改而且能被
+  不同引用修改的全局变量，而不是明确地传递 ``(height, width, type, wood)``
+  变量。你就需要彻底检查全局变量的所有入口，来理解到为什么一个长方形桌子变
+  成了正方形，最后发现远程的模板代码修改了这份上下文，弄错了桌子尺寸规格的
+  定义。
+  
+- 面条式代码 (Spaghetti code) ：多页嵌套的if语句与for循环，包含大量复制-粘贴
+  的过程代码，且没有合适的分割——这样的代码被称为面条式代码。Python中有意思
+  的缩进排版(最具争议的特性之一)使面条式代码很难维持。所以好消息是你也许不
+  会经常看到这种面条式代码。
 
-- Heavy usage of global state or context: instead of explicitly
-  passing ``(height, width, type, wood)`` to each other, Table
-  and Carpenter rely on global variables that can be modified
-  and are modified on the fly by different agents. You need to
-  scrutinize all access to these global variables to understand why
-  a rectangular table became a square, and discover that remote
-  template code is also modifying this context, messing with
-  table dimensions.
-
-- Spaghetti code: multiple pages of nested if clauses and for loops
-  with a lot of copy-pasted procedural code and no
-  proper segmentation are known as spaghetti code. Python's
-  meaningful indentation (one of its most controversial features) make
-  it very hard to maintain this kind of code. So the good news is that
-  you might not see too much of it.
-
-- Ravioli code is more likely in Python: it consists of hundreds of
-  similar little pieces of logic, often classes or objects, without
-  proper structure. If you never can remember if you have to use
-  FurnitureTable, AssetTable or Table, or even TableNew for your
-  task at hand, you might be swimming in ravioli code.
-
+- Python中更可能出现馄饨代码：这类代码包含上百段相似的逻辑碎片，通常是缺乏
+  合适结构的类或对象，如果你始终弄不清手头上的任务应该使用FurnitureTable，
+  AssetTable还是Table，甚至TableNew，也许你已经陷入了馄饨代码中。
 
 模块
 -------
 
-Python modules are one of the main abstraction layers available and probably the
-most natural one. Abstraction layers allow separating code into parts holding
-related data and functionality.
+Python模块是最主要的抽象层之一，并且很可能是最自然的一个。抽象层允许将代码分为
+不同部分，每个部分包含相关的数据与功能。
 
-For example, a layer of a project can handle interfacing with user actions,
-while another would handle low-level manipulation of data. The most natural way
-to separate these two layers is to regroup all interfacing functionality
-in one file, and all low-level operations in another file. In this case,
-the interface file needs to import the low-level file. This is done with the
-``import`` and ``from ... import`` statements.
+例如在项目中，一层控制用户操作相关接口，另一层处理底层数据操作。最自然分开这两
+层的方式是，在一份文件里重组所有功能接口，并将所有底层操作封装到另一个文件中。
+这种情况下，接口文件需要导入封装底层操作的文件，可通过 ``import`` 和 
+``from ... import`` 语句完成。一旦你使用 `import` 语句，就可以使用这个模块。
+既可以是内置的模块包括 `os` 和 `sys`，也可以是已经安装的第三方的模块，或者项目
+内部的模块。
 
-As soon as you use `import` statements you use modules. These can be either
-built-in modules such as `os` and `sys`, third-party modules you have installed
-in your environment, or your project's internal modules.
+为遵守风格指南中的规定，模块名称要短、使用小写，并避免使用特殊符号，比如点(.)
+和问号(?)。如 :file:`my.spam.py` 这样的名字是必须不能用的！该方式命名将妨碍
+Python的模块查找功能。就 `my.spam.py` 来说，Python 认为需要在 :file:`my` 文件夹
+中找到 :file:`spam.py` 文件，实际并不是这样。这个例子 
+`example <http://docs.python.org/tutorial/modules.html#packages>`_ 展示了点表示
+法应该如何在Python文件中使用。如果愿意你可以将模块命名为 :file:`my_spam.py`，
+不过并不推荐在模块名中使用下划线。
 
-To keep in line with the style guide, keep module names short, lowercase, and
-be sure to avoid using special symbols like the dot (.) or question mark (?).
-So a file name like :file:`my.spam.py` is one you should avoid! Naming this way
-will interfere with the way Python looks for modules.
+除了以上的命名限制外，Python文件成为模块没有其他特殊的要求，但为了合理地使用这
+个观念并避免问题，你需要理解import的原理机制。具体来说，``import modu`` 语句将
+寻找合适的文件，即调用目录下的 :file:`modu.py` 文件（如果该文件存在）。如果没有
+找到这份文件，Python解释器递归地在 "PYTHONPATH" 环境变量中查找该文件，如果仍没
+有找到，将抛出ImportError异常。
 
-In the case of `my.spam.py` Python expects to find a :file:`spam.py` file in a
-folder named :file:`my` which is not the case. There is an
-`example <http://docs.python.org/tutorial/modules.html#packages>`_ of how the
-dot notation should be used in the Python docs.
+一旦找到 :file:`modu.py`，Python解释器将在隔离的作用域内执行这个模块。所有顶层
+语句都会被执行，包括其他的引用。方法与类的定义将会存储到模块的字典中。然后，这个
+模块的变量、方法和类通过命名空间暴露给调用方，这是Python中特别有用和强大的核心概念。
 
-If you'd like you could name your module :file:`my_spam.py`, but even our
-friend the underscore should not be seen often in module names.
+在很多其他语言中，``include file`` 指令被预处理器用来获取文件里的所有代码并‘复制’
+到调用方的代码中。Python则不一样：include代码被独立放在模块命名空间里，这意味着你
+一般不需要担心include的代码可能造成不好的影响，例如重载同名方法。
 
-Aside from some naming restrictions, nothing special is required for a Python
-file to be a module, but you need to understand the import mechanism in order
-to use this concept properly and avoid some issues.
+也可以使用import语句的特殊形式 ``from modu import *`` 模拟更标准的行为。但这通常
+被认为是不好的做法。**使用** ``import *`` **的代码较难阅读而且依赖独立性不足**。
+使用 ``from modu import func`` 能精确定位你想导入的方法并将其放到全局命名空间中。
+比 ``import *`` 要好些，因为它明确地指明往全局命名空间中导入了什么方法，它和
+``import modu`` 相比唯一的优点是可以少打点儿字。
 
-Concretely, the ``import modu`` statement will look for the proper file, which
-is :file:`modu.py` in the same directory as the caller if it exists.  If it is
-not found, the Python interpreter will search for :file:`modu.py` in the "path"
-recursively and raise an ImportError exception if it is not found.
-
-Once :file:`modu.py` is found, the Python interpreter will execute the module in
-an isolated scope. Any top-level statement in :file:`modu.py` will be executed,
-including other imports if any. Function and class definitions are stored in
-the module's dictionary.
-
-Then, the module's variables, functions, and classes will be available to the
-caller through the module's namespace, a central concept in programming that is
-particularly helpful and powerful in Python.
-
-In many languages, an ``include file`` directive is used by the preprocessor to
-take all code found in the file and 'copy' it into the caller's code. It is
-different in Python: the included code is isolated in a module namespace, which
-means that you generally don't have to worry that the included code could have
-unwanted effects, e.g. override an existing function with the same name.
-
-It is possible to simulate the more standard behavior by using a special syntax
-of the import statement: ``from modu import *``. This is generally considered
-bad practice. **Using** ``import *`` **makes code harder to read and makes
-dependencies less compartmentalized**.
-
-Using ``from modu import func`` is a way to pinpoint the function you want to
-import and put it in the global namespace. While much less harmful than ``import
-*`` because it shows explicitly what is imported in the global namespace, its
-only advantage over a simpler ``import modu`` is that it will save a little
-typing.
-
-**Very bad**
+**很差的做法**
 
 .. code-block:: python
 
     [...]
     from modu import *
     [...]
-    x = sqrt(4)  # Is sqrt part of modu? A builtin? Defined above?
+    x = sqrt(4)  # sqrt是模块modu的一部分么？或是内建函数么？上文定义了么？
 
-**Better**
+**稍微好一些的做法**
 
 .. code-block:: python
 
     from modu import sqrt
     [...]
-    x = sqrt(4)  # sqrt may be part of modu, if not redefined in between
+    x = sqrt(4)  # 如果在import语句与这条语句之间，sqrt没有被重复定义，它也许是模块modu的一部分。
 
-**Best**
+**最好的做法**
 
 .. code-block:: python
 
     import modu
     [...]
-    x = modu.sqrt(4)  # sqrt is visibly part of modu's namespace
+    x = modu.sqrt(4)  # sqrt显然是属于模块modu的。
 
-As mentioned in the :ref:`code_style` section, readability is one of the main
-features of Python. Readability means to avoid useless boilerplate text and
-clutter, therefore some efforts are spent trying to achieve a certain level of
-brevity. But terseness and obscurity are the limits where brevity should stop.
-Being able to tell immediately where a class or function comes from, as in the
-``modu.func`` idiom, greatly improves code readability and understandability in
-all but the simplest single file projects.
-
+在 :ref:`代码风格` 章节中提到，可读性是Python最主要的特性之一。可读性意味着避免
+无用且重复的文本和混乱的结构，因而需要花费一些努力以实现一定程度的简洁。但不能
+过份简洁而导致简短晦涩。除了简单的单文件项目外，其他项目需要能够明确指出类和方法
+的出处，例如使用 ``modu.func`` 语句，这将显著提升代码的可读性和易理解性。
 
 包
 --------
 
-Python provides a very straightforward packaging system, which is simply an
-extension of the module mechanism to a directory.
+Python提供非常简单的包管理系统，即简单地将模块管理机制扩展到一个目录上(目录扩
+展为包)。
 
-Any directory with an :file:`__init__.py` file is considered a Python package.
-The different modules in the package are imported in a similar manner as plain
-modules, but with a special behavior for the :file:`__init__.py` file, which is
-used to gather all package-wide definitions.
+任意包含 :file:`__init__.py` 文件的目录都被认为是一个Python包。导入一个包里不同
+模块的方式和普通的导入模块方式相似，特别的地方是 :file:`__init__.py` 文件将集合
+所有包范围内的定义。
 
-A file :file:`modu.py` in the directory :file:`pack/` is imported with the
-statement ``import pack.modu``. This statement will look for an
-:file:`__init__.py` file in :file:`pack`, execute all of its top-level
-statements. Then it will look for a file named :file:`pack/modu.py` and
-execute all of its top-level statements. After these operations, any variable,
-function, or class defined in :file:`modu.py` is available in the pack.modu
-namespace.
+:file:`pack/`目录下的 :file:`modu.py` 文件通过 ``import pack.modu`` 语句导入。
+该语句会在 :file:`pack` 目录下寻找 :file:`__init__.py` 文件，并执行其中所有顶层
+语句。以上操作之后，:file:`modu.py` 内定义的所有变量、方法和类在pack.modu命名空
+间中均可看到。
 
-A commonly seen issue is to add too much code to :file:`__init__.py`
-files. When the project complexity grows, there may be sub-packages and
-sub-sub-packages in a deep directory structure. In this case, importing a
-single item from a sub-sub-package will require executing all
-:file:`__init__.py` files met while traversing the tree.
+一个常见的问题是往 :file:`__init__.py` 中加了过多代码，随着项目的复杂度增长，
+目录结构越来越深，子包和更深嵌套的子包可能会出现。在这种情况下，导入多层嵌套
+的子包中的某个部件需要执行所有通过路径里碰到的 :file:`__init__.py` 文件。如果
+包内的模块和子包没有代码共享的需求，使用空白的 :file:`__init__.py` 文件是正常
+甚至好的做法。
 
-Leaving an :file:`__init__.py` file empty is considered normal and even a good
-practice, if the package's modules and sub-packages do not need to share any
-code.
+最后，导入深层嵌套的包可用这个方便的语法：``import very.deep.module as mod``。
+该语法允许使用 `mod` 替代冗长的 ``very.deep.module``。
 
-Lastly, a convenient syntax is available for importing deeply nested packages:
-``import very.deep.module as mod``. This allows you to use `mod` in place of the
-verbose repetition of ``very.deep.module``.
 
 面向对象编程
 ---------------------------
 
-Python is sometimes described as an object-oriented programming language. This
-can be somewhat misleading and needs to be clarified.
+Python有时被描述为面向对象编程的语言，这多少是个需要澄清的误导。在Python中
+一切都是对象，并且能按对象的方式处理。这么说的意思是，例如函数是一等对象。
+函数、类、字符串乃至类型都是Python对象：与其他对象一样，他们有类型，能作为
+函数参数传递，并且还可能有自己的方法和属性。这样理解的话，Python是一种面向
+对象语言。
 
-In Python, everything is an object, and can be handled as such. This is what is
-meant when we say, for example, that functions are first-class objects.
-Functions, classes, strings, and even types are objects in Python: like any
-object, they have a type, they can be passed as function arguments, and they
-may have methods and properties. In this understanding, Python is an
-object-oriented language.
+然而，与Java不同的是，Python并没有将面向对象编程作为最主要的编程范式。非面向
+对象的Python项目(比如，使用较少甚至不使用类定义，类继承，或其它面向对象编程的
+机制)也是完全可行的。
 
-However, unlike Java, Python does not impose object-oriented programming as the
-main programming paradigm. It is perfectly viable for a Python project to not
-be object-oriented, i.e. to use no or very few class definitions, class
-inheritance, or any other mechanisms that are specific to object-oriented
-programming.
+此外在 模块_ 章节里曾提到，Python管理模块与命名空间的方式提供给开发者一个自然
+的方式以实现抽象层的封装和分离，这是使用面向对象最常见的原因。因而，如果业务逻辑
+没有要求，Python开发者有更多自由去选择不使用面向对象。
 
-Moreover, as seen in the modules_ section, the way Python handles modules and
-namespaces gives the developer a natural way to ensure the
-encapsulation and separation of abstraction layers, both being the most common
-reasons to use object-orientation. Therefore, Python programmers have more
-latitude to not use object-orientation, when it is not required by the business
-model.
+在一些情况下，需要避免不必要的面向对象。当我们想要将状态与功能结合起来，使用
+标准类定义是有效的。但正如函数式编程所讨论的那个问题，函数式的“变量”状态与类的
+状态并不相同。
 
-There are some reasons to avoid unnecessary object-orientation. Defining
-custom classes is useful when we want to glue together some state and some
-functionality. The problem, as pointed out by the discussions about functional
-programming, comes from the "state" part of the equation.
+在某些架构中，典型代表是web应用，大量Python进程实例被产生以响应可能同时到达的
+外部请求。在这种情况下，在实例化对象内保持某些状态，即保持某些环境静态信息，
+容易出现并发问题或竞态条件。有时候在对象状态的初始化(通常通过 ``__init__()``
+方法实现)和在其方法中使用该状态之间，环境发生了变化，保留的状态可能已经过时。
+举个例子，某个请求将对象加载到内存中并标记它为已读。如果同时另一个请求要删除
+这个对象，删除操作可能刚好发生在第一个请求加载完该对象之后，结果就是第一个请
+求标记了一个已经被删除的对象为已读。
 
-In some architectures, typically web applications, multiple instances of Python
-processes are spawned to respond to external requests that can happen at the
-same time. In this case, holding some state into instantiated objects, which
-means keeping some static information about the world, is prone to concurrency
-problems or race-conditions. Sometimes, between the initialization of the state
-of an object (usually done with the ``__init__()`` method) and the actual use
-of the object state through one of its methods, the world may have changed, and
-the retained state may be outdated. For example, a request may load an item in
-memory and mark it as read by a user. If another request requires the deletion
-of this item at the same time, it may happen that the deletion actually occurs
-after the first process loaded the item, and then we have to mark as read a
-deleted object.
+这些问题使我们产生一个想法：使用无状态的函数是一种更好的编程范式。另一种建议
+是尽量使用隐式上下文和副作用较小的函数与程序。函数的隐式上下文由函数内部访问
+到的所有全局变量与持久层对象组成。副作用即函数可能使其隐式上下文发生改变。如
+果函数保存或删除全局变量或持久层中数据，这种行为称为副作用。
 
-This and other issues led to the idea that using stateless functions is a
-better programming paradigm.
 
-Another way to say the same thing is to suggest using functions and procedures
-with as few implicit contexts and side-effects as possible. A function's
-implicit context is made up of any of the global variables or items in the
-persistence layer that are accessed from within the function. Side-effects are
-the changes that a function makes to its implicit context. If a function saves
-or deletes data in a global variable or in the persistence layer, it is said to
-have a side-effect.
+把有隐式上下文和副作用的函数与仅包含逻辑的函数(纯函数)谨慎地区分开来，会带来
+以下好处：
 
-Carefully isolating functions with context and side-effects from functions with
-logic (called pure functions) allow the following benefits:
+- 纯函数的结果是确定的：给定一个输入，输出总是固定相同。
+  
+- 当需要重构或优化时，纯函数更易于更改或替换。
 
-- Pure functions are deterministic: given a fixed input,
-  the output will always be the same.
+- 纯函数更容易做单元测试：很少需要复杂的上下文配置和之后的数据清除工作。
+  
+- 纯函数更容易操作、修饰和分发。
 
-- Pure functions are much easier to change or replace if they need to
-  be refactored or optimized.
-
-- Pure functions are easier to test with unit-tests: There is less
-  need for complex context setup and data cleaning afterwards.
-
-- Pure functions are easier to manipulate, decorate, and pass around.
-
-In summary, pure functions are more efficient building blocks than classes
-and objects for some architectures because they have no context or side-effects.
-
-Obviously, object-orientation is useful and even necessary in many cases, for
-example when developing graphical desktop applications or games, where the
-things that are manipulated (windows, buttons, avatars, vehicles) have a
-relatively long life of their own in the computer's memory.
-
+总之，对于某些架构而言，纯函数比类和对象在构建模块时更有效率，因为他们没有任何
+上下文和副作用。但显然在很多情况下，面向对象编程是有用甚至必要的。例如图形桌面
+应用或游戏的开发过程中，操作的元素(窗口、按钮、角色、车辆)在计算机内存里拥有相
+对较长的生命周期。
 
 装饰器
 ----------
 
-The Python language provides a simple yet powerful syntax called 'decorators'.
-A decorator is a function or a class that wraps (or decorates) a function
-or a method. The 'decorated' function or method will replace the original
-'undecorated' function or method. Because functions are first-class objects
-in Python, this can be done 'manually', but using the @decorator syntax is
-clearer and thus preferred.
+Python语言提供一个简单而强大的语法: '装饰器'。装饰器是一个函数或类，它可以
+包装(或装饰)一个函数或方法。被 '装饰' 的函数或方法会替换原来的函数或方法。
+由于在Python中函数是一等对象，它也可以被 '手动操作'，但是使用@decorators
+语法更清晰，因此首选这种方式。
 
 .. code-block:: python
 
     def foo():
-        # do something
+        # 实现语句
 
     def decorator(func):
-        # manipulate func
+        # 操作func语句
         return func
 
-    foo = decorator(foo)  # Manually decorate
+    foo = decorator(foo)  # 手动装饰
 
     @decorator
     def bar():
-        # Do something
-    # bar() is decorated
+        # 实现语句
+    # bar()被装饰了
 
 This mechanism is useful for separating concerns and avoiding
 external un-related logic 'polluting' the core logic of the function
@@ -311,6 +228,7 @@ with decoration is memoization or caching: you want to store the results of an
 expensive function in a table and use them directly instead of recomputing
 them when they have already been computed. This is clearly not part
 of the function logic.
+
 
 动态类型
 --------------
