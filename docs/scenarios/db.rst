@@ -4,21 +4,22 @@
 DB-API
 ------
 
-The Python Database API (DB-API) defines a standard interface for Python
-database access modules. It's documented in :pep:`249`.
-Nearly all Python database modules such as `sqlite3`, `psycopg` and
-`mysql-python` conform to this interface.
 
-Tutorials that explain how to work with modules that conform to this interface can be found
-`here <http://halfcooked.com/presentations/osdc2006/python_databases.html>`__ and
-`here <http://web.archive.org/web/20120815130844/http://www.amk.ca/python/writing/DB-API.html>`__.
+Python数据库API（DB-API）定义了一个Python数据库访问模块的标准接口。它的文档在 :pep:`249` 可以查看。
+几乎所有Python数据库模块，诸如 `sqlite3`， `psycopg` 以及 `mysql-python` 都遵循这个接口。
+
+
+关于如何与遵守这一接口的模块交互的教程可以在这里找到：
+`这里 <http://halfcooked.com/presentations/osdc2006/python_databases.html>`__  以及
+`这里 <http://web.archive.org/web/20120815130844/http://www.amk.ca/python/writing/DB-API.html>`__ 。
+
 
 SQLAlchemy
 ----------
 
-`SQLAlchemy <http://www.sqlalchemy.org/>`_ is a commonly used database toolkit.
-Unlike many database libraries it not only provides an ORM layer but also a
-generalized API for writing database-agnostic code without SQL.
+
+`SQLAlchemy <http://www.sqlalchemy.org/>`_ 是一个流行的数据库工具。不像很多
+数据库库，它不仅提供一个ORM层，而且还有一个通用API来编写避免SQL的数据库无关代码。
 
 .. code-block:: console
 
@@ -27,50 +28,42 @@ generalized API for writing database-agnostic code without SQL.
 Django ORM
 ----------
 
-The Django ORM is the interface used by `Django <http://www.djangoproject.com>`_
-to provide database access.
+Django ORM 是 `Django <http://www.djangoproject.com>`_ 用来进行数据库访问的接口。
 
-It's based on the idea of
-`models <https://docs.djangoproject.com/en/dev/#the-model-layer>`_,
-an abstraction that makes it easier to manipulate data in Python.
+它的思想建立在 `models <https://docs.djangoproject.com/en/dev/#the-model-layer>`_ ，
+之上。这是一个致力于简化Python中数据操作的抽象层。
 
-The basics:
+基础：
 
-- Each model is a Python class that subclasses django.db.models.Model.
-- Each attribute of the model represents a database field.
-- Django gives you an automatically-generated database-access API; see
-  `Making queries <https://docs.djangoproject.com/en/dev/topics/db/queries/>`__.
+- 每个model是django.db.models.Model的子类。
+- model的每个属性表示数据库的域（field）。
+- Django给你一个自动生成的数据库访问API，参见
+  `Making queries <https://docs.djangoproject.com/en/dev/topics/db/queries/>`__。
 
 peewee
 ------
 
-`peewee <http://docs.peewee-orm.com/en/latest/>`_ is another ORM with a focus
-on being lightweight with support for Python 2.6+ and 3.2+ which supports
-SQLite, MySQL and Postgres by default. The
-`model layer <https://peewee.readthedocs.org/en/latest/peewee/quickstart.html#model-definition>`_
-is similar to that of the Django ORM and it has
-`SQL-like methods <https://peewee.readthedocs.org/en/latest/peewee/quickstart.html#retrieving-data>`_
-to query data. While SQLite, MySQL and Postgres are supported out-of-the-box,
-there is a `collection of add-ons <https://peewee.readthedocs.org/en/latest/peewee/playhouse.html#playhouse>`_
-available.
+`peewee <http://docs.peewee-orm.com/en/latest/>`_ 是另一个ORM，它致力于轻量级和支持Python2.6+与3.2+默认支持的
+SQLite，MySQL以及Postgres。 `model layer <https://peewee.readthedocs.org/en/latest/peewee/quickstart.html#model-definition>`_
+与Django ORM类似并且它拥有 `SQL-like methods <https://peewee.readthedocs.org/en/latest/peewee/quickstart.html#retrieving-data>`_
+来查询数据。除了将SQLite，MySQL以及Postgres变为开箱即用，还有进一步的扩展功能可以在这里找到：
+`collection of add-ons <https://peewee.readthedocs.org/en/latest/peewee/playhouse.html#playhouse>`_。
 
 PonyORM
 -------
 
-`PonyORM <http://ponyorm.com/>`_ is an ORM that takes a different approach to
-querying the database. Instead of writing an SQL-like language or boolean
-expressions, Python's generator syntax is used. There's also an graphical
-schema editor that can generate PonyORM entities for you. It supports Python
-2.6+ and Python 3.3+ and can connect to SQLite, MySQL, Postgres & Oracle
+`PonyORM <http://ponyorm.com/>`_ 是一个ORM，它使用与众不同的方法查询数据库，有别于
+使用类似SQL的语言或者布尔表达式，它使用Python的生成器达到目的。而且还有一个图形化
+schema编辑器生成PonyORM实体。它支持Python2.6+与3.3+并且可以连接SQLite，MySQL，Postgres与Oracle。
 
 
 
 SQLObject
 ---------
 
-`SQLObject <http://www.sqlobject.org/>`_ is yet another ORM. It supports a wide
-variety of databases: Common database systems MySQL, Postgres and SQLite and
-more exotic systems like SAP DB, SyBase and MSSQL. It only supports Python 2
-from Python 2.6 upwards.
+
+`SQLObject <http://www.sqlobject.org/>`_ 是另一个ORM。它支持广泛的数据库，常见的
+MySQL，Postgres以及SQLite与更多的特别系统如SAP DB，SyBase与MSSQL。它只支持Python 2
+
 
 .. There's no official information on this on their page, this information was gathered by looking at their source code
