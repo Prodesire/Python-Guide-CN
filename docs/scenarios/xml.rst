@@ -4,11 +4,10 @@ XML解析
 untangle
 --------
 
-`untangle <https://github.com/stchris/untangle>`_ is a simple library which
-takes an XML document and returns a Python object which mirrors the nodes and
-attributes in its structure.
+`untangle <https://github.com/stchris/untangle>`_ 库可以将XML文档映射为一个Python
+对象，该对象于其结构中包含了原文档的节点与属性信息。
 
-For example, an XML file like this:
+作为例子，一个像这样的XML文件：
 
 .. code-block:: xml
 
@@ -17,28 +16,29 @@ For example, an XML file like this:
         <child name="child1">
     </root>
 
-can be loaded like this:
+可以被这样载入：
 
 .. code-block:: python
 
     import untangle
     obj = untangle.parse('path/to/file.xml')
 
-and then you can get the child elements name like this:
+
+然后你可以像这样获取child元素名称：
 
 .. code-block:: python
 
     obj.root.child['name']
 
-untangle also supports loading XML from a string or an URL.
+untangle也支持从字符串或URL中载入XML。
 
 xmltodict
 ---------
 
-`xmltodict <http://github.com/martinblech/xmltodict>`_ is another simple
-library that aims at making XML feel like working with JSON.
+`xmltodict <http://github.com/martinblech/xmltodict>`_ 是另一个简易的库，
+它致力于将XML变得像JSON。
 
-An XML file like this:
+对于一个像这样的XML文件：
 
 .. code-block:: xml
 
@@ -52,7 +52,7 @@ An XML file like this:
       </plus>
     </mydocument>
 
-can be loaded into a Python dict like this:
+可以装载进一个Python字典里，像这样：
 
 .. code-block:: python
 
@@ -61,7 +61,7 @@ can be loaded into a Python dict like this:
     with open('path/to/file.xml') as fd:
         obj = xmltodict.parse(fd.read())
 
-and then you can access elements, attributes and values like this:
+你可以访问元素，属性以及值，像这样：
 
 .. code-block:: python
 
@@ -70,6 +70,5 @@ and then you can access elements, attributes and values like this:
     doc['mydocument']['plus']['@a'] # == u'complex'
     doc['mydocument']['plus']['#text'] # == u'element as well'
 
-xmltodict also lets you roundtrip back to XML with the unparse function,
-has a streaming mode suitable for handling files that don't fit in memory
-and supports namespaces.
+xmltodict 也有unparse函数让你可以转回XML。该函数有一个streaming模式适合用来
+处理不能放入内存的文件，它还支持命名空间。
