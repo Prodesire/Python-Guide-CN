@@ -91,7 +91,7 @@ Python的模块查找功能。就 `my.spam.py` 来说，Python 认为需要在 :
 比 ``import *`` 要好些，因为它明确地指明往全局命名空间中导入了什么方法，它和
 ``import modu`` 相比唯一的优点是可以少打点儿字。
 
-**很差的做法**
+**差**
 
 .. code-block:: python
 
@@ -100,7 +100,7 @@ Python的模块查找功能。就 `my.spam.py` 来说，Python 认为需要在 :
     [...]
     x = sqrt(4)  # sqrt是模块modu的一部分么？或是内建函数么？上文定义了么？
 
-**稍微好一些的做法**
+**稍好**
 
 .. code-block:: python
 
@@ -108,7 +108,7 @@ Python的模块查找功能。就 `my.spam.py` 来说，Python 认为需要在 :
     [...]
     x = sqrt(4)  # 如果在import语句与这条语句之间，sqrt没有被重复定义，它也许是模块modu的一部分。
 
-**最好的做法**
+**最好的做法
 
 .. code-block:: python
 
@@ -131,7 +131,7 @@ Python提供非常简单的包管理系统，即简单地将模块管理机制�
 模块的方式和普通的导入模块方式相似，特别的地方是 :file:`__init__.py` 文件将集合
 所有包范围内的定义。
 
-:file:`pack/`目录下的 :file:`modu.py` 文件通过 ``import pack.modu`` 语句导入。
+:file:`pack/` 目录下的 :file:`modu.py` 文件通过 ``import pack.modu`` 语句导入。
 该语句会在 :file:`pack` 目录下寻找 :file:`__init__.py` 文件，并执行其中所有顶层
 语句。以上操作之后，:file:`modu.py` 内定义的所有变量、方法和类在pack.modu命名空
 间中均可看到。
@@ -221,179 +221,147 @@ Python语言提供一个简单而强大的语法: '装饰器'。装饰器是一�
         # 实现语句
     # bar()被装饰了
 
-This mechanism is useful for separating concerns and avoiding
-external un-related logic 'polluting' the core logic of the function
-or method. A good example of a piece of functionality that is better handled
-with decoration is memoization or caching: you want to store the results of an
-expensive function in a table and use them directly instead of recomputing
-them when they have already been computed. This is clearly not part
-of the function logic.
-
+这个机制对于分离概念和避免外部不相关逻辑‘污染’主要逻辑很有用处。缓存就是一个很
+好的推荐使用装饰器的例子：你需要在table中储存一个耗时函数的结果，并且下次能直接
+使用该结果，而不是再计算一次。这显然不属于函数的逻辑部分。
 
 动态类型
 --------------
 
-Python is dynamically typed, which means that variables do not have a fixed
-type. In fact, in Python, variables are very different from what they are in
-many other languages, specifically statically-typed languages. Variables are not
-a segment of the computer's memory where some value is written, they are 'tags'
-or 'names' pointing to objects. It is therefore possible for the variable 'a' to
-be set to the value 1, then to the value 'a string', then to a function.
+Python是动态类型语言，这意味着变量并没有固定的类型。实际上，Python 中的变量和其他
+语言有很大的不同，特别是静态类型语言。变量并不是计算机内存中被写入的某个值，它们
+只是指向内存的 ‘标签’ 或 ‘名称’ 。因此可能存在这样的情况，变量 'a' 先代表值1，然后变成
+字符串 'a string' , 然后又变为指向一个函数。
 
-The dynamic typing of Python is often considered to be a weakness, and indeed
-it can lead to complexities and hard-to-debug code. Something named 'a' can be
-set to many different things, and the developer or the maintainer needs to track
-this name in the code to make sure it has not been set to a completely unrelated
-object.
+Python 的动态类型常被认为是它的缺点，的确这个特性会导致复杂度提升和难以调试的代码。
+命名为 'a' 的变量可能是各种类型，开发人员或维护人员需要在代码中追踪命名，以保证它
+没有被设置到毫不相关的对象上。
 
-Some guidelines help to avoid this issue:
+这里有些避免发生类似问题的参考方法：
 
-- Avoid using the same variable name for different things.
+- 避免对不同类型的对象使用同一个变量名
 
-**Bad**
+**差**
 
 .. code-block:: python
 
     a = 1
     a = 'a string'
     def a():
-        pass  # Do something
+        pass  # 实现代码
 
-**Good**
+**好**
 
 .. code-block:: python
 
     count = 1
     msg = 'a string'
     def func():
-        pass  # Do something
+        pass  # 实现代码
 
-Using short functions or methods helps reduce the risk
-of using the same name for two unrelated things.
+使用简短的函数或方法能降低对不相关对象使用同一个名称的风险。即使是相关的不同
+类型的对象，也更建议使用不同命名：
 
-It is better to use different names even for things that are related,
-when they have a different type:
-
-**Bad**
+**差**
 
 .. code-block:: python
 
-    items = 'a b c d'  # This is a string...
-    items = items.split(' ')  # ...becoming a list
-    items = set(items)  # ...and then a set
+    items = 'a b c d'  # 首先指向字符串...
+    items = items.split(' ')  # ...变为列表
+    items = set(items)  # ...再变为集合
 
-There is no efficiency gain when reusing names: the assignments
-will have to create new objects anyway. However, when the complexity
-grows and each assignment is separated by other lines of code, including
-'if' branches and loops, it becomes harder to ascertain what a given
-variable's type is.
+重复使用命名对效率并没有提升：赋值时无论如何都要创建新的对象。然而随着复杂度的
+提升，赋值语句被其他代码包括 'if' 分支和循环分开，使得更难查明指定变量的类型。
+在某些代码的做法中，例如函数编程，推荐的是从不重复对同一个变量命名赋值。Java
+内的实现方式是使用 'final' 关键字。Python并没有 'final' 关键字而且这与它的哲学
+相悖。尽管如此，避免给同一个变量命名重复赋值仍是是个好的做法，并且有助于掌握
+可变与不可变类型的概念。
 
-Some coding practices, like functional programming, recommend never reassigning
-a variable. In Java this is done with the `final` keyword. Python does not have
-a `final` keyword and it would be against its philosophy anyway. However, it may
-be a good discipline to avoid assigning to a variable more than once, and it
-helps in grasping the concept of mutable and immutable types.
 
 可变和不可变类型
 ---------------------------
 
-Python has two kinds of built-in or user-defined types.
-
-Mutable types are those that allow in-place modification of the content. Typical
-mutables are lists and dictionaries: All lists have mutating methods, like
-:py:meth:`list.append` or :py:meth:`list.pop`, and can be modified in place.
-The same goes for dictionaries.
-
-Immutable types provide no method for changing their content. For instance, the
-variable x set to the integer 6 has no "increment" method. If you want to
-compute x + 1, you have to create another integer and give it a name.
+Python提供两种内置或用户定义的类型。可变类型允许内容的内部修改。典型的动态类型
+包括列表与字典：列表都有可变方法，如 :py:meth:`list.append` 和 :py:meth:`list.pop`，
+并且能就地修改。字典也是一样。不可变类型没有修改自身内容的方法。比如，赋值为整数
+6的变量 x 并没有 "自增" 方法，如果需要计算 x + 1，必须创建另一个整数变量并给其命名。
 
 .. code-block:: python
 
     my_list = [1, 2, 3]
     my_list[0] = 4
-    print my_list  # [4, 2, 3] <- The same list as changed
+    print my_list  # [4, 2, 3] <- 原列表改变了
 
     x = 6
-    x = x + 1  # The new x is another object
+    x = x + 1  # x 变量是一个新的变量
 
-One consequence of this difference in behavior is that mutable
-types are not "stable", and therefore cannot be used as dictionary
-keys.
 
-Using properly mutable types for things that are mutable in nature
-and immutable types for things that are fixed in nature
-helps to clarify the intent of the code.
+这种差异导致的一个后果就是，可变类型是不 '稳定 '的，因而不能作为字典的键使用。合理地
+使用可变类型与不可变类型有助于阐明代码的意图。例如与列表相似的不可变类型是元组，
+创建方式为 ``(1, 2)``。元组是不可修改的，并能作为字典的键使用。
 
-For example, the immutable equivalent of a list is the tuple, created
-with ``(1, 2)``. This tuple is a pair that cannot be changed in-place,
-and can be used as a key for a dictionary.
 
-One peculiarity of Python that can surprise beginners is that
-strings are immutable. This means that when constructing a string from
-its parts, it is much more efficient to accumulate the parts in a list,
-which is mutable, and then glue ('join') the parts together when the
-full string is needed. One thing to notice, however, is that list
-comprehensions are better and faster than constructing a list in a loop
-with calls to ``append()``.
+Python 中一个可能会让初学者惊讶的特性是：字符串是不可变类型。这意味着当需要组合一个
+字符串时，将每一部分放到一个可变列表里，使用字符串时再组合 ('join') 起来的做法更高效。
+值得注意的是，使用列表推导的构造方式比在循环中调用 ``append()`` 来构造列表更好也更快。
 
-**Bad**
+
+**差**
 
 .. code-block:: python
 
-    # create a concatenated string from 0 to 19 (e.g. "012..1819")
+    # 创建将0到19连接起来的字符串 (例 "012..1819")
     nums = ""
     for n in range(20):
-      nums += str(n)   # slow and inefficient
+      nums += str(n)   # 慢且低效
     print nums
 
-**Good**
+**好**
 
 .. code-block:: python
 
-    # create a concatenated string from 0 to 19 (e.g. "012..1819")
+    # 创建将0到19连接起来的字符串 (例 "012..1819")
     nums = []
     for n in range(20):
       nums.append(str(n))
-    print "".join(nums)  # much more efficient
+    print "".join(nums)  # 更高效
 
-**Best**
+**最好**
 
 .. code-block:: python
 
-    # create a concatenated string from 0 to 19 (e.g. "012..1819")
+    # 创建将0到19连接起来的字符串 (例 "012..1819")
     nums = [str(n) for n in range(20)]
     print "".join(nums)
 
-One final thing to mention about strings is that using ``join()`` is not always
-best. In the instances where you are creating a new string from a pre-determined
-number of strings, using the addition operator is actually faster, but in cases
-like above or in cases where you are adding to an existing string, using
-``join()`` should be your preferred method.
+最后关于字符串的说明的一点是，使用 ``join()`` 并不总是最好的选择。比如当用预先
+确定数量的字符串创建一个新的字符串时，使用加法操作符确实更快，但在上文提到的情况
+下或添加到已存在字符串的情况下，使用 ``join()`` 是更好的选择。
 
 .. code-block:: python
 
     foo = 'foo'
     bar = 'bar'
 
-    foobar = foo + bar  # This is good
-    foo += 'ooo'  # This is bad, instead you should do:
+    foobar = foo + bar  # 好的做法
+    foo += 'ooo'  # 不好的做法, 应该这么做:
     foo = ''.join([foo, 'ooo'])
 
 .. note::
-    You can also use the :ref:`% <python:string-formatting>` formatting operator
-    to concatenate a pre-determined number of strings besides :py:meth:`str.join`
-    and ``+``. However, :pep:`3101`, discourages the usage of the ``%`` operator
-    in favor of the :py:meth:`str.format` method.
-
+    
+	除了 :py:meth:`str.join` 和 ``+``，你也可以使用 :ref:`% <python:string-formatting>` 
+	格式运算符来连接确定数量的字符串，但 :pep:`3101` 建议使用 :py:meth:`str.format`
+	替代 ``%`` 操作符。
+	
+	
 .. code-block:: python
 
     foo = 'foo'
     bar = 'bar'
 
-    foobar = '%s%s' % (foo, bar) # It is OK
-    foobar = '{0}{1}'.format(foo, bar) # It is better
-    foobar = '{foo}{bar}'.format(foo=foo, bar=bar) # It is best
+    foobar = '%s%s' % (foo, bar) # 可行
+    foobar = '{0}{1}'.format(foo, bar) # 更好
+    foobar = '{foo}{bar}'.format(foo=foo, bar=bar) # 最好
 
 更多阅读
 ---------------
