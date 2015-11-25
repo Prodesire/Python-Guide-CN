@@ -43,7 +43,7 @@ XPath是一种在结构化文档（如HTML或XML）中定位信息的方式。�
 如果你使用Chrome，你可以右键元素，选择 'Inspect element'，高亮这段代码，
 再次右击，并选择 'Copy XPath'。
 
-在一次快速解析后，我们看到在页面中的数据保存在两个元素中，一个是title是
+在进行一次快速分析后，我们看到在页面中的数据保存在两个元素中，一个是title是
 'buyer-name' 的div，另一个class是 'item-price' 的span：
 
 .. code-block:: html
