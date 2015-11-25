@@ -2,31 +2,28 @@
 图像处理
 ==================
 
-Most image processing and manipulation techniques can be carried out
-effectively using two libraries: Python Imaging Library (PIL)  and OpenSource
-Computer Vision (OpenCV).
+多数图像处理与操作技术可以被两个库有效完成，它们是Python Imaging Library (PIL)与
+OpenSource Computer Vision (OpenCV)。
 
-A brief description of both is given below.
+下面是这两个库的简略介绍。
 
 Python 图形库
 ----------------------
 
-The `Python Imaging Library <http://www.pythonware.com/products/pil/>`_, or PIL
-for short, is one of the core libraries for image manipulation in Python. Unfortunately,
-its development has stagnated, with its last release in 2009.
-
-Luckily for you, there's an actively-developed fork of PIL called
-`Pillow <http://python-pillow.github.io/>`_ - it's easier to install, runs on
-all operating systems, and supports Python 3.
+ `Python Imaging Library <http://www.pythonware.com/products/pil/>`_ ，或者叫PIL，简略来说，
+ 是Python图像操作的核心库。不幸的是，它的开发陷入了停滞，最后一次更新是2009年。
+ 
+ 对你而言幸运的是，存在一个活跃的PIL开发分支，叫做 `Pillow <http://python-pillow.github.io/>`_ 
+ 它很容易安装，运行在各个操作系统上，而且支持Python3。
 
 安装
 ~~~~~~~~~~~~
 
-Before installing Pillow, you'll have to install Pillow's prerequisites. Find
-the instructions for your platform in the
+
+在安装Pillow之前，你应该先安装Pillow的前置部分。针对你的平台对此的特别指导可以在此找到
 `Pillow installation instructions <https://pillow.readthedocs.org/en/3.0.0/installation.html>`_.
 
-After that, it's straightforward:
+完成之后，直接执行：
 
 .. code-block:: console
 
@@ -38,44 +35,43 @@ After that, it's straightforward:
 .. code-block:: python
 
     from PIL import Image, ImageFilter
-    #Read image
+    #读取图像
     im = Image.open( 'image.jpg' )
-    #Display image
+    #显示图像
     im.show()
 
-    #Applying a filter to the image
+    #过滤图像
     im_sharp = im.filter( ImageFilter.SHARPEN )
-    #Saving the filtered image to a new file
+    #保存过滤过的图像到文件中
     im_sharp.save( 'image_sharpened.jpg', 'JPEG' )
 
-    #Splitting the image into its respective bands, i.e. Red, Green,
-    #and Blue for RGB
+    #分解图像到三个RGB不同的通道（band）中。
     r,g,b = im_sharp.split()
 
-    #Viewing EXIF data embedded in image
+    #显示被插入到图像中的EXIF标记
     exif_data = im._getexif()
     exif_data
 
-There are more examples of the Pillow library in the
-`Pillow tutorial <http://pillow.readthedocs.org/en/3.0.x/handbook/tutorial.html>`_.
+
+这里有一些Pillow库的例子：
+`Pillow tutorial <http://pillow.readthedocs.org/en/3.0.x/handbook/tutorial.html>`_。
 
 
-开源计算机视觉
+开源计算机视觉（OpenCv）
 --------------------------
 
-OpenSource Computer Vision, more commonly known as OpenCV, is a more advanced
-image manipulation and processing software than PIL. It has been implemented
-in several languages and is widely used.
+OpenSource Computer Vision,其更广为人知的名字是OpenCv，是一个在图像操作与处理上
+比PIL更先进的库。它可以在很多语言上被执行并被广泛使用。
 
 安装
 ~~~~~~~~~~~~
 
-In Python, image processing using OpenCV is implemented using the ``cv2`` and
-``NumPy`` modules.  The `installation instructions for OpenCV
-<http://docs.opencv.org/2.4/doc/tutorials/introduction/table_of_content_introduction/table_of_content_introduction.html#table-of-content-introduction>`_
-should guide you through configuring the project for yourself.
+在Python中，使用OpenCV进行图像处理是通过使用 ``cv2`` 与 ``NumPy`` 模块进行的。
+ `installation instructions for OpenCV
+ <http://docs.opencv.org/2.4/doc/tutorials/introduction/table_of_content_introduction/table_of_content_introduction.html#table-of-content-introduction>`_
+可以指导你如何为你自己的项目进行配置。
 
-NumPy can be downloaded from the Python Package Index(PyPI):
+NumPy可以从Python Package Index （PyPI）中下载：
 
 .. code-block:: console
 
@@ -89,19 +85,20 @@ NumPy can be downloaded from the Python Package Index(PyPI):
 
     from cv2 import *
     import numpy as np
-    #Read Image
+    #读取图像
     img = cv2.imread('testimg.jpg')
-    #Display Image
+    #显示图像
     cv2.imshow('image',img)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
 
-    #Applying Grayscale filter to image
+    #Applying Grayscale filter to image 作用Grayscale（灰度）过滤器到图像上
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
-    #Saving filtered image to new file
+    #保存过滤过的图像到新文件中
     cv2.imwrite('graytest.jpg',gray)
 
-There are more Python-implemented examples of OpenCV in this `collection of
+更多的OpenCV在Python运行例子在这里可以找到：
+`collection of
 tutorials
 <http://opencv-python-tutroals.readthedocs.org/en/latest/py_tutorials/py_tutorials.html>`_.
