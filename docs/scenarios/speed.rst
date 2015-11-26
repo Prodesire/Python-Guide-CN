@@ -1,12 +1,11 @@
 速度
 =====
 
-CPython, the most commonly used implementation of Python, is slow for CPU bound
-tasks. `PyPy`_ is fast.
 
-Using a slightly modified version of `David Beazley's`_ CPU bound test code
-(added loop for multiple tests), you can see the difference between CPython
-and PyPy's processing.
+CPython作为最流行的Python环境，对于CPU密集型任务（CPU bound tasks）较慢，而  `PyPy`_ 则较快。
+
+使用稍作改动的   `David Beazley的`_   CPU密集测试代码（增加了循环进行多轮测试），
+你可以看到CPython与PyPy之间的执行差距。
 
 .. code-block:: console
 
@@ -40,46 +39,40 @@ Context
 The GIL
 -------
 
-`The GIL`_ (Global Interpreter Lock) is how Python allows multiple threads to
-operate at the same time. Python's memory management isn't entirely thread-safe,
-so the GIL is required to prevent multiple threads from running the same
-Python code at once.
+`GIL`_ (全局解释器锁)是Python支持多线程并行操作的方式。Python的内存管理不是
+线程安全的，所以GIL被创造出来避免多线程同时运行同一个Python代码。
 
-David Beazley has a great `guide`_ on how the GIL operates. He also covers the
-`new GIL`_ in Python 3.2. His results show that maximizing performance in a
-Python application requires a strong understanding of the GIL, how it affects
-your specific application, how many cores you have, and where your application
-bottlenecks are.
+David Beazley 有一个关于GIL如何工作的 `指导`_ 。他也讨论了 Python3.2中的 `新GIL`_ 
+他的结论是为了最大化一个Python程序的性能，应该对GIL工作方式有一个深刻的理解——它如何
+影响你的特定程序，你拥有多少核，以及你程序瓶颈在哪。
 
-C Extensions
+C 扩展
 ------------
 
 
 The GIL
 -------
 
-`Special care`_ must be taken when writing C extensions to make sure you
-register your threads with the interpreter.
 
-C Extensions
+当写一个C扩展时必须 `特别关注`_  在解释器中注册你的线程。
+
+C 扩展
 ::::::::::::
 
 
 Cython
 ------
 
-`Cython <http://cython.org/>`_ implements a superset of the Python language
-with which you are able to write C and C++ modules for Python. Cython also
-allows you to call functions from compiled C libraries. Using Cython allows
-you to take advantage of Python's strong typing of variables and operations.
+`Cython <http://cython.org/>`_ 是Python语言的一个超集，对其你可以为Python写C
+或C++模块。Cython也使得你可以从已编译的C库中调用函数。使用Cython让你得以发挥Python
+的变量与操作的强类型优势。
 
-Here's an example of strong typing with Cython:
+这是一个Cython中的强类型例子。
 
 .. code-block:: cython
 
     def primes(int kmax):
-    """Calculation of prime numbers with additional
-    Cython keywords"""
+    """有一些Cython附加关键字的素数计算 """
 
         cdef int n, k, i
         cdef int p[1000]
@@ -100,13 +93,13 @@ Here's an example of strong typing with Cython:
         return result
 
 
-This implementation of an algorithm to find prime numbers has some additional
-keywords compared to the next one, which is implemented in pure Python:
+
+将这个有一些附加关键字的寻找素数算法实现与下面这个纯Python实现比较：
 
 .. code-block:: python
 
     def primes(kmax):
-    """Calculation of prime numbers in standard Python syntax"""
+    """标准Python语法下的素数计算"""
 
         p= range(1000)
         result = []
@@ -125,15 +118,14 @@ keywords compared to the next one, which is implemented in pure Python:
             n = n + 1
         return result
 
-Notice that in the Cython version you declare integers and integer arrays
-to be compiled into C types while also creating a Python list:
+
+注意，在Cython版本，在创建一个Python列表时，你声明了会被编译为C类型的整型和整型数组。
 
 
 .. code-block:: cython
 
     def primes(int kmax):
-        """Calculation of prime numbers with additional
-        Cython keywords"""
+        """有一些Cython附加关键字的素数计算 """
 
         cdef int n, k, i
         cdef int p[1000]
@@ -143,29 +135,27 @@ to be compiled into C types while also creating a Python list:
 .. code-block:: python
 
     def primes(kmax):
-        """Calculation of prime numbers in standard Python syntax"""
+        """标准Python语法下的素数计算"""
 
         p= range(1000)
         result = []
 
-What is the difference? In the upper Cython version you can see the
-declaration of the variable types and the integer array in a similar way as
-in standard C. For example `cdef int n,k,i` in line 3. This additional type
-declaration (i.e. integer) allows the Cython compiler to generate more
-efficient C code from the second version. While standard Python code is saved
-in :file:`*.py` files, Cython code is saved in :file:`*.pyx` files.
+有什么差别呢？在上面的Cython版本中，你可以看到变量类型与整型数组像标准C一样被声明。
+作为例子，第三行的 `cdef int n,k,i` 这个附加类型声明（整型）使得Cython编译器得以产生比
+第二个版本更有效率的C代码。标准Python代码以 `*.py` 格式保存，而Cython以
+ `*.pyx` 格式保存。
 
-What's the difference in speed? Let's try it!
+速度上有什么差异呢？看看这个！
 
 .. code-block:: python
 
 	import time
-	#activate pyx compiler
+	#启动pyx编译器
 	import pyximport
 	pyximport.install()
-	#primes implemented with Cython
+	#Cython的素数算法实现
 	import primesCy
-	#primes implemented with Python
+	#Python的素数算法实现
 	import primes
 
 	print "Cython:"
@@ -181,7 +171,7 @@ What's the difference in speed? Let's try it!
 	print "Python time: %s" %(t2-t1)
 
 
-These lines both need a remark:
+这两行代码需要一些说明：
 
 .. code-block:: python
 
@@ -189,15 +179,13 @@ These lines both need a remark:
     pyximport.install()
 
 
-The `pyximport` module allows you to import :file:`*.pyx` files (e.g.,
-:file:`primesCy.pyx`) with the Cython-compiled version of the `primes`
-function. The `pyximport.install()` command allows the Python interpreter to
-start the Cython compiler directly to generate C-code, which is automatically
-compiled to a :file:`*.so` C-library. Cython is then able to import this
-library for you in your Python code, easily and efficiently. With the
-`time.time()` function you are able to compare the time between these 2
-different calls to find 500 prime numbers. On a standard notebook (dual core
-AMD E-450 1.6 GHz), the measured values are:
+
+`pyximport` 使得你可以导入 `*.pyx` 文件，（像 `primesCy.pyx` 这样的）。
+`pyximport.install()` 命令使Python解释器可以打开Cython编译器直接编译出 `*.so` 格式
+的C库。Cython之后可以导入这个库到你的Python代码中，简便而有效。使用 `time.time()` 函数
+你可以比较两个不同的在查找500个素数的调用长的时间消耗差异。在一个标准笔记本中
+（双核AMD E-450 1.6GHz），测量值是这样的：
+ 
 
 .. code-block:: console
 
@@ -206,7 +194,7 @@ AMD E-450 1.6 GHz), the measured values are:
     Python time: 0.0566 seconds
 
 
-And here the output of an embedded `ARM beaglebone <http://beagleboard.org/Products/BeagleBone>`_ machine:
+而这个是嵌入的 `ARM beaglebone <http://beagleboard.org/Products/BeagleBone>`_ 机的输出结果：
 
 .. code-block:: console
 
@@ -243,8 +231,8 @@ Multiprocessing
 
 
 .. _`PyPy`: http://pypy.org
-.. _`The GIL`: http://wiki.python.org/moin/GlobalInterpreterLock
-.. _`guide`: http://www.dabeaz.com/python/UnderstandingGIL.pdf
-.. _`New GIL`: http://www.dabeaz.com/python/NewGIL.pdf
-.. _`Special care`: http://docs.python.org/c-api/init.html#threads
-.. _`David Beazley's`: http://www.dabeaz.com/GIL/gilvis/measure2.py
+.. _`GIL`: http://wiki.python.org/moin/GlobalInterpreterLock
+.. _`指导`: http://www.dabeaz.com/python/UnderstandingGIL.pdf
+.. _`新GIL`: http://www.dabeaz.com/python/NewGIL.pdf
+.. _`特别关注`: http://docs.python.org/c-api/init.html#threads
+.. _`David Beazley的`: http://www.dabeaz.com/GIL/gilvis/measure2.py
