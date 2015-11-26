@@ -1,75 +1,58 @@
 文档
 =============
 
-Readability is a primary focus for Python developers, in both project
-and code documentation. Following some simple best practices can save
-both you and others a lot of time.
+可读性是Python开发者需关注的重点，这包括项目和代码文档的可读性。遵循一些
+简单的最佳实践能够帮助你和其他人节省很多时间。
 
 项目文档
 ---------------------
 
-A :file:`README` file at the root directory should give general information
-to both users and maintainers of a project. It should be raw text or
-written in some very easy to read markup, such as :ref:`reStructuredText-ref`
-or Markdown. It should contain a few lines explaining the purpose of the
-project or library (without assuming the user knows anything about the
-project), the URL of the main source for the software, and some basic credit
-information. This file is the main entry point for readers of the code.
+根目录下的 :file:`README` 文件应该告诉用户和维护者关于项目的基本信息。它应该是
+原始文本，用一些非常容易阅读的标记，比如 :ref:`reStructuredText-ref` 或 Markdown。
+它应该包含几行内容用来解释项目或者库的目的（假设用户不用知道任何关于该项目的事），
+软件主要源的URL，以及一些基本的信用信息。此文件是代码阅读者的主要入口。
 
-An :file:`INSTALL` file is less necessary with Python.  The installation
-instructions are often reduced to one command, such as ``pip install
-module`` or ``python setup.py install`` and added to the :file:`README`
-file.
+:file:`INSTALL` 文件对Python来说并不必要。安装指令通常少至一条命令，比如说
+``pip install module`` 或 ``python setup.py install`` ，这被添加到 :file:`README`
+文件中。
 
-A :file:`LICENSE` file should *always* be present and specify the license
-under which the software is made available to the public.
+:file:`LICENSE` 文件应该 *总是* 存在的，而且应该指定向公众开放的软件许可。
 
-A :file:`TODO` file or a ``TODO`` section in :file:`README` should list the
-planned development for the code.
+:file:`TODO` 文件或者位于 :file:`README` 中的 ``TODO`` 区域应该列出代码的开发计划。
 
-A :file:`CHANGELOG` file or section in :file:`README` should compile a short
-overview of the changes in the code base for the latest versions.
+:file:`CHANGELOG` 文件或者位于 :file:`README` 中的 ``CHANGELOG`` 区域应该呈现对
+代码库的最新修改的简短概述。
 
 项目发布
 -------------------
 
-Depending on the project, your documentation might include some or all
-of the following components:
+根据项目，你的文档中可能包含下列部分或所有的内容：
 
-- An *introduction* should show a very short overview of what can be
-  done with the product, using one or two extremely simplified use
-  cases. This is the thirty-second pitch for your project.
+- 一份 *介绍* 应该用一两个极其简化的用例，来非常简短地概述该产品
+  能够用来做什么。这是你的项目的30秒的自我陈述（thirty-second pitch）。
 
-- A *tutorial* should show some primary use cases in more detail. The reader
-  will follow a step-by-step procedure to set-up a working prototype.
+- 一份 *教程* 应该展示一些主要的用例，它要有更多细节。读者将会跟着一步步搭建
+  工作原型。
 
-- An *API reference* is typically generated from the code (see
-  :ref:`docstrings <docstring-ref>`). It will list all publicly available
-  interfaces, parameters, and return values.
+- 一份 *API 参考* 通常从代码（参见 :ref:`docstrings <docstring-ref>`）中产生。
+  它会列出所有的可供公共访问的接口、参数和返回值。
 
-- *Developer documentation* is intended for potential contributors. This can
-  include code convention and general design strategy of the project.
+- *开发人员文档* 适用于潜在贡献者。这可以包括项目的代码惯例和通用设计策略。
 
 .. _sphinx-ref:
 
 Sphinx
 ~~~~~~
 
-Sphinx_ is far and away the most popular Python documentation
-tool. **Use it.**  It converts :ref:`restructuredtext-ref` markup language
-into a range of output formats including HTML, LaTeX (for printable
-PDF versions), manual pages, and plain text.
+Sphinx_ 无疑是最流行的Python文档工具。**请使用它吧。** 它能把 :ref:`restructuredtext-ref`标记语言转换为广泛的输出格式，包括HTML、LaTeX(可打印PDF版本)、手册页和纯文本。
 
-There is also **great**, **free** hosting for your Sphinx_ docs:
-`Read The Docs`_. Use it. You can configure it with commit hooks to
-your source repository so that rebuilding your documentation will
-happen automatically.
+`Read The Docs`_ 是一个 *超棒的* 并且 *免费的* 文档托管，可以托管你的 Sphinx_ 文档。
+请使用它。你可以为它配置提交钩子到你的源库中，这样文档的重新构建将会自动进行。
 
-.. note::
+.. 笔记::
 
-    Sphinx is famous for its API generation, but it also works well
-    for general project documentation. This Guide is built with
-    Sphinx_ and is hosted on `Read The Docs`_
+    Sphinx因API生成而著名，但它也适用于普通的项目文档。本指南是用Sphinx_
+    构建，并托管在 `Read The Docs`_ 上。
 
 .. _Sphinx: http://sphinx.pocoo.org
 .. _Read The Docs: http://readthedocs.org
@@ -79,11 +62,11 @@ happen automatically.
 reStructuredText
 ~~~~~~~~~~~~~~~~
 
-Most Python documentation is written with reStructuredText_. It's like
-Markdown with all the optional extensions built in.
+大多数Python文档是用 reStructuredText_ 编写的。它就像是内建了所有可选扩展的
+Markdown。
 
-The `reStructuredText Primer`_ and the `reStructuredText Quick
-Reference`_ should help you familiarize yourself with its syntax.
+`reStructuredText Primer`_ 和 `reStructuredText Quick Reference`_ 应该会帮助
+你熟悉它的语法。
 
 .. _reStructuredText: http://docutils.sourceforge.net/rst.html
 .. _reStructuredText Primer: http://sphinx.pocoo.org/rest.html
@@ -93,13 +76,11 @@ Reference`_ should help you familiarize yourself with its syntax.
 代码文档建议
 -------------------------
 
-Comments clarify the code and they are added with purpose of making the
-code easier to understand. In Python, comments begin with a hash
-(number sign) (``#``).
+注释能使代码清晰，将其加入到代码中是为了理解代码起来更容易。在Python中，注意以一个hash（数字符号）（“#”）开始。
 
 .. _docstring-ref:
 
-In Python, *docstrings* describe modules, classes, and functions:
+在Python中， *docstrings* 用来描述模块、类和函数：
 
 .. code-block:: python
 
@@ -107,69 +88,65 @@ In Python, *docstrings* describe modules, classes, and functions:
         """Returns the square root of self times self."""
         ...
 
-In general, follow the comment section of :pep:`8#comments` (the "Python Style
-Guide").
+一般来说，要遵循 :pep:`8#comments` （"Python风格指南"）的注释部分。
 
-Commenting Sections of Code
+注释代码块
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-*Do not use triple-quote strings to comment code*. This is not a good
-practice, because line-oriented command-line tools such as grep will
-not be aware that the commented code is inactive. It is better to add
-hashes at the proper indentation level for every commented line. Your
-editor probably has the ability to do this easily, and it is worth
-learning the comment/uncomment toggle.
+*不要使用三引号去注释代码*。 这不是好的实践，因为面向行的命令行工具，
+比如说grep，不会知道注释过的代码是没有激活的。对每一个注释行，使用带有
+合适缩进的井号会更好。你的编辑器可能很容易做到这一点，并能切换注释/取消注释。
 
-Docstrings and Magic
+文档字符串和魔法
 ~~~~~~~~~~~~~~~~~~~~
 
-Some tools use docstrings to embed more-than-documentation behavior,
-such as unit test logic. Those can be nice, but you won't ever go
-wrong with vanilla "here's what this does."
+一些工具使用文档字符串来嵌入超过文档（more-than-documentation）的行为，
+比如说单元测试逻辑。这些可以很好，但你也不能排除“这就是这样做的”。
+（译者注：原句是Those can be nice, but you won't ever go wrong with 
+vanilla "here's what this does." 对此句的翻译是意译的，我也可能理解
+不到位~）
 
-Docstrings versus Block comments
+
+文档字符串 vs 块注释
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-These aren't interchangeable. For a function or class, the leading
-comment block is a programmer's note. The docstring describes the
-*operation* of the function or class:
+这些不可互换。对于函数或类，开头的注释区是程序员的注解。而文档字符串
+描述了函数或类的 *操作*:
 
 .. code-block:: python
 
-    # This function slows down program execution for some reason.
+    # 因为某种原因这个函数减慢程序执行。
     def square_and_rooter(x):
-        """Returns the square root of self times self."""
+        """返回自己乘以自己的平方根。"""
 	...
 
-.. see also:: Further reading on docstrings: :pep:`257`
+.. 参见:: 关于文档字符串更多阅读: :pep:`257`
 
 
 其他工具
 -----------
 
-You might see these in the wild. Use :ref:`sphinx-ref`.
-
+你可能在其他场景看到过这些。使用 :ref:`sphinx-ref`。
+ 
 Pycco_
-    Pycco is a "literate-programming-style documentation generator"
-    and is a port of the node.js Docco_. It makes code into a
-    side-by-side HTML code and documentation.
+    Pycco是一个 “文学编程风格的文档生成器”，它是node.js Docco_ 的
+    移植版本。它将代码生成为一个并排的HTML代码和文档。
 
 .. _Pycco: http://fitzgen.github.com/pycco
 .. _Docco: http://jashkenas.github.com/docco
 
 Ronn_
-    Ronn builds Unix manuals. It converts human readable textfiles to roff
-    for terminal display, and also to HTML for the web.
+    Ronn用来构建Unix手册。它将人可读的文本文件转换成用于终端显示的roff文件,
+    以及用于web的HTML文件。
 
 .. _Ronn: https://github.com/rtomayko/ronn
 
 Epydoc_
-    Epydoc is discontinued. Use :ref:`sphinx-ref` instead.
+    Epydoc已经中断开发。使用 :ref:`sphinx-ref` 来替代。
 
 .. _Epydoc: http://epydoc.sourceforge.net
 
 MkDocs_
-    MkDocs is a fast and simple static site generator that's geared towards
-    building project documentation with Markdown.
+    MkDocs是一个快速简单的静态网站生成器，它适合于构建使用Markdown的项目文档。
 
 .. _MkDocs: http://www.mkdocs.org/
