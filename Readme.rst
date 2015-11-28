@@ -60,46 +60,46 @@ Writing Great Code（写出优雅的代码）（完成）
 - Common Gotchas（常见陷阱）（完成）
 - Choosing a License（选择一个许可）（完成）
 
-Scenario Guide（场景/方案指南）（翻译中）
+*Scenario Guide（场景/方案指南）（翻译中）*
 ---------------------------
 - Network Applications（网络应用）（完成）
-- Web Applications（Web 应用）（翻译中）
+- *Web Applications（Web 应用）（翻译中）*
 - HTML Scraping（HTML 抓取）（完成）
 - Command-line Applications（命令行应用）（完成）
-- GUI Applications（GUI应用）（翻译中）
+- *GUI Applications（GUI应用）（翻译中）*
 - Databases（数据库）（完成）
 - Networking（网络）（完成）
-- Systems Administration（系统管理）（待翻译）
-- Continuous Integration（持续集成）（待翻译）
+- *Systems Administration（系统管理）（待翻译）*
+- *Continuous Integration（持续集成）（待翻译）*
 - Speed（速度）（完成）
 - Scientific Applications（科学应用）（完成）
 - Image Manipulation（图像处理）（完成）
 - XML parsing（XML解析）（完成）
 - JSON（JSON）（完成）
-- Cryptography（密码学）（待翻译）
-- Interfacing with C/C++ Libraries（与C/C++库交互）（待翻译）
+- *Cryptography（密码学）（翻译中）*
+- *Interfacing with C/C++ Libraries（与C/C++库交互）（待翻译）*
 
-Shipping Great Code（部署优雅的代码）（待翻译）
+*Shipping Great Code（部署优雅的代码）（待翻译）*
 ---------------------------
-- Packaging Your Code（打包你的代码）（待翻译）
-- Freezing Your Code（Freezing你的代码）（待翻译）
+- *Packaging Your Code（打包你的代码）（待翻译）*
+- *Freezing Your Code（Freezing你的代码）（待翻译）*
 
-Development Environment（开发环境）（待翻译）
+*Development Environment（开发环境）（待翻译）*
 ---------------------------
-- Your Development Environment（你的开发环境）（待翻译）
-- Virtual Environments（虚拟环境）（待翻译）
-- Further Configuration of Pip and Virtualenv（Pip和Virtualenv的更多配置）（待翻译）
+- *Your Development Environment（你的开发环境）（待翻译）*
+- *Virtual Environments（虚拟环境）（待翻译）*
+- *Further Configuration of Pip and Virtualenv（Pip和Virtualenv的更多配置）（待翻译）*
 
-Additional Notes（额外关注）（待翻译）
+*Additional Notes（额外关注）（待翻译）*
 ---------------------------
-- Introduction（介绍）（待翻译）
-- The Community（社区）（待翻译）
-- Learning Python（学习Python）（待翻译）
-- Documentation（文档）（待翻译）
-- News（新闻）（待翻译）
+- *Introduction（介绍）（待翻译）*
+- *The Community（社区）（待翻译）*
+- *Learning Python（学习Python）（待翻译）*
+- *Documentation（文档）（待翻译）*
+- *News（新闻）（待翻译）*
 
-其他（待翻译）
+*其他（待翻译）*
 ---------------------------
-- Contribute（贡献）（待翻译）
-- License（许可证）（待翻译）
-- The Guide Style Guide（风格指南指引）（待翻译）
+- *Contribute（贡献）（待翻译）*
+- *License（许可证）（待翻译）*
+- *The Guide Style Guide（风格指南指引）（待翻译）*
