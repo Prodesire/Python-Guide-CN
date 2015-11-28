@@ -44,23 +44,10 @@ JSON
 simplejson
 ----------
 
-The JSON library was added to Python in version 2.6.
-If you're using an earlier version of Python, the
-`simplejson <https://simplejson.readthedocs.org/en/latest/>`_ library is
-available via PyPI.
-
-JSON库是Python2.6版后才加入的。如果你使用更早版本的Python，
-`simplejson <https://simplejson.readthedocs.org/en/latest/>`_ 
-库也可以通过PyPI获取。
-
-simplejson mimics the json standard library. It is available so that developers
-that use older versions of Python can use the latest features available in the
-json lib.
+JSON库是Python2.6版中加入的。如果你使用更早版本的Python，
+可以通过PyPI获取 `simplejson <https://simplejson.readthedocs.org/en/latest/>`_ 库。
 
 simplejson类似json标准库，它使得使用老版本Python的开发者们可以使用json库中的最新特性。
-
-You can start using simplejson when the json library is not available by
-importing simplejson under a different name:
 
 如果json库不可用，你可以将simplejson取别名为json来使用：
 
@@ -68,9 +55,4 @@ importing simplejson under a different name:
     
     import simplejson as json
 
-After importing simplejson as json, the above examples will all work as if you
-were using the standard json library.
-
-在将simplejson当成json导入后，上面的例子将像你在用标准json库一样正常运行。
-
-
+在将simplejson当成json导入后，上面的例子会像你在使用标准json库一样正常运行。
