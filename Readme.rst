@@ -98,7 +98,7 @@ Additional Notes（额外关注）（待翻译）
 - Documentation（文档）（待翻译）
 - News（新闻）（待翻译）
 
-其他（带翻译）
+其他（待翻译）
 ---------------------------
 - Contribute（贡献）（待翻译）
 - License（许可证）（待翻译）
