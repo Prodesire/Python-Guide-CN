@@ -4,28 +4,23 @@
 Cryptography
 ------------
 
-`Cryptography <https://cryptography.io/en/latest/>`_ is an actively developed
-library that provides cryptographic recipes and primitives. It supports 
-Python 2.6-2.7, Python 3.2+ and PyPy.
+`Cryptography <https://cryptography.io/en/latest/>`_ 是一个开发活跃的库，它提供
+了加密方法（recipes）和基元（primitives），支持Python 2.6-2.7、Python 3.2+ 和 PyPy。
 
+Cryptography 分为两个层，方法（recipes）层和危险底层（hazardous materials，简称hazmat）。
+方法层提供用于适当的对称加密，hazmat层提供底层的加密基元。
 
-Cryptography is divided into two layers of recipes and hazardous materials
-(hazmat).  The recipes layer provides simple API for proper symmetric
-encryption and the hazmat layer provides low-level cryptographic primitives.
-
-
-
-Installation
+安装
 ~~~~~~~~~~~~
 
 .. code-block:: console
 
     $ pip install cryptography
 
-Example
+例子
 ~~~~~~~
 
-Example code using high level symmetric encryption recipe:
+示例代码使用了高层的对称加密方法：
 
 .. code-block:: python
 
@@ -37,22 +32,20 @@ Example code using high level symmetric encryption recipe:
 
 
 
-
 PyCrypto
 --------
 
-`PyCrypto <https://www.dlitz.net/software/pycrypto/>`_ is another library,
-which provides secure hash functions and various encryption algorithms. It
-supports Python version 2.1 through 3.3.
+`PyCrypto <https://www.dlitz.net/software/pycrypto/>`_ 是另一个密码库，它提供
+安全的哈希函数和各种加密算法，支持Python 2.1到3.3。
 
-Installation
+安装
 ~~~~~~~~~~~~
 
 .. code-block:: console
 
     $ pip install pycrypto
 
-Example
+例子
 ~~~~~~~
 
 .. code-block:: python
