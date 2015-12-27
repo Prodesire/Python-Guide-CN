@@ -4,47 +4,40 @@
 打包你的代码
 ===================
 
-Package your code to share it with other developers. For example
-to share a library for other developers to use in their application,
-or for development tools like 'py.test'.
+打包就是把你的代码分享给其他开发者。作为例子，共享一个库给其他开发者用在
+它们的应用中，或者作为一个开发工具，比如 'py.test'。
 
-An advantage of this method of distribution is its well established ecosystem
-of tools such as PyPI and pip, which make it easy for other developers to
-download and install your package either for casual experiments, or as part of
-large, professional systems.
+这种分发方式的一个优势是它拥有既已建成的良好的工具生态，如PyPI与pip，其使得其他
+开发者很容易下载与安装你的包，而无论是一个即兴实验还是作为一个巨型软件系统的一部分。
 
-It is a well-established convention for Python code to be shared this way.
-If your code isn't packaged on PyPI, then it will be harder
-for other developers to find it, and to use it as part of their existing
-process. They will regard such projects with substantial suspicion of being
-either badly managed or abandoned.
+使用这种方式共享Python代码是既已存在的传统，如果你的代码没打包到PyPI上，则它将难以
+被其他开发者找到并用在它们的程序中。事实上他们会怀疑这种项目是否管理不善或者已被放弃了。
 
-The downside of distributing code like this is that it relies on the
-recipient understanding how to install the required version of Python,
-and being able and willing to use tools such as pip to install your code's
-other dependencies. This is fine when distributing to other developers, but
-makes this method unsuitable for distributing applications to end-users.
+像这样分发代码的消极一面是它依赖使用者理解如何安装所要求的Python版本以及会并且希望
+使用pip这样的工具安装你的代码及其他依赖项。虽然对于其它的开发者来说这是没问题的，但
+对于最终用户这并不友好。
 
-The `Python Packaging Guide <https://python-packaging-user-guide.readthedocs.org/en/latest/>`_
-provides an extensive guide on creating and maintaining Python packages.
+`Python打包指南 <https://python-packaging-user-guide.readthedocs.org/en/latest/>`_ 
+提供了更多关于如何创建以及维护Python包的知识。
+
+
 
 打包的多种方式
 :::::::::::::::::::::::::
 
-To distribute applications to end-users, you should
-:ref:`freeze your application <freezing-your-code-ref>`.
+为了分发应用给最终用户，你应该
+:ref:`冻结你的应用 <freezing-your-code-ref>`。
 
-On Linux, you may also want to consider
-:ref:`creating a Linux distro package <packaging-for-linux-distributions-ref>`
-(e.g. a .deb file for Debian or Ubuntu.)
+在Linux，你可能想会考虑
+:ref:`创建一个Linux分发包 <packaging-for-linux-distributions-ref>`
+(例 对于Debian或Ubuntu是一个 .deb文件)
+
 
 对于Python开发者
 :::::::::::::::::::::
 
-If you're writing an open source Python module, `PyPI <http://pypi.python.org>`_
-, more properly known as *The Cheeseshop*, is the place to host it.
-
-
+如果你编写了一个开源的Python模块， `PyPI <http://pypi.python.org>`_
+, 更多属性参见 *The Cheeseshop*，这是一个放它的地方。
 
 Pip vs. easy_install
 --------------------
@@ -52,44 +45,47 @@ Pip vs. easy_install
 Use `pip <http://pypi.python.org/pypi/pip>`_.  More details
 `here <http://stackoverflow.com/questions/3220404/why-use-pip-over-easy-install>`_
 
+使用 `pip <http://pypi.python.org/pypi/pip>`_. 更多细节参见
+`here <http://stackoverflow.com/questions/3220404/why-use-pip-over-easy-install>`_
 
-个人的PyPI
+
+私人的PyPI
 -------------
 
-If you want to install packages from a source other than PyPI, (say, if
-your packages are *proprietary*), you can do it by hosting a simple http
-server, running from the directory which holds those packages which need to be
-installed.
+如果你想要从有别于PyPI的其他源安装包（也就是说，如果你的包是 *专门* （proprietary）的），
+你可以通过为自己开启一个服务器来建立一个这样的源，这个服务器应该开在你想共享的包所在位置
+的文件夹下。
 
-**Showing an example is always beneficial**
+**例子总是有益的**
 
-For example, if you want to install a package called :file:`MyPackage.tar.gz`,
-and assuming this is your directory structure:
-
+作为例子，如果你想要共享一个叫做 :file:`MyPackage.tar.gz` 的包，并且假设你的文件
+结构是这样的：
 
 - archive
    - MyPackage
        - MyPackage.tar.gz
 
-Go to your command prompt and type:
+
+打开你的命令行并且输入：
 
 .. code-block:: console
 
    $ cd archive
    $ python -m SimpleHTTPServer 9000
 
-This runs a simple http server running on port 9000 and will list all packages
-(like **MyPackage**). Now you can install **MyPackage** using any Python
-package installer. Using Pip, you would do it like:
+
+这运行了一个简单的http服务器，其监听端口9000并且将列出所有包（比如 **MyPackage**）。现在
+你可以使用任何Python包安装器从你的服务器中安装 **MyPackage** 。若使用Pip,你可以这样做：
 
 .. code-block:: console
 
    $ pip install --extra-index-url=http://127.0.0.1:9000/ MyPackage
 
-Having a folder with the same name as the package name is **crucial** here.
-I got fooled by that, one time. But if you feel that creating a folder called
-:file:`MyPackage` and keeping :file:`MyPackage.tar.gz` inside that, is
-*redundant*, you can still install MyPackage using:
+你的文件夹名字与你的包名相同是 **必须**的。我曾经被这个坑过一次。但是如果你但觉得
+创建一个叫做 :file:`MyPackage`的文件夹然后里面又有一个:file:`MyPackage.tar.gz`文件
+是*多余*的，你可以这样共享MyPackage:
+
+
 
 .. code-block:: console
 
@@ -98,86 +94,82 @@ I got fooled by that, one time. But if you feel that creating a folder called
 pypiserver
 ++++++++++
 
-`Pypiserver <https://pypi.python.org/pypi/pypiserver>`_ is a minimal PyPI
-compatible server.  It can be used to serve a set of packages to easy_install
-or pip.  It includes helpful features like an administrative command
-(:option:`-U`) which will update all its packages to their latest versions
-found on PyPI.
+`Pypiserver <https://pypi.python.org/pypi/pypiserver>`_ 是一个精简的PyPI兼容服务器。
+它可以被用来让一系列包通过easy_install与pip进行共享。它包含一些有益的命令，诸如管理
+命令(:option:`-U`)，其可以自动更新所有它的包到PyPI上的最新版。
 
 
 S3-Hosted PyPi
 ++++++++++++++
 
-One simple option for a personal PyPi server is to use Amazon S3. A
-prerequisite for this is that you have an Amazon AWS account with an S3 bucket.
 
-1. **Install all your requirements from PyPi or another source**
-2. **Install pip2pi**
+一个简单的个人PyPI服务器实现选项是使用Amazon S3。使用它的一个前置要求是你有一个
+Amazon AWS账号并且有 S3 bucket。
+
+1. **安装所有你需要的东西从PyPI或者其他源。
+
+2. **安装 pip2pi**
 
 * :code:`pip install git+https://github.com/wolever/pip2pi.git`
 
-3. **Follow pip2pi README for pip2tgz and dir2pi commands**
+3. **跟着 pip2pi 的README文件使用pip2tgz 与 dir2pi命令**
 
 * :code:`pip2tgz packages/ YourPackage` (or :code:`pip2tgz packages/ -r requirements.txt`)
 * :code:`dir2pi packages/`
 
-4. **Upload the new files**
 
-* Use a client like Cyberduck to sync the entire :file:`packages` folder to your s3 bucket
-* Make sure you upload :code:`packages/simple/index.html` as well as all new files and directories
+4. **上传新文件**
+* 使用像Cyberduck这些的客户端同步整个 :file:`packages`文件夹到你的s3 bucket
+* 保证你像（注意文件和路径）这样 :code:`packages/simple/index.html` 上传了新的文件。
 
-5. **Fix new file permissions**
+5. **Fix新文件许可**
 
-* By default, when you upload new files to the S3 bucket, they will have the wrong permissions set.
-* Use the Amazon web console to set the READ permission of the files to EVERYONE.
-* If you get HTTP 403 when trying to install a package, make sure you've set the permissions correctly.
+* 默认情况下，当你上传新文件到S3 bucket,它们将有一个不合适的许可设置。
+* 使用Amazon web console设置文件的对所有人的READ许可。
+* 如果当你尝试安装一个包的时候遇上 HTTP 403 ，确保你正确设置了许可。
 
-6. **All done**
+6. **搞定**
 
-* You can now install your package with :code:`pip install --index-url=http://your-s3-bucket/packages/simple/ YourPackage`
+*你可以安装你的包通过使用代码 :code:`pip install --index-url=http://your-s3-bucket/packages/simple/ YourPackage`
 
 .. _packaging-for-linux-distributions-ref:
 
-For Linux Distributions
+
+在Linux上分发
 ::::::::::::::::::::::::
 
-Creating a Linux distro package is arguably the "right way" to distribute code
-on Linux.
 
-Because a distribution package doesn't include the Python interpreter, it
-makes the download and install about 2MB smaller than
+创建一个Linux分发包对于Linux来说是个正确的决定。
+
+因为分发包可以不包含Python解释器，它使得下载与安装这些包可以减小2MB，
 :ref:`freezing your application <freezing-your-code-ref>`.
 
-Also, if a distribution releases a new security update for Python, then your
-application will automatically start using that new version of Python.
+并且，如果Python有了更新的版本，则你的应用可以自动使用新版本的Python。
 
-The bdist_rpm command makes `producing an RPM file <https://docs.python.org/3/distutils/builtdist.html#creating-rpm-packages>`_
-for use by distributions like Red Hat or SuSE is trivially easy.
+bdist_rpm命令使得 `producing an RPM file <https://docs.python.org/3/distutils/builtdist.html#creating-rpm-packages>`_
+使得像Red Hat以及SuSE使用分发包变得极其简单，
 
-However, creating and maintaining the different configurations required for
-each distribution's format (e.g. .deb for Debian/Ubuntu, .rpm for Red
-Hat/Fedora, etc) is a fair amount of work. If your code is an application that
-you plan to distribute on other platforms, then you'll also have to create and
-maintain the separate config required to freeze your application for Windows
-and OSX. It would be much less work to simply create and maintain a single
-config for one of the cross platform :ref:`freezing tools
-<freezing-your-code-ref>`, which will produce stand-alone executables for all
-distributions of Linux, as well as Windows and OSX.
 
-Creating a distribution package is also problematic if your code is for a
-version of Python that isn't currently supported by a distribution.
-Having to tell *some versions* of Ubuntu end-users that they need to add `the
+ 无论如何，创建和维持不同配置要求给不同的发布格式（如 对于Debian/Ubuntu是.deb，而对于Red
+ Hat/Fedora是.rpm等）无疑需要大量的工作。如果你的代码是一个应用，而你计划分发到其他平台上，
+ 则你需要创建并维护各个配置要求来冻结你的应用为Windows与OSX。它比创建和
+ 维护一个单独的配置给每个平台要简单的多 :ref:`freezing tools <freezing-your-code-ref>`
+ 其将产生独立可执行的文件给所有Linux发布版，就像Windows与OSX上一样，
+
+创建一个对Python版本敏感的分发包也会造成问题。可能需要告诉Ubuntu的*一些版本*的
+用户他们需要增加 `the
 'dead-snakes' PPA <https://launchpad.net/~fkrull/+archive/ubuntu/deadsnakes>`_
-using `sudo apt-repository` commands before they can install your .deb file
-makes for an extremely hostile user experience. Not only that, but you'd have
-to maintain a custom equivalent of these instructions for every distribution,
-and worse, have your users read, understand, and act on them.
+通过使用 `sudo apt-repository`命令在他们安装你的 .deb文件，这将使用户极其厌烦。
+不仅如此，你会要维持每个发布版的使用指导，也许更糟的是，你的用户要去读，理解，
+并按它上面说的做。
 
-Having said all that, here's how to do it:
+
+下面是指导如何做上面所说事情的链接：
 
 * `Fedora <https://fedoraproject.org/wiki/Packaging:Python>`_
 * `Debian and Ubuntu <http://www.debian.org/doc/packaging-manuals/python-policy/>`_
 * `Arch <https://wiki.archlinux.org/index.php/Python_Package_Guidelines>`_
+
 
 有用的工具
 ------------
