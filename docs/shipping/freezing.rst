@@ -4,39 +4,33 @@
 Freezing你的代码
 ==================
 
-To 'Freeze' your code is to distribute to end-users as an executable which
-includes a bundled Python interpreter.
 
-Applications such as 'Dropbox', BitTorrent clients, 'Eve Online' and
-'Civilisation IV' do this.
+'冻结'（Freeze） 你的代码是指分发给最终用户一个打包了Python解释器的可执行版本。
 
-The advantage of distributing this way is that your application will work even
-if the user doesn't already have the required version of Python installed. On
-Windows, and even on many Linux distributions and OSX versions, the right
-version of Python will not already be installed.
+像 'Dropbox', BitTorrent 客户端， 'Eve Online' 以及 '文明4' 都是这样的。
 
-One disadvantage is that it will bloat your distribution by about 2MB.
-Another problem is that your application will not receive any security updates
-to the version of Python it uses unless you freeze a new version and get
-users to download it.
+进行这种分发的一个好处是你的用户不需要之前安装过所要求版本的Python。在Windows上，
+甚至一些Linus分发版与OSX版本，正确的Python版本并不总是安装过的。
+
+这样的一个劣势是你的分发版将增大大约2MB。另一个问题在于你的应用并不能接收对于该版本
+Python的任何安全更新除非你冻结一个新的版本并让你的用户下载它。
 
 Freezing的多种方式
 ------------------------
 
-:ref:`Packaging your code <packaging-your-code-ref>` is for distributing
-libraries or tools to other developers.
+:ref: `打包你的代码<packaging-your-code-ref>` 是指把你的库或工具分发给其他开发者。
 
-On Linux, an alternative to freezing is to
-:ref:`create a Linux distro package <packaging-for-linux-distributions-ref>`
-(e.g. .deb files for Debian or Ubuntu, or .rpm files for Red Hat and SuSE.)
+在Linux 一个冻结的待选物是 :ref:`创建一个Linux分发
+包 <packaging-for-linux-distributions-ref> (e.g.对于Debian或Ubuntu是 .deb文件，
+而对于Red Hat 与SuSE是.rpm文件)`
 
-.. todo:: Fill in "Freezing Your Code" stub
+.. todo:: 完善 "冻结你的代码" 部分（stub）。
 
 
-Comparison
+比较
 ----------
 
-Solutions and platforms/features supported:
+各解决方案的平台/特性支持性
 
 =========== ======= ===== ==== ======== ======= ============= ============== ==== =====================
 Solution    Windows Linux OS X Python 3 License One-file mode Zipfile import Eggs pkg_resources support
@@ -48,15 +42,14 @@ cx_Freeze   yes     yes   yes  yes      PSF     no            yes            yes
 py2app      no      no    yes  yes      MIT     no            yes            yes  yes
 =========== ======= ===== ==== ======== ======= ============= ============== ==== =====================
 
+    
 .. note::
-    Freezing Python code on Linux into a Windows executable was only once
-    supported in PyInstaller `and later dropped.
+    从Linux到Windows的冻结只有PyInstaller支持，参见
     <http://stackoverflow.com/questions/2950971/cross-compiling-a-python-script-on-linux-into-a-windows-executable#comment11890276_2951046>`_.
 
 .. note::
-    All solutions need MS Visual C++ dll to be installed on target machine, except py2app.
-    Only Pyinstaller makes self-executable exe that bundles the dll when
-    passing :option:`--onefile` to :file:`Configure.py`.
+    所有解决方案需要目前机器上安装了MS Visual C++ dll。除了py2app以外。
+    只有Pyinstaller创建了可以自足运行的exe文件，其绑定了dll，当传递 :option:`--onefile` to :file:`Configure.py`.
 
 Windows
 -------
@@ -64,18 +57,20 @@ Windows
 bbFreeze
 ~~~~~~~~
 
-Prerequisite is to install :ref:`Python, Setuptools and pywin32 dependency on Windows <install-windows>`.
+前置要求是安装 :ref:`Python, Setuptools 以及 pywin32 的依赖项 <install-windows>`.
 
-.. todo:: Write steps for most basic .exe
+.. todo:: 补充更多简单的生成 .exe的步骤。 
+
 
 py2exe
 ~~~~~~
 
-Prerequisite is to install :ref:`Python on Windows <install-windows>`.
+    
+前置要求是安装 :ref:`Python on Windows <install-windows>`.
 
-1. Download and install http://sourceforge.net/projects/py2exe/files/py2exe/
+1. 下载并且安装 http://sourceforge.net/projects/py2exe/files/py2exe/
 
-2. Write :file:`setup.py` (`List of configuration options <http://www.py2exe.org/index.cgi/ListOfOptions>`_):
+2. 编写 :file:`setup.py` (`配置选项清单 <http://www.py2exe.org/index.cgi/ListOfOptions>`_):
 
 .. code-block:: python
 
@@ -86,25 +81,26 @@ Prerequisite is to install :ref:`Python on Windows <install-windows>`.
         windows=[{'script': 'foobar.py'}],
     )
 
-3. (Optionally) `include icon <http://www.py2exe.org/index.cgi/CustomIcons>`_
 
-4. (Optionally) `one-file mode <http://stackoverflow.com/questions/112698/py2exe-generate-single-executable-file#113014>`_
+3. (可选) `包含图标 <http://www.py2exe.org/index.cgi/CustomIcons>`_
 
-5. Generate :file:`.exe` into :file:`dist` directory:
+4. (可选) `单文件模式 <http://stackoverflow.com/questions/112698/py2exe-generate-single-executable-file#113014>`_
+
+5. 生成 :file: `.exe` 到 :file:`dist` 目录:
 
 .. code-block:: console
 
    $ python setup.py py2exe
 
-6. Provide the Microsoft Visual C runtime DLL. Two options: `globally install dll on target machine <https://www.microsoft.com/en-us/download/details.aspx?id=29>`_ or `distribute dll alongside with .exe <http://www.py2exe.org/index.cgi/Tutorial#Step52>`_.
+6.提供Microsoft Visual C 运行时DLL。两个选项: `在目标机器全局安装dll <https://www.microsoft.com/en-us/download/details.aspx?id=29>`_ 或者 `与.exe一起分发dll <http://www.py2exe.org/index.cgi/Tutorial#Step52>`_.
 
 PyInstaller
 ~~~~~~~~~~~
 
-Prerequisite is to have installed :ref:`Python, Setuptools and pywin32 dependency on Windows <install-windows>`.
+前置是安装 :ref:`Python, Setuptools 以及pywin32 依赖项 <install-windows>`.
 
-- `Most basic tutorial <http://bojan-komazec.blogspot.com/2011/08/how-to-create-windows-executable-from.html>`_
-- `Manual <http://www.pyinstaller.org/export/d3398dd79b68901ae1edd761f3fe0f4ff19cfb1a/project/doc/Manual.html?format=raw>`_
+- `更多的简单教程 <http://bojan-komazec.blogspot.com/2011/08/how-to-create-windows-executable-from.html>`_
+- `手册 <http://www.pyinstaller.org/export/d3398dd79b68901ae1edd761f3fe0f4ff19cfb1a/project/doc/Manual.html?format=raw>`_
 
 
 OS X
