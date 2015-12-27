@@ -18,7 +18,7 @@ Python的任何安全更新除非你冻结一个新的版本并让你的用户�
 Freezing的多种方式
 ------------------------
 
-:ref: `打包你的代码<packaging-your-code-ref>` 是指把你的库或工具分发给其他开发者。
+:ref:`打包你的代码<packaging-your-code-ref>` 是指把你的库或工具分发给其他开发者。
 
 在Linux 一个冻结的待选物是 :ref:`创建一个Linux分发
 包 <packaging-for-linux-distributions-ref> (e.g.对于Debian或Ubuntu是 .deb文件，
@@ -44,12 +44,12 @@ py2app      no      no    yes  yes      MIT     no            yes            yes
 
     
 .. note::
-    从Linux到Windows的冻结只有PyInstaller支持，参见
-    <http://stackoverflow.com/questions/2950971/cross-compiling-a-python-script-on-linux-into-a-windows-executable#comment11890276_2951046>`_.
+    从Linux到Windows的冻结只有PyInstaller支持，
+    `其余的 <http://stackoverflow.com/questions/2950971/cross-compiling-a-python-script-on-linux-into-a-windows-executable#comment11890276_2951046>`_。
 
 .. note::
     所有解决方案需要目前机器上安装了MS Visual C++ dll。除了py2app以外。
-    只有Pyinstaller创建了可以自足运行的exe文件，其绑定了dll，当传递 :option:`--onefile` to :file:`Configure.py`.
+    只有Pyinstaller创建了可以自足运行的exe文件，其绑定了dll，可以传递 :option:`--onefile` to :file:`Configure.py`。
 
 Windows
 -------
@@ -57,7 +57,7 @@ Windows
 bbFreeze
 ~~~~~~~~
 
-前置要求是安装 :ref:`Python, Setuptools 以及 pywin32 的依赖项 <install-windows>`.
+前置要求是安装 :ref:`Python, Setuptools 以及 pywin32 的依赖项 <install-windows>`。
 
 .. todo:: 补充更多简单的生成 .exe的步骤。 
 
@@ -66,7 +66,7 @@ py2exe
 ~~~~~~
 
     
-前置要求是安装 :ref:`Python on Windows <install-windows>`.
+前置要求是安装了 :ref:`Python on Windows <install-windows>`。
 
 1. 下载并且安装 http://sourceforge.net/projects/py2exe/files/py2exe/
 
@@ -92,7 +92,7 @@ py2exe
 
    $ python setup.py py2exe
 
-6.提供Microsoft Visual C 运行时DLL。两个选项: `在目标机器全局安装dll <https://www.microsoft.com/en-us/download/details.aspx?id=29>`_ 或者 `与.exe一起分发dll <http://www.py2exe.org/index.cgi/Tutorial#Step52>`_.
+6.提供Microsoft Visual C 运行时DLL。两个选项: `在目标机器全局安装dll <https://www.microsoft.com/en-us/download/details.aspx?id=29>`_ 或者 `与.exe一起分发dll <http://www.py2exe.org/index.cgi/Tutorial#Step52>`_。
 
 PyInstaller
 ~~~~~~~~~~~
