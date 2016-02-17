@@ -66,7 +66,7 @@ Writing Great Code（写出优雅的代码）（完成）
 - *Web Applications（Web 应用）（翻译中）*
 - HTML Scraping（HTML 抓取）（完成）
 - Command-line Applications（命令行应用）（完成）
-- *GUI Applications（GUI应用）（翻译中）*
+- *GUI Applications（GUI应用）（完成）*
 - Databases（数据库）（完成）
 - Networking（网络）（完成）
 - *Systems Administration（系统管理）（待翻译）*
@@ -77,12 +77,12 @@ Writing Great Code（写出优雅的代码）（完成）
 - XML parsing（XML解析）（完成）
 - JSON（JSON）（完成）
 - *Cryptography（密码学）（翻译中）*
-- *Interfacing with C/C++ Libraries（与C/C++库交互）（待翻译）*
+- *Interfacing with C/C++ Libraries（与C/C++库交互）（完成）*
 
-*Shipping Great Code（部署优雅的代码）（待翻译）*
+*Shipping Great Code（部署优雅的代码）（完成）*
 ---------------------------
-- *Packaging Your Code（打包你的代码）（待翻译）*
-- *Freezing Your Code（Freezing你的代码）（待翻译）*
+- *Packaging Your Code（打包你的代码）（完成）*
+- *Freezing Your Code（Freezing你的代码）（完成）*
 
 *Development Environment（开发环境）（待翻译）*
 ---------------------------
