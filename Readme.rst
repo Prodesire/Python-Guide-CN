@@ -70,19 +70,19 @@ Writing Great Code（写出优雅的代码）（完成）
 - Databases（数据库）（完成）
 - Networking（网络）（完成）
 - *Systems Administration（系统管理）（待翻译）*
-- *Continuous Integration（持续集成）（待翻译）*
+- Continuous Integration（持续集成）（完成）
 - Speed（速度）（完成）
 - Scientific Applications（科学应用）（完成）
 - Image Manipulation（图像处理）（完成）
 - XML parsing（XML解析）（完成）
 - JSON（JSON）（完成）
-- *Cryptography（密码学）（翻译中）*
-- *Interfacing with C/C++ Libraries（与C/C++库交互）（完成）*
+- Cryptography（密码学）（完成）
+- Interfacing with C/C++ Libraries（与C/C++库交互）（完成）
 
-*Shipping Great Code（部署优雅的代码）（完成）*
+Shipping Great Code（部署优雅的代码）（完成）
 ---------------------------
-- *Packaging Your Code（打包你的代码）（完成）*
-- *Freezing Your Code（Freezing你的代码）（完成）*
+- Packaging Your Code（打包你的代码）（完成）
+- Freezing Your Code（Freezing你的代码）（完成）
 
 *Development Environment（开发环境）（待翻译）*
 ---------------------------
