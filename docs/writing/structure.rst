@@ -15,6 +15,271 @@
 可靠的的代码。
 
 
+仓库的结构
+---------------------------
+
+这很重要
+:::::::::::::::
+
+在一个健康的开发周期中，代码风格，API设计和自动化是非常关键的。同样的，对于工
+程的`架构 <http://www.amazon.com/gp/product/1257638017/ref=as_li_ss_tl?
+ie=UTF8&tag=bookforkind-20&linkCode=as2&camp=1789&creative=39095&creat
+iveASIN=1257638017>`__ ,仓库的结构也是关键的一部分。
+
+当一个潜在的用户和贡献者登录到你的仓库页面时，他们会看到这些:
+
+-  工程的名字
+-  工程的描述
+-  一系列的文件
+
+只有当他们滚动到目录下方时才会看到你工程的README。
+
+如果你的仓库的目录是一团糟，没有清晰的结构，他们可能要到处寻找才能找到你写的漂
+亮的文档。
+
+    为你的渴望的事业而奋斗，而不是仅仅只为你现在的工作而工作。
+
+当然，第一印象并不是一切。但是，你和你的同事会和这个仓库并肩战斗很长时间，会熟悉
+它的每一个角落和细节。拥有良好的布局，事半功倍。
+
+仓库样例
+:::::::::::::::::
+
+**请看这里**: 这是 `Kenneth Reitz <http://kennethreitz.org>`_ 推荐的。
+
+这个仓库 `可以在Github上找到 <https://github.com/kennethreitz/samplemod>`__ 。
+
+::
+
+    README.rst
+    LICENSE
+    setup.py
+    requirements.txt
+    sample/__init__.py
+    sample/core.py
+    sample/helpers.py
+    docs/conf.py
+    docs/index.rst
+    tests/test_basic.py
+    tests/test_advanced.py
+
+让我们看一下细节。
+
+真正的模块
+:::::::::::::::::
+
+.. csv-table::
+   :widths: 20, 40
+
+   "布局", "``./sample/`` or ``./sample.py``"
+   "作用", "核心代码"
+
+
+你的模块包是这个仓库的核心，它不应该隐藏起来:
+
+::
+
+    ./sample/
+
+如果你的模块只有一个文件，那么你可以直接将这个文件放在仓库的根目录下:
+
+::
+
+    ./sample.py
+
+这个模块文件不应该属于任何一个模棱两可的src或者python子目录。
+
+License
+:::::::
+
+
+.. csv-table::
+   :widths: 20, 40
+
+   "布局", "``./LICENSE``"
+   "作用", "许可证."
+
+除了源代码本身以外，这个毫无疑问是你仓库最重要的一部分。在这个文件中要有完整的许
+可说明和授权。
+
+如果你不太清楚你应该使用哪种许可方式，请查看
+`choosealicense.com <http://choosealicense.com>`_.
+
+当然，你也可以在发布你的代码时不做任何许可说明，但是这显然阻碍潜在的用户使用你的
+代码。
+
+Setup.py
+::::::::
+
+.. csv-table::
+   :widths: 20, 40
+
+   "布局", "``./setup.py``"
+   "作用", "打包和发布管理"
+
+
+如果你的模块包在你的根目录下，显然这个文件也应该在根目录下。
+
+Requirements File
+:::::::::::::::::
+
+.. csv-table::
+   :widths: 20, 40
+
+   "布局", "``./requirements.txt``"
+   "作用", "开发依赖."
+
+
+一个 `pip requirements
+file <https://pip.pypa.io/en/stable/user_guide/#requirements-files>`__
+应该放在仓库的根目录。它应该指明完整工程的所有依赖包: 测试, 编译和文档生成。
+
+如果你的工程没有任何开发依赖，或者你喜欢通过 ``setup.py`` 来设置，那么这个文件
+不是必须的。
+
+Documentation
+:::::::::::::
+
+
+.. csv-table::
+   :widths: 20, 40
+
+   "布局", "``./docs/``"
+   "作用", "包的参考文档"
+
+没有任何理由把这个放到别的地方。
+
+Test Suite
+::::::::::
+
+
+.. csv-table::
+   :widths: 20, 40
+
+   "布局", "``./test_sample.py`` or ``./tests``"
+   "作用", "包的集合和单元测试"
+
+最开始，一组测试例子只是放在一个文件当中:
+
+::
+
+    ./test_sample.py
+
+当测试例子逐步增加时，你会把它放到一个目录里面，像下面这样:
+
+::
+
+    tests/test_basic.py
+    tests/test_advanced.py
+
+当然，这些测试例子需要导入你的包来进行测试，有几种方式来处理:
+
+-  将你的包安装到site-packages中。
+-  通过简单直接的路径设置来解决导入的问题。
+
+我极力推荐后者。如果使用`setup.py <http://setup.py>`__ 来测试一个持续更新的代
+码库，需要为每一个版本的代码库设置一个独立的测试环境.太麻烦了。
+
+可以先创建一个包含上下文环境的文件 tests/context.py。
+file:
+
+::
+
+    import os
+    import sys
+    sys.path.insert(0, os.path.abspath('..'))
+
+    import sample
+
+然后，在每一个测试文件中，导入:
+
+::
+
+    from .context import sample
+
+这样就能够像期待的那样工作，而不用采用安装的方式.
+
+一些人会说应该把你的测试例子放到你的模块里面 -- 我不同意。这样会增加你用户使用
+的复杂度；而且添加测试模块将导致需要额外的依赖和运行环境。
+
+Makefile
+::::::::
+
+
+.. csv-table::
+   :widths: 20, 40
+
+   "布局", "``./Makefile``"
+   "作用", "常规的管理任务"
+
+
+如果你看看我的项目或者其他开源项目，你都会发现有一个Makefile。为什么？这些项目
+也不是用C写的。。。简而言之，make对于定义常规的管理任务是非常有用的工具。
+
+** 样例 Makefile:**
+
+::
+
+    init:
+        pip install -r requirements.txt
+
+    test:
+        py.test tests
+
+一些其他的常规管理脚本（比如 ``manage.py`` 或者 ``fabfile.py``），也放在仓库
+的根目录下。
+
+
+关于 Django Applications
+:::::::::::::::::::::::::::::
+
+从Django 1.4开始，我发现有这样一个趋势，很多开发者错误地使用Django自带的应用
+模板创建项目，导致他们的仓库结构非常糟糕。
+
+这是怎么回事儿? 是的, 他们在进入一个新的仓库后，通常都这样操作：
+
+::
+
+    $ django-admin.py start-project samplesite
+
+这样的操作生成的仓库结构是这样的:
+
+::
+
+    README.rst
+    samplesite/manage.py
+    samplesite/samplesite/settings.py
+    samplesite/samplesite/wsgi.py
+    samplesite/samplesite/sampleapp/models.py
+
+亲，不要这样做.
+
+相对路径会让你的工具和你的开发者都很疑惑。没有必要的嵌套对任何人都没有好处（除非
+你们怀念庞大的SVN仓库）。
+
+让我们这样才做:
+
+::
+
+    $ django-admin.py start-project samplesite .
+
+注意末尾的 "``.``"。
+
+生成的结构是这样的:
+
+::
+
+    README.rst
+    manage.py
+    samplesite/settings.py
+    samplesite/wsgi.py
+    samplesite/sampleapp/models.py
+
+
+
+
+
+
 结构是一把钥匙
 ----------------
 
