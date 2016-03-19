@@ -1,24 +1,25 @@
 贡献
 ~~~~~~~~~~
 
-Python-guide is under active development, and contributors are welcome.
+Python-guide目前还在开发中，欢迎大家贡献代码。
 
-If you have a feature request, suggestion, or bug report, please open a new
-issue on GitHub_. To submit patches, please send a pull request on GitHub_.
-Once your changes get merged back in, you'll automatically be added to the
-`Contributors List <https://github.com/kennethreitz/python-guide/contributors>`_.
+如果你有feature request，修改建议，或者bug报告，请在GitHub_上新建issue。如果想要
+提交补丁，请直接pull request到 GitHub_。
+一旦你的修改被merge，你会被自动添加到
+`贡献者一览 <https://github.com/kennethreitz/python-guide/contributors>`_ 中。
+
 
 风格指南
 -----------
 
-For all contributions, please follow the :ref:`guide-style-guide`.
+请戳这里 :ref:`guide-style-guide`.
 
 .. _todo-list-ref:
 
 要做的事
 ---------
 
-If you'd like to contribute, there's plenty to do. Here's a short todo_ list.
+如果你想为我们做些贡献，这里有我们的计划。一个简短的 todo_ 列表。
 
     .. include:: ../../TODO.rst
 
