@@ -4,22 +4,15 @@
 Fabric
 ------
 
-`Fabric <http://docs.fabfile.org>`_ is a library for simplifying system
-administration tasks. While Chef and Puppet tend to focus on managing servers
-and system libraries, Fabric is more focused on application level tasks such
-as deployment.
+`Fabric <http://docs.fabfile.org>`_ 是一个简化系统管理任务的库。Chef和Puppet倾向于关注管理服务器和系统库，而Fabric更加关注应用级别的任务，比如说部署。
 
-Install Fabric:
+安装Fabric:
 
 .. code-block:: console
 
     $ pip install fabric
 
-The following code will create two tasks that we can use: ``memory_usage`` and
-``deploy``. The former will output the memory usage on each machine. The
-latter will ssh into each server, cd to our project directory, activate the
-virtual environment, pull the newest codebase, and restart the application
-server.
+下面的代码将会创建我们可以使用的两个任务： ``memory_usage`` 和 ``deploy``。前者将会在每台机器上输出内存使用情况。后者将会ssh到每台服务器，cd到我们的工程目录，激活虚拟环境，拉取最新的代码库，以及重启应用服务器。
 
 .. code-block:: python
 
@@ -38,8 +31,7 @@ server.
                 run('git pull')
                 run('touch app.wsgi')
 
-With the previous code saved in a file named :file:`fabfile.py`, we can check
-memory usage with:
+将上述代码保存到文件 :file:`fabfile.py` 中，我们可以这样检查内存的使用：
 
 .. code-block:: console
 
@@ -64,53 +56,40 @@ and we can deploy with:
 
     $ fab deploy
 
-Additional features include parallel execution, interaction with remote
-programs, and host grouping.
+额外的特性包括并行执行、和远程程序交互、以及主机分组。
 
-    `Fabric Documentation <http://docs.fabfile.org>`_
+    `Fabric 文档 <http://docs.fabfile.org>`_
 
 Salt
 ----
 
-`Salt <http://saltstack.org/>`_ is an open source infrastructure management
-tool.  It supports remote command execution from a central point (master host)
-to multiple hosts (minions). It also supports system states which can be used
-to configure multiple servers using simple template files.
+`Salt <http://saltstack.org/>`_ 是一个开源的基础管理工具。它支持从中心节点（主要的主机）到多个主机（指从机）的远程命令执行。它也支持系统语句，能够使用简单的模板文件配置多台服务器。
 
-Salt supports Python versions 2.6 and 2.7 and can be installed via pip:
+Salt支持Python 2.6和2.7，并能通过pip安装：
 
 .. code-block:: console
 
     $ pip install salt
 
-After configuring a master server and any number of minion hosts, we can run
-arbitrary shell commands or use pre-built modules of complex commands on our
-minions.
+在配置好一台主服务器和任意数量的从机后，我们可以在从机上使用任意的shell命令或者预制的复杂命令的模块。
 
-The following command lists all available minion hosts, using the ping module.
+下面的命令使用ping模块列出所有可用的从机：
 
 .. code-block:: console
 
     $ salt '*' test.ping
 
-The host filtering is accomplished by matching the minion id,
-or using the grains system. The
-`grains <http://docs.saltstack.org/en/latest/topics/targeting/grains.html>`_
-system uses static host information like the operating system version or the
-CPU architecture to provide a host taxonomy for the Salt modules.
+主机过滤是通过匹配从机id或者使用颗粒系统（grains system）。 `颗粒（grains） <http://docs.saltstack.com/en/latest/topics/targeting/grains.html>`_ 系统使用静态的主机信息，比如操作系统版本或者CPU架构，来为Salt模块提供主机分类内容。
 
-The following command lists all available minions running CentOS using the
-grains system:
+下列命令行使用颗粒系统列举了所有可用的运行CentOS的从机：
 
 .. code-block:: console
 
     $ salt -G 'os:CentOS' test.ping
 
-Salt also provides a state system. States can be used to configure the minion
-hosts.
+Salt也提供状态系统。状态能够用来配置从机。
 
-For example, when a minion host is ordered to read the following state file,
-it will install and start the Apache server:
+例如，当一个从机接受读取下列状态文件的指令，他将会安装和启动Apache服务器：
 
 .. code-block:: yaml
 
@@ -123,27 +102,25 @@ it will install and start the Apache server:
         - require:
           - pkg: apache
 
-State files can be written using YAML, the Jinja2 template system or pure Python.
+状态文件可以使用YAML、Jinja2模板系统或者纯Python编写。
 
-    `Salt Documentation <http://docs.saltstack.com>`_
+    `Salt 文档 <http://docs.saltstack.com>`_
 
 
 Psutil
 ------
 
-`Psutil <https://code.google.com/p/psutil/>`_ is an interface to different
-system information (e.g. CPU, memory, disks, network, users and processes).
+`Psutil <https://code.google.com/p/psutil/>`_ 是获取不同系统信息（比如CPU、内存、硬盘、网络、用户、进程）的接口。
 
-Here is an example to be aware of some server overload. If any of the
-tests (net, CPU) fail, it will send an email.
+下面是一个关注一些服务器过载的例子。如果任意一个测试（网络、CPU）失败，它将会发送一封邮件。
 
 .. code-block:: python
 
-    # Functions to get system values:
+    # 获取系统变量的函数:
     from psutil import cpu_percent, net_io_counters
-    # Functions to take a break:
+    # 休眠函数:
     from time import sleep
-    # Package for email services:
+    # 用于email服务的包:
     import smtplib
     import string
     MAX_NET_USAGE = 400000
@@ -169,7 +146,7 @@ tests (net, CPU) fail, it will send an email.
         if counter > 25:
             attack = 0
             counter = 0
-    # Write a very important email if attack is higher than 4
+    # 如果attack大于4，就编写一封十分重要的email
     TO = "you@your_email.com"
     FROM = "webmaster@your_domain.com"
     SUBJECT = "Your domain is out of system resources!"
@@ -180,19 +157,14 @@ tests (net, CPU) fail, it will send an email.
     server.quit()
 
 
-A full terminal application like a widely extended top which is based on
-psutil and with the ability of a client-server monitoring is
-`glance <https://github.com/nicolargo/glances/>`_.
+一个类似于基于psutil并广泛扩展的top，并拥有客服端-服务端监控能力的完全终端应用叫做 `glance <https://github.com/nicolargo/glances/>`_ 。
 
 Ansible
 -------
 
-`Ansible <http://ansible.com/>`_  is an open source system automation tool.
-The biggest advantage over Puppet or Chef is it does not require an agent on
-the client machine. Playbooks are Ansible’s configuration, deployment, and
-orchestration language and are written in in YAML with Jinja2 for templating.
+`Ansible <http://ansible.com/>`_ 是一个开源系统自动化工具。相比于Puppet或者Chef最大的优点是它不需要客户机上的代理。Playbooks是Ansible的配置、部署和编制语言，它用YAML格式编写，使用Jinja2作为模板。
 
-Ansible supports Python versions 2.6 and 2.7 and can be installed via pip:
+Ansible支持Python 2.6和2.7，并能使用pip安装：
 
 .. code-block:: console
 
@@ -201,8 +173,9 @@ Ansible supports Python versions 2.6 and 2.7 and can be installed via pip:
 Ansible requires an inventory file that describes the hosts to which it has
 access. Below is an example of a host and playbook that will ping all the
 hosts in the inventory file.
+Ansible需要一个清单文件，来描述主机经过何处。以下是一个主机和playbook的例子，在清单文件中将会ping所有主机。
 
-Here is an example inventory file:
+清单文件示例如下：
 :file:`hosts.yml`
 
 .. code-block:: yaml
@@ -210,7 +183,7 @@ Here is an example inventory file:
     [server_name]
     127.0.0.1
 
-Here is an example playbook:
+playbook示例如下：
 :file:`ping.yml`
 
 .. code-block:: yaml
@@ -222,78 +195,48 @@ Here is an example playbook:
         - name: ping
           action: ping
 
-To run the playbook:
+要运行playbook：
 
 .. code-block:: console
 
     $ ansible-playbook ping.yml -i hosts.yml --ask-pass
 
-The Ansible playbook will ping all of the servers in the :file:`hosts.yml` file.
-You can also select groups of servers using Ansible. For more information
-about Ansible, read the `Ansible Docs <http://docs.ansible.com/>`_.
+Ansible playbook在 :file:`hosts.yml` 中将会ping所有的服务器。你也可以选择成组的服务器使用Ansible。了解更多关于Ansible的信息，请阅读 `Ansible Docs <http://docs.ansible.com/>`_ 。
 
-`An Ansible tutorial <https://serversforhackers.com/an-ansible-tutorial/>`_ is also a 
-great and detailed introduction to getting started with Ansible.
+`An Ansible tutorial <https://serversforhackers.com/an-ansible-tutorial/>`_ 也是一个很棒的且详细的指引来开始熟悉Ansible。
 
 
 Chef
 ----
-`Chef <https://www.chef.io/chef/>`_  is a systems and cloud infrastructure automation 
-framework that makes it easy to deploy servers and applications to any physical, 
-virtual, or cloud location. In case this is your choice for configuration management, 
-you will primarily use Ruby to write your infrastructure code. 
+`Chef <https://www.chef.io/chef/>`_ 是一个系统的云基础设施自动化框架，它使部署服务器和应用到任何物理、虚拟或者云终端上变得简单。你可以选择进行配置管理，那将主要使用Ruby去编写你的基础设施代码。
 
-Chef clients run on every server that is part of your infrastructure and these regularly 
-check with your Chef server to ensure your system is always aligned and represents the 
-desired state. Since each individual server has its own distinct Chef client, each server 
-configures itself and this distributed approach makes Chef a scalable automation platform.
+Chef客户端运行于组成你的基础设施的每台服务器上，这些客户端定期检查Chef服务器来确保系统是均衡并且处于设想的状态。由于每台服务器拥有它自己的独立的Chef客户端，每个服务器配置自己，这种分布式方法使得Chef成为一个可扩展的自动化平台。
 
-Chef works by using custom recipes (configuration elements), implemented in cookbooks. Cookbooks, which are basically 
-packages for infrastructure choices, are usually stored in your Chef server. 
-Read the `Digital Ocean tutorial series 
-<https://www.digitalocean.com/community/tutorials/how-to-install-a-chef-server-workstation-and-client-on-ubuntu-vps-instances>`_ 
-on chef to learn how to create a simple Chef Server.
+Chef通过使用定制的在cookbook中实现的食谱（配置元素）来工作。Cookbook通常作为基础设施的选择项，作为包存放在Chef服务器中。请阅读 `Digital Ocean tutorial series 
+<https://www.digitalocean.com/community/tutorials/how-to-install-a-chef-server-workstation-and-client-on-ubuntu-vps-instances>`_ 关于Chef的部分来学习如何创建一个简单的Chef服务器。
 
-To create a simple cookbook the `knife <https://docs.chef.io/knife.html>`_ command is used:
+要创建一个简单的cookbook，使用 `knife <https://docs.chef.io/knife.html>`_ 命令：
 
 .. code-block:: console 
 
     knife cookbook create cookbook_name
 
-`Getting started with Chef <http://gettingstartedwithchef.com/first-steps-with-chef.html>`_ 
-is a good starting point for Chef Beginners and many community maintained cookbooks that can 
-serve as a good reference or tweaked to serve your infrustructure configuration needs can be 
-found on the `Chef Supermarket <https://supermarket.chef.io/cookbooks>`_.
+`Getting started with Chef <http://gettingstartedwithchef.com/first-steps-with-chef.html>`_ 对Chef初学者来说是一个好的开始点，许多社区维护着cookbook，可以作为是一个好的参考。要服务自己的基础设施配置需求，请见 `Chef Supermarket <https://supermarket.chef.io/cookbooks>`_ 。
 
-- `Chef Documentation <https://docs.chef.io/>`_
+- `Chef 文档 <https://docs.chef.io/>`_
 
 Puppet
 ------
 
-`Puppet <http://puppetlabs.com>`_ is IT Automation and configuration management
-software from Puppet Labs that allows System Administrators to define the state
-of their IT Infrastructure, thereby providing an elegant way to manage their
-fleet of physical and virtual machines.
+`Puppet <http://puppetlabs.com>`_ 是来自Puppet Labs的IT自动化和配置管理软件，允许系统管理员定义他们的IT基础设施状态，这样就能够提供一种优雅的方式管理他们成群的物理和虚拟机器。
 
-Puppet is available both as an Open Source and an Enterprise variant. Modules
-are small, shareable units of code written to automate or define the state of a
-system.  `Puppet Forge <https://forge.puppetlabs.com/>`_ is a repository for
-modules written by the community for Open Source and Enterprise Puppet.
+Puppet均可作为开源版和企业版获取到。其模块是小的、可共享的代码单元，用以自动化或定义系统的状态。 `Puppet Forge <https://forge.puppetlabs.com/>`_ 是一个模块仓库，它由社区编写，面向开源和企业版的Puppet。
 
-Puppet Agents are installed on nodes whose state needs to be monitored or
-changed.  A designated server known as the Puppet Master is responsible for
-orchestrating the agent nodes.
+Puppet代理安装于其状态需要被监控或者修改的节点上。作为特定服务器的Puppet Master负责组织代理节点。
 
-Agent nodes send basic facts about the system such as to the operating system,
-kernel, architecture, ip address, hostname etc. to the Puppet Master.
-The Puppet Master then compiles a catalog with information provided by the
-agents on how each node should be configured and sends it to the agent. The
-agent enforces the change as prescribed in the catalog and sends a report back
-to the Puppet Master.
+代理节点发送系统的基本信息到Puppet Master，比如说操作系统、内核、架构、ip地址、主机名等。接着，Puppet Master编译携带有节点生成信息的目录，告知每个节点应如何配置，并发送给代理。代理便会执行前述目录中的变化，并向Puppet Master发送回一份报告。
 
-Facter is an interesting tool that ships with Puppet that pulls basic facts
-about the system. These facts can be referenced as a variable while writing
-your Puppet modules.
+Facter是一个有趣的工具，它用来传递Puppet获取到的基本系统信息。这些信息可以在编写Puppet模块的时候作为变量来引用。
 
 .. code-block:: console
 
@@ -304,9 +247,7 @@ your Puppet modules.
     $ facter operatingsystem
     Ubuntu  
 
-Writing Modules in Puppet is pretty straight forward. Puppet Manifests together
-form Puppet Modules. Puppet manifest end with an extension of ``.pp``.
-Here is an example of 'Hello World' in Puppet.
+在Puppet中编写模块十分直截了当。Puppet清单（manifest）组成了Puppet模块。Puppet清单以扩展名 ``.pp`` 结尾。下面是一个Puppet中 ‘Hello World’的例子。
 
 .. code-block:: puppet
 
@@ -316,10 +257,7 @@ Here is an example of 'Hello World' in Puppet.
         #the notification message by default.
     }
 
-Here is another example with system based logic. Note how the operating system
-fact is being used as a variable prepended with the ``$`` sign. Similarly, this
-holds true for other facts such as hostname which can be referenced by
-``$hostname``
+这里是另一个基于系统的逻辑的例子。注意操纵系统信息是如何作为变量使用的，变量前加了前缀符号 ``$`` 。类似的，其他信息比如说主机名就能用 ``$hostname`` 来引用。
 
 .. code-block:: puppet
 
@@ -330,11 +268,7 @@ holds true for other facts such as hostname which can be referenced by
         },
     }
 
-There are several resource types for Puppet but the package-file-service
-paradigm is all you need for undertaking majority of the configuration
-management. The following Puppet code makes sure that the OpenSSH-Server
-package is installed in a system and the sshd service is notified to restart
-everytime the sshd configuration file is changed.
+Puppet有多种资源类型，需要时可以使用包-文件-服务（package-file-service）范式来承担配置管理的主要任务。下面的Puppet代码确保了系统中安装了OpenSSH-Server包，并且在每次sshd配置文件改变时重启sshd服务。
 
 .. code-block:: puppet
 
@@ -361,7 +295,7 @@ everytime the sshd configuration file is changed.
         hasrestart=> true,
     }
 
-For more information, refer to the `Puppet Labs Documentation <http://docs.puppetlabs.com>`_
+了解更多信息，参考 `Puppet Labs 文档 <http://docs.puppetlabs.com>`_ 。
 
 Blueprint
 ---------
@@ -371,12 +305,4 @@ Blueprint
 Buildout
 --------
 
-`Buildout <http://www.buildout.org>`_ is an open source software build tool.
-Buildout is created using the Python programming language. It implements a 
-principle of separation of configuration from the scripts that do the setting up.
-Buildout is primarily used to download and set up dependencies in Python eggs
-format of the software being developed or deployed. Recipes for build tasks in any
-environment can be created, and many are already available.
-
-Buidout is written in Python.
-
+`Buildout <http://www.buildout.org>`_ 是一个开源软件构件工具。Buildout由Python编写。它实现了配置和构建脚本分离的原则。Buildout主要用于下载和设置正在开发或部署软件的Python egg格式的依赖。在任何环境中构建任务的指南（recipe，原意为“食谱”，引申为“指南”）能被创建，许多早已可用。
