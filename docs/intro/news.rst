@@ -4,46 +4,41 @@
 Planet Python
 ~~~~~~~~~~~~~
 
-This is an aggregate of Python news from a growing number of developers.
+这是一个聚合的，展示不断增长的开发者内容的Python新闻。
 
     `Planet Python <http://planet.python.org>`_
 
 /r/python
 ~~~~~~~~~
 
-/r/python is the Reddit Python community where users contribute and vote on
-Python-related news.
+/r/python是Reddit的Python社区，在这里用户会贡献和投票出和Python相关的新闻。
 
     `/r/python <http://reddit.com/r/python>`_
 
 Pycoder's Weekly
 ~~~~~~~~~~~~~~~~
 
-Pycoder's Weekly is a free weekly Python newsletter for Python developers 
-by Python developers (Projects, Articles, News, and Jobs).
+Pycoder's Weekly是一个面向Python开发者的免费的每周简讯，包括项目、文章、新闻和工作。
 
     `Pycoder's Weekly <http://www.pycoders.com/>`_
 
 Python Weekly
 ~~~~~~~~~~~~~
 
-Python Weekly is a free weekly newsletter featuring curated news, articles,
-new releases, jobs, etc. related to Python.
+Python Weekly是一个免费的每周简讯，其特色包括与Python相关的新闻、文章、新的发行版本、工作等。
 
     `Python Weekly <http://www.pythonweekly.com/>`_
 
 Python News
 ~~~~~~~~~~~~~
 
-Python News is the news section in the official Python web site
-(www.python.org). It briefly highlights the news from the Python community.
+Python News是Python官方网站的新闻章节。它简短突出来自Python社区的新闻。
 
     `Python News <http://www.python.org/news/>`_
 
 Import Python Weekly
 ~~~~~~~~~~~~~~~~~~~~
 
-Weekly Python Newsletter containing Python Articles, Projects, Videos, Tweets
-delivered in your inbox.  Keep Your Python Programming Skills Updated.
+Weekly Python Newsletter包含有Python文章、项目、视频、Tweets，并发送到你的收件箱。能够保持你的Python编程技能持续更新。
 
     `Import Python Weekly Newsletter <http://www.importpython.com/newsletter/>`_
