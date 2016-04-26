@@ -4,7 +4,7 @@
 官方文档
 ----------------------
 
-The official Python Language and Library documentation can be found here:
+Python语言和库的官方文档能够在这里找到：
 
     - `Python 2.x <https://docs.python.org/2/>`_
     - `Python 3.x <https://docs.python.org/3/>`_
@@ -13,9 +13,7 @@ The official Python Language and Library documentation can be found here:
 Read the Docs
 -------------
 
-Read the Docs is a popular community project that hosts documentation
-for open source software. It holds documentation for many Python modules,
-both popular and exotic.
+Read the Docs是一个流行的社区项目，存放着开源软件的文档。它拥有很多Python模块，优秀且流行。
 
     `Read the Docs <https://readthedocs.org/>`_
 
@@ -23,17 +21,13 @@ both popular and exotic.
 pydoc
 -----
 
-:program:`pydoc` is a utility that is installed when you install Python.
-It allows you to quickly retrieve and search for documentation from your
-shell. For example, if you needed a quick refresher on the
-:mod:`time` module, pulling up documentation would be as simple as
+:program:`pydoc` 是一个在你安装Python时跟着安装的工具。它允许你在shell中快速检索和查找文档。比如，如果你需要对 :mod:`time` 模块的进行快速回顾，查看文档就是像下面这么简单：
 
     .. code-block:: console
 
        $ pydoc time
 
-The above command is essentially equivalent to opening the Python REPL
-and running
+上面的命令和打开Python REPL然后运行下面指令是基本等价的：
 
     .. code-block:: pycon
 

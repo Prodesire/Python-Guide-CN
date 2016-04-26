@@ -90,12 +90,12 @@ Shipping Great Code（部署优雅的代码）（完成）
 - *Virtual Environments（虚拟环境）（待翻译）*
 - *Further Configuration of Pip and Virtualenv（Pip和Virtualenv的更多配置）（待翻译）*
 
-*Additional Notes（额外关注）（待翻译）*
+Additional Notes（额外关注）（完成）
 ---------------------------
 - Introduction（介绍）（完成）
-- *The Community（社区）（待翻译）*
+- The Community（社区）（完成）
 - Learning Python（学习Python）（完成）
-- *Documentation（文档）（待翻译）*
+- Documentation（文档）（完成）
 - News（新闻）（完成）
 
 其他（完成）

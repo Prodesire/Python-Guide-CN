@@ -6,64 +6,57 @@
 BDFL
 ----
 
-Guido van Rossum, the creator of Python, is often referred to as the BDFL — the
-Benevolent Dictator For Life.
+Python的创始人Guido van Rossum 通常被称为BDFL —— 生活的仁慈独裁者。
 
 
 
 Python软件基金会
 --------------------------
 
-The mission of the Python Software Foundation is to promote, protect, and
-advance the Python programming language, and to support and facilitate the
-growth of a diverse and international community of Python programmers.
+Python软件基金会的任务是促进、保护和发展Python编程语言，同时支持和帮助Python编程者的多样、国际化的社区的成长。
 
-`Learn More about the PSF <http://www.python.org/psf/>`_.
+`了解更多关于PSF的内容 <http://www.python.org/psf/>`_.
 
 
 PEPs
 ----
 
-PEPs are *Python Enhancement Proposals*. They describe changes to Python itself,
-or the standards around it.
+PEPs是 *Python 增强提议*。它们描述了Python自身或者相关库的变化。
 
-There are three different types of PEPs (as defined by :pep:`1`):
+这里有三种不同的PEPs类型（由 :pep:`1` 定义）：
 
     **Standards**
-        Describes a new feature or implementation.
+        描述一项新特性或者实现。
 
     **Informational**
-        Describes a design issue, general guidelines, or information to the
-        community.
+        描述一个设计issue、大体方针、或者社区信息。
 
     **Process**
-        Describes a process related to Python.
+        描述和Python相关的过程。
 
 
-Notable PEPs
+著名的 PEPs
 ~~~~~~~~~~~~
 
-There are a few PEPs that could be considered required reading:
+这里有少许PEPs可以认为是要求阅读的：
 
-- :pep:`8`: The Python Style Guide.
-    Read this. All of it. Follow it.
+- :pep:`8`: Python风格指南。
+    完整阅读它，并照着做。
 
-- :pep:`20`: The Zen of Python.
-    A list of 19 statements that briefly explain the philosophy behind Python.
+- :pep:`20`: Python之禅.
+    一个19行的小诗，简述了Python背后的哲学。
 
-- :pep:`257`: Docstring Conventions.
-    Gives guidelines for semantics and conventions associated with Python
-    docstrings.
+- :pep:`257`: 文档字符串约定.
+    给出了与Python文档字符串相关的语义和约定的指导方针。
 
-You can read more at `The PEP Index <http://www.python.org/dev/peps/>`_.
+你可以在 `PEP 索引 <http://www.python.org/dev/peps/>`_ 上了解更多。
 
-Submitting a PEP
+提交一个 PEP
 ~~~~~~~~~~~~~~~~
 
-PEPs are peer-reviewed and accepted/rejected after much discussion. Anyone
-can write and submit a PEP for review.
+PEPs会被同行审阅，并在大量的讨论后决定接受或拒绝。任何人都能编写和提交一个PEP供以审阅。
 
-Here's an overview of the PEP acceptance workflow:
+这里有一个接受PEP的工作流：
 
 .. image:: ../_static/pep-0001-1.png
 
@@ -71,16 +64,12 @@ Here's an overview of the PEP acceptance workflow:
 Python会议
 --------------------------
 
-The major events for the Python community are developer conferences. The two
-most notable conferences are PyCon, which is held in the US, and its European
-sibling, EuroPython.
+Python社区主要的事件就是开发者会议。两个最著名的会议就是在美国举办的PyCon，和在欧洲举办的姊妹版会议EuroPython。
 
-A comprehensive list of conferences is maintained at `pycon.org <http://www.pycon.org/>`_.
+会议的综合列表维护在 `pycon.org <http://www.pycon.org/>`_ 上。
 
 
 Python用户组
 --------------------------
 
-User Groups are where a bunch of Python developers meet to present or talk
-about Python topics of interest. A list of local user groups is maintained at
-the `Python Software Foundation Wiki <http://wiki.python.org/moin/LocalUserGroups>`_.
+用户组就是一群Python开发者见面现身或讨论感兴趣的Python话题的地方。一系列本地用户组维护在 `Python 软件基金会 Wiki <http://wiki.python.org/moin/LocalUserGroups>`_ 中。
