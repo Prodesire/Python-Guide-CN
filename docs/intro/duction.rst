@@ -1,55 +1,32 @@
 介绍
 ============
 
-From the `official Python website <http://python.org/about/>`_:
+来自 `Python官方网站 <http://python.org/about/>`_ 的介绍：
 
-Python is a general-purpose, high-level programming language similar
-to Tcl, Perl, Ruby, Scheme, or Java. Some of its main key features
-include:
+Python是一门通用的高级编程语言，类似于Tcl、Perl、Ruby、Scheme或者Java。其一些主要的关键特性包括：
 
-* **very clear, readable syntax**
+* **非常清晰、可读的语法**
 
-  Python's philosophy focuses on readability, from code blocks
-  delineated with significant whitespace to intuitive keywords in
-  place of inscrutable punctuation.
+  Python的哲学注重可读性，从显著空格划定的代码块到使用直观关键字替代难懂符号。
 
-* **extensive standard libraries and third party modules for virtually
-  any task**
+* **大量的标准库和第三方模块可用于几乎任何任务**
 
-  Python is sometimes described with the words "batteries included"
-  because of its extensive
-  `standard library <http://docs.python.org/library/>`_, which includes
-  modules for regular expressions, file IO, fraction handling,
-  object serialization, and much more.
+  Python有时被描述为“自带电池（batteries included）”（引申为“功能完备”），就是因为它拥有大量的 `标准库 <http://docs.python.org/library/>`_ ，这包括正则表达式、文件IO、分数处理、对象序列化等。
 
-  Additionally, the
-  `Python Package Index <http://pypi.python.org/pypi/>`_ is available
-  for users to submit their packages for widespread use, similar to
-  Perl's `CPAN <http://www.cpan.org>`_. There is a thriving community
-  of very powerful Python frameworks and tools like
-  the `Django <http://www.djangoproject.com>`_ web framework and the
-  `NumPy <http://numpy.scipy.org>`_ set of math routines.
+  此外，`Python Package Index <http://pypi.python.org/pypi/>`_ 允许用户提交他们的包以得到更广泛的使用，类似于Perl的 `CPAN <http://www.cpan.org>`_ 。Python拥有生机蓬勃的社区，他们开发出非常强大的Python框架和工具，比如 `Django <http://www.djangoproject.com>`_ 网络框架和 `NumPy <http://numpy.scipy.org>`_ 数学库。
 
-* **integration with other systems**
+* **和其他系统集成**
 
-  Python can integrate with `Java libraries <http://www.jython.org>`_,
-  enabling it to be used with the rich Java environment that corporate
-  programmers are used to. It can also be
-  `extended by C or C++ modules <http://docs.python.org/extending/>`_
-  when speed is of the essence.
+  Python能够和 `Java 库 <http://www.jython.org>`_ 集成，从而能够使用合作编程者所用的丰富Java环境。当对速度的要求变得重要时，它也可以用 `C or C++ 模块扩展 <http://docs.python.org/extending/>`_ 。
 
-* **ubiquity on computers**
+* **广泛适用于各平台**
 
-  Python is available on Windows, \*nix, and Mac. It runs wherever the
-  Java virtual machine runs, and the reference implementation CPython
-  can help bring Python to wherever there is a working C compiler.
+  Python能够在Windows、\*nix、Mac上获取到，它能运行在Java虚拟机能运行的地方，而且其参考实现CPython能够使Python运行于C编译器能够工作的地方。
 
-* **friendly community**
 
-  Python has a vibrant and large :ref:`community <the-community>`
-  which maintains wikis, conferences, countless repositories,
-  mailing lists, IRC channels, and so much more. Heck, the Python
-  community is even helping to write this guide!
+* **友好的社区**
+
+  Python拥有充满生机的、庞大的 :ref:`社区 <the-community>` ，他们维护着wiki、会议、无数的库、邮件列表、IRC频道（Internet Relay Chat，因特网中继聊天）等。见鬼了，他们甚至还帮助编写本指南！
 
 
 .. _about-ref:
@@ -57,32 +34,22 @@ include:
 关于这份指南
 ----------------
 
-Purpose
+目的
 ~~~~~~~
 
-The Hitchhiker's Guide to Python exists to provide both novice and expert
-Python developers a best practice handbook for the installation, configuration,
-and usage of Python on a daily basis.
+Hitchhiker的Python指南旨在为Python初学者和专家提供一个关于Python安装、配置、和日常使用的最佳实践手册。
 
 
-By the Community
+经由社区
 ~~~~~~~~~~~~~~~~
 
-This guide is architected and maintained by `Kenneth Reitz
-<https://github.com/kennethreitz>`_ in an open fashion. This is a
-community-driven effort that serves one purpose: to serve the community.
+本指南由 `Kenneth Reitz <https://github.com/kennethreitz>`_ 以开放的形式进行架构和维护。这是由社区驱动的成果，服务目标就是服务社区。
 
-For the Community
+面向社区
 ~~~~~~~~~~~~~~~~~
 
-All contributions to the Guide are welcome, from Pythonistas of all levels.
-If you think there's a gap in what the Guide covers, fork the Guide on
-GitHub and submit a pull request.
+所有水平的Python编程者对本指南所有的贡献都是欢迎的。如果你觉得本指南没有覆盖到某些内容，请在GitHub上fork指南，并提交一个pull请求。
 
-Contributions are welcome from everyone, whether they're an old hand or a
-first-time Pythonista, and the authors to the Guide will gladly help if you
-have any questions about the appropriateness, completeness, or accuracy of
-a contribution.
+欢迎每个人的贡献，不管是高手还是新手。如果你对提交的合适性、完成度或者准确度方面有任何疑问，本指南的作者会非常愿意帮助你。
 
-To get started working on The Hitchhiker's Guide,
-see the :doc:`/notes/contribute` page.
+想要开始为Hitchhiker的指南做贡献，请见 :doc:`/notes/contribute` 页面。
