@@ -4,85 +4,72 @@
 风格指南指引
 =====================
 
-As with all documentation, having a consistent format helps make the
-document more understandable. In order to make The Guide easier to digest,
-all contributions should fit within the rules of this style guide where
-appropriate.
+所有文档都有一致的格式，以帮助更好地理解文档。为了使指导更容易消化，所有贡献都应适应风格指南的规则。
 
-The Guide is written as :ref:`restructuredtext-ref`.
+本指南以 :ref:`restructuredtext-ref` 形式编写。
 
-.. note:: Parts of The Guide may not yet match this style guide. Feel free
-   to update those parts to be in sync with The Guide Style Guide
+.. 注意:: 本指南部分内容可能尚未符合本指南指引。欢迎更新这些部分以保持同步。
 
-.. note:: On any page of the rendered HTML you can click "Show Source" to
-   see how authors have styled the page.
+.. 注意:: 在任何一个渲染后的HTML页面，你可以点击“查看源码（Show Source）”来看作者是如何排版的。
 
 关联
 ---------
 
-Strive to keep any contributions relevant to the :ref:`purpose of The Guide
-<about-ref>`.
+尽量保持任何贡献与 :ref:`本指南目的 <about-ref>` 相关。
 
-* Avoid including too much information on subjects that don't directly
-  relate to Python development.
-* Prefer to link to other sources if the information is already out there.
-  Be sure to describe what and why you are linking.
+* 避免在主题中包含太多与Python开发并不直接相关的信息。
+* 如果其他资源已存在，最好以链接的形式来展示。确保描述出你所链接的内容和原因。
 * `Cite <http://sphinx.pocoo.org/rest.html?highlight=citations#citations>`_
-  references where needed.
-* If a subject isn't directly relevant to Python, but useful in conjunction
-  with Python (e.g., Git, GitHub, Databases), reference by linking to useful
-  resources, and describe why it's useful to Python.
-* When in doubt, ask.
+  引用在需要的地方。
+* 如果某主题并不与Python直接相关，但是和Python之间的关联又很有用（比如Git、GitHub、数据库等），以链接的形式引用这些资源，并描述为什么它对Python有用。
+* 如果疑问，就去询问。
 
 标题
 --------
 
-Use the following styles for headings.
+使用下列风格作为标题。
 
-Chapter title:
+章节标题：
 
 .. code-block:: rest
 
     #########
-    Chapter 1
+    章节 1
     #########
 
-Page title:
+页面标题： 
 
 .. code-block:: rest
 
     ===================
-    Time is an Illusion
+    时间是种幻觉
     ===================
 
-Section headings:
+小节标题:
 
 .. code-block:: rest
 
-    Lunchtime Doubly So
+    午餐时间加倍
     -------------------
 
-Sub section headings:
+次小节标题:
 
 .. code-block:: rest
 
-    Very Deep
+    非常深
     ~~~~~~~~~
 
-散点
+换行
 -----
 
-Wrap text lines at 78 characters. Where necessary, lines may exceed 78
-characters, especially if wrapping would make the source text more difficult
-to read.
-
+每78个字符进行文字换行。必要时可以超过78个字符，尤其是那种换行使得源内容更难阅读的情况。
 
 代码例子
 -------------
 
-Wrap all code examples at 70 characters to avoid horizontal scrollbars.
+所有代码示例要在70个字符进行换行，以避免出现水平滚动条。
 
-Command line examples:
+命令行例子：
 
 .. code-block:: rest
 
@@ -91,9 +78,9 @@ Command line examples:
         $ run command --help
         $ ls ..
 
-Be sure to include the ``$`` prefix before each line.
+确保每行前面包含了 ``$`` 前缀。
 
-Python interpreter examples:
+Python解释器例子：
 
 .. code-block:: rest
 
@@ -103,7 +90,7 @@ Python interpreter examples:
 
         >>> import this
 
-Python examples:
+Python 例子：
 
 .. code-block:: rest
 
@@ -117,32 +104,29 @@ Python examples:
 外部链接
 ------------------
 
-* Prefer labels for well known subjects (ex: proper nouns) when linking:
+* 链接时最好使用众所周知的主题（比如一些合适的名词）：
 
   .. code-block:: rest
 
-      Sphinx_ is used to document Python.
+      Sphinx_ 通常用来文档化Python。
 
       .. _Sphinx: http://sphinx.pocoo.org
 
-* Prefer to use descriptive labels with inline links instead of leaving bare
-  links:
+* 最好使用带有内联链接的描述性标签，而不是单纯的链接:
 
   .. code-block:: rest
 
-      Read the `Sphinx Tutorial <http://sphinx.pocoo.org/tutorial.html>`_
+      阅读 `Sphinx 教程 <http://sphinx.pocoo.org/tutorial.html>`_
 
-* Avoid using labels such as "click here", "this", etc. preferring
-  descriptive labels (SEO worthy) instead.
+* 避免使用诸如“点击这里”、“这个”等标签。最好使用描述性标签（值得搜索引擎优化，SEO worthy）。
 
 指向指南内部章节的链接
 --------------------------------
 
-To cross-reference other parts of this documentation, use the `:ref:
-<http://sphinx.pocoo.org/markup/inline.html#cross-referencing-arbitrary-locations>`_
-keyword and labels.
+要交叉引用本文档的其他部分，使用 `:ref:
+<http://sphinx.pocoo.org/markup/inline.html#cross-referencing-arbitrary-locations>`_ 关键字和标签。
 
-To make reference labels more clear and unique, always add a ``-ref`` suffix:
+要使引用标签更加清晰和独特，通常加上一个 ``-ref`` 后缀：
 
 .. code-block:: rest
 
@@ -154,8 +138,7 @@ To make reference labels more clear and unique, always add a ``-ref`` suffix:
 注意和警告
 ------------------
 
-Make use of the appropriate `admonitions directives
-<http://sphinx.pocoo.org/rest.html#directives>`_ when making notes.
+使用适当的 `警告指示 <http://sphinx.pocoo.org/rest.html#directives>`_ 来说明注意内容。
 
 注意:
 
@@ -175,10 +158,7 @@ Make use of the appropriate `admonitions directives
 要做的事
 -----
 
-Please mark any incomplete areas of The Guide with a `todo directive
-<http://sphinx.pocoo.org/ext/todo.html?highlight=todo#directive-todo>`_. To
-avoid cluttering the :ref:`todo-list-ref`, use a single ``todo`` for stub
-documents or large incomplete sections.
+请用 `todo 指示 <http://sphinx.pocoo.org/ext/todo.html?highlight=todo#directive-todo>`_ 来标记本指南中任何未完成的部分。避免使 :ref:`todo-list-ref` 混乱，为未完的文档或者大量未完的小节使用单独的 ``todo``。
 
 .. code-block:: rest
 

@@ -3,8 +3,7 @@
 
 Python-guide目前还在开发中，欢迎大家贡献代码。
 
-如果你有feature request，修改建议，或者bug报告，请在GitHub_上新建issue。如果想要
-提交补丁，请直接pull request到 GitHub_。
+如果你有feature request，修改建议，或者bug报告，请在 GitHub_ 上新建issue。如果想要提交补丁，请直接pull request到 GitHub_。
 一旦你的修改被merge，你会被自动添加到
 `贡献者一览 <https://github.com/kennethreitz/python-guide/contributors>`_ 中。
 

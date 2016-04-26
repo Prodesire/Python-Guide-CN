@@ -100,6 +100,6 @@ Shipping Great Code（部署优雅的代码）（完成）
 
 *其他（待翻译）*
 ---------------------------
-- *Contribute（贡献）（待翻译）*
-- *License（许可证）（待翻译）*
+- Contribute（贡献）（完成）
+- License（许可证）（完成）
 - *The Guide Style Guide（风格指南指引）（待翻译）*
