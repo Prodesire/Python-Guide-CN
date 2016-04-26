@@ -98,8 +98,8 @@ Shipping Great Code（部署优雅的代码）（完成）
 - *Documentation（文档）（待翻译）*
 - *News（新闻）（待翻译）*
 
-*其他（待翻译）*
+其他（完成）
 ---------------------------
 - Contribute（贡献）（完成）
 - License（许可证）（完成）
-- *The Guide Style Guide（风格指南指引）（待翻译）*
+- The Guide Style Guide（风格指南指引）（完成）
