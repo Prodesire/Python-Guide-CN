@@ -7,9 +7,8 @@ Camelot
 -------
 除了Python，SQLAlchemy和Qt之外，`Camelot <http://www.python-camelot.com>`_ 提供构建应用的组件。它的灵感取决于Django的管理接口。
 
-如下是主要的信息资源网站:
-http://www.python-camelot.com
-，邮件列表网站：//groups.google.com/forum/#!forum/project-camelot
+如下是主要的信息资源网站: http://www.python-camelot.com
+，邮件列表网站： http://groups.google.com/forum/#!forum/project-camelot
 
 Cocoa
 -----
@@ -55,7 +54,7 @@ PyjamasDesktop是Pyjamas的端口。PyjamasDesktop是桌面应用工具集，并
 
 `PyjamasDesktop的Python维基百科 <http://wiki.python.org/moin/PyjamasDesktop>`_.
 
-主要的网址; `pyjs Desktop <http://pyjs.org/>`_.
+主要的网址: `pyjs Desktop <http://pyjs.org/>`_.
 
 Qt
 --
@@ -74,4 +73,4 @@ wxPython
 wxPython是Python语言编写的GUI工具包。Python编写人员能够使简单容易地使用健壮，高功能的图形用户接口编程。把流行的wxWidgets包在跨平台GUI库中，从而作为Python的扩展模块，这用C++编写。
 
 **安装（稳定版）wxPython可以去如下网址**
-*http://www.wxpython.org/download.php#stable，并且下载适用于当前操作系统的安装包。*
+http://www.wxpython.org/download.php#stable ，并且下载适用于当前操作系统的安装包。

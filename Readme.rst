@@ -60,16 +60,16 @@ Writing Great Code（写出优雅的代码）（完成）
 - Common Gotchas（常见陷阱）（完成）
 - Choosing a License（选择一个许可）（完成）
 
-*Scenario Guide（场景/方案指南）（翻译中）*
+Scenario Guide（场景/方案指南）（完成）
 ---------------------------
 - Network Applications（网络应用）（完成）
 - Web Applications（Web 应用）（完成）
 - HTML Scraping（HTML 抓取）（完成）
 - Command-line Applications（命令行应用）（完成）
-- *GUI Applications（GUI应用）（完成）*
+- GUI Applications（GUI应用）（完成）
 - Databases（数据库）（完成）
 - Networking（网络）（完成）
-- *Systems Administration（系统管理）（待翻译）*
+- Systems Administration（系统管理）（完成）
 - Continuous Integration（持续集成）（完成）
 - Speed（速度）（完成）
 - Scientific Applications（科学应用）（完成）
