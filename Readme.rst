@@ -94,7 +94,7 @@ Shipping Great Code（部署优雅的代码）（完成）
 ---------------------------
 - Introduction（介绍）（完成）
 - *The Community（社区）（待翻译）*
-- *Learning Python（学习Python）（待翻译）*
+- Learning Python（学习Python）（完成）
 - *Documentation（文档）（待翻译）*
 - News（新闻）（完成）
 
