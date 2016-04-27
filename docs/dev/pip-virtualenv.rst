@@ -3,66 +3,47 @@
 Pip和Virtualenv的更多配置
 ===========================================
 
-用 ``pip`` 获得一个活跃的虚拟环境
+用 ``pip`` 来要求一个激活的虚拟环境
 ---------------------------------------------------
 
-By now it should be clear that using virtual environments is a great way to
-keep your development environment clean and keeping different projects'
-requirements separate.
+现在应该很清楚了，使用虚拟环境是个保持开发环境干净和分隔不同项目要求的好做法。
 
-When you start working on many different projects, it can be hard to remember to
-activate the related virtual environment when you come back to a specific
-project.  As a result of this, it is very easy to install packages globally
-while thinking that you are actually installing the package for the virtual
-environment of the project. Over time this can result in a messy global package
-list.
+当你开始工作在多个不同的项目上时，会很难记住去激活哪个相关的虚拟环境来回到特定的项目。其结果就是，你会非常容易在全局范围内安装包，虽然想的是要安装在特定工程的虚拟环境中。时间越久，就会导致混乱的全局包列表。
 
-In order to make sure that you install packages to your active virtual
-environment when you use ``pip install``, consider adding the following two
-lines to your :file:`~/.bashrc` file:
+为了确保你当你使用 ``pip install`` 时是将包安装在激活的虚拟环境中，考虑在 :file:`~/.bashrc` 文件中加上以下两行：
 
 .. code-block:: console
 
     export PIP_REQUIRE_VIRTUALENV=true
 
-After saving this change and sourcing the :file:`~/.bashrc` file with
-``source ~/.bashrc``, pip will no longer let you install packages if you are not
-in a virtual environment.  If you try to use ``pip install`` outside of a
-virtual environment pip will gently remind you that an activated virtual
-environment is needed to install packages.
+在保存完这个修改以及使用 ``source ~/.bashrc`` 来source一下 :file:`~/.bashrc` 文件后，如果你不在一个虚拟环境中，pip就不会让你安装包。如果你试着在虚拟环境外使用 ``pip install`` ，pip将会柔和地提示你需要一个激活的虚拟环境来安装包。
 
 .. code-block:: console
 
     $ pip install requests
     Could not find an activated virtualenv (required).
 
-You can also do this configuration by editing your :file:`pip.conf` or
-:file:`pip.ini` file. :file:`pip.conf` is used by Unix and Mac OS X operating
-systems and it can be found at:
+你也可以通过编辑 :file:`pip.conf` 或 :file:`pip.ini`来做相同的配置。 :file:`pip.conf` 被Unix和Mac OS X操作系统使用，能够在这里找到：
 
 .. code-block:: console
 
     $HOME/.pip/pip.conf
 
-Similarly, the :file:`pip.ini` file is used by Windows operating systems and it
-can be found at:
+类似的， :file:`pip.ini` 被Windows操作系统使用，能够在这里找到：
 
 .. code-block:: console
 
     %HOME%\pip\pip.ini
 
-If you don't have a :file:`pip.conf` or :file:`pip.ini` file at these locations,
-you can create a new file with the correct name for your operating system.
+如果在这些位置中并没有 :file:`pip.conf` 或 :file:`pip.ini` ，你可以在对应的操作系统中创建一个正确名字的新文件。
 
-If you already have a configuration file, just add the following line under the
-``[global]`` settings to require an active virtual environment:
+如果你早就拥有配置文件了，只需将下行添加到 ``[global]`` 设置下，即可要求一个激活的虚拟环境：
 
 .. code-block:: console
 
     require-virtualenv = true
 
-If you did not have a configuration file, you will need to create a new one and
-add the following lines to this new file:
+如果你没有配置文件，你需要创建一个新的，然后把下面几行添加到这个新文件中：
 
 .. code-block:: console
 
@@ -70,9 +51,7 @@ add the following lines to this new file:
     require-virtualenv = true
 
 
-You will of course need to install some packages globally (usually ones that
-you use across different projects consistently) and this can be accomplished by
-adding the following to your :file:`~/.bashrc` file:
+当然，你也需要在全局范围内安装一些包（通常是在多个项目中都要一直用到的包），可以添加下面内容到 :file:`~/.bashrc` 来完成：
 
 .. code-block:: console
 
@@ -80,51 +59,33 @@ adding the following to your :file:`~/.bashrc` file:
         PIP_REQUIRE_VIRTUALENV="" pip "$@"
     }
 
-After saving the changes and sourcing your :file:`~/.bashrc` file you can now
-install packages globally by running ``gpip install``. You can change the name
-of the function to anything you like, just keep in mind that you will have to
-use that name when trying to install packages globally with pip.
+在保存完这个修改以及使用 ``source ~/.bashrc`` 来source一下 :file:`~/.bashrc` 文件后，你现在可以通过运行 ``gpip install`` 来在全局范围内安装包。你可以把函数名改成任何你喜欢的，只要记住当你要用pip在全局范围内安装包的时候使用那个名字就行了。
 
 存下包以供将来使用
 -------------------------------
 
-Every developer has preferred libraries and when you are working on a lot of
-different projects, you are bound to have some overlap between the libraries
-that you use. For example, you may be using the ``requests`` library in a lot
-of different projects.
+每个开发者都有偏好的库，当你工作在大量不同的项目上时，这些项目之间肯定有一些重叠的库。比如说，你可能在多个不同的项目上使用了 ``requests`` 。
 
-It is surely unnecessary to re-download the same packages/libraries each time
-you start working on a new project (and in a new virtual environment as a result).
-Fortunately, you can configure pip in such a way that it tries to reuse already
-installed packages.
+每当你开始一个新项目（并有一个新的虚拟环境）重新下载相同的包/库是没有必要的。幸运的是，你能通过下面的方式去配置pip来重用已经安装的库。
 
-On UNIX systems, you can add the following line to your :file:`.bashrc` or
-:file:`.bash_profile` file.
+在UNIX系统中，你可以添加以下两行到你的 :file:`.bashrc` 或 :file:`.bash_profile` 文件中。
 
 .. code-block:: console
 
     export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 
-You can set the path to anywhere you like (as long as you have write
-access). After adding this line, ``source`` your :file:`.bashrc`
-(or :file:`.bash_profile`) file and you will be all set.
+你可以设置成任何你喜欢的路径（只要设置了写权限）。添加完后， ``source`` 下你的 :file:`.bashrc` （或者 :file:`.bash_profile` ）文件，就设置好啦。
 
-Another way of doing the same configuration is via the :file:`pip.conf` or
-:file:`pip.ini` files, depending on your system. If you are on Windows, you can
-add the following line to your :file:`pip.ini` file under ``[global]`` settings:
+另一个进行相同配置的方法是通过 :file:`pip.conf` 或 :file:`pip.ini` 文件来做，这取决于你的系统。如果你用Windows，就将下面一行添加到 :file:`pip.ini` 文件中的 ``[global]`` 设置下：
 
 .. code-block:: console
 
     download-cache = %HOME%\pip\cache
 
-Similarly, on UNIX systems you should simply add the following line to your
-:file:`pip.conf` file under ``[global]`` settings:
+类似的，如果你使用UNIX，就将下面一行添加到 :file:`pip.conf` 文件中的 ``[global]`` 设置下：
 
 .. code-block:: console
 
     download-cache = $HOME/.pip/cache
 
-Even though you can use any path you like to store your cache, it is recommended
-that you create a new folder *in* the folder where your :file:`pip.conf` or
-:file:`pip.ini` file lives. If you don't trust yourself with all of this path
-voodoo, just use the values provided here and you will be fine.
+虽然你可以使用任何你喜欢的存储缓存的路径，但是仍然推荐在 :file:`pip.conf` 或者 :file:`pip.ini` 文件所在目录下床架一个新的文件夹 *in* 。如果你不相信自己能够处理好这个路径，就使用这里提供的内容就好，不会有问题的。
