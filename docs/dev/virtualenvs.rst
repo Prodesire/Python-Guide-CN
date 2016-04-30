@@ -1,130 +1,98 @@
 虚拟环境
 ====================
 
-A Virtual Environment is a tool to keep the dependencies required by different
-projects in separate places, by creating virtual Python environments for them.
-It solves the "Project X depends on version 1.x but, Project Y needs 4.x"
-dilemma, and keeps your global site-packages directory clean and manageable.
+虚拟环境是一个将不同项目所需求的依赖分别放在独立的地方的一个工具，它给这些工程创建虚拟的Python环境。它解决了“项目X依赖于版本1.x，而项目Y需要项目4.x”的两难问题，而且使你的全局site-packages目录保持干净和可管理。
 
-For example, you can work on a project which requires Django 1.3 while also
-maintaining a project which requires Django 1.0.
+比如，你可以工作在一个需求Django 1.3的工程，同时维护一个需求Django 1.0的工程。
 
 virtualenv
 ----------
 
-`virtualenv <http://pypi.python.org/pypi/virtualenv>`_ is a tool to create
-isolated Python environments. virtualenv creates a folder which contains all the 
-necessary executables to use the packages that a Python project would need. 
+`virtualenv <http://pypi.python.org/pypi/virtualenv>`_ 是一个创建隔绝的Python环境的工具。virtualenv创建一个包含所有必要的可执行文件的文件夹，用来使用Python工程所需的包。
 
-Install virtualenv via pip:
+通过pip安装virtualenv：
 
 .. code-block:: console
 
   $ pip install virtualenv
 
-Basic Usage
+基本使用
 ~~~~~~~~~~~
 
-1. Create a virtual environment for a project:
+1. 为一个工程创建一个虚拟环境：
 
 .. code-block:: console
 
    $ cd my_project_folder
    $ virtualenv venv
 
-``virtualenv venv`` will create a folder in the current directory which will
-contain the Python executable files, and a copy of the ``pip`` library which you
-can use to install other packages. The name of the virtual environment (in this
-case, it was ``venv``) can be anything; omitting the name will place the files
-in the current directory instead.
+``virtualenv venv`` 将会在当前的目录中创建一个文件夹，包含了Python可执行文件，以及 ``pip`` 库的一份拷贝，这样就能安装其他包了。虚拟环境的名字（此例中是 ``venv`` ）可以是任意的；若省略名字将会把文件均放在当前目录。
 
-This creates a copy of Python in whichever directory you ran the command in,
-placing it in a folder named :file:`venv`.
+在任何你运行命令的目录中，这会创建Python的拷贝，并将之放在叫做 :file:`venv` 的文件中。
 
-You can also use a Python interpreter of your choice.
+你可以选择使用一个Python解释器：
 
 .. code-block:: console
 
    $ virtualenv -p /usr/bin/python2.7 venv
 
-This will use the Python interpreter in :file:`/usr/bin/python2.7`
+这将会使用 :file:`/usr/bin/python2.7` 中的Python解释器。
 
-2. To begin using the virtual environment, it needs to be activated:
+2. 要开始使用虚拟环境，其需要被激活：
 
 .. code-block:: console
 
    $ source venv/bin/activate
 
-The name of the current virtual environment will now appear on the left of 
-the prompt (e.g. ``(venv)Your-Computer:your_project UserName$)`` to let you know 
-that it's active. From now on, any package that you install using pip will be 
-placed in the ``venv`` folder, isolated from the global Python installation.
+当前虚拟环境的名字会显示在提示符左侧（比如说 ``(venv)你的电脑:你的工程 用户名$）以让你知道它是激活的。从现在起，任何你使用pip安装的包将会放在 ``venv`` 文件夹中，与全局安装的Python隔绝开。
 
-Install packages as usual, for example:
+像平常一样安装包，比如：
 
 .. code-block:: console
 
     $ pip install requests
 
-3. If you are done working in the virtual environment for the moment, you can
-   deactivate it:
+3. 如果你在虚拟环境中暂时完成了工作，则可以停用它：
 
 .. code-block:: console
 
    $ deactivate
 
-This puts you back to the system's default Python interpreter with all its
-installed libraries.
+这将会回到系统默认的Python解释器，包括已安装的库也会回到默认的。
 
-To delete a virtual environment, just delete its folder. (In this case, 
-it would be ``rm -rf venv``.)
+要删除一个虚拟环境，只需删除它的文件夹。（要这么做请执行  ``rm -rf venv`` ）
 
-After a while, though, you might end up with a lot of virtual environments
-littered across your system, and its possible you'll forget their names or
-where they were placed.
+然后一段时间后，你可能会有很多个虚拟环境散落在系统各处，你将有可能忘记它们的名字或者位置。
 
-Other Notes
+其他注意
 ~~~~~~~~~~~
 
-Running ``virtualenv`` with the option :option:`--no-site-packages` will not
-include the packages that are installed globally. This can be useful
-for keeping the package list clean in case it needs to be accessed later.
-[This is the default behavior for ``virtualenv`` 1.7 and later.]
+运行带 :option:`--no-site-packages` 选项的 ``virtualenv`` 将不会包括全局安装的包。这可用于保持包列表干净，以防以后需要访问它。（这在 ``virtualenv`` 1.7及之后是默认行为）
 
-In order to keep your environment consistent, it's a good idea to "freeze"
-the current state of the environment packages. To do this, run
+为了保持你的环境的一致性，“冷冻住（freeze）”环境包当前的状态是个好主意。要这么做，请运行：
 
 .. code-block:: console
 
     $ pip freeze > requirements.txt
 
-This will create a :file:`requirements.txt` file, which contains a simple
-list of all the packages in the current environment, and their respective
-versions. You can see the list of installed packages without the requirements 
-format using "pip list". Later it will be easier for a different developer 
-(or you, if you need to re-create the environment) to install the same packages
-using the same versions:
+这将会创建一个 :file:`requirements.txt` 文件，其中包含了当前环境中所有包及各自的版本的简单列表。你可以使用 “pip list”在不产生requirements文件的情况下，查看已安装包的列表。这将会使另一个不同的开发者（或者是你，如果你需要重新创建这样的环境）在以后安装相同版本的相同包变得容易。
 
 .. code-block:: console
 
     $ pip install -r requirements.txt
 
-This can help ensure consistency across installations, across deployments,
-and across developers.
+这能帮助确保安装、部署和开发者之间的一致性。
 
-Lastly, remember to exclude the virtual environment folder from source
-control by adding it to the ignore list.
+最后，记住在源码版本控制中排除掉虚拟环境文件夹，可在ignore的列表中加上它。
 
 .. _virtualenvwrapper-ref:
 
 virtualenvwrapper
 -----------------
 
-`virtualenvwrapper <http://virtualenvwrapper.readthedocs.org/en/latest/index.html>`_
-provides a set of commands which makes working with virtual environments much
-more pleasant. It also places all your virtual environments in one place.
+`virtualenvwrapper <http://virtualenvwrapper.readthedocs.org/en/latest/index.html>`_ 提供了一系列命令使得和虚拟环境工作变得愉快许多。它把你所有的虚拟环境都放在一个地方。
 
-To install (make sure **virtualenv** is already installed):
+安装（确保 **virtualenv** 已经安装了）：
 
 .. code-block:: console
 
@@ -132,98 +100,91 @@ To install (make sure **virtualenv** is already installed):
   $ export WORKON_HOME=~/Envs
   $ source /usr/local/bin/virtualenvwrapper.sh
 
-(`Full virtualenvwrapper install instructions <http://virtualenvwrapper.readthedocs.org/en/latest/install.html>`_.)
+(`virtualenvwrapper 的完整安装指引 <http://virtualenvwrapper.readthedocs.org/en/latest/install.html>`_.)
 
-For Windows, you can use the `virtualenvwrapper-win <https://github.com/davidmarble/virtualenvwrapper-win/>`_.
+对于Windows，你可以使用 `virtualenvwrapper-win <https://github.com/davidmarble/virtualenvwrapper-win/>`_ 。
 
 To install (make sure **virtualenv** is already installed):
+安装（确保 **virtualenv** 已经安装了）：
 
 .. code-block:: console
 
   $ pip install virtualenvwrapper-win
   
-In Windows, the default path for WORKON_HOME is %USERPROFILE%\Envs
+在Windows中，WORKON_HOME默认的路径是 %USERPROFILE%\Envs 。
 
-Basic Usage
+基本使用
 ~~~~~~~~~~~
 
-1. Create a virtual environment:
+1. 创建一个虚拟环境：
 
 .. code-block:: console
 
    $ mkvirtualenv venv
 
-This creates the :file:`venv` folder inside :file:`~/Envs`.
+这会在 :file:`~/Envs` 中创建 :file:`venv` 文件夹。
 
-2. Work on a virtual environment:
+2. 在虚拟环境上工作：
 
 .. code-block:: console
 
    $ workon venv
 
-Alternatively, you can make a project, which creates the virtual environment,
-and also a project directory inside ``$PROJECT_HOME``, which is ``cd`` -ed into
-when you ``workon myproject``.
+或者，你可以创建一个项目，它会创建虚拟环境，并在 ``$PROJECT_HOME`` 中创建一个项目目录。当你使用 ``workon myproject`` 时，会 ``cd`` -ed 到项目目录中。
 
 .. code-block:: console
 
    $ mkproject myproject
 
-**virtualenvwrapper** provides tab-completion on environment names. It really
-helps when you have a lot of environments and have trouble remembering their
-names.
+**virtualenvwrapper** 提供环境名字的tab补全功能。当你有很多环境，并且很难记住它们的名字时，这就显得很有用。
 
-``workon`` also deactivates whatever environment you are currently in, so you
-can quickly switch between environments.
+``workon`` 也能停止你当前所在的环境，所以你可以在环境之间快速的切换。
 
-3. Deactivating is still the same:
+3. 停止是一样的：
 
 .. code-block:: console
 
    $ deactivate
 
-4. To delete:
+4. 删除：
 
 .. code-block:: console
 
    $ rmvirtualenv venv
 
-Other useful commands
+其他有用的命令
 ~~~~~~~~~~~~~~~~~~~~~
 
 ``lsvirtualenv``
-  List all of the environments.
+  列举所有的环境。
 
 ``cdvirtualenv``
-  Navigate into the directory of the currently activated virtual environment,
-  so you can browse its :file:`site-packages`, for example.
+  导航到当前激活的虚拟环境的目录中，比如说这样你就能够浏览它的 :file:`site-packages` 。
 
 ``cdsitepackages``
-  Like the above, but directly into :file:`site-packages` directory.
+  和上面的类似，但是是直接进入到 :file:`site-packages` 目录中。
 
 ``lssitepackages``
-  Shows contents of :file:`site-packages` directory.
+  显示 :file:`site-packages` 目录中的内容。
 
-`Full list of virtualenvwrapper commands <http://virtualenvwrapper.readthedocs.org/en/latest/command_ref.html>`_.
+`virtualenvwrapper 命令的完全列表 <http://virtualenvwrapper.readthedocs.org/en/latest/command_ref.html>`_ 。
 
 virtualenv-burrito
 ------------------
 
-With `virtualenv-burrito <https://github.com/brainsik/virtualenv-burrito>`_, you
-can have a working virtualenv + virtualenvwrapper environment in a single command.
+有了 `virtualenv-burrito <https://github.com/brainsik/virtualenv-burrito>`_ ，你就能使用单行命令拥有virtualenv + virtualenvwrapper的环境。
 
 autoenv
 -------
-When you ``cd`` into a directory containing a :file:`.env`, `autoenv <https://github.com/kennethreitz/autoenv>`_
-automagically activates the environment.
+当你 ``cd`` 进入一个包含 :file:`.env` 的目录中，就会 `autoenv <https://github.com/kennethreitz/autoenv>`_ 自动激活那个环境。
 
-Install it on Mac OS X using ``brew``:
+使用 ``brew`` 在Mac OS X上安装它：
 
 .. code-block:: console
 
    $ brew install autoenv
 
-And on Linux:
+在Linux上:
 
 .. code-block:: console
 
