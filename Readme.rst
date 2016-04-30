@@ -86,7 +86,7 @@ Shipping Great Code（部署优雅的代码）（完成）
 
 *Development Environment（开发环境）（待翻译）*
 ---------------------------
-- *Your Development Environment（你的开发环境）（待翻译）*
+- Your Development Environment（你的开发环境）（完成）
 - *Virtual Environments（虚拟环境）（待翻译）*
 - Further Configuration of Pip and Virtualenv（Pip和Virtualenv的更多配置）（完成）
 

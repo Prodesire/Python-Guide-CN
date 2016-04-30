@@ -5,19 +5,13 @@
 文本编辑器
 ::::::::::::
 
-Just about anything that can edit plain text will work for writing Python code,
-however, using a more powerful editor may make your life a bit easier.
+任何能够编辑普通文本的编辑器都能够用来编写Python代码，然后，使用一个更加强大的编辑器可能使你的生活变得容易点。
 
 
 Vim
 ---
 
-Vim is a text editor which uses keyboard shortcuts for editing instead of menus
-or icons. There are a couple of plugins and settings for the Vim editor to
-aid Python development. If you only develop in Python, a good start is to set
-the default settings for indentation and line-wrapping to values compliant with
-:pep:`8`. In your home directory, open a file called :file:`.vimrc` and add the
-following lines::
+Vim是一个使用键盘快捷键而不是菜单或图标来编辑的文本编辑器。有许多增强Vim编辑器中Python开发环境的插件和设置。如果你只开发Python，使用缩进和换行均符合 :pep:`8` 要求的默认设置是一个好的开始。在你的home目录中，打开 :file:`.vimrc` 文件，添加下面这些内容::
 
     set textwidth=79  " lines longer than 79 columns will be broken
     set shiftwidth=4  " operation >> indents 4 columns; << unindents 4 columns
@@ -27,33 +21,17 @@ following lines::
     set shiftround    " round indent to multiple of 'shiftwidth'
     set autoindent    " align the new line indent with the previous line
 
-With these settings, newlines are inserted after 79 characters and indentation
-is set to 4 spaces per tab. If you also use Vim for other languages, there is a
-handy plugin called indent_, which handles indentation settings for Python
-source files.
+基于上述设置，新行会在超过79个字符被添加，tab键则会自动转换为4个空格。如果你还使用Vim编辑其他语言，有一个叫做 indent_ 的便捷插件可以让这个设置只为Python源文件服务。
 
-There is also a handy syntax plugin called syntax_ featuring some improvements
-over the syntax file included in Vim 6.1.
+还有一个方便的语法插件叫做 syntax_ ，改进了Vim 6.1中的语法文件。
 
-These plugins supply you with a basic environment for developing in Python.
-To get the most out of Vim, you should continually check your code for syntax
-errors and PEP8 compliance. Luckily PEP8_ and Pyflakes_ will do this for you.
-If your Vim is compiled with :option:`+python` you can also utilize some very
-handy plugins to do these checks from within the editor.
+这些插件使你拥有一个基本的环境进行Python开发。要最有效的使用Vim，你应该市场检查代码的语法错误和是否符合PEP8。幸运的是， PEP8_ 和 Pyflakes_ 将会帮你做这些。如果你的Vim是用 :option:`+python` 编译的，你也可以在编辑器中使用一些非常有用的插件来做这些检查。
 
-For PEP8 checking and pyflakes, you can install vim-flake8_. Now you can map the
-function ``Flake8`` to any hotkey or action you want in Vim. The plugin will
-display errors at the bottom of the screen, and provide an easy way to jump to
-the corresponding line. It's very handy to call this function whenever you save
-a file. In order to do this, add the following line to your
-:file:`.vimrc`::
+对于PEP8检查和pyflakes，你可以安装 vim-flake8_ 。然后你就可以在Vim中把 ``Flake8`` 映射到任何热键或你想要的行为上。这个插件将会在屏幕下方显示出错误，并且提供一个简单的方式跳转到相关行。在保存文件的时候调用这个功能会是非常方便的。要这么做，就把下面一行加入到你的 :file:`.vimrc`::
 
     autocmd BufWritePost *.py call Flake8()
 
-If you are already using syntastic_, you can set it to run Pyflakes on write
-and show errors and warnings in the quickfix window. An example configuration
-to do that which also shows status and warning messages in the statusbar would
-be::
+如果你已经在使用 syntastic_ ，你可以设置它来运行Pyflakes，并在quickfix窗口中显示错误和警告。一个这样做并还会在状态栏中显示状态和警告信息的样例是::
 
     set statusline+=%#warningmsg#
     set statusline+=%{SyntasticStatuslineFlag()}
@@ -65,23 +43,22 @@ be::
 Python-mode
 ^^^^^^^^^^^
 
-Python-mode_ is a complex solution for working with Python code in Vim.
-It has:
+Python-mode_ 是一个在Vim中使用Python的综合解决方案。
+它拥有：
 
-- Asynchronous Python code checking (``pylint``, ``pyflakes``, ``pep8``, ``mccabe``) in any combination
-- Code refactoring and autocompletion with Rope
-- Fast Python folding
-- Virtualenv support
-- Search through Python documentation and run Python code
-- Auto PEP8_ error fixes
+- 任意组合的异步Python代码检查（ ``pylint`` 、  ``pyflakes`` 、  ``pep8`` 、 ``mccabe``）
+- 使用Rope进行代码重构和补全
+- Python快速折叠
+- 支持virtualenv
+- 搜索Python文档，运行Python代码
+- 自动修复 PEP8_ 错误
 
-And more.
+以及其他更多。
 
 SuperTab
 ^^^^^^^^
 
-SuperTab_ is a small Vim plugin that makes code completion more convenient by
-using ``<Tab>`` key or any other customized keys.
+SuperTab_ 是一个小的Vim插件，通过使用 ``<Tab>`` 或任何其他定制的按键，能够使代码补全变得更方便。
 
 .. _indent: http://www.vim.org/scripts/script.php?script_id=974
 .. _syntax: http://www.vim.org/scripts/script.php?script_id=790
@@ -95,46 +72,30 @@ using ``<Tab>`` key or any other customized keys.
 Emacs
 -----
 
-Emacs is another powerful text editor. It is fully programmable (lisp), but
-it can be some work to wire up correctly. A good start if you're already an
-Emacs user is `Python Programming in Emacs`_ at EmacsWiki.
+Emacs是另一个强大的文本编辑器。它是完全可编程的（lisp），但要正确的工作要花些功夫。如果你已经是一名Emacs的用户了，在EmacsWiki上的 `Python Programming in Emacs`_ 将会是好的开始。
 
-1. Emacs itself comes with a Python mode.
+1. Emacs 本身支持Python模式。
 
 .. _Python Programming in Emacs: http://emacswiki.org/emacs/PythonProgrammingInEmacs
 
 TextMate
 --------
 
-    `TextMate <http://macromates.com/>`_ brings Apple's approach to operating
-    systems into the world of text editors. By bridging UNIX underpinnings and
-    GUI, TextMate cherry-picks the best of both worlds to the benefit of expert
-    scripters and novice users alike.
+`TextMate <http://macromates.com/>`_ 将苹果操作系统技术带入了文本编辑器的世界。通过桥接UNIX和GUI，TextMate将两者中最好的部分带给了脚本专家和新手用户。
 
 Sublime Text
 ------------
 
-    `Sublime Text <http://www.sublimetext.com/>`_ is a sophisticated text
-    editor for code, markup and prose. You'll love the slick user interface,
-    extraordinary features and amazing performance.
+`Sublime Text <http://www.sublimetext.com/>`_ 是一款高级的，用来编写代码、标记和文章的文本编辑器。你将会爱上漂亮的用户界面、非凡的特性和惊人的表现。
 
-Sublime Text has excellent support for editing Python code and uses Python for
-its plugin API. It also has a diverse variety of plugins,
-`some of which <https://github.com/SublimeLinter/SublimeLinter>`_ allow for
-in-editor PEP8 checking and code "linting".
+Sublime Text对编写Python代码支持极佳，而且它使用Python写其插件API。它也拥有大量各式各样的插件， `其中一些 <https://github.com/SublimeLinter/SublimeLinter>`_ 允许编辑器内的PEP8检查和代码提示。
 
 Atom
 ----
 
-    `Atom <https://atom.io/>`_ is a hackable text editor for the 21st century,
-    built on atom-shell, and based on everything we love about our favorite
-    editors.
+`Atom <https://atom.io/>`_ 是一款21世纪的可删减的（hackable）文本编辑器。它基于我们所喜欢的编辑器的任何优秀特性，并构建于atom-shell上。
 
-Atom is web native (HTML, CSS, JS), focusing on modular design and easy plugin
-development. It comes with native package control and plethora of packages.
-Recommended for Python development is
-`Linter <https://github.com/AtomLinter/Linter>`_ combined with
-`linter-flake8 <https://github.com/AtomLinter/linter-flake8>`_.
+Atom是web原生的（HTML、CSS、JS），专注于模块化的设计和简单的插件开发。它自带本地包管理和大量的包。Python开发所推荐的插件是 `Linter <https://github.com/AtomLinter/Linter>`_ 和 `linter-flake8 <https://github.com/AtomLinter/linter-flake8>`_ 的组合。
 
 
 IDEs
@@ -143,82 +104,52 @@ IDEs
 PyCharm / IntelliJ IDEA
 -----------------------
 
-`PyCharm <http://www.jetbrains.com/pycharm/>`_ is developed by JetBrains, also
-known for IntelliJ IDEA. Both share the same code base and most of PyCharm's
-features can be brought to IntelliJ with the free
-`Python Plug-In <https://plugins.jetbrains.com/plugin/?idea&pluginId=631>`_.  There are two
-versions of PyCharm: Professional Edition (Free 30-day trial) and Community
-Edition(Apache 2.0 License) with fewer features.
+`PyCharm <http://www.jetbrains.com/pycharm/>`_ 由JetBrains公司开发，此公司还以IntelliJ IDEA闻名。它们都共享着相同的基础代码，PyCharm中大多数特性能通过免费的 `Python 插件 <https://plugins.jetbrains.com/plugin/?idea&pluginId=631>`_ 带入到IntelliJ中。PyCharm由两个版本：专业版（Professional Edition）（30天试用）和拥有相对少特性的社区版（Community Edition）（Apache 2.0 License）。
 
 Enthought Canopy
 ----------------
-`Enthought Canopy <https://www.enthought.com/products/canopy/>`_ is a Python
-IDE which is focused towards Scientists and Engineers as it provides pre 
-installed libraries for data analysis. 
+`Enthought Canopy <https://www.enthought.com/products/canopy/>`_ 是一款专门面向科学家和工程师的Python IDE，它预装了为数据分析而用的库。
 
 Eclipse
 -------
 
-The most popular Eclipse plugin for Python development is Aptana's
-`PyDev <http://pydev.org>`_.
+Eclipse中进行Python开发最流行的插件是Aptana的 `PyDev <http://pydev.org>`_ 。
 
 
 Komodo IDE
 ----------
 
-`Komodo IDE <http://www.activestate.com/komodo-ide>`_ is developed by
-ActiveState and is a commercial IDE for Windows, Mac, and Linux.
-`KomodoEdit <https://github.com/Komodo/KomodoEdit>`_ is the open source
-alternative.
+`Komodo IDE <http://www.activestate.com/komodo-ide>`_ 由ActiveState开发，并且是在Windows、Mac和Linux平台上的商业IDE。
 
 
 Spyder
 ------
 
-`Spyder <https://github.com/spyder-ide/spyder>`_ is an IDE specifically geared
-toward working with scientific Python libraries (namely
-`Scipy <http://www.scipy.org/>`_). It includes integration with pyflakes_,
-`pylint <http://www.logilab.org/857>`_ and
-`rope <https://github.com/python-rope/rope>`_.
+`Spyder <https://github.com/spyder-ide/spyder>`_ 是一款专门面向和Python科学库（即 `Scipy <http://www.scipy.org/>`_ ）打交道的IDE。它集成了 pyflakes_ 、 `pylint <http://www.logilab.org/857>`_ 和 `rope <https://github.com/python-rope/rope>`_ 。
 
-Spyder is open-source (free), offers code completion, syntax highlighting,
-a class and function browser, and object inspection.
+Spyder是开源的（免费的），提供了代码补全、语法高亮、类和函数浏览器，以及对象检查的功能。
 
 
 WingIDE
 -------
 
-`WingIDE <http://wingware.com/>`_ is a Python specific IDE. It runs on Linux,
-Windows and Mac (as an X11 application, which frustrates some Mac users).
+`WingIDE <http://wingware.com/>`_ 是一个专门面向Python的IDE。它能运行在Linux、Windows和Mac（作为一款X11应用程序，会使某些Mac用户遇到困难）上。
 
-WingIDE offers code completion, syntax highlighting, source browser, graphical
-debugger and support for version control systems.
+WingIDE提供了代码补全、语法高亮、源代码浏览器、图形化调试器的功能，还支持版本控制系统。
 
 
 NINJA-IDE
 ---------
 
-`NINJA-IDE <http://www.ninja-ide.org/>`_ (from the recursive acronym: "Ninja-IDE
-Is Not Just Another IDE") is a cross-platform IDE, specially designed to build
-Python applications, and runs on Linux/X11, Mac OS X and Windows desktop
-operating systems. Installers for these platforms can be downloaded from the
-website.
+`NINJA-IDE <http://www.ninja-ide.org/>`_ （来自递归缩写："Ninja-IDE Is Not Just Another IDE"）是一款跨平台的IDE，特别设计成构建Python应用，并能运行于Linux/X11、Mac OS X和Windows桌面操作系统上。从网上可以下载到这些平台的安装包。
 
-NINJA-IDE is open-source software (GPLv3 licence) and is developed
-in Python and Qt. The source files can be downloaded from
-`GitHub <https://github.com/ninja-ide>`_.
+NINJA-IDE是一款开源软件（GPLv3许可），是使用Python和Qt开发。在 `GitHub <https://github.com/ninja-ide>`_ 能下载到源文件。
 
 
 Eric (The Eric Python IDE)
 --------------------------
 
-`Eric <http://eric-ide.python-projects.org/>`_ is a full featured Python IDE
-offering sourcecode autocompletion, syntax highlighting, support for version
-control systems, python 3 support, integrated web browser, python shell,
-integrated debugger and a flexible plug-in system. Written in python, it is
-based on the Qt gui toolkit, integrating the Scintilla editor control. Eric
-is an open-source software project (GPLv3 licence) with more than ten years of
-active development.
+`Eric <http://eric-ide.python-projects.org/>`_ 是一款功能齐全的Python IDE，提供源代码自动补全、语法高亮、对版本控制系统的支持、对Python 3的支持、集成的web浏览器、Python Shell、集成的调试器和灵活的插件系统等功能。它基于Qt GUI工具集，使用Python编写，集成了Scintilla编辑器控制。Eric是一款超过10年活跃开发的开源软件工程（GPLv3许可）。
 
 
 解释器工具
@@ -228,35 +159,21 @@ active development.
 虚拟环境
 --------------------
 
-Virtual Environments provide a powerful way to isolate project package dependencies. This means that you can use packages particular to a Python project without installing them system wide and thus avoiding potential version conflicts.
+虚拟环境提供了隔离项目包依赖的强大方式。这意味着你无须再系统范围内安装Python工程特定的包，因此就能避免潜在的版本冲突。
 
 To start using and see more information:
 `Virtual Environments <http://github.com/kennethreitz/python-guide/blob/master/docs/dev/virtualenvs.rst>`_ docs.
+开始使用和查阅更多信息：请参阅 `Virtual Environments <http://github.com/kennethreitz/python-guide/blob/master/docs/dev/virtualenvs.rst>`_ 文档。
 
 
 pyenv
 -----
 
-`pyenv <https://github.com/yyuu/pyenv>`_ is a tool to allow multiple versions
-of the Python interpreter to be installed at the same time.  This solves the
-problem of having different projects requiring different versions of Python.
-For example, it becomes very easy to install Python 2.7 for compatibility in
-one project, whilst still using Python 3.4 as the default interpreter.
-pyenv isn't just limited to the CPython versions - it will also install PyPy,
-anaconda, miniconda, stackless, jython, and ironpython interpreters.
+`pyenv <https://github.com/yyuu/pyenv>`_ 是一个允许多个Python解释器版本同时安装于一台机器的工具。这解决了不同的项目需要不同版本的Python的问题。比如，为了兼容性，可以很容易地为一个项目安装Python 2.7，而继续使用Python 3.4作为默认的编辑器。pyenv不止限于CPython版本——它还能安装PyPy、anaconda、miniconda、stackless、jython和ironpython解释器。
 
-pyenv works by filling a ``shims`` directory with fake versions of the Python
-interpreter (plus other tools like ``pip`` and ``2to3``).  When the system
-looks for a program named ``python``, it looks inside the ``shims`` directory
-first, and uses the fake version, which in turn passes the command on to
-pyenv.  pyenv then works out which version of Python should be run based on
-environment variables, ``.python-version`` files, and the global default.
+pyenv的工作原理是在一个叫做 ``shims`` 目录中创建Python解释器（以及其他工具像  ``pip`` 和 ``2to3`` 等）的假版本。当系统寻找名为 ``python`` 的应用时，它会先在 ``shims`` 目录中查找，并使用那个假版本，然后会传递命令到pyenv中。pyenv基于环境变量、 ``.python-version`` 文件和全局默认设置的信息就知道该运行哪个版本的Python。
 
-pyenv isn't a tool for managing virtual environments, but there is the plugin
-`pyenv-virtualenv <https://github.com/yyuu/pyenv-virtualenv>`_ which automates
-the creation of different environments, and also makes it possible to use the
-existing pyenv tools to switch to different environments based on environment
-variables or ``.python-version`` files.
+pyenv不是管理虚拟环境的工具，但是有一个叫做 `pyenv-virtualenv <https://github.com/yyuu/pyenv-virtualenv>`_ 的插件可以自动化不同环境的创建，而且也能够使用现有的pyenv工具，基于环境变量或者 ``.python-version`` 文件，来切换不同的环境。
 
 其他工具
 :::::::::::
@@ -264,37 +181,31 @@ variables or ``.python-version`` files.
 IDLE
 ----
 
-:ref:`IDLE <python:idle>` is an integrated development environment that is
-part of Python standard library. It is completely written in Python and uses
-the Tkinter GUI toolkit. Though IDLE is not suited for full-blown development
-using Python, it is quite helpful to try out small Python snippets and
-experiment with different features in Python.
+:ref:`IDLE <python:idle>` 是一个集成的开发环境，它是Python标准库的一部分。它完全由Python编写，并使用Tkinter GUI工具集。尽管IDLE不适用于作为成熟的Python开发工具，但它对尝试小的Python代码和对Python不同特性的实验非常有帮助。
 
-It provides the following features:
+它提供以下特性：
 
-* Python Shell Window (interpreter)
-* Multi window text editor that colorizes Python code
-* Minimal debugging facility
+* Python Shell窗口（解释器）
+* 多窗口文本编辑器，支持彩色化Python代码
+* 最小的调试工具
 
 
 IPython
 -------
 
-`IPython <http://ipython.org/>`_ provides a rich toolkit to help you make the
-most out of using Python interactively. Its main components are:
+`IPython <http://ipython.org/>`_ 提供一个丰富的工具集来帮助你最大限度地和Python交互。它主要的组件有：
 
-* Powerful Python shells (terminal- and Qt-based).
-* A web-based notebook with the same core features but support for rich media,
-  text, code, mathematical expressions and inline plots.
-* Support for interactive data visualization and use of GUI toolkits.
-* Flexible, embeddable interpreters to load into your own projects.
-* Tools for high level and interactive parallel computing.
+* 强大的Python shell（终端和基于Qt）。
+* 一个基于网络的笔记本，拥有相同的核心特性，但是支持富媒体、文本、代码、数学表达式和内联绘图。
+* 支持交互式的数据可视化和GUI工具集的使用。
+* 灵活、嵌入的解释器载入到你的工程工程中。
+* 支持高级可交互的并行计算的工具。
 
 .. code-block:: console
 
     $ pip install ipython
 
-To download and install IPython with all it's optional dependencies for the notebook, qtconsole, tests, and other functionalities
+下载和安装带有所有可选依赖（notebook、qtconsol、tests和其他功能）的IPython
 
 .. code-block:: console
 
@@ -303,18 +214,16 @@ To download and install IPython with all it's optional dependencies for the note
 BPython
 -------
 
-`bpython <http://bpython-interpreter.org/>`_ is an alternative interface to the
-Python interpreter for Unix-like operating systems. It has the following
-features:
+`bpython <http://bpython-interpreter.org/>`_ 在类Unix操作系统中可替代Python解释器的接口。它有以下特性：
 
-* In-line syntax highlighting.
-* Readline-like autocomplete with suggestions displayed as you type.
-* Expected parameter list for any Python function.
-* "Rewind" function to pop the last line of code from memory and re-evaluate.
-* Send entered code off to a pastebin.
-* Save entered code to a file.
-* Auto-indentation.
-* Python 3 support.
+* 内联的语法高亮。
+* 行内输入时的自动补全建议。
+* 任何Python函数的期望参数列表。
+* 从内存中pop出代码的最后一行并重新运行（re-evaluate）的“倒带”功能.
+* 将输入的代码发送到pastebin。
+* 将输入的代码保存到一个文件中。
+* 自动缩进。
+* 支持Python 3。
 
 .. code-block:: console
 
@@ -323,19 +232,16 @@ features:
 ptpython
 --------
 
-`ptpython <https://github.com/jonathanslenders/ptpython/>`_ is a REPL build
-on top of the `prompt_toolkit <http://github.com/jonathanslenders/python-prompt-toolkit>`_
-library. It is considered to be an alternative to BPython_. Features include:
+`ptpython <https://github.com/jonathanslenders/ptpython/>`_ 是一个构建在 `prompt_toolkit <http://github.com/jonathanslenders/python-prompt-toolkit>`_ 库顶部的REPL。它被视作是 BPython_ 的替代。特性包括：
 
-* Syntax highlighting
-* Autocompletion
-* Multiline editing
-* Emacs and VIM Mode
-* Embedding REPL inside of your code
-* Syntax Validation
-* Tab pages
-* Support for integrating with IPython_'s shell, by installing IPython
-  ``pip install ipython`` and running ``ptipython``.
+* 语法高亮
+* 自动补全
+* 多行编辑
+* Emacs和VIM模式
+* 代码中嵌入的REPL
+* 语法合法性
+* Tab页
+* 通过安装Ipython ``pip install ipython`` 并运行 ``ptipython`` ，支持集成 IPython_ 的shell
 
 .. code-block:: console
 
