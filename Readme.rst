@@ -5,6 +5,7 @@ Python最佳实践指南中文版
 项目翻译自 `Hitchhiker's Guide to Python <https://github.com/kennethreitz/python-guide>`_。
 
 Readthedocs文档地址 `Python最佳实践指南中文版 <http://pythonguidecn.readthedocs.org/>`_。
+
 -----------
 
 本指南目前持续不断地更新与完善。这份主要是自我见解的指南旨在为Python初学者和
