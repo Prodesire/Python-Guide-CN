@@ -101,7 +101,7 @@ Markdown。
 ~~~~~~~~~~~~~~~~~~~~
 
 一些工具使用文档字符串来嵌入超过文档（more-than-documentation）的行为，
-比如说单元测试逻辑。这些可以很好，但你也不能排除“这就是这样做的”。
+比如说单元测试逻辑。这些可能很好，但是简单地“保持文档就是文档”你永远都不对错。
 （译者注：原句是Those can be nice, but you won't ever go wrong with 
 vanilla "here's what this does." 对此句的翻译是意译的，我也可能理解
 不到位~）
