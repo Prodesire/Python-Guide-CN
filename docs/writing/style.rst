@@ -596,7 +596,7 @@ or pass a default argument to :py:meth:`dict.get`.
         for line in f:
             print line
 
-``with`` 语句会更好，因为它能确保你总是关闭文件，及时是在 ``with`` 的区块中
+``with`` 语句会更好，因为它能确保你总是关闭文件，即使是在 ``with`` 的区块中
 抛出一个异常。
 
 行的延续
