@@ -3,7 +3,7 @@
 
 虚拟环境是一个将不同项目所需求的依赖分别放在独立的地方的一个工具，它给这些工程创建虚拟的Python环境。它解决了“项目X依赖于版本1.x，而项目Y需要项目4.x”的两难问题，而且使你的全局site-packages目录保持干净和可管理。
 
-比如，你可以工作在一个需求Django 1.3的工程，同时维护一个需求Django 1.0的工程。
+比如，你可以工作在一个需求Django 1.10的工程，同时维护一个需求Django 1.8的工程。
 
 virtualenv
 ----------
@@ -16,6 +16,12 @@ virtualenv
 
   $ pip install virtualenv
 
+测试你的安装
+
+.. code-block:: console
+
+   $ virtualenv --version
+
 基本使用
 ~~~~~~~~~~~
 
@@ -24,27 +30,32 @@ virtualenv
 .. code-block:: console
 
    $ cd my_project_folder
-   $ virtualenv venv
+   $ virtualenv my_project
 
-``virtualenv venv`` 将会在当前的目录中创建一个文件夹，包含了Python可执行文件，以及 ``pip`` 库的一份拷贝，这样就能安装其他包了。虚拟环境的名字（此例中是 ``venv`` ）可以是任意的；若省略名字将会把文件均放在当前目录。
+``virtualenv my_project`` 将会在当前的目录中创建一个文件夹，包含了Python可执行文件，以及 ``pip`` 库的一份拷贝，这样就能安装其他包了。虚拟环境的名字（此例中是 ``my_project`` ）可以是任意的；若省略名字将会把文件均放在当前目录。
 
-在任何你运行命令的目录中，这会创建Python的拷贝，并将之放在叫做 :file:`venv` 的文件中。
+在任何你运行命令的目录中，这会创建Python的拷贝，并将之放在叫做 :file:`my_project` 的文件中。
 
-你可以选择使用一个Python解释器：
+你可以选择使用一个Python解释器（比如``python2.7``）：
 
 .. code-block:: console
 
-   $ virtualenv -p /usr/bin/python2.7 venv
+   $ virtualenv -p /usr/bin/python2.7 my_project
 
-这将会使用 :file:`/usr/bin/python2.7` 中的Python解释器。
+或者使用``~/.bashrc``的一个环境变量将解释器改为全局性的：
+
+.. code-block:: console
+
+   $ export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python2.7
+
 
 2. 要开始使用虚拟环境，其需要被激活：
 
 .. code-block:: console
 
-   $ source venv/bin/activate
+   $ source my_project/bin/activate
 
-当前虚拟环境的名字会显示在提示符左侧（比如说 ``(venv)你的电脑:你的工程 用户名$）以让你知道它是激活的。从现在起，任何你使用pip安装的包将会放在 ``venv`` 文件夹中，与全局安装的Python隔绝开。
+当前虚拟环境的名字会显示在提示符左侧（比如说 ``(my_project)你的电脑:你的工程 用户名$）以让你知道它是激活的。从现在起，任何你使用pip安装的包将会放在 ``my_project`` 文件夹中，与全局安装的Python隔绝开。
 
 像平常一样安装包，比如：
 
@@ -60,14 +71,14 @@ virtualenv
 
 这将会回到系统默认的Python解释器，包括已安装的库也会回到默认的。
 
-要删除一个虚拟环境，只需删除它的文件夹。（要这么做请执行  ``rm -rf venv`` ）
+要删除一个虚拟环境，只需删除它的文件夹。（要这么做请执行  ``rm -rf my_project`` ）
 
 然后一段时间后，你可能会有很多个虚拟环境散落在系统各处，你将有可能忘记它们的名字或者位置。
 
 其他注意
 ~~~~~~~~~~~
 
-运行带 :option:`--no-site-packages` 选项的 ``virtualenv`` 将不会包括全局安装的包。这可用于保持包列表干净，以防以后需要访问它。（这在 ``virtualenv`` 1.7及之后是默认行为）
+运行带 ``--no-site-packages`` 选项的 ``virtualenv`` 将不会包括全局安装的包。这可用于保持包列表干净，以防以后需要访问它。（这在 ``virtualenv`` 1.7及之后是默认行为）
 
 为了保持你的环境的一致性，“冷冻住（freeze）”环境包当前的状态是个好主意。要这么做，请运行：
 
@@ -90,7 +101,7 @@ virtualenv
 virtualenvwrapper
 -----------------
 
-`virtualenvwrapper <http://virtualenvwrapper.readthedocs.org/en/latest/index.html>`_ 提供了一系列命令使得和虚拟环境工作变得愉快许多。它把你所有的虚拟环境都放在一个地方。
+`virtualenvwrapper <https://virtualenvwrapper.readthedocs.io/en/latest/index.html>`_ 提供了一系列命令使得和虚拟环境工作变得愉快许多。它把你所有的虚拟环境都放在一个地方。
 
 安装（确保 **virtualenv** 已经安装了）：
 
@@ -100,7 +111,7 @@ virtualenvwrapper
   $ export WORKON_HOME=~/Envs
   $ source /usr/local/bin/virtualenvwrapper.sh
 
-(`virtualenvwrapper 的完整安装指引 <http://virtualenvwrapper.readthedocs.org/en/latest/install.html>`_.)
+(`virtualenvwrapper 的完整安装指引 <https://virtualenvwrapper.readthedocs.io/en/latest/install.html>`_.)
 
 对于Windows，你可以使用 `virtualenvwrapper-win <https://github.com/davidmarble/virtualenvwrapper-win/>`_ 。
 
@@ -110,7 +121,7 @@ To install (make sure **virtualenv** is already installed):
 .. code-block:: console
 
   $ pip install virtualenvwrapper-win
-  
+
 在Windows中，WORKON_HOME默认的路径是 %USERPROFILE%\Envs 。
 
 基本使用
@@ -120,15 +131,15 @@ To install (make sure **virtualenv** is already installed):
 
 .. code-block:: console
 
-   $ mkvirtualenv venv
+   $ mkvirtualenv my_project
 
-这会在 :file:`~/Envs` 中创建 :file:`venv` 文件夹。
+这会在 :file:`~/Envs` 中创建 :file:`my_project` 文件夹。
 
 2. 在虚拟环境上工作：
 
 .. code-block:: console
 
-   $ workon venv
+   $ workon my_project
 
 或者，你可以创建一个项目，它会创建虚拟环境，并在 ``$PROJECT_HOME`` 中创建一个项目目录。当你使用 ``workon myproject`` 时，会 ``cd`` -ed 到项目目录中。
 
@@ -150,7 +161,7 @@ To install (make sure **virtualenv** is already installed):
 
 .. code-block:: console
 
-   $ rmvirtualenv venv
+   $ rmvirtualenv my_project
 
 其他有用的命令
 ~~~~~~~~~~~~~~~~~~~~~
@@ -167,7 +178,7 @@ To install (make sure **virtualenv** is already installed):
 ``lssitepackages``
   显示 :file:`site-packages` 目录中的内容。
 
-`virtualenvwrapper 命令的完全列表 <http://virtualenvwrapper.readthedocs.org/en/latest/command_ref.html>`_ 。
+`virtualenvwrapper 命令的完全列表 <https://virtualenvwrapper.readthedocs.io/en/latest/command_ref.html>`_ 。
 
 virtualenv-burrito
 ------------------
