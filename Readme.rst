@@ -42,45 +42,47 @@ Readthedocs文档地址 `Python最佳实践指南中文版 <http://pythonguidecn
 
 翻译进度（进行中）
 ============================
-Getting Started（开始吧）（完成）
+Getting Started（开始吧）（待更新）
 ---------------------------
-- Picking an Interpreter（选择一个解释器）（完成）
+- Picking an Interpreter（选择一个解释器）（待更新）
 - Properly Install Python（正确地安装Python）（完成）
 
 Writing Great Code（写出优雅的代码）（完成）
 ---------------------------
-- Structuring Your Project（结构化你的工程）（完成）
-- Code Style（代码风格）（完成）
-- Reading Great Code（阅读好的代码）（完成）
-- Documentation（文档）（完成）
-- Testing Your Code（测试你的代码）（完成）
-- Logging（日志）（完成）
-- Common Gotchas（常见陷阱）（完成）
+- Structuring Your Project（结构化你的工程）（待更新）
+- Code Style（代码风格）（待更新）
+- Reading Great Code（阅读好的代码）（待更新）
+- Documentation（文档）（待更新）
+- Testing Your Code（测试你的代码）（待更新）
+- Logging（日志）（待更新）
+- Common Gotchas（常见陷阱）（待更新）
 - Choosing a License（选择一个许可）（完成）
 
-Scenario Guide（场景/方案指南）（完成）
+Scenario Guide（场景/方案指南）（待更新）
 ---------------------------
 - Network Applications（网络应用）（完成）
-- Web Applications（Web 应用）（完成）
-- HTML Scraping（HTML 抓取）（完成）
-- Command-line Applications（命令行应用）（完成）
-- GUI Applications（GUI应用）（完成）
-- Databases（数据库）（完成）
+- Web Applications（Web 应用）（待更新）
+- HTML Scraping（HTML 抓取）（待更新）
+- Command-line Applications（命令行应用）（待更新）
+- GUI Applications（GUI应用）（待更新）
+- Databases（数据库）（待更新）
 - Networking（网络）（完成）
-- Systems Administration（系统管理）（完成）
-- Continuous Integration（持续集成）（完成）
-- Speed（速度）（完成）
-- Scientific Applications（科学应用）（完成）
-- Image Manipulation（图像处理）（完成）
-- XML parsing（XML解析）（完成）
-- JSON（JSON）（完成）
-- Cryptography（密码学）（完成）
-- Interfacing with C/C++ Libraries（与C/C++库交互）（完成）
+- Systems Administration（系统管理）（待更新）
+- Continuous Integration（持续集成）（待更新）
+- Speed（速度）（待更新）
+- Scientific Applications（科学应用）（待更新）
+- Image Manipulation（图像处理）（待更新）
+- XML parsing（XML解析）（待更新）
+- JSON（JSON）（待更新）
+- Cryptography（密码学）（待更新）
+- Interfacing with C/C++ Libraries（与C/C++库交互）（待更新）
+- Machine Learning（机器学习）（待翻译）
+- Data Serialization（数据序列化）（待翻译）
 
-Shipping Great Code（部署优雅的代码）（完成）
+Shipping Great Code（部署优雅的代码）（待更新）
 ---------------------------
-- Packaging Your Code（打包你的代码）（完成）
-- Freezing Your Code（Freezing你的代码）（完成）
+- Packaging Your Code（打包你的代码）（待更新）
+- Freezing Your Code（Freezing你的代码）（待更新）
 
 Development Environment（开发环境）（完成）
 ---------------------------
@@ -88,16 +90,16 @@ Development Environment（开发环境）（完成）
 - Virtual Environments（虚拟环境）（完成）
 - Further Configuration of Pip and Virtualenv（Pip和Virtualenv的更多配置）（完成）
 
-Additional Notes（额外关注）（完成）
+Additional Notes（额外关注）（待更新）
 ---------------------------
 - Introduction（介绍）（完成）
 - The Community（社区）（完成）
-- Learning Python（学习Python）（完成）
+- Learning Python（学习Python）（待更新）
 - Documentation（文档）（完成）
-- News（新闻）（完成）
+- News（新闻）（待更新）
 
-其他（完成）
+其他（待更新）
 ---------------------------
-- Contribute（贡献）（进行中）
+- Contribute（贡献）（待更新）
 - License（许可证）（完成）
-- The Guide Style Guide（风格指南指引）（完成）
+- The Guide Style Guide（风格指南指引）（待更新）
