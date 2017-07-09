@@ -1,7 +1,5 @@
 Python最佳实践指南中文版
 ============================
-**翻译项目已基本完成，接下来就是持续跟进原项目进度。目前没有特别好的方法能够及时获知原项目进行了哪些相对于本项目的更新，也就不能很好地跟进翻译。欢迎有经验的伙伴贡献解决方案。**
-
 项目翻译自 `Hitchhiker's Guide to Python <https://github.com/kennethreitz/python-guide>`_。
 
 Readthedocs文档地址 `Python最佳实践指南中文版 <http://pythonguidecn.readthedocs.org/>`_。
@@ -17,7 +15,7 @@ Readthedocs文档地址 `Python最佳实践指南中文版 <http://pythonguidecn
 - 不同平台和系统上的安装
 - Py2app, Py2exe, bbfreeze, pyInstaller
 - Pip
-- Numpy, scipy, statpy, pylot, matlib
+- Numpy, scipy, statpy, pyplot, matplotlib
 - Virtualenv
 - Fabric
 - 优秀的模块推荐，按主题/目的分类
@@ -42,7 +40,7 @@ Readthedocs文档地址 `Python最佳实践指南中文版 <http://pythonguidecn
 
 -----------
 
-翻译进度（已完成）
+翻译进度（进行中）
 ============================
 Getting Started（开始吧）（完成）
 ---------------------------
@@ -100,6 +98,6 @@ Additional Notes（额外关注）（完成）
 
 其他（完成）
 ---------------------------
-- Contribute（贡献）（完成）
+- Contribute（贡献）（进行中）
 - License（许可证）（完成）
 - The Guide Style Guide（风格指南指引）（完成）
