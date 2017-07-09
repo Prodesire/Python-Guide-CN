@@ -1,7 +1,7 @@
-开始吧
+Python入门
 ---------------
 
-这部分指南关注搭建你的Python环境。
+Python新手？让我们正确地设置你的Python环境。
 
 .. toctree::
    :maxdepth: 2
@@ -14,13 +14,16 @@
     :maxdepth: 1
 
     starting/installation
+    starting/install3/osx
+    starting/install3/win
+    starting/install3/linux
     starting/install/osx
     starting/install/win
     starting/install/linux
 
 
 
-写出优雅的代码
+写出优雅的Python代码
 ------------------
 
 这部分指南关注编写Python代码的最佳实践。
@@ -39,7 +42,7 @@
 
 
 
-场景/方案指南
+Python应用的场景指南
 --------------
 
 这部分指南关注基于不同场景的工具和模块推荐。
@@ -59,13 +62,15 @@
    scenarios/speed
    scenarios/scientific
    scenarios/imaging
+   scenarios/serialization
    scenarios/xml
    scenarios/json
    scenarios/crypto
+   scenarios/ml
    scenarios/clibs
 
 
-部署优雅的代码
+部署优雅的Python代码
 -------------------
 
 这部分指南关注部署你的Python代码。
@@ -77,8 +82,10 @@
    shipping/freezing
 
 
-开发环境
+Python开发环境
 -----------------------
+
+这部分指南关注Python开发环境，以及用于编写Python代码的可用且最实用的工具。
 
 .. toctree::
    :maxdepth: 2
@@ -105,11 +112,9 @@
    intro/news
 
 
-
-
 --------------------------------------
 
-贡献注意点和法律信息如下：
+贡献注意点和法律信息如下（给感兴趣的同学）：
 
 .. toctree::
    :maxdepth: 2
