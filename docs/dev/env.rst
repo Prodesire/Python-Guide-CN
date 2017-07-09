@@ -25,7 +25,7 @@ Vim是一个使用键盘快捷键而不是菜单或图标来编辑的文本编�
 
 还有一个方便的语法插件叫做 syntax_ ，改进了Vim 6.1中的语法文件。
 
-这些插件使你拥有一个基本的环境进行Python开发。要最有效的使用Vim，你应该市场检查代码的语法错误和是否符合PEP8。幸运的是， PEP8_ 和 Pyflakes_ 将会帮你做这些。如果你的Vim是用 :option:`+python` 编译的，你也可以在编辑器中使用一些非常有用的插件来做这些检查。
+这些插件使你拥有一个基本的环境进行Python开发。要最有效的使用Vim，你应该时常检查代码的语法错误和是否符合PEP8。幸运的是， pycodestyle_ 和 Pyflakes_ 将会帮你做这些。如果你的Vim是用 ``+python`` 编译的，你也可以在编辑器中使用一些非常有用的插件来做这些检查。
 
 对于PEP8检查和pyflakes，你可以安装 vim-flake8_ 。然后你就可以在Vim中把 ``Flake8`` 映射到任何热键或你想要的行为上。这个插件将会在屏幕下方显示出错误，并且提供一个简单的方式跳转到相关行。在保存文件的时候调用这个功能会是非常方便的。要这么做，就把下面一行加入到你的 :file:`.vimrc`::
 
@@ -46,12 +46,12 @@ Python-mode
 Python-mode_ 是一个在Vim中使用Python的综合解决方案。
 它拥有：
 
-- 任意组合的异步Python代码检查（ ``pylint`` 、  ``pyflakes`` 、  ``pep8`` 、 ``mccabe``）
+- 任意组合的异步Python代码检查（ ``pylint`` 、  ``pyflakes`` 、  ``pycodestyle`` 、 ``mccabe``）
 - 使用Rope进行代码重构和补全
 - Python快速折叠
 - 支持virtualenv
 - 搜索Python文档，运行Python代码
-- 自动修复 PEP8_ 错误
+- 自动修复 pycodestyle_ 错误
 
 以及其他更多。
 
@@ -63,7 +63,7 @@ SuperTab_ 是一个小的Vim插件，通过使用 ``<Tab>`` 或任何其他定�
 .. _indent: http://www.vim.org/scripts/script.php?script_id=974
 .. _syntax: http://www.vim.org/scripts/script.php?script_id=790
 .. _Pyflakes: http://pypi.python.org/pypi/pyflakes/
-.. _PEP8: http://pypi.python.org/pypi/pep8/
+.. _pycodestyle: https://pypi.python.org/pypi/pycodestyle/
 .. _syntastic: https://github.com/scrooloose/syntastic
 .. _Python-mode: https://github.com/klen/python-mode
 .. _SuperTab: http://www.vim.org/scripts/script.php?script_id=1643
@@ -105,6 +105,14 @@ PyCharm / IntelliJ IDEA
 -----------------------
 
 `PyCharm <http://www.jetbrains.com/pycharm/>`_ 由JetBrains公司开发，此公司还以IntelliJ IDEA闻名。它们都共享着相同的基础代码，PyCharm中大多数特性能通过免费的 `Python 插件 <https://plugins.jetbrains.com/plugin/?idea&pluginId=631>`_ 带入到IntelliJ中。PyCharm由两个版本：专业版（Professional Edition）（30天试用）和拥有相对少特性的社区版（Community Edition）（Apache 2.0 License）。
+
+Python （在 Visual Studio Code中）
+------------------------------
+
+`用于Visual Studio的Python <https://marketplace.visualstudio.com/items?itemName=donjayamanne.python>`_ 是一款用于 `Visual Studio Code IDE <https://code.visualstudio.com>`_ 的扩展。
+它是一个免费的、轻量的、开源的IDE，支持Mac、Windows和Linux。它以诸如Node.js和Python等开源技术构建，具有如Intellisense（自动补全）、本地和远程调试、linting（代码检查）等引人注目的特性。
+
+MIT 许可证。
 
 Enthought Canopy
 ----------------
