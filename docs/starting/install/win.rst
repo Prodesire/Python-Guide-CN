@@ -1,10 +1,11 @@
 .. _install-windows:
 
-在Windows上安装Python
+在Windows上安装Python 2
 ============================
 
-首先，从官网下载 `最新版本 <https://www.python.org/ftp/python/2.7.10/python-2.7.10.msi>`_
-的Python 2.7。可通过 `Python官网 <http://python.org>`_ 的"Windows Installer"链接保证下载到的版本是最新的。
+首先，从官网下载 `最新版本 <https://www.python.org/ftp/python/2.7.13/python-2.7.13.msi>`_
+的Python 2.7。如果想要确保下载到最新版本，单击 `Python官网 <http://python.org>`_ 的
+Downloads > Windows 链接。
 
 Windows版本是MSI文件格式，双击它即可开始安装。MSI文件格式允许Windows管理员使用标准工具自动
 进行安装流程。
@@ -26,6 +27,8 @@ Python将安装到内含版本号信息的路径，例如2.7版本的Python将�
 
     [Environment]::SetEnvironmentVariable("Path", "$env:Path;C:\Python27\;C:\Python27\Scripts\", "User")
 
+这也是安装过程中的一个选择。
+
 其中第二个路径(:file:`Scripts`)可接收已安装包的命令文件，添加这个路径很有益处。虽然以上步骤完成后，
 就可以开始正式使用Python了，但我还是强烈建议各位，在正式开始Python应用开发前，安装接下来教程中所介绍
 的工具和库。特别应该安装Setuptools——它将简化安装和使用Python第三方库的流程。
@@ -37,7 +40,7 @@ Setuptools是一款非常重要的Python第三方工具，它是标准包自带�
 就可以通过一行指令下载和安装任何可获取到的Python应用包，还可以轻松地将这种网络安装的方式加入到自己开发
 的Python应用中。
 
-通过运行Python脚本 `ez_setup.py <https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py>`_ 获取最新
+通过运行Python脚本 `ez_setup.py <https://bootstrap.pypa.io/ez_setup.py>`_ 获取最新
 Windows版本的Setuptools。
 
 安装完后就可以使用 **easy_install** 命令，但由于该命令已经被大多数人弃用，我们将安装替代它的 **pip** 命令。
@@ -52,9 +55,9 @@ Pip支持包的卸载，而且与easy_install不同，它一直处于维护下�
 虚拟环境工具(virturalenv)通过为不同项目创建专属的Python虚拟环境，以实现其依赖的库独立保存在不同的路径。
 这解决了“项目X依赖包版本1.x，但项目Y依赖包版本为4.x”的难题, 并且维持全局的site-packages目录干净、易管理。 
 
-举个例子，通过这个工具可以实现依赖Django 1.3的项目与依赖Django 1.0的项目共存。
+举个例子，通过这个工具可以实现依赖Django 1.10的项目与依赖Django 1.8的项目共存。
 
-进一步了解与使用请参考文档 `Virtual Environments <http://github.com/kennethreitz/python-guide/blob/master/docs/dev/virtualenvs.rst>`_ 。
+进一步了解与使用请参考文档 :ref:`Virtual Environments <virtualenvironments-ref>` 。
 
 --------------------------------
 

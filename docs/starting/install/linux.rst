@@ -1,21 +1,23 @@
 .. _install-linux:
 
-在Linux上安装Python
+在Linux上安装Python 2
 ==========================
 
-最新版本的CentOS, Fedora, Redhat企业版(RHEL)和Ubuntu **自带 Python 2.7**。
+最新版本的CentOS, Fedora, Red Hat 企业版 Linux (RHEL) 和 Ubuntu **自带 Python 2.7**。
 
 想要获取已安装的Python版本号，可以通过终端运行命令：
 
 .. code-block:: console
 
-    $ python --version
+    $ python2 --version
 
-部分旧版本的RHEL和CentOS系统自带Python 2.4，该版本已不被目前的Python应用接受。幸运的是，
-`Extra Packages for Enterprise Linux` (epel, 企业版Linux的额外软件包)基于Fedora的版本提供高质量
-的附加软件包，该仓库包含与系统自带的Python 2.4共同安装好的Python 2.6。
+尽管如此，随着Python 3的流行，一些发行版，比如Fedora，不再预装Python 2。你可以使用
+发行版的包管理器来安装 ``python2`` ：
 
-.. _Extra Packages for Enterprise Linux: http://fedoraproject.org/wiki/EPEL
+.. code-block:: console
+
+    $ sudo dnf install python2
+
 
 你不必安装和配置即可直接使用Python进行开发。话虽如此，我还是强烈建议各位，在正式开始Python应用
 开发前，安装接下来教程中所介绍的工具和库。特别应该安装Setuptools和pip，它们将简化安装和使用
@@ -44,9 +46,9 @@ Virtual Environments
 虚拟环境工具(virturalenv)通过为不同项目创建专属的Python虚拟环境，以实现其依赖的库独立保存在不同的路径。
 这解决了“项目X依赖包版本1.x，但项目Y依赖包版本为4.x”的难题, 并且维持全局的site-packages目录干净、易管理。 
 
-举个例子，通过这个工具可以实现依赖Django 1.3的项目与依赖Django 1.0的项目共存。
+举个例子，通过这个工具可以实现依赖Django 1.10的项目与依赖Django 1.8的项目共存。
 
-进一步了解与使用请参考文档 `Virtual Environments <http://github.com/kennethreitz/python-guide/blob/master/docs/dev/virtualenvs.rst>`_ 。
+进一步了解与使用请参考文档 :ref:`Virtual Environments <virtualenvironments-ref>`  。
 
 也可使用 :ref:`virtualenvwrapper <virtualenvwrapper-ref>` 更轻松地管理你的虚拟环境。
 
