@@ -42,9 +42,9 @@ Readthedocs文档地址 `Python最佳实践指南中文版 <http://pythonguidecn
 
 翻译进度（进行中）
 ============================
-Getting Started（开始吧）（待更新）
+Getting Started（开始吧）（完成）
 ---------------------------
-- Picking an Interpreter（选择一个解释器）（待更新）
+- Picking an Interpreter（选择一个解释器）（完成）
 - Properly Install Python（正确地安装Python）（完成）
 
 Writing Great Code（写出优雅的代码）（完成）
