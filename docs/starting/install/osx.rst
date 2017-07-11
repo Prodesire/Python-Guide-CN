@@ -19,7 +19,7 @@ OS X自带的Python版本更适合用于学习而不是开发。因为版本与P
 现在就开始吧！
 --------------
 
-跟着我一起安装合适的Python吧。
+跟着我一起安装真实版本的Python吧。
 
 在正式安装之前，应先安装C编译器。最快的方式是运行 ``xcode-select --install`` 来安装Xcode命令行工具。
 你也可以从Mac应用商店下载完全版的 `XCode <http://developer.apple.com/xcode/>`_， 

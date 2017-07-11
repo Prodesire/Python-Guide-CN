@@ -5,7 +5,7 @@
 
 最新版本的CentOS, Fedora, Red Hat 企业版 Linux (RHEL) 和 Ubuntu **自带 Python 2.7**。
 
-想要获取已安装的Python版本号，可以通过终端运行命令：
+想要获取已安装的Python 2版本号，可以通过终端运行命令：
 
 .. code-block:: console
 
@@ -40,7 +40,7 @@ Python 2.7.9 以及之后版本(Python2 系列)，和Python 3.4以及之后版�
 
 `参考官方pip安装指南 <https://pip.pypa.io/en/latest/installing/>`_ 获取pip工具，并自动安装最新版本的setuptools。
 
-Virtual Environments
+虚拟环境
 --------------------
 
 虚拟环境工具(virturalenv)通过为不同项目创建专属的Python虚拟环境，以实现其依赖的库独立保存在不同的路径。
@@ -48,7 +48,7 @@ Virtual Environments
 
 举个例子，通过这个工具可以实现依赖Django 1.10的项目与依赖Django 1.8的项目共存。
 
-进一步了解与使用请参考文档 :ref:`Virtual Environments <virtualenvironments-ref>`  。
+进一步了解与使用请参考文档 :ref:`虚拟环境 <virtualenvironments-ref>`  。
 
 也可使用 :ref:`virtualenvwrapper <virtualenvwrapper-ref>` 更轻松地管理你的虚拟环境。
 

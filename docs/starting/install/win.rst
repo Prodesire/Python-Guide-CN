@@ -10,8 +10,8 @@ Downloads > Windows 链接。
 Windows版本是MSI文件格式，双击它即可开始安装。MSI文件格式允许Windows管理员使用标准工具自动
 进行安装流程。
 
-Python将安装到内含版本号信息的路径，例如2.7版本的Python将被安装到 :file:`C:\\Python27\\`, 
-故多个版本的Python可以共存在一个系统里，不会有冲突。当然仅有一个默认的Python文件解释器，
+Python将安装到内含版本号信息的路径，例如Python 2.7版本将被安装到 :file:`C:\\Python27\\`, 
+故多个版本的Python可以共存在一个系统里，不会有冲突。当然仅有一个默认的Python解释器，
 :envvar:`PATH` 环境变量也不是自动修改的，开发人员可以控制要运行的Python版本。
 
 把默认使用的Python版本路径加到 :envvar:`PATH` 环境变量中，避免每次使用时都要冗余地写全Python
@@ -49,10 +49,10 @@ Pip支持包的卸载，而且与easy_install不同，它一直处于维护下�
 通过运行Python脚本 `get-pip.py <https://raw.github.com/pypa/pip/master/contrib/get-pip.py>`_ 可安装pip
 
 
-虚拟环境(Virtual Environment)
+虚拟环境
 --------------------
 
-虚拟环境工具(virturalenv)通过为不同项目创建专属的Python虚拟环境，以实现其依赖的库独立保存在不同的路径。
+虚拟环境工具(通常是指“virturalenv”)通过为不同项目创建专属的Python虚拟环境，以实现其依赖的库独立保存在不同的路径。
 这解决了“项目X依赖包版本1.x，但项目Y依赖包版本为4.x”的难题, 并且维持全局的site-packages目录干净、易管理。 
 
 举个例子，通过这个工具可以实现依赖Django 1.10的项目与依赖Django 1.8的项目共存。

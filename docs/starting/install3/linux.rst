@@ -1,111 +1,97 @@
 .. _install3-linux:
 
-Installing Python 3 on Linux
+在Linux上安装Python 3
 ============================
 
-This document describes how to install Python 3.6 on Ubuntu Linux machines.
+这份文档描述了如何在Ubuntu Linux机器上安装Python 3.6。
 
-To see which version of Python 3 you have installed, open a command prompt and run
+想要获取已安装的Python 3版本号，可以通过终端运行命令：
 
 .. code-block:: console
 
     $ python3 --version
 
-If you are using Ubuntu 16.10 or newer, then you can easily install Python 3.6 with the following commands::
+如果你使用的是Ubuntu 16.10或更新，可以通过以下命令简单地安装Python 3.6::
 
     $ sudo apt-get update
     $ sudo apt-get install python3.6
 
-If you're using another version of Ubuntu (e.g. the latest LTS release), we recommend using the `deadsnakes PPA <https://launchpad.net/~fkrull/+archive/ubuntu/deadsnakes>`_ to install Python 3.6::
+如果你使用的是其他版本的Ubuntu（比如LTS发行版），我们推荐使用 `deadsnakes PPA <https://launchpad.net/~fkrull/+archive/ubuntu/deadsnakes>`_ 来安装 Python 3.6::
 
     $ sudo add-apt-repository ppa:fkrull/deadsnakes
     $ sudo apt-get update
     $ sudo apt-get install python3.6
 
-If you are using other Linux distribution, chances are you already have Python 3
-pre-installed as well. If not, use your distribution's package manager.
-For example on Fedora, you would use `dnf`:
+如果你使用的是其他Linux发行版，有可能已经预装了Python 3。如果没有，使用发行版的包管理器。
+比如，在Fedora上你可以使用 `dnf`：
 
 .. code-block:: console
 
     $ sudo dnf install python3
 
-Note that if the version of the ``python3`` package is not recent enough
-for you, there may be ways of installing more recent versions as well,
-depending on you distribution. For example installing the ``python36`` package
-on Fedora 25 to get Python 3.6. If you are a Fedora user, you might want
-to read about `multiple Python versions available in Fedora`_.
+注意，如果 ``python3`` 包的版本不够新，还有其他方式安装更新的版本，这取决于所在的发行版。
+比如在Fedora 25上安装 ``python36`` 包来获取Python 3.6。如果你是Fedora用户，你可能想
+阅读 `Fedora中可用的多Python版本`_ 。
 
-.. _multiple Python versions available in Fedora: https://developer.fedoraproject.org/tech/languages/python/multiple-pythons.html
+.. _Fedora中可用的多Python版本: https://developer.fedoraproject.org/tech/languages/python/multiple-pythons.html
 
 
-Working with Python 3
+使用Python 3
 ---------------------
 
-At this point, you may have system Python 2.7 available as well.
+这个时候，在你系统上可能Python 2.7也是可用的。
 
 .. code-block:: console
 
     $ python
 
-This will launch the Python 2 interpreter.
+将打开Python 2解释器。
 
 .. code-block:: console
 
     $ python3
 
-This will launch the Python 3 interpreter.
+将打开Python 3解释器。
 
 Setuptools & Pip
 ----------------
 
-The two most crucial third-party Python packages are `setuptools <https://pypi.python.org/pypi/setuptools>`_ and `pip <https://pip.pypa.io/en/stable/>`_.
+`setuptools <https://pypi.python.org/pypi/setuptools>`_ 和 `pip <https://pip.pypa.io/en/stable/>`_
+是最重要的两个Python第三方软件包。一旦安装了它们，就可以通过一条指令下载、安装和卸载可获取到的
+Python应用包，还可以轻松地将这种网络安装的方式加入到自己开发的Python应用中。
 
-Once installed, you can download, install and uninstall any compliant Python software
-product with a single command. It also enables you to add this network installation
-capability to your own Python software with very little work.
+Python 2.7.9 以及之后版本(Python2 系列)，和Python 3.4以及之后版本均默认包含pip。
 
-Python 2.7.9 and later (on the python2 series), and Python 3.4 and later include
-pip by default.
-
-To see if pip is installed, open a command prompt and run
+运行以下命令行代码检查pip是否已经安装：
 
 .. code-block:: console
 
     $ command -v pip
 
-To install pip, `follow the official pip installation guide <https://pip.pypa.io/en/latest/installing/>`_ - this will automatically install the latest version of setuptools.
+`参考官方pip安装指南 <https://pip.pypa.io/en/latest/installing/>`_ 获取pip工具，并自动安装最新版本的setuptools。
 
-Note that on some Linux distributions including Ubuntu and Fedora the ``pip``
-command is meant for Python 2, while the ``pip3`` command is meant for Python 3.
+注意，在某些Linux发行版（包括Ubuntu和Fedora）上， ``pip`` 用于Python 2的，而 ``pip3`` 用于Python 3。
 
 .. code-block:: console
 
     $ command -v pip3
 
-However, when using virtual environments (described bellow), you don't need to
-care about that.
+不过，使用虚拟环境（下面描述）就无需担心这个问题。
 
 
-Virtual Environments
+虚拟环境
 --------------------
 
-A Virtual Environment is a tool to keep the dependencies required by different projects
-in separate places, by creating virtual Python environments for them. It solves the
-"Project X depends on version 1.x but, Project Y needs 4.x" dilemma, and keeps
-your global site-packages directory clean and manageable.
+虚拟环境工具(通常是指“virturalenv”)通过为不同项目创建专属的Python虚拟环境，以实现其依赖的库独立保存在不同的路径。
+这解决了“项目X依赖包版本1.x，但项目Y依赖包版本为4.x”的难题, 并且维持全局的site-packages目录干净、易管理。 
 
-For example, you can work on a project which requires Django 1.10 while also
-maintaining a project which requires Django 1.8.
+举个例子，通过这个工具可以实现依赖Django 1.10的项目与依赖Django 1.8的项目共存。
 
-To start using this and see more information: :ref:`Virtual Environments <virtualenvironments-ref>` docs.
+进一步了解与使用请参考文档 :ref:`虚拟环境 <virtualenvironments-ref>`  。
 
-You can also use :ref:`virtualenvwrapper <virtualenvwrapper-ref>` to make it easier to
-manage your virtual environments.
-
+也可使用 :ref:`virtualenvwrapper <virtualenvwrapper-ref>` 更轻松地管理你的虚拟环境。
 
 --------------------------------
 
-This page is a remixed version of `another guide <http://www.stuartellis.eu/articles/python-development-windows/>`_,
-which is available under the same license.
+该页是 `另一份指南 <http://www.stuartellis.eu/articles/python-development-windows/>`_ 的混合版本，可通过同一份许可获取。
 

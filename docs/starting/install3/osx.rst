@@ -2,117 +2,100 @@
 
 .. _install3-osx:
 
-Installing Python 3 on Mac OS X
+在Mac OS X上安装Python 3
 ================================
 
-The latest version of Mac OS X, Sierra, **comes with Python 2.7 out of the box**.
+最新版本的Mac OS X，Sierra， **自带Python 2.7**。
 
-You do not need to install or configure anything else to use Python 2. These
-instructions document the installation of Python 3.
+你不必安装和配置即可直接使用Python 2。本教程用来说明Python 3的安装。
 
-The version of Python that ships with OS X is great for learning, but it's not
-good for development. The version shipped with OS X may be out of date from the
-`official current Python release <https://www.python.org/downloads/mac-osx/>`_,
-which is considered the stable production version.
+OS X自带的Python版本更适合用于学习而不是开发。因为版本与Python官网发布的 `官方最新稳定版本 
+<https://www.python.org/downloads/mac-osx/>`_ 相比可能已经过时。
 
-Doing it Right
+现在就开始吧！
 --------------
 
-Let's install a real version of Python.
+跟着我一起安装真实版本的Python吧。
 
-Before installing Python, you'll need to install GCC. GCC can be obtained
-by downloading `XCode <http://developer.apple.com/xcode/>`_, the smaller
-`Command Line Tools <https://developer.apple.com/downloads/>`_ (must have an
-Apple account) or the even smaller `OSX-GCC-Installer <https://github.com/kennethreitz/osx-gcc-installer#readme>`_
-package.
+在正式安装之前，应先安装C编译器。最快的方式是运行 ``xcode-select --install`` 来安装Xcode命令行工具。
+你也可以从Mac应用商店下载完全版的 `XCode <http://developer.apple.com/xcode/>`_， 
+或者更轻巧的 `OSX-GCC-Installer <https://github.com/kennethreitz/osx-gcc-installer#readme>`_ 。
 
-.. note::
-    If you already have XCode installed, do not install OSX-GCC-Installer.
-    In combination, the software can cause issues that are difficult to
-    diagnose.
+.. 注意::
+    如果已经安装了XCode，请不要再安装 OSX-GCC-Installer。两者结合可能会引发难以诊断的问题。
 
-.. note::
-    If you perform a fresh install of XCode, you will also need to add the
-    commandline tools by running ``xcode-select --install`` on the terminal.
+.. 注意::
+    执行XCode的全新安装完成后，须在终端执行下述命令 ``xcode-select --install`` 来安装命令行工具。
 
-While OS X comes with a large number of UNIX utilities, those familiar with
-Linux systems will notice one key component missing: a package manager.
-`Homebrew <http://brew.sh>`_ fills this void.
 
-To `install Homebrew <http://brew.sh/#install>`_, open :file:`Terminal` or
-your favorite OSX terminal emulator and run
+尽管OS X系统附带了大量UNIX工具，熟悉Linux系统的人员使用时会发现缺少一个重要的组件——合适的包管理工具，
+`Homebrew <http://brew.sh>`_ 正好填补了这个空缺。
+
+`安装 Homebrew <http://brew.sh/#install>`_ 只需打开 :file:`终端` 或个人常用的终端模拟器并运行：
 
 .. code-block:: console
 
-    $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-The script will explain what changes it will make and prompt you before the
-installation begins.
-Once you've installed Homebrew, insert the Homebrew directory at the top
-of your :envvar:`PATH` environment variable. You can do this by adding the following
-line at the bottom of your :file:`~/.profile` file
+运行这段脚本将列出它会引起的改变，并在安装开始前提示你。
+安装完成Homebrew后，需将其所在路径插入到 :envvar:`PATH` 环境变量的最前面，即在你所登录用户的
+:file:`~/.profile` 文件末尾加上这一行：
 
 .. code-block:: console
 
     export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
-Now, we can install Python 3:
+接下来可以开始安装Python 3：
 
 .. code-block:: console
 
     $ brew install python3
 
-This will take a minute or two.
+这将持续几分钟。
 
 
 Pip
 ---
 
-Homebrew installs ``pip3`` for you.
+Homebrew 会为你安装 ``pip3`` 。
 
-``pip3`` is the alias for the Python 3 version of ``pip`` on systems with both
-the Homebrew'd Python 2 and 3 installed.
+``pip3`` 是系统（装了Python 2和3）中 Python 3 的 ``pip`` 的别名。
 
-Working with Python 3
+使用Python 3
 ---------------------
 
-At this point, you have the system Python 2.7 available, potentially the
-:ref:`Homebrew version of Python 2 <install-osx>` installed, and the Homebrew
-version of Python 3 as well.
+这个时候，在你系统上可能Python 2.7也是可用的。可能 :ref:`Homebrew 版本的Python 2 <install-osx>`
+和Python 3都安装了。 
 
 .. code-block:: console
 
     $ python
 
-will launch the Python 2 interpreter.
+将打开Python 2解释器。
 
 .. code-block:: console
 
     $ python3
 
-will launch the Python 3 interpreter.
+将打开Python 3解释器。
 
-``pip3`` and ``pip`` will both be available.  If the Homebrew version of Python
-2 is not installed, they will be the same.  If the Homebrew version of Python 2
-is installed then ``pip`` will point to Python 2 and ``pip3`` will point to
-Python 3.
+``pip3`` and ``pip`` 都是可用的。如果Homebrew版本的Python 2没有安装，它们就是一样的。
+如果Homebrew版本的Python 2安装了，那么 ``pip`` 指向的是Python 2，而 ``pip3`` 指向Python 3。
 
 
-Virtual Environments
+虚拟环境
 --------------------
 
-A Virtual Environment (commonly referred to as a 'virtualenv') is a tool to keep
-the dependencies required by different projects in separate places, by creating
-virtual Python environments for them. It solves the "Project X depends on
-version 1.x but, Project Y needs 4.x" dilemma, and keeps your global
-site-packages directory clean and manageable.
+虚拟环境工具(通常是指“virturalenv”)通过为不同项目创建专属的Python虚拟环境，以实现其依赖的库独立保存在不同的路径。
+这解决了“项目X依赖包版本1.x，但项目Y依赖包版本为4.x”的难题, 并且维持全局的site-packages目录干净、易管理。 
 
-For example, you can work on a project which requires Django 1.10 while also
-maintaining a project which requires Django 1.8.
+举个例子，通过这个工具可以实现依赖Django 1.10的项目与依赖Django 1.8的项目共存。
 
-To start using this and see more information: :ref:`Virtual Environments <virtualenvironments-ref>` docs.
+进一步了解与使用请参考文档 :ref:`虚拟环境 <virtualenvironments-ref>`  。
+
+也可使用 :ref:`virtualenvwrapper <virtualenvwrapper-ref>` 更轻松地管理你的虚拟环境。
 
 --------------------------------
 
-This page is a remixed version of `another guide <http://www.stuartellis.eu/articles/python-development-windows/>`_,
-which is available under the same license.
+该页是 `另一份指南 <http://www.stuartellis.eu/articles/python-development-windows/>`_ 的混合版本，可通过同一份许可获取。
+
