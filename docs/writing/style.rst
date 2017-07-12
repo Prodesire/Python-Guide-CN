@@ -484,8 +484,6 @@ PEP 8
 访问字典元素
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Don't use the :py:meth:`dict.has_key` method. Instead, use ``x in d`` syntax,
-or pass a default argument to :py:meth:`dict.get`.
 不要使用 :py:meth:`dict.has_key` 方法。取而代之，使用 ``x in d`` 语法，或者
 将一个默认参数传递给 :py:meth:`dict.get`。
 
