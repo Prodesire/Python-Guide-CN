@@ -330,7 +330,7 @@ com/questions/302459/what-is-a-programming-idiom>`_ 上有充足的讨论。
 即使两个函数看起来完全一样，但因为 *查找集合* 是利用了Python中的集合是可哈希的
 特性，两者的查询性能是非常不同的。为了判断一个项是否在列表中，Python将会查看
 每个项直到它找到匹配的项。这是耗时的，尤其是对长列表而言。另一方面，在集合中，
-想的哈希值将会告诉Python在集合的哪里去查找匹配的项。结果是，即使集合很大，查询
+项的哈希值将会告诉Python在集合的哪里去查找匹配的项。结果是，即使集合很大，查询
 的速度也很快。在字典中查询也是同样的原理。想了解更多内容，请见
 `StackOverflow <http://stackoverflow.com/questions/513882/python-list-vs-dict-for-look-up-table>`_ 。想了解在每种数据结构上的多种常见操作的花费时间的详细内容，
 请见 `此页面 <https://wiki.python.org/moin/TimeComplexity?>`_。
@@ -484,8 +484,6 @@ PEP 8
 访问字典元素
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Don't use the :py:meth:`dict.has_key` method. Instead, use ``x in d`` syntax,
-or pass a default argument to :py:meth:`dict.get`.
 不要使用 :py:meth:`dict.has_key` 方法。取而代之，使用 ``x in d`` 语法，或者
 将一个默认参数传递给 :py:meth:`dict.get`。
 
