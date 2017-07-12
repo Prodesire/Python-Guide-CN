@@ -166,7 +166,7 @@ Test Suite
 -  将你的包安装到site-packages中。
 -  通过简单直接的路径设置来解决导入的问题。
 
-我极力推荐后者。如果使用 `setup.py <http://setup.py>`__ 来测试一个持续更新的代码库，需要为每一个版本的代码库设置一个独立的测试环境.太麻烦了。
+我极力推荐后者。如果使用 ``setup.py develop`` 来测试一个持续更新的代码库，需要为每一个版本的代码库设置一个独立的测试环境.太麻烦了。
 
 可以先创建一个包含上下文环境的文件 tests/context.py。
 file:
@@ -175,7 +175,7 @@ file:
 
     import os
     import sys
-    sys.path.insert(0, os.path.abspath('..'))
+    sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
     import sample
 
@@ -211,6 +211,8 @@ Makefile
 
     test:
         py.test tests
+    
+    PHONY: init test
 
 一些其他的常规管理脚本（比如 ``manage.py`` 或者 ``fabfile.py``），也放在仓库的根目录下。
 
@@ -224,7 +226,7 @@ Makefile
 
 ::
 
-    $ django-admin.py start-project samplesite
+    $ django-admin.py startproject samplesite
 
 这样的操作生成的仓库结构是这样的:
 
@@ -244,7 +246,7 @@ Makefile
 
 ::
 
-    $ django-admin.py start-project samplesite .
+    $ django-admin.py startproject samplesite .
 
 注意末尾的 "``.``"。
 
@@ -469,9 +471,71 @@ Python语言提供一个简单而强大的语法: '装饰器'。装饰器是一�
         # 实现语句
     # bar()被装饰了
 
-这个机制对于分离概念和避免外部不相关逻辑‘污染’主要逻辑很有用处。缓存就是一个很
-好的推荐使用装饰器的例子：你需要在table中储存一个耗时函数的结果，并且下次能直接
+这个机制对于分离概念和避免外部不相关逻辑“污染”主要逻辑很有用处。
+`记忆化 <https://en.wikipedia.org/wiki/Memoization#Overview>` 或缓存就是一个很
+好的使用装饰器的例子：你需要在table中储存一个耗时函数的结果，并且下次能直接
 使用该结果，而不是再计算一次。这显然不属于函数的逻辑部分。
+
+上下文管理器
+----------------
+
+上下文管理器是一个Python对象，为操作提供了额外的上下文信息。 这种额外的信息，
+在使用 ``with`` 语句初始化上下文，以及完成 ``with`` 块中的所有代码时，采用可调用的形式。 
+这里展示了使用上下文管理器的为人熟知的示例，打开文件：
+
+.. code-block:: python
+
+    with open('file.txt') as f:
+        contents = f.read()
+
+任何熟悉这种模式的人都知道以这种形式调用 ``open`` 能确保 ``f` 的 ``close`` 方法会在某个时候被调用。
+这样可以减少开发人员的认知负担，并使代码更容易阅读。
+
+实现这个功能有两种简单的方法：使用类或使用生成器。 让我们自己实现上面的功能，以使用类方式开始：
+
+.. code-block:: python
+
+    class CustomOpen(object):
+        def __init__(self, filename):
+            self.file = open(filename)
+
+        def __enter__(self):
+            return self.file
+
+        def __exit__(self, ctx_type, ctx_value, ctx_traceback):
+            self.file.close()
+
+    with CustomOpen('file') as f:
+        contents = f.read()
+
+这只是一个常规的Python对象，它有两个由 ``with`` 语句使用的额外方法。 
+CustomOpen 首先被实例化，然后调用它的`__enter__``方法，而且 ``__enter__`` 的返回值在
+``as f`` 语句中被赋给 ``f`` 。 当 ``with`` 块中的内容执行完后，会调用 `__exit__`` 方法。
+
+而生成器方式使用了Python自带的
+`contextlib <https://docs.python.org/2/library/contextlib.html>`_:
+
+.. code-block:: python
+
+    from contextlib import contextmanager
+
+    @contextmanager
+    def custom_open(filename):
+        f = open(filename)
+        try:
+            yield f
+        finally:
+            f.close()
+
+    with custom_open('file') as f:
+        contents = f.read()
+
+这与上面的类示例道理相通，尽管它更简洁。``custom_open`` 函数一直运行到 ``yield`` 语句。
+然后它将控制权返回给 ``with`` 语句，然后在 ``as f`` 部分将yield的 `f` 赋值给f。 
+``finally`` 确保不论 ``with`` 中是否发生异常， ``close()`` 都会被调用。
+
+由于这两种方法都是一样的，所以我们应该遵循Python之禅来决定何时使用哪种。
+如果封装的逻辑量很大，则类的方法可能会更好。 而对于处理简单操作的情况，函数方法可能会更好。
 
 动态类型
 --------------
@@ -574,13 +638,22 @@ Python 中一个可能会让初学者惊讶的特性是：字符串是不可变�
       nums.append(str(n))
     print "".join(nums)  # 更高效
 
-**最好**
+**更好好**
 
 .. code-block:: python
 
     # 创建将0到19连接起来的字符串 (例 "012..1819")
     nums = [str(n) for n in range(20)]
     print "".join(nums)
+
+**最好Best**
+
+.. code-block:: python
+
+    # 创建将0到19连接起来的字符串 (例 "012..1819")
+    nums = map(str, range(20))
+    print "".join(nums) 
+
 
 最后关于字符串的说明的一点是，使用 ``join()`` 并不总是最好的选择。比如当用预先
 确定数量的字符串创建一个新的字符串时，使用加法操作符确实更快，但在上文提到的情况
@@ -610,6 +683,15 @@ Python 中一个可能会让初学者惊讶的特性是：字符串是不可变�
     foobar = '%s%s' % (foo, bar) # 可行
     foobar = '{0}{1}'.format(foo, bar) # 更好
     foobar = '{foo}{bar}'.format(foo=foo, bar=bar) # 最好
+
+
+提供依赖关系
+------------------------
+
+
+Runners
+-------
+
 
 更多阅读
 ---------------
