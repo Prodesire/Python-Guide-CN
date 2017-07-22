@@ -47,10 +47,10 @@ Getting Started（开始吧）（完成）
 - Picking an Interpreter（选择一个解释器）（完成）
 - Properly Install Python（正确地安装Python）（完成）
 
-Writing Great Code（写出优雅的代码）（完成）
+Writing Great Code（写出优雅的代码）（待更新）
 ---------------------------
 - Structuring Your Project（结构化你的工程）（完成）
-- Code Style（代码风格）（待更新）
+- Code Style（代码风格）（完成）
 - Reading Great Code（阅读好的代码）（待更新）
 - Documentation（文档）（待更新）
 - Testing Your Code（测试你的代码）（待更新）

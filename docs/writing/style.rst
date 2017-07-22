@@ -7,11 +7,11 @@
 事实上，高度的可读性是Python语言的设计核心。这基于这样的事实：代码的
 阅读比编写更加频繁。
 
-Python代码易读和易懂的其中一个原因是它的相对完整的代码风格指引和 “Pythonic” 
-的风格。
+Python代码具有高可读性的其中一个原因是它的相对完整的代码风格指引和 “Pythonic” 
+的习语。
 
-此外，当一位富有经验的Python开发者（Pythonista）指出某段代码并不 “Pythonic”，
-这通常意味着这些代码并没有遵循通用的指导方针，也没有用最佳的（最可读的）方式
+当一位富有经验的Python开发者（Pythonista）指出某段代码并不 “Pythonic”时，
+通常意味着这些代码并没有遵循通用的指导方针，也没有用最佳的（最可读的）方式
 来表达意图。
 
 在某些边缘情况下，Python代码中并没有大家都认同的表达意图的最佳方式，但这些情况
@@ -297,6 +297,8 @@ com/questions/302459/what-is-a-programming-idiom>`_ 上有充足的讨论。
 
     four_lists = [[] for __ in xrange(4)]
 
+注意：在 Python 3 中使用 range() 而不是 xrange()
+
 根据列表来创建字符串
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -401,23 +403,25 @@ Python之禅
 PEP 8
 -----
 
-:pep:`8` 是Python事实上的代码风格指南。
+:pep:`8` 是Python事实上的代码风格指南，我们可以在 `pep8.org <http://pep8.org/>`_
+上获得高质量的、一度的PEP 8版本。
 
+强烈推荐阅读这部分。整个Python社区都尽力遵循本文档中规定的准则。一些项目可能受其影响，
+而其他项目可能 `修改其建议 <http://docs.python-equests.org/en/master/dev/contributing/kenneth-reitz-s-code-style >`_。
 
-你的Python代码遵循 PEP 8 通常是个好主意，当和其他开发者一起维护项目时，
-这帮助使代码更加具有可持续性。这个命令行程序，`pep8 <https://github.com/jcrocholl/pep8>`_,
-能够检查你的代码的一致性。在你的终端中运行下列命令：
+也就是说，让您的 Python 代码遵循 PEP 8 通常是个好主意，这也有助于在与其他开发人员
+一起工作时使代码更加具有可持续性。命令行程序 pycodestyle `<https://github.com/PyCQA/pycodestyle>`_ 
+（以前叫做``pep8``），可以检查代码一致性。在您的终端上运行以下命令来安装它：
 
 .. code-block:: console
 
-    $ pip install pep8
-
+    $ pip install pycodestyle
 
 然后，对一个文件或者一系列的文件运行它，来获得任何违规行为的报告。
 
 .. code-block:: console
 
-    $ pep8 optparse.py
+    $ pycodestyle optparse.py
     optparse.py:69:11: E401 multiple imports on one line
     optparse.py:77:1: E302 expected 2 blank lines, found 1
     optparse.py:88:5: E301 expected 1 blank line, found 0
