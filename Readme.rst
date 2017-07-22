@@ -51,7 +51,7 @@ Writing Great Code（写出优雅的代码）（待更新）
 ---------------------------
 - Structuring Your Project（结构化你的工程）（完成）
 - Code Style（代码风格）（完成）
-- Reading Great Code（阅读好的代码）（待更新）
+- Reading Great Code（阅读好的代码）（完成）
 - Documentation（文档）（待更新）
 - Testing Your Code（测试你的代码）（待更新）
 - Logging（日志）（待更新）

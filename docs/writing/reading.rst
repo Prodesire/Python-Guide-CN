@@ -5,6 +5,14 @@
 
 成为优秀Python编写者的秘诀是去阅读，理解和领会好的代码。
 
+.. raw:: html
+
+    <iframe width="560" 
+            height="315" 
+            src="https://www.youtube.com/embed/Jc8M9-LoEuo" 
+            frameborder="0" allowfullscreen></iframe>
+    
+
 良好的代码需要遵循
 :ref:`代码风格` 中概述的指南,尽可能向读者表述简洁清楚。
 
@@ -33,7 +41,6 @@
 - `Tablib <https://github.com/kennethreitz/tablib>`_
   Tablib是无格式的表格数据集库，使用Python编写。
 
-.. todo:: 内嵌和解释Python代码阅读的YouTube视频：http://www.youtube.com/watch?v=Jc8M9-LoEuo 这可能要求安装插件Sphinx。https://bitbucket.org/birkenfeld/sphinx-contrib/src/a09f29fc16970f34350ca36ac7f229e00b1b1674/youtube?at=default
 
 .. todo:: 包括每个列出项目中典型代码的例子。解释为什么它是非常优秀的代码，举出较复杂的例子。
 
