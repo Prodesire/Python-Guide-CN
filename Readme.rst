@@ -54,7 +54,7 @@ Writing Great Code（写出优雅的代码）（待更新）
 - Reading Great Code（阅读好的代码）（完成）
 - Documentation（文档）（完成）
 - Testing Your Code（测试你的代码）（完成）
-- Logging（日志）（待更新）
+- Logging（日志）（完成）
 - Common Gotchas（常见陷阱）（待更新）
 - Choosing a License（选择一个许可）（完成）
 
