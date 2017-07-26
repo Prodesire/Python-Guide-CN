@@ -47,7 +47,7 @@ Getting Started（开始吧）（完成）
 - Picking an Interpreter（选择一个解释器）（完成）
 - Properly Install Python（正确地安装Python）（完成）
 
-Writing Great Code（写出优雅的代码）（待更新）
+Writing Great Code（写出优雅的代码）（完成）
 ---------------------------
 - Structuring Your Project（结构化你的工程）（完成）
 - Code Style（代码风格）（完成）
@@ -55,7 +55,7 @@ Writing Great Code（写出优雅的代码）（待更新）
 - Documentation（文档）（完成）
 - Testing Your Code（测试你的代码）（完成）
 - Logging（日志）（完成）
-- Common Gotchas（常见陷阱）（待更新）
+- Common Gotchas（常见陷阱）（完成）
 - Choosing a License（选择一个许可）（完成）
 
 Scenario Guide（场景/方案指南）（待更新）
