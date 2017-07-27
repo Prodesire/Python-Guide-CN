@@ -15,7 +15,8 @@ lxml和Requests
 -----------------
 
 `lxml <http://lxml.de/>`_ 是一个优美的扩展库，用来快速解析XML以及HTML文档
-即使所处理的标签非常混乱。我们也将使用 `Requests <http://docs.python-requests.org/en/latest/>`_ 模块取代内建的urllib2模块，因为其速度更快而且可读性更好。你可以通过使用
+即使所处理的标签非常混乱。我们也将使用 `Requests <http://docs.python-requests.org/en/latest/>`_ 
+模块取代内建的urllib2模块，因为其速度更快而且可读性更好。你可以通过使用
 ``pip install lxml`` 与 ``pip install requests`` 命令来安装这两个模块。
 
 让我们以下面的导入开始：
@@ -37,7 +38,7 @@ lxml和Requests
 方法访问：XPath以及CSS选择器。在这个例子中，我们将选择前者。
 
 XPath是一种在结构化文档（如HTML或XML）中定位信息的方式。一个关于XPath的
-不错的介绍参见 `W3Schools <http://www.w3schools.com/xpath/default.asp>`_ 。
+不错的介绍参见 `W3Schools <http://www.w3schools.com/xml/xpath_intro.asp>`_ 。
 
 有很多工具可以获取元素的XPath，如Firefox的FireBug或者Chrome的Inspector。
 如果你使用Chrome，你可以右键元素，选择 'Inspect element'，高亮这段代码，
@@ -87,3 +88,6 @@ XPath是一种在结构化文档（如HTML或XML）中定位信息的方式。�
 
 我们可以考虑一些更酷的想法：修改这个脚本来遍历该例数据集中剩余的页面，或者
 使用多线程重写这个应用从而提升它的速度。
+
+如果你想学习如何使用python导入数据 - 这个 `DataCamp 数据导入课程https://www.datacamp.com/courses/importing-data-in-r-part-1?tap_a=5644-dce66f&tap_s= 116411-750171>`_
+是个开始的好地方。
