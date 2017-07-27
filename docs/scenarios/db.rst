@@ -4,7 +4,6 @@
 DB-API
 ------
 
-
 Python数据库API（DB-API）定义了一个Python数据库访问模块的标准接口。它的文档在 :pep:`249` 可以查看。
 几乎所有Python数据库模块，诸如 `sqlite3`， `psycopg` 以及 `mysql-python` 都遵循这个接口。
 
@@ -17,13 +16,24 @@ Python数据库API（DB-API）定义了一个Python数据库访问模块的标�
 SQLAlchemy
 ----------
 
-
 `SQLAlchemy <http://www.sqlalchemy.org/>`_ 是一个流行的数据库工具。不像很多
 数据库库，它不仅提供一个ORM层，而且还有一个通用API来编写避免SQL的数据库无关代码。
 
 .. code-block:: console
 
     $ pip install sqlalchemy
+
+Records
+-------
+
+`Records <https://github.com/kennethreitz/records>`_是极简SQL库，旨在将原始SQL查询发送到各种数据库。 
+数据可以以编程方式使用，也可以导出到一些有用的数据格式。
+
+.. code-block:: console
+
+    $ pip install records
+
+还包括用于导出SQL数据的命令行工具。
 
 Django ORM
 ----------
@@ -44,10 +54,10 @@ peewee
 ------
 
 `peewee <http://docs.peewee-orm.com/en/latest/>`_ 是另一个ORM，它致力于轻量级和支持Python2.6+与3.2+默认支持的
-SQLite，MySQL以及Postgres。 `model layer <https://peewee.readthedocs.org/en/latest/peewee/quickstart.html#model-definition>`_
-与Django ORM类似并且它拥有 `SQL-like methods <https://peewee.readthedocs.org/en/latest/peewee/quickstart.html#retrieving-data>`_
+SQLite，MySQL以及Postgres。 `model layer <https://peewee.readthedocs.io/en/latest/peewee/quickstart.html#model-definition>`_
+与Django ORM类似并且它拥有 `SQL-like methods <https://peewee.readthedocs.io/en/latest/peewee/quickstart.html#retrieving-data>`_
 来查询数据。除了将SQLite，MySQL以及Postgres变为开箱即用，还有进一步的扩展功能可以在这里找到：
-`collection of add-ons <https://peewee.readthedocs.org/en/latest/peewee/playhouse.html#playhouse>`_。
+`collection of add-ons <https://peewee.readthedocs.io/en/latest/peewee/playhouse.html#playhouse>`_。
 
 PonyORM
 -------
@@ -60,7 +70,6 @@ schema编辑器生成PonyORM实体。它支持Python2.6+与3.3+并且可以连�
 
 SQLObject
 ---------
-
 
 `SQLObject <http://www.sqlobject.org/>`_ 是另一个ORM。它支持广泛的数据库，常见的
 MySQL，Postgres以及SQLite与更多的特别系统如SAP DB，SyBase与MSSQL。它只支持Python 2
