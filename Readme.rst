@@ -61,7 +61,7 @@ Writing Great Code（写出优雅的代码）（完成）
 Scenario Guide（场景/方案指南）（待更新）
 ---------------------------
 - Network Applications（网络应用）（完成）
-- Web Applications（Web 应用）（待更新）
+- Web Applications（Web 应用）（完成）
 - HTML Scraping（HTML 抓取）（待更新）
 - Command-line Applications（命令行应用）（待更新）
 - GUI Applications（GUI应用）（待更新）

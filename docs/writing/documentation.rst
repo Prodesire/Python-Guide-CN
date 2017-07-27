@@ -44,7 +44,8 @@
 Sphinx
 ~~~~~~
 
-Sphinx_ 无疑是最流行的Python文档工具。**请使用它吧。** 它能把 :ref:`restructuredtext-ref`标记语言转换为广泛的输出格式，包括HTML、LaTeX(可打印PDF版本)、手册页和纯文本。
+Sphinx_ 无疑是最流行的Python文档工具。**请使用它吧。** 它能把 :ref:`restructuredtext-ref`
+标记语言转换为广泛的输出格式，包括HTML、LaTeX(可打印PDF版本)、手册页和纯文本。
 
 `Read The Docs`_ 是一个 *超棒的* 并且 *免费的* 文档托管，可以托管你的 Sphinx_ 文档。
 请使用它。你可以为它配置提交钩子到你的源库中，这样文档的重新构建将会自动进行。
