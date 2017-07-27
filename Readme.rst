@@ -67,7 +67,7 @@ Scenario Guide（场景/方案指南）（待更新）
 - GUI Applications（GUI应用）（完成）
 - Databases（数据库）（完成）
 - Networking（网络）（完成）
-- Systems Administration（系统管理）（待更新）
+- Systems Administration（系统管理）（完成）
 - Continuous Integration（持续集成）（待更新）
 - Speed（速度）（待更新）
 - Scientific Applications（科学应用）（待更新）
