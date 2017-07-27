@@ -63,7 +63,7 @@ Scenario Guide（场景/方案指南）（待更新）
 - Network Applications（网络应用）（完成）
 - Web Applications（Web 应用）（完成）
 - HTML Scraping（HTML 抓取）（完成）
-- Command-line Applications（命令行应用）（待更新）
+- Command-line Applications（命令行应用）（完成）
 - GUI Applications（GUI应用）（待更新）
 - Databases（数据库）（待更新）
 - Networking（网络）（完成）

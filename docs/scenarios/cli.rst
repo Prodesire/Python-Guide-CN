@@ -13,7 +13,7 @@
 * `curl <http://curl.haxx.se/>`_ - 基于URL语法的数据传输工具
 * `httpie <https://github.com/jakubroztocil/httpie>`_ - 一个用户友好的命令行HTTP客户端，可以代替cURL
 * `git <http://git-scm.com/>`_ - 一个分布式版本控制系统
-* `mercurial <http://mercurial.selenic.com/>`_ - 一个主体是Python的分布式版本控制系统
+* `mercurial <https://www.mercurial-scm.org/>`_ - 一个主体是Python的分布式版本控制系统
 
 Clint
 -----
@@ -25,9 +25,8 @@ Clint
 Click
 -----
 
-`click <http://click.pocoo.org/>`_ 是一个即将出品的Python包，它创建了一个命令行接口，
-可以尽可能的简化组合代码。命令行接口创建工具（“Command-line Interface Creation Kit”,Click）
-支持很多配置但也有开箱可用的默认值设定。
+`click <http://click.pocoo.org/>`_ 是一个以尽可能少的代码，用组合方式创建命令行接口的Python包。
+命令行接口创建工具（“Command-line Interface Creation Kit”, Click）高度可配置，但也有开箱即用的默认值设置。
 
 docopt
 ------
@@ -38,8 +37,9 @@ docopt
 Plac
 ------
 
-`Plac <https://pypi.python.org/pypi/plac>`_ Python标准库 `argparse <http://docs.python.org/2/library/argparse.html>`_ 
-的简单封装，它隐藏了大量声明接口的细节：参数解析器是被推断的，其优于写命令明确处理。
+`Plac <https://pypi.python.org/pypi/plac>`_ Python标准库 
+`argparse <http://docs.python.org/2/library/argparse.html>`_ 的简单封装，
+它隐藏了大量声明接口的细节：参数解析器是被推断的，其优于写命令明确处理。
 这个模块的面向是不想太复杂的用户，程序员，系统管理员，科学家以及只是想
 写个只运行一次的脚本的人们，使用这个命令行接口的理由是它可以快速实现并且简单。
 
@@ -50,3 +50,10 @@ Cliff
 它使用setuptools入口点（entry points）来提供子命令，输出格式化，以及其他的扩展。这个框架
 可以用来创建多层命令程序，如subversion与git，其主程序要进行一些简单的参数解析然后调用
 一个子命令干活。
+
+Cement
+------
+
+`Cement <http://builtoncement.com/>`_ 是一个高级的CLI应用程序框架。
+其目标是为简单和复杂的命令行应用程序引入标准和功能完整的平台，并支持快速开发需求，而不会牺牲质量。
+Cement是灵活的，它的用例范围涵盖了从微框架的简单到巨型框架的复杂。
