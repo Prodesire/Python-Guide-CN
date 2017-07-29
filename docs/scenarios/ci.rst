@@ -5,7 +5,8 @@
 为什么?
 ----
 
-Martin Fowler 和 Kent Beck 首次提出 `Continuous Integration <http://martinfowler.com/articles/continuousIntegration.html>`_ （简称：CI），将之描述为：
+Martin Fowler 和 Kent Beck 首次提出 `Continuous Integration <http://martinfowler.com/articles/continuousIntegration.html>`_ 
+（简称：CI），将之描述为：
 
     持续集成是一种软件开发实践：许多团队频繁地集成他们的工作，每位成员通常进行
     日常集成，进而每天会有多种集成。每个集成会由自动的构建（包括测试）来尽可能快地
@@ -26,19 +27,11 @@ Buildbot
 测试的Python系统。
 
 
-Mule
------
-
-`Mule <http://www.mulesoft.org/documentation/display/current/Mule+Fundamentals>`_
-是一个轻量级的集成平台，它允许你在任何地方连接任何事物。你可以使用Mule智能地管理
-节点之间的消息路由、数据映射、编制、可靠性、安全性和可扩展性。将其他系统和应用添加
-到Mule中，使它处理系统间的所有通信，从而允许你追踪和监控每个发生的事件。
-
 
 Tox
 ---
 
-`Tox <http://tox.readthedocs.org/en/latest/>`_ 是一款为Python软件提供打包、测试和
+`Tox <https://tox.readthedocs.io/en/latest/>`_ 是一款为Python软件提供打包、测试和
 开发的自动化工具，基于命令行或CI服务器。它是一个通用的虚拟环境管理和测试的命令行
 工具，提供如下特性：
 
@@ -71,8 +64,9 @@ Travis-CI
 
 
 这将会使你的工程在罗列的Python版本中，用给定的脚本进行测试，而且只会构建主干分支。
-有许多可供开启的选项，包括通知、步骤前后等。 `Travis-ci docs <http://about.travis-ci.org/docs/>`_ 详尽地解释了所有这些操作。
+有许多可供开启的选项，包括通知、步骤前后等。 `Travis-ci docs <http://about.travis-ci.org/docs/>`_ 
+详尽地解释了所有这些操作。
 
-为了激活你的工程的测试，去 `travis-ci 网站 <https://travis-ci.org/>`_ 登录你的GitHub
+为了激活你的工程的测试，去 `travis-ci 网站 <https://docs.travis-ci.com/user/languages/python/>`_ 登录你的GitHub
 账号。然后在你的profile设置中激活你的工程。现在，每一次push到GitHub上的提交将会运行
 你的工程中的测试。
