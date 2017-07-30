@@ -80,7 +80,7 @@ Pandas
 Rpy2
 ----
 
-`Rpy2 <http://rpy.sourceforge.net/rpy2.html>`_ 是一个对R统计学包的Python绑定，
+`Rpy2 <http://rpy2.bitbucket.org>`_ 是一个对R统计学包的Python绑定，
 它能够让Python执行R函数，并在两个环境中交换数据。Rpy2是
 对 `Rpy <http://rpy.sourceforge.net/rpy.html>`_ 绑定的面向对象实现。
 
