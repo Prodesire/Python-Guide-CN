@@ -58,7 +58,7 @@ Writing Great Code（写出优雅的代码）（完成）
 - Common Gotchas（常见陷阱）（完成）
 - Choosing a License（选择一个许可）（完成）
 
-Scenario Guide（场景/方案指南）（待更新）
+Scenario Guide（场景/方案指南）（完成）
 ---------------------------
 - Network Applications（网络应用）（完成）
 - Web Applications（Web 应用）（完成）
@@ -82,7 +82,7 @@ Scenario Guide（场景/方案指南）（待更新）
 Shipping Great Code（部署优雅的代码）（待更新）
 ---------------------------
 - Packaging Your Code（打包你的代码）（待更新）
-- Freezing Your Code（Freezing你的代码）（待更新）
+- Freezing Your Code（Freezing你的代码）（完成）
 
 Development Environment（开发环境）（完成）
 ---------------------------

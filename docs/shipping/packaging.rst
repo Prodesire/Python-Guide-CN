@@ -17,7 +17,7 @@
 使用pip这样的工具安装你的代码及其他依赖项。虽然对于其它的开发者来说这是没问题的，但
 对于最终用户这并不友好。
 
-`Python打包指南 <https://python-packaging-user-guide.readthedocs.org/en/latest/>`_ 
+`Python打包指南 <https://python-packaging-user-guide.readthedocs.io/>`_ 
 提供了更多关于如何创建以及维护Python包的知识。
 
 
@@ -96,7 +96,7 @@ pypiserver
 
 `Pypiserver <https://pypi.python.org/pypi/pypiserver>`_ 是一个精简的PyPI兼容服务器。
 它可以被用来让一系列包通过easy_install与pip进行共享。它包含一些有益的命令，诸如管理
-命令(:option:`-U`)，其可以自动更新所有它的包到PyPI上的最新版。
+命令（ ``-U`` ），其可以自动更新所有它的包到PyPI上的最新版。
 
 
 S3-Hosted PyPi
@@ -176,3 +176,4 @@ bdist_rpm命令使得 `producing an RPM file <https://docs.python.org/3/distutil
 
 - `fpm <https://github.com/jordansissel/fpm>`_
 - `alien <http://joeyh.name/code/alien/>`_
+- `dh-virtualenv <https://dh-virtualenv.readthedocs.io/en/latest/info.html>`_ (for APT/DEB omnibus packaging)
