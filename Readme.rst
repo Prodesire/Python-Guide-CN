@@ -75,7 +75,7 @@ Scenario Guide（场景/方案指南）（待更新）
 - XML parsing（XML解析）（完成）
 - JSON（JSON）（完成）
 - Cryptography（密码学）（完成）
-- Interfacing with C/C++ Libraries（与C/C++库交互）（待更新）
+- Interfacing with C/C++ Libraries（与C/C++库交互）（完成）
 - Machine Learning（机器学习）（待翻译）
 - Data Serialization（数据序列化）（待翻译）
 
