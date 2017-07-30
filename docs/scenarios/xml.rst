@@ -59,7 +59,7 @@ xmltodict
     import xmltodict
 
     with open('path/to/file.xml') as fd:
-        obj = xmltodict.parse(fd.read())
+        doc = xmltodict.parse(fd.read())
 
 你可以访问元素，属性以及值，像这样：
 

@@ -72,7 +72,7 @@ Scenario Guide（场景/方案指南）（待更新）
 - Speed（速度）（完成）
 - Scientific Applications（科学应用）（完成）
 - Image Manipulation（图像处理）（完成）
-- XML parsing（XML解析）（待更新）
+- XML parsing（XML解析）（完成）
 - JSON（JSON）（待更新）
 - Cryptography（密码学）（待更新）
 - Interfacing with C/C++ Libraries（与C/C++库交互）（待更新）
