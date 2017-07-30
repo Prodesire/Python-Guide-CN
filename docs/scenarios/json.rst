@@ -45,7 +45,7 @@ simplejson
 ----------
 
 JSON库是Python2.6版中加入的。如果你使用更早版本的Python，
-可以通过PyPI获取 `simplejson <https://simplejson.readthedocs.org/en/latest/>`_ 库。
+可以通过PyPI获取 `simplejson <https://simplejson.readthedocs.io/en/latest/>`_ 库。
 
 simplejson类似json标准库，它使得使用老版本Python的开发者们可以使用json库中的最新特性。
 
