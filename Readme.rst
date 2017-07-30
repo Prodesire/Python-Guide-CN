@@ -76,7 +76,7 @@ Scenario Guide（场景/方案指南）（待更新）
 - JSON（JSON）（完成）
 - Cryptography（密码学）（完成）
 - Interfacing with C/C++ Libraries（与C/C++库交互）（完成）
-- Machine Learning（机器学习）（待翻译）
+- Machine Learning（机器学习）（完成）
 - Data Serialization（数据序列化）（待翻译）
 
 Shipping Great Code（部署优雅的代码）（待更新）
