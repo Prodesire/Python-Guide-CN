@@ -71,7 +71,7 @@ Scenario Guide（场景/方案指南）（待更新）
 - Continuous Integration（持续集成）（完成）
 - Speed（速度）（完成）
 - Scientific Applications（科学应用）（完成）
-- Image Manipulation（图像处理）（待更新）
+- Image Manipulation（图像处理）（完成）
 - XML parsing（XML解析）（待更新）
 - JSON（JSON）（待更新）
 - Cryptography（密码学）（待更新）

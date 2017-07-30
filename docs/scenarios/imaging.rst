@@ -21,7 +21,7 @@ Python 图形库
 
 
 在安装Pillow之前，你应该先安装Pillow的前置部分。针对你的平台对此的特别指导可以在此找到
-`Pillow installation instructions <https://pillow.readthedocs.org/en/3.0.0/installation.html>`_.
+`Pillow installation instructions <https://pillow.readthedocs.io/en/3.0.0/installation.html>`_.
 
 完成之后，直接执行：
 
@@ -54,7 +54,7 @@ Python 图形库
 
 
 这里有一些Pillow库的例子：
-`Pillow tutorial <http://pillow.readthedocs.org/en/3.0.x/handbook/tutorial.html>`_。
+`Pillow 教程 <https://pillow.readthedocs.io/en/3.0.x/handbook/tutorial.html>`_。
 
 
 开源计算机视觉（OpenCv）
@@ -101,4 +101,4 @@ NumPy可以从Python Package Index （PyPI）中下载：
 更多的OpenCV在Python运行例子在这里可以找到：
 `collection of
 tutorials
-<http://opencv-python-tutroals.readthedocs.org/en/latest/py_tutorials/py_tutorials.html>`_.
+<https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_tutorials.html>`_.
