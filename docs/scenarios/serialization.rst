@@ -1,23 +1,20 @@
 ==================
-Data Serialization
+数据序列化
 ==================
 
-What is data serialization?
+什么是数据序列化？
 ---------------------------
 
-Data serialization is the concept of converting structured data into a format 
-that allows it to be shared or stored in such a way that its original 
-structure to be recovered. In some cases, the secondary intention of data 
-serialization is to minimize the size of the serialized data which then 
-minimizes disk space or bandwidth requirements.
+数据序列化是将结构化数据转换成允许以共享或存储的格式，可恢复其原始结构的概念。
+在某些情况下，数据序列化的第二个目的是将要序列化数据的大小最小化，从而使磁盘空间
+或带宽要求最小化。
 
 Pickle
 ------
 
-The native data serialization module for Python is called `Pickle 
-<https://docs.python.org/2/library/pickle.html>`_. 
+Python原生的数据序列化模块称为 `Pickle <https://docs.python.org/2/library/pickle.html>`_ 。
 
-Here's an example:
+例子如下：
 
 .. code-block:: python
        
@@ -35,6 +32,5 @@ Here's an example:
 Protobuf
 --------
 
-If you're looking for a serialization module that has support in multiple 
-languages, Google's `Protobuf 
-<https://developers.google.com/protocol-buffers>`_ library is an option. 
+如果您正在寻找支持多种语言的序列化模块，那么Google的 `Protobuf 
+<https://developers.google.com/protocol-buffers>`_ 库就是一个选择。
