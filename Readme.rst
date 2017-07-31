@@ -79,10 +79,10 @@ Scenario Guide（场景/方案指南）（完成）
 - Machine Learning（机器学习）（完成）
 - Data Serialization（数据序列化）（完成）
 
-Shipping Great Code（部署优雅的代码）（待更新）
+Shipping Great Code（部署优雅的代码）（完成）
 ---------------------------
-- Packaging Your Code（打包你的代码）（待更新）
-- Freezing Your Code（Freezing你的代码）（完成）
+- Packaging Your Code（打包你的代码）（完成）
+- Freezing Your Code（冻结你的代码）（完成）
 
 Development Environment（开发环境）（完成）
 ---------------------------
