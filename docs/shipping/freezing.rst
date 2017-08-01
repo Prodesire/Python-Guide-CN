@@ -142,7 +142,7 @@ PyInstaller
 前置是安装 :ref:`Python, Setuptools 以及pywin32 依赖项 <install-windows>`.
 
 - `更多的简单教程 <http://bojan-komazec.blogspot.com/2011/08/how-to-create-windows-executable-from.html>`_
-- `手册 <http://www.pyinstaller.org/export/d3398dd79b68901ae1edd761f3fe0f4ff19cfb1a/project/doc/Manual.html?format=raw>`_
+- `手册 <https://pyinstaller.readthedocs.io/en/stable/>`_
 
 
 OS X

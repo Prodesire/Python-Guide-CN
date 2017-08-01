@@ -98,7 +98,7 @@ Additional Notes（额外关注）（完成）
 - Documentation（文档）（完成）
 - News（新闻）（完成）
 
-其他（待更新）
+其他（完成）
 ---------------------------
 - Contribute（贡献）（完成）
 - License（许可证）（完成）

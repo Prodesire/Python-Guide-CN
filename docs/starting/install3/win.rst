@@ -1,7 +1,7 @@
 .. _install3-windows:
 
 在Windows上安装Python 3
-============================
+==============================
 
 首先，从官网下载 `最新版本 <https://www.python.org/ftp/python/3.6.0/python-3.6.0.exe>`_
 的Python 2.7。如果想要确保下载到最新版本，单击 `Python官网 <http://python.org>`_ 的

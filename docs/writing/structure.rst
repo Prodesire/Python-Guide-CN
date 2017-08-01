@@ -319,7 +319,16 @@ Python的模块查找功能。就 `my.spam.py` 来说，Python 认为需要在 :
 中找到 :file:`spam.py` 文件，实际并不是这样。这个例子 
 `example <http://docs.python.org/tutorial/modules.html#packages>`_ 展示了点表示
 法应该如何在Python文件中使用。如果愿意你可以将模块命名为 :file:`my_spam.py`，
-不过并不推荐在模块名中使用下划线。
+不过并不推荐在模块名中使用下划线。但是，在模块名称中使用其他字符（空格或连字号）
+将阻止导入（-是减法运算符），因此请尽量保持模块名称简单，以无需分开单词。 
+最重要的是，不要使用下划线命名空间，而是使用子模块。
+
+.. code-block:: python
+
+  # OK
+  import library.plugin.foo
+  # not OK
+  import library.foo_plugin
 
 除了以上的命名限制外，Python文件成为模块没有其他特殊的要求，但为了合理地使用这
 个观念并避免问题，你需要理解import的原理机制。具体来说，``import modu`` 语句将
