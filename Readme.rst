@@ -94,7 +94,7 @@ Additional Notes（额外关注）（待更新）
 ---------------------------
 - Introduction（介绍）（完成）
 - The Community（社区）（完成）
-- Learning Python（学习Python）（待更新）
+- Learning Python（学习Python）（完成）
 - Documentation（文档）（完成）
 - News（新闻）（待更新）
 
