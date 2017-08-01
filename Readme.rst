@@ -100,6 +100,6 @@ Additional Notes（额外关注）（完成）
 
 其他（待更新）
 ---------------------------
-- Contribute（贡献）（待更新）
+- Contribute（贡献）（完成）
 - License（许可证）（完成）
-- The Guide Style Guide（风格指南指引）（待更新）
+- The Guide Style Guide（风格指南指引）（完成）
