@@ -8,21 +8,23 @@ http://docs.python-guide.org/en/latest/notes/contribute/
 如何测试你的修改
 ------------------------
 
-The html version of this guide is built with [sphinx](http://www.sphinx-doc.org/en/stable/). You may test your revisions locally by having sphinx installed. You can do this easily with pip (as described in the link).
+本指南的html版本使用 [sphinx](http://www.sphinx-doc.org/en/stable/) 构建。 
+您可以通过在本地安装sphinx测试您的修订版本。您可以轻松地使用pip（如链接中所述）。
 
 ``` bash
 pip install --user sphinx
 ```
 
-Then navigate to the directory of the makefile and ```make build``` or ```make html```. Sphinx will then generate the html in a folder called _build/html
+然后导航到makefile的目录，并执行 ```make build``` 或 ```make html``` 。然后，
+Sphinx将在名为_build/html的文件夹中生成html。
 
-After navigating to this folder, you can then use python's built in webserver to view your changes locally:
+导航到此文件夹后，您可以使用python的内置Web服务器在本地查看更改：
 
 ``` bash
 python3 -m http.server
 ```
 
-By default, http.server listens on every ip address bound on your host on port 8000. To bind to a specific one, say, localhost on port 8005:
+默认情况下，http.server监听每个绑定在您的主机IP地址的8000端口。要绑定到特定IP和端口，例如，localhost的8005端口：
 
 ``` bash
 python3 -m http.server 8005 --bind 127.0.0.1
