@@ -42,3 +42,10 @@ Import Python Weekly
 Weekly Python Newsletter包含有Python文章、项目、视频、Tweets，并发送到你的收件箱。能够保持你的Python编程技能持续更新。
 
     `Import Python Weekly Newsletter <http://www.importpython.com/newsletter/>`_
+
+Awesome Python Newsletter
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+每周最流行的Python新闻、文章和包的概述。
+
+    `Awesome Python Newsletter <https://python.libhunt.com/newsletter>`_

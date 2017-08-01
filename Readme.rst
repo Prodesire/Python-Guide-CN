@@ -90,13 +90,13 @@ Development Environment（开发环境）（完成）
 - Virtual Environments（虚拟环境）（完成）
 - Further Configuration of Pip and Virtualenv（Pip和Virtualenv的更多配置）（完成）
 
-Additional Notes（额外关注）（待更新）
+Additional Notes（额外关注）（完成）
 ---------------------------
 - Introduction（介绍）（完成）
 - The Community（社区）（完成）
 - Learning Python（学习Python）（完成）
 - Documentation（文档）（完成）
-- News（新闻）（待更新）
+- News（新闻）（完成）
 
 其他（待更新）
 ---------------------------
