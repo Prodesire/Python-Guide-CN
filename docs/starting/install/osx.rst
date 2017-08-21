@@ -63,6 +63,14 @@ OS X自带的Python版本更适合用于学习而不是开发。因为版本与P
 
 耗时大概几分钟。
 
+Homebrew命名可执行文件 ``python2``，以便你仍然可以通过可执行文件“python”运行系统Python。
+
+.. code-block:: console
+
+    $ python -V   # 系统Python解释器
+    $ python2 -V  # Homebrew安装的Python 2解释器
+    $ python3 -V  # Homebrew安装的Python 3解释器（如果安装了）
+
 
 Setuptools & Pip
 ----------------
@@ -75,6 +83,11 @@ Setuptools提供 ``easy_install`` 命令，实现通过网络（通常Internet�
 ``pip`` 是一款方便安装和管理Python 包的工具，
 在 `一些方面 <https://python-packaging-user-guide.readthedocs.org/en/latest/pip_easy_install/#pip-vs-easy-install>`_ ，
 它更优于 ``easy_install`` ，故更推荐它。
+
+.. code-block:: console
+
+    $ pip2 -V  # pip指向Homebrew安装的Python 2解释器
+    $ pip3 -V  # pip指向Homebrew安装的Python 3解释器（如果安装了）
 
 
 

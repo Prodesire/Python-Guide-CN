@@ -59,7 +59,7 @@ Pip
 
 Homebrew 会为你安装 ``pip3`` 。
 
-``pip3`` 是系统（装了Python 2和3）中 Python 3 的 ``pip`` 的别名。
+``pip3`` 是Homebrew版Python 3的 ``pip`` 的别名。
 
 使用Python 3
 ---------------------
@@ -71,16 +71,22 @@ Homebrew 会为你安装 ``pip3`` 。
 
     $ python
 
-将打开Python 2解释器。
+将打开系统Python解释器。
+
+.. code-block:: console
+
+    $ python2
+
+将会打开使用Homebrew安装的Python 2解释器（如果有）。
 
 .. code-block:: console
 
     $ python3
 
-将打开Python 3解释器。
+将会打开使用Homebrew安装的Python 3解释器（如果有）。
 
-``pip3`` and ``pip`` 都是可用的。如果Homebrew版本的Python 2没有安装，它们就是一样的。
-如果Homebrew版本的Python 2安装了，那么 ``pip`` 指向的是Python 2，而 ``pip3`` 指向Python 3。
+如果Homebrew版的Python 2安装了，``pip2`` 指向Python 2。
+如果Homebrew版的Python 3安装了，``pip3`` 指向Python 3。
 
 
 虚拟环境
