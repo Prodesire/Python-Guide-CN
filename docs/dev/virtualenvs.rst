@@ -1,17 +1,173 @@
-虚拟环境
+Pipenv & 虚拟环境
 ====================
 
-虚拟环境是一个将不同项目所需求的依赖分别放在独立的地方的一个工具，它给这些工程创建虚拟的
-Python环境。它解决了“项目X依赖于版本1.x，而项目Y需要项目4.x”的两难问题，而且使你的全局
-site-packages目录保持干净和可管理。
+本教程将引导你完成安装和使用 Python 包。
 
-比如，你可以工作在一个需求Django 1.10的工程，同时维护一个需求Django 1.8的工程。
+它将向你展示如何安装和使用必要的工具，并就最佳做法做出强烈推荐。请记住，
+Python 用于许多不同的目的。准确地说，你希望如何管理依赖项可能会根据
+你如何决定发布软件而发生变化。这里提供的指导最直接适用于网络服务
+（包括 Web 应用程序）的开发和部署，但也非常适合管理任意项目的开发和测试环境。
 
-virtualenv
+.. note:: 本指南是针对 Python 3 编写。但如果你由于某种原因仍然使用 Python 2.7，
+  这些指引应该能够正常工作。
+
+确保你已经有了 Python 和 pip
+---------------------------------
+
+在您进一步之前，请确保您有 Python，并且可从您的命令行中获得。
+你可以通过简单地运行以下命令来检查：
+
+.. code-block:: bash
+
+    $ python --version
+
+你应该得到像 ``3.6.2`` 之类的一些输出。如果没有 Python，请从 `python.org`_ 
+安装最新的 3.x 版本，或参考本指南的 `安装 Python`_ 一节。
+
+.. Note:: 如果你是新手，你会得到如下错误：
+    
+    .. code-block:: python
+
+        >>> python
+        Traceback (most recent call last):
+          File "<stdin>", line 1, in <module>
+        NameError: name 'python' is not defined
+
+    这是因为此命令要在 *shell*（也称为 *终端* 或 *控制台*）中运行。有关使用操作系统的
+    shell 并和 Python 进行交互的介绍，请参阅面向 Python 新手的 `入门教程`_。
+
+另外，你需要确保 :ref:`pip` 是可用的。你可以通过运行以下命令来检查：
+
+.. code-block:: bash
+
+    $ pip --version
+
+如果你使用 `python.org`_ 或 `Homebrew`_ 的安装程序来安装 Python，你应该已经有 pip 了。
+如果您使用的是Linux，并使用操作系统的包管理器进行安装，则可能需要单独
+`安装 pip <https://pip.pypa.io/en/stable/installing/>`_。
+
+.. _入门教程: https://opentechschool.github.io/python-beginners/en/getting_started.html#what-is-python-exactly
+.. _python.org: https://python.org
+.. _Homebrew: https://brew.sh
+.. _安装 Python: http://docs.python-guide.org/en/latest/starting/installation/
+
+
+安装 Pipenv
+-----------------
+
+:ref:`Pipenv` 是 Python 项目的依赖管理器。如果您熟悉 Node.js 的 `npm`_ 或
+Ruby 的 `bundler`_，那么它们在思路上与这些工具类似。尽管 :ref:`pip` 可以安装 Python 包，
+但仍推荐使用 Pipenv，因为它是一种更高级的工具，可简化依赖关系管理的常见使用情况。
+
+使用 ``pip`` 来安装 Pipenv：
+
+.. code-block:: python
+
+    $ pip install --user pipenv
+
+
+.. Note:: 这进行了 `用户安装`_，以防止破坏任何系统范围的包。如果安装后, shell 中没有
+     ``pipenv``，则需要将 `用户基础目录`_的 ``bin`` 目录添加到 ``PATH`` 中。您可以通过运行
+    ``python -m site`` 找到用户库，它将打印包括用户基础的站点信息。例如，在 Linux 上，
+    这将返回 ``USER_BASE: '~/.local'``，所以你需要在 ``PATH`` 中添加 ``~/.local/bin``。
+    在 Linux 和 MacOS 上，您可以通过 `修改 ~/.profile`_ 永久地设置 ``PATH``。
+    在 Windows 上，您可以在 `控制面板`_ 中永久设置用户的 ``PATH``。
+
+.. _npm: https://www.npmjs.com/
+.. _bundler: http://bundler.io/
+.. _用户基础目录: https://docs.python.org/3/library/site.html#site.USER_BASE
+.. _用户安装: https://pip.pypa.io/en/stable/user_guide/#user-installs
+.. _修改 ~/.profile: https://stackoverflow.com/a/14638025
+.. _控制面板: https://msdn.microsoft.com/en-us/library/windows/desktop/bb776899(v=vs.85).aspx
+
+为你的项目安装包
+------------------------------------
+
+Pipenv 管理每个项目的依赖关系。要安装软件包时，请更改到您的项目目录（或只是本教程中的
+一个空目录）并运行：
+
+.. code-block:: bash
+
+    $ cd myproject
+    $ pipenv install requests
+
+Pipenv 将在您的项目目录中安装超赞的 `Requests`_ 库并为您创建一个 ``Pipfile``。
+:ref:`Pipfile` 用于跟踪您的项目中需要重新安装的依赖，例如在与他人共享项目时。
+你应该得到类似的输出（尽管显示的确切路径会有所不同）：
+
+.. code-block:: text
+
+    Creating a Pipfile for this project...
+    Creating a virtualenv for this project...
+    Using base prefix '/usr/local/Cellar/python3/3.6.2/Frameworks/Python.framework/Versions/3.6'
+    New python executable in ~/.local/share/virtualenvs/tmp-agwWamBd/bin/python3.6
+    Also creating executable in ~/.local/share/virtualenvs/tmp-agwWamBd/bin/python
+    Installing setuptools, pip, wheel...done.
+
+    Virtualenv location: ~/.local/share/virtualenvs/tmp-agwWamBd
+    Installing requests...
+    Collecting requests
+      Using cached requests-2.18.4-py2.py3-none-any.whl
+    Collecting idna<2.7,>=2.5 (from requests)
+      Using cached idna-2.6-py2.py3-none-any.whl
+    Collecting urllib3<1.23,>=1.21.1 (from requests)
+      Using cached urllib3-1.22-py2.py3-none-any.whl
+    Collecting chardet<3.1.0,>=3.0.2 (from requests)
+      Using cached chardet-3.0.4-py2.py3-none-any.whl
+    Collecting certifi>=2017.4.17 (from requests)
+      Using cached certifi-2017.7.27.1-py2.py3-none-any.whl
+    Installing collected packages: idna, urllib3, chardet, certifi, requests
+    Successfully installed certifi-2017.7.27.1 chardet-3.0.4 idna-2.6 requests-2.18.4 urllib3-1.22
+
+    Adding requests to Pipfile's [packages]...
+    P.S. You have excellent taste! ✨ 🍰 ✨
+
+.. _Requests: https://python-requests.org
+
+
+使用安装好的包
+------------------------
+
+现在安装了 Requests，您可以创建一个简单的 ``main.py`` 文件来使用它：
+
+.. code-block:: python
+
+    import requests
+
+    response = requests.get('https://httpbin.org/ip')
+
+    print('Your IP is {0}'.format(response.json()['origin']))
+
+然后你就可以使用 ``pipenv run`` 运行这段脚本：
+
+.. code-block:: bash
+
+    $ pipenv run python main.py
+
+你应该获取到类似的输出：
+
+.. code-block:: text
+
+    Your IP is 8.8.8.8
+
+使用 ``$ pipenv run`` 可确保您的安装包可用于您的脚本。我们还可以生成一个新的 shell，
+确保所有命令都可以使用 ``$ pipenv shell`` 访问已安装的包。
+
+
+下一步
 ----------
+
+恭喜，您现在知道如何安装和使用Python包了！ ✨ 🍰 ✨
+
+
+
+更低层次: virtualenv
+=======================
 
 `virtualenv <http://pypi.python.org/pypi/virtualenv>`_ 是一个创建隔绝的Python环境的
 工具。virtualenv创建一个包含所有必要的可执行文件的文件夹，用来使用Python工程所需的包。
+
+它可以独立使用，代替Pipenv。
 
 通过pip安装virtualenv：
 

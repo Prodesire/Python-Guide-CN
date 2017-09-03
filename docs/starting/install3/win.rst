@@ -3,8 +3,8 @@
 在Windows上安装Python 3
 ==============================
 
-首先，从官网下载 `最新版本 <https://www.python.org/ftp/python/3.6.0/python-3.6.0.exe>`_
-的Python 2.7。如果想要确保下载到最新版本，单击 `Python官网 <http://python.org>`_ 的
+首先，从官网下载 `最新版本 <https://www.python.org/ftp/python/3.6.2/python-3.6.2.exe>`_
+的Python 3.6。如果想要确保下载到最新版本，单击 `Python官网 <http://python.org>`_ 的
 Downloads > Windows 链接。
 
 Python将安装到内含版本号信息的路径，例如Python 3.6版本将被安装到 :file:`C:\\Python36\\`, 
@@ -64,15 +64,17 @@ Pip支持包的卸载，而且与easy_install不同，它一直处于维护下�
 通过运行Python脚本 `get-pip.py <https://raw.github.com/pypa/pip/master/contrib/get-pip.py>`_ 可安装pip
 
 
-虚拟环境
+Pipenv & 虚拟环境
 --------------------
 
-虚拟环境工具(通常是指“virturalenv”)通过为不同项目创建专属的Python虚拟环境，以实现其依赖的库独立保存在不同的路径。
-这解决了“项目X依赖包版本1.x，但项目Y依赖包版本为4.x”的难题, 并且维持全局的site-packages目录干净、易管理。 
+下一步安装 Pipenv，然后就可以安装依赖关系并管理虚拟环境。
 
-举个例子，通过这个工具可以实现依赖Django 1.10的项目与依赖Django 1.8的项目共存。
+虚拟环境工具通过为不同项目创建专属的 Python 虚拟环境，以实现其依赖的库独立保存在不同的路径。
+这解决了“项目X依赖于 1.x 版本，但项目 Y 需要 4.x”的难题，并且维持全局的 site-packages 目录干净、易管理。 
 
-进一步了解与使用请参考文档 :ref:`Virtual Environments <virtualenvironments-ref>` 。
+举个例子，通过这个工具可以实现依赖 Django 1.10 的项目与依赖 Django 1.8 的项目共存。
+
+所以，向前！进入到 :ref:`Pipenv & 虚拟环境 <virtualenvironments-ref>` 文档中！
 
 --------------------------------
 
