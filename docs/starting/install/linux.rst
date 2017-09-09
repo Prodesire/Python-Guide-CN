@@ -3,6 +3,8 @@
 在Linux上安装Python 2
 ==========================
 
+.. image:: https://farm5.staticflickr.com/4268/34435688560_4cc2a7bcbb_k_d.jpg
+
 最新版本的CentOS, Fedora, Red Hat 企业版 Linux (RHEL) 和 Ubuntu **自带 Python 2.7**。
 
 想要获取已安装的Python 2版本号，可以通过终端运行命令：

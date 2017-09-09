@@ -3,6 +3,8 @@
 代码风格
 ==========
 
+.. image:: https://farm5.staticflickr.com/4223/33907150054_5ee79e8940_k_d.jpg
+
 如果你问Python程序员最喜欢Python的什么，他们总会说是Python的高可读性。
 事实上，高度的可读性是Python语言的设计核心。这基于这样的事实：代码的
 阅读比编写更加频繁。

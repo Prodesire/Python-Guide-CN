@@ -2,6 +2,8 @@
 图像处理
 ==================
 
+.. image:: https://farm5.staticflickr.com/4157/34575689432_3de8e9a348_k_d.jpg
+
 多数图像处理与操作技术可以被两个库有效完成，它们是Python Imaging Library (PIL)与
 OpenSource Computer Vision (OpenCV)。
 

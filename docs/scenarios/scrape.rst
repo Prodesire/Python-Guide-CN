@@ -1,6 +1,8 @@
 HTML 抓取
 =============
 
+.. image:: https://farm3.staticflickr.com/2900/34268661876_442428e122_k_d.jpg
+
 Web抓取
 ------------
 

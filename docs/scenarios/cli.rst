@@ -1,6 +1,8 @@
 命令行应用
 =========================
 
+.. image:: https://farm5.staticflickr.com/4272/34435690330_11930b5987_k_d.jpg
+
 命令行应用，也被称为 `控制台应用 <http://en.wikipedia.org/wiki/Console_application>`_
 是面向如 `shell <http://en.wikipedia.org/wiki/Shell_(computing)>`_ 之类文本接口的计算机程序。
 命令行应用通常接收一些输入作为参数，这些参数（arguments）通常被称为参数（parameters）或子命令

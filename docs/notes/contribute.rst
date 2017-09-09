@@ -1,6 +1,8 @@
 贡献
 ~~~~~~~~~~
 
+.. image:: https://farm3.staticflickr.com/2858/33573769116_49c1ef51e7_k_d.jpg
+
 Python-guide目前还在开发中，欢迎大家贡献代码。
 
 如果你有feature request，修改建议，或者bug报告，请在 GitHub_ 上新建issue。如果想要提交补丁，请直接pull request到 GitHub_。

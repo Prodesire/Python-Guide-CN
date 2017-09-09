@@ -1,6 +1,8 @@
 JSON
 ====
 
+.. image:: https://farm5.staticflickr.com/4174/33928819683_97b5c6a184_k_d.jpg
+
 `json <https://docs.python.org/2/library/json.html>`_ 库可以自字符串或文件中解析JSON。
 该库解析JSON后将其转为Python字典或者列表。它也可以转换Python字典或列表为JSON字符串。
 

@@ -1,6 +1,8 @@
 GUI应用
 ================
 
+.. image:: https://farm5.staticflickr.com/4250/33907143624_cd621b535c_k_d.jpg
+
 以下GUI应用按字母顺序排列。
 
 Camelot

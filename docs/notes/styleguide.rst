@@ -4,6 +4,8 @@
 风格指南指引
 =====================
 
+.. image:: https://farm4.staticflickr.com/3684/33573755856_7f43d43adf_k_d.jpg
+
 所有文档都有一致的格式，以帮助更好地理解文档。为了使指导更容易消化，所有贡献都应适应风格指南的规则。
 
 本指南以 :ref:`restructuredtext-ref` 形式编写。

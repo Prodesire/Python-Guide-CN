@@ -3,6 +3,8 @@
 在Mac OS X上安装Python 2
 =============================
 
+.. image:: https://farm5.staticflickr.com/4268/34435688560_4cc2a7bcbb_k_d.jpg
+
 .. note::
     查看我们的 :ref:`在OS X上安装Python 3指南<install3-osx>`.
 

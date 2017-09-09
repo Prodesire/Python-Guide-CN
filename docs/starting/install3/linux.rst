@@ -3,6 +3,8 @@
 在Linux上安装Python 3
 ============================
 
+.. image:: https://farm5.staticflickr.com/4276/34435689480_2e6f358510_k_d.jpg
+
 这份文档描述了如何在Ubuntu Linux机器上安装Python 3.6。
 
 想要获取已安装的Python 3版本号，可以通过终端运行命令：

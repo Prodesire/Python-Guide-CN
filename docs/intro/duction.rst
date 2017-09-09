@@ -1,6 +1,8 @@
 介绍
 ============
 
+.. image:: https://farm5.staticflickr.com/4180/34725946825_0f85497e60_k_d.jpg
+
 来自 `Python官方网站 <http://python.org/about/>`_ 的介绍：
 
 Python是一门通用的高级编程语言，类似于Tcl、Perl、Ruby、Scheme或者Java。其一些主要的关键特性包括：

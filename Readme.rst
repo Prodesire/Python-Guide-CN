@@ -1,5 +1,8 @@
 Python最佳实践指南中文版
 ============================
+
+.. image:: https://farm1.staticflickr.com/628/33173824932_58add34581_k_d.jpg
+
 项目翻译自 `Hitchhiker's Guide to Python <https://github.com/kennethreitz/python-guide>`_。
 
 Readthedocs文档地址 `Python最佳实践指南中文版 <http://pythonguidecn.readthedocs.org/>`_。

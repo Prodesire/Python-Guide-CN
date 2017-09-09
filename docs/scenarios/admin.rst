@@ -1,6 +1,8 @@
 系统管理
 ======================
 
+.. image:: https://farm5.staticflickr.com/4179/34435690580_3afec7d4cd_k_d.jpg
+
 Fabric
 ------
 

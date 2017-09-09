@@ -1,6 +1,8 @@
 日志（Logging）
 =======
 
+.. image:: https://farm5.staticflickr.com/4246/35254379756_c9fe23f843_k_d.jpg
+
 `日志 <https://docs.python.org/2/library/logging.html#module-logging>`_ 
 模块自2.3版本开始便是Python标准库的一部分。它被简洁的描述在 :pep:`282`。
 众所周知，除了 `基础日志指南`_ 部分，该文档并不容易阅读。
