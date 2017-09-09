@@ -59,8 +59,7 @@ Python-mode
 Python-mode_ 是一个在Vim中使用Python的综合解决方案。
 它拥有：
 
-- 任意组合的异步Python代码检查（ ``pylint`` 、 ``pyflakes`` 、 ``pycodestyle`` 、
-``mccabe``）
+- 任意组合的异步Python代码检查（ ``pylint`` 、 ``pyflakes`` 、 ``pycodestyle`` 、 ``mccabe``）
 - 使用Rope进行代码重构和补全
 - Python快速折叠
 - 支持virtualenv
@@ -135,7 +134,7 @@ IntelliJ IDEA闻名。它们都共享着相同的基础代码，PyCharm中大多
 拥有相对少特性的社区版（Community Edition）（Apache 2.0 License）。
 
 Python （在 Visual Studio Code中）
-------------------------------
+-----------------------------------------
 
 `用于Visual Studio的Python <https://marketplace.visualstudio.com/items?itemName=donjayamanne.python>`_ 
 是一款用于 `Visual Studio Code IDE <https://code.visualstudio.com>`_ 的扩展。
@@ -308,8 +307,7 @@ ptpython
 * 代码中嵌入的REPL
 * 语法合法性
 * Tab页
-* 通过安装Ipython ``pip install ipython`` 并运行 ``ptipython`` ，支持集成
-IPython_ 的shell
+* 通过安装Ipython ``pip install ipython`` 并运行 ``ptipython`` ，支持集成 IPython_ 的 shell
 
 .. code-block:: console
 

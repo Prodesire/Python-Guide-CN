@@ -1,3 +1,5 @@
+.. _virtualenvironments-ref:
+
 Pipenv & 虚拟环境
 ====================
 
@@ -38,7 +40,7 @@ Python 用于许多不同的目的。准确地说，你希望如何管理依赖�
     这是因为此命令要在 *shell*（也称为 *终端* 或 *控制台*）中运行。有关使用操作系统的
     shell 并和 Python 进行交互的介绍，请参阅面向 Python 新手的 `入门教程`_。
 
-另外，你需要确保 :ref:`pip` 是可用的。你可以通过运行以下命令来检查：
+另外，你需要确保 ``pip`` 是可用的。你可以通过运行以下命令来检查：
 
 .. code-block:: bash
 
@@ -57,19 +59,19 @@ Python 用于许多不同的目的。准确地说，你希望如何管理依赖�
 安装 Pipenv
 -----------------
 
-:ref:`Pipenv` 是 Python 项目的依赖管理器。如果您熟悉 Node.js 的 `npm`_ 或
-Ruby 的 `bundler`_，那么它们在思路上与这些工具类似。尽管 :ref:`pip` 可以安装 Python 包，
+``Pipenv`` 是 Python 项目的依赖管理器。如果您熟悉 Node.js 的 `npm`_ 或
+Ruby 的 `bundler`_，那么它们在思路上与这些工具类似。尽管 ``pip`` 可以安装 Python 包，
 但仍推荐使用 Pipenv，因为它是一种更高级的工具，可简化依赖关系管理的常见使用情况。
 
 使用 ``pip`` 来安装 Pipenv：
 
-.. code-block:: python
+.. code-block:: shell
 
     $ pip install --user pipenv
 
 
 .. Note:: 这进行了 `用户安装`_，以防止破坏任何系统范围的包。如果安装后, shell 中没有
-     ``pipenv``，则需要将 `用户基础目录`_的 ``bin`` 目录添加到 ``PATH`` 中。您可以通过运行
+    ``pipenv``，则需要将 `用户基础目录`_ 的 ``bin`` 目录添加到 ``PATH`` 中。您可以通过运行
     ``python -m site`` 找到用户库，它将打印包括用户基础的站点信息。例如，在 Linux 上，
     这将返回 ``USER_BASE: '~/.local'``，所以你需要在 ``PATH`` 中添加 ``~/.local/bin``。
     在 Linux 和 MacOS 上，您可以通过 `修改 ~/.profile`_ 永久地设置 ``PATH``。
@@ -94,7 +96,7 @@ Pipenv 管理每个项目的依赖关系。要安装软件包时，请更改到�
     $ pipenv install requests
 
 Pipenv 将在您的项目目录中安装超赞的 `Requests`_ 库并为您创建一个 ``Pipfile``。
-:ref:`Pipfile` 用于跟踪您的项目中需要重新安装的依赖，例如在与他人共享项目时。
+``Pipfile`` 用于跟踪您的项目中需要重新安装的依赖，例如在与他人共享项目时。
 你应该得到类似的输出（尽管显示的确切路径会有所不同）：
 
 .. code-block:: text
@@ -184,7 +186,7 @@ Pipenv 将在您的项目目录中安装超赞的 `Requests`_ 库并为您创建
    $ virtualenv --version
 
 基本使用
-~~~~~~~~~~~
+--------------
 
 1. 为一个工程创建一个虚拟环境：
 
@@ -242,7 +244,7 @@ Pipenv 将在您的项目目录中安装超赞的 `Requests`_ 库并为您创建
 然后一段时间后，你可能会有很多个虚拟环境散落在系统各处，你将有可能忘记它们的名字或者位置。
 
 其他注意
-~~~~~~~~~~~
+--------------
 
 运行带 ``--no-site-packages`` 选项的 ``virtualenv`` 将不会包括全局安装的包。
 这可用于保持包列表干净，以防以后需要访问它。（这在 ``virtualenv`` 1.7及之后是默认行为）
@@ -295,7 +297,7 @@ virtualenvwrapper
 在Windows中，WORKON_HOME默认的路径是 %USERPROFILE%\Envs 。
 
 基本使用
-~~~~~~~~~~~
+--------------
 
 1. 创建一个虚拟环境：
 
@@ -336,7 +338,7 @@ virtualenvwrapper
    $ rmvirtualenv my_project
 
 其他有用的命令
-~~~~~~~~~~~~~~~~~~~~~
+-------------------
 
 ``lsvirtualenv``
   列举所有的环境。

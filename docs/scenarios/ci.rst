@@ -4,7 +4,7 @@
 .. image:: https://farm5.staticflickr.com/4173/33907150594_9abba7ad0a_k_d.jpg
 
 为什么?
-----
+------------
 
 Martin Fowler 和 Kent Beck 首次提出 `Continuous Integration <http://martinfowler.com/articles/continuousIntegration.html>`_ 
 （简称：CI），将之描述为：

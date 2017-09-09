@@ -191,7 +191,7 @@ Python的闭包是 *迟绑定* 。
 
 ::
 
-     $ export PYTHONDONTWRITEBYTECODE = 1
+    $ export PYTHONDONTWRITEBYTECODE=1
 
 使用 ``$PYTHONDONTWRITEBYTECODE`` 环境变量，Python则不会把这些文件写入磁盘，
 您的开发环境将会保持良好和干净。
@@ -201,9 +201,9 @@ Python的闭包是 *迟绑定* 。
 删除字节码（.pyc）文件
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-以下是删除所有已存在的字节码文件的好方法：
+以下是删除所有已存在的字节码文件的好方法::
 
-     $ find . -type f -name "*.py[co]" -delete -or -type d -name "__pycache__" -delete
+    $ find . -type f -name "*.py[co]" -delete -or -type d -name "__pycache__" -delete
 
 从项目根目录运行，所有 ``.pyc`` 文件会嗖地一下消失， 好多了~
 
@@ -216,15 +216,15 @@ Python的闭包是 *迟绑定* 。
 一份忽略文件将确保匹配的文件未被检入存储库。
 Git_ 使用 ``.gitignore``，而 Mercurial_ 使用``.hgignore```。
 
-.. _Git：https：//git-scm.com/
-.. _Mercurial：https：//www.mercurial-scm.org/
+.. _Git: https://git-scm.com/
+.. _Mercurial: https://www.mercurial-scm.org/
 
 至少你的忽略文件应该是这样的。
 
 ::
 
-     syntax:glob    # .gitignore文件不需要这行。
-     *.py[cod]      # 将匹配.pyc、.pyo和.pyd文件。
-     __pycache__ /  # 排除整个文件夹
+    syntax:glob   # .gitignore 文件不需要这行
+    *.py[cod]     # 将匹配 .pyc、.pyo 和 .pyd文件
+    __pycache__/  # 排除整个文件夹
 
 您可能希望根据需要添加更多文件和目录。下次提交到存储库时，这些文件将不被包括。

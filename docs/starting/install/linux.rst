@@ -50,7 +50,7 @@ Python 2.7.9 以及之后版本(Python2 系列)，和Python 3.4以及之后版�
 
 举个例子，通过这个工具可以实现依赖Django 1.10的项目与依赖Django 1.8的项目共存。
 
-进一步了解与使用请参考文档 :ref:`虚拟环境 <virtualenvironments-ref>`  。
+进一步了解与使用请参考文档 :ref:`虚拟环境 <virtualenvironments-ref>` 。
 
 也可使用 :ref:`virtualenvwrapper <virtualenvwrapper-ref>` 更轻松地管理你的虚拟环境。
 

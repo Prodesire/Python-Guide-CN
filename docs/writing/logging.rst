@@ -1,5 +1,5 @@
 日志（Logging）
-=======
+=====================
 
 .. image:: https://farm5.staticflickr.com/4246/35254379756_c9fe23f843_k_d.jpg
 
@@ -16,7 +16,7 @@
   并结合其他用户资料构成用户报告或者用来优化商业目标。
 
 ... 或者打印?
--------------
+-------------------
 
 当需要在命令行应用中显示帮助文档时， ``打印`` 是一个相对于日志更好的选择。
 而在其他时候，日志总能优于 ``打印`` ，理由如下：
@@ -39,7 +39,7 @@
 在库中，声明日志的最佳方式是通过 ``__name__`` 全局变量： :mod:`logging` 
 模块通过点(dot)运算符创建层级排列的日志，因此，用 ``__name__`` 可以避免名字冲突。
 
-以下是来自 `请求资源`_ 的一个例子--把它放置在你的 ``__init__.py`` 文件中
+以下是一个来自 `requests 资源`_ 的最佳实践的例子 —— 把它放置在你的 ``__init__.py`` 文件中
 
 .. code-block:: python
 
@@ -57,16 +57,16 @@
 
 配置日志至少有以下三种方式：
 
- - 使用INI格式文件：
-  - **优点**: 使用 :func:`logging.config.listen` 函数监听socket，可在运行过程中更新配置
-  - **缺点**: 通过源码控制日志配置较少（ *例如* 子类化定制的过滤器或记录器）。
- - 使用字典或JSON格式文件：
-  - **优点**: 除了可在运行时动态更新，在Python 2.6之后，还可通过 :mod:`json` 
-    模块从其它文件中导入配置。
-  - **缺点**: 很难通过源码控制日志配置。
- - 使用源码：
-  - **优点**: 对配置绝对的控制。
-  - **缺点**: 对配置的更改需要对源码进行修改。
+- 使用INI格式文件：
+    - **优点**: 使用 :func:`logging.config.listen` 函数监听socket，可在运行过程中更新配置
+    - **缺点**: 通过源码控制日志配置较少（ *例如* 子类化定制的过滤器或记录器）。
+- 使用字典或JSON格式文件：
+    - **优点**: 除了可在运行时动态更新，在Python 2.6之后，还可通过 :mod:`json` 
+      模块从其它文件中导入配置。
+    - **缺点**: 很难通过源码控制日志配置。
+- 使用源码：
+    - **优点**: 对配置绝对的控制。
+    - **缺点**: 对配置的更改需要对源码进行修改。
 
 
 通过INI文件进行配置的例子
@@ -169,4 +169,4 @@ Python 2.7中，你可以使用字典实现详细配置。:pep:`391` 包含了�
 .. _日志指南: http://docs.python.org/howto/logging.html
 .. _库日志配置: https://docs.python.org/howto/logging.html#configuring-logging-for-a-library
 .. _日志记录: https://docs.python.org/library/logging.html#logrecord-attributes
-.. _资源请求: https://github.com/kennethreitz/requests
+.. _requests 资源: https://github.com/kennethreitz/requests

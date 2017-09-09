@@ -83,9 +83,9 @@ Use `pip <http://pypi.python.org/pypi/pip>`_.  More details
 
    $ pip install --extra-index-url=http://127.0.0.1:9000/ MyPackage
 
-你的文件夹名字与你的包名相同是 **必须**的。我曾经被这个坑过一次。但是如果你但觉得
-创建一个叫做 :file:`MyPackage`的文件夹然后里面又有一个:file:`MyPackage.tar.gz`文件
-是*多余*的，你可以这样共享MyPackage:
+你的文件夹名字与你的包名相同是 **必须** 的。我曾经被这个坑过一次。但是如果你觉得
+创建一个叫做 :file:`MyPackage` 的文件夹然后里面又有一个 :file:`MyPackage.tar.gz` 文件
+是 *多余* 的，你可以这样共享 MyPackage:
 
 
 
@@ -108,7 +108,7 @@ S3-Hosted PyPi
 一个简单的个人PyPI服务器实现选项是使用Amazon S3。使用它的一个前置要求是你有一个
 Amazon AWS账号并且有 S3 bucket。
 
-1. **安装所有你需要的东西从PyPI或者其他源。
+1. **安装所有你需要的东西从PyPI或者其他源**
 
 2. **安装 pip2pi**
 
@@ -132,7 +132,7 @@ Amazon AWS账号并且有 S3 bucket。
 
 6. **搞定**
 
-*你可以安装你的包通过使用代码 :code:`pip install --index-url=http://your-s3-bucket/packages/simple/ YourPackage`
+* 你可以安装你的包通过使用代码 :code:`pip install --index-url=http://your-s3-bucket/packages/simple/ YourPackage`
 
 .. _packaging-for-linux-distributions-ref:
 
@@ -158,10 +158,9 @@ bdist_rpm命令使得 `producing an RPM file <https://docs.python.org/3/distutil
  维护一个单独的配置给每个平台要简单的多 :ref:`freezing tools <freezing-your-code-ref>`
  其将产生独立可执行的文件给所有Linux发布版，就像Windows与OSX上一样，
 
-创建一个对Python版本敏感的分发包也会造成问题。可能需要告诉Ubuntu的*一些版本*的
-用户他们需要增加 `the
-'dead-snakes' PPA <https://launchpad.net/~fkrull/+archive/ubuntu/deadsnakes>`_
-通过使用 `sudo apt-repository`命令在他们安装你的 .deb文件，这将使用户极其厌烦。
+创建一个对Python版本敏感的分发包也会造成问题。可能需要告诉Ubuntu的 *一些版本* 的
+用户他们需要增加 `the 'dead-snakes' PPA <https://launchpad.net/~fkrull/+archive/ubuntu/deadsnakes>`_
+通过使用 `sudo apt-repository` 命令在他们安装你的 .deb文件，这将使用户极其厌烦。
 不仅如此，你会要维持每个发布版的使用指导，也许更糟的是，你的用户要去读，理解，
 并按它上面说的做。
 

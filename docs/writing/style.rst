@@ -60,8 +60,8 @@ Python代码具有高可读性的其中一个原因是它的相对完整的代�
 
     if x == 1: print 'one'
 
-    if <复杂的比较> and <其他复杂的比较>:
-        # 做一些工作
+    if <complex comparison> and <other complex comparison>:
+        # do something
 
 **优雅**
 
@@ -73,10 +73,10 @@ Python代码具有高可读性的其中一个原因是它的相对完整的代�
     if x == 1:
         print 'one'
 
-    cond1 = <复杂的比较>
-    cond2 = <其他复杂的比较>
+    cond1 = <complex comparison>
+    cond2 = <other complex comparison>
     if cond1 and cond2:
-        # 做一些工作
+        # do something
 
 函数参数
 ~~~~~~~~~~~~~~~~~~
@@ -128,7 +128,7 @@ Python中有多种方式调用带关键字参数的函数。比如说，我们�
    命名参数，我们可以使用 ``**kwargs`` 的结构。在函数体中， ``kwargs`` 是一个
    字典，它包含所有传递给函数但没有被其他关键字参数捕捉的命名参数。
 
-和 *任意参数列表*中所需注意的一样，相似的原因是：这些强大的技术是用在被证明确实
+和 *任意参数列表* 中所需注意的一样，相似的原因是：这些强大的技术是用在被证明确实
 需要用到它们的时候，它们不应该被用在能用更简单和更明确的结构，来足够表达函数意图
 的情况中。
 
@@ -214,7 +214,7 @@ pyflakes，将无法解析这种“魔法”代码。
        return x  # 返回值x只有一个出口点有利于维护代码
 
 习语（Idiom）
-------
+------------------
 
 编程习语，说得简单些，就是写代码的 *方式*。编程习语的概念在 `c2 <http://c2.
 com/cgi/wiki?ProgrammingIdiom>`_ 和 `Stack Overflow <http://stackoverflow.
@@ -231,7 +231,7 @@ com/questions/302459/what-is-a-programming-idiom>`_ 上有充足的讨论。
 .. _unpacking-ref:
 
 解包（Unpacking）
-~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 如果你知道一个列表或者元组的长度，你可以将其解包并为它的元素取名。比如，
 ``enumerate()`` 会对list中的每个项提供包含两个元素的元组：
@@ -273,7 +273,7 @@ com/questions/302459/what-is-a-programming-idiom>`_ 上有充足的讨论。
     filename = 'foobar.txt'
     basename, __, ext = filename.rpartition('.')
 
-.. 注意::
+.. note::
 
    许多Python风格指南建议使用单下划线的 "``_``" 而不是这里推荐的双下划线 "``__``" 来
    指示废弃变量。问题是， "``_``" 常用在作为 :func:`~gettext.gettext` 函数
@@ -409,7 +409,7 @@ PEP 8
 上获得高质量的、一度的PEP 8版本。
 
 强烈推荐阅读这部分。整个Python社区都尽力遵循本文档中规定的准则。一些项目可能受其影响，
-而其他项目可能 `修改其建议 <http://docs.python-equests.org/en/master/dev/contributing/kenneth-reitz-s-code-style >`_。
+而其他项目可能 `修改其建议 <http://docs.python-equests.org/en/master/dev/contributing/kenneth-reitz-s-code-style>`_。
 
 也就是说，让您的 Python 代码遵循 PEP 8 通常是个好主意，这也有助于在与其他开发人员
 一起工作时使代码更加具有可持续性。命令行程序 pycodestyle `<https://github.com/PyCQA/pycodestyle>`_ 

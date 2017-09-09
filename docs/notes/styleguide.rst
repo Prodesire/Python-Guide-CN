@@ -10,9 +10,9 @@
 
 本指南以 :ref:`restructuredtext-ref` 形式编写。
 
-.. 注意:: 本指南部分内容可能尚未符合本指南指引。欢迎更新这些部分以保持同步。
+.. note:: 本指南部分内容可能尚未符合本指南指引。欢迎更新这些部分以保持同步。
 
-.. 注意:: 在任何一个渲染后的HTML页面，你可以点击“查看源码（Show Source）”来看作者是如何排版的。
+.. note:: 在任何一个渲染后的HTML页面，你可以点击“查看源码（Show Source）”来看作者是如何排版的。
 
 关联
 ---------
@@ -164,7 +164,7 @@ Python 例子：
     .. warning:: DON'T PANIC
 
 要做的事
------
+---------------
 
 请用 `todo 指示 <http://sphinx.pocoo.org/ext/todo.html?highlight=todo#directive-todo>`_ 来标记本指南中任何未完成的部分。避免使 :ref:`todo-list-ref` 混乱，为未完的文档或者大量未完的小节使用单独的 ``todo``。
 

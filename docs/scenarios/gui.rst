@@ -29,7 +29,7 @@ PyGObject aka (PyGi)
 它完全兼容GTK+ 3。使用“Python GTK+ 3 教程”（https://python-gtk-3-tutorial.readthedocs.io/en/latest/>`_）
 来开始学习。
 
-`API参考<http://lazka.github.io/pgi-docs/>`_
+`API 参考 <http://lazka.github.io/pgi-docs/>`_
 
 Kivy
 ----

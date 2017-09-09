@@ -69,8 +69,7 @@ OpenSource Computer Vision,其更广为人知的名字是OpenCv，是一个在�
 ~~~~~~~~~~~~
 
 在Python中，使用OpenCV进行图像处理是通过使用 ``cv2`` 与 ``NumPy`` 模块进行的。
- `installation instructions for OpenCV
- <http://docs.opencv.org/2.4/doc/tutorials/introduction/table_of_content_introduction/table_of_content_introduction.html#table-of-content-introduction>`_
+`OpenCV 安装指南 <http://docs.opencv.org/2.4/doc/tutorials/introduction/table_of_content_introduction/table_of_content_introduction.html#table-of-content-introduction>`_
 可以指导你如何为你自己的项目进行配置。
 
 NumPy可以从Python Package Index （PyPI）中下载：

@@ -107,7 +107,7 @@ Nginx
 WSGI 服务器
 ::::::::::::
 
-独立WSGI服务器相比传统web服务器，使用更少的资源，并提供最高的性能 [3]_。
+独立WSGI服务器相比传统web服务器，使用更少的资源，并提供最高的性能 [1]_。
 
 .. _gunicorn-ref:
 
@@ -125,8 +125,8 @@ Gunicorn是如今新Python web应用程序的推荐选择。
 Waitress
 --------
 
-`Waitress <https://waitress.readthedocs.io>`_是一个纯Python WSGI服务器，声称具备“非常可接受的性能”。
- 它的文档不是很详细，但它确实提供了一些很好的而Gunicorn没有的功能（例如HTTP请求缓冲）。
+`Waitress <https://waitress.readthedocs.io>`_ 是一个纯Python WSGI服务器，声称具备“非常可接受的性能”。
+它的文档不是很详细，但它确实提供了一些很好的而Gunicorn没有的功能（例如HTTP请求缓冲）。
 
 Waitress在Python Web开发社区中越来越受欢迎。
 
@@ -162,7 +162,7 @@ Hosting
 使用PaaS时，应用开发者只需关注编写应用代码，而无须关心配置细节。
 
 Heroku
-~~~~~~
+------
 
 `Heroku <http://www.heroku.com/python>`_ 为Python 2.7-3.5 应用程序提供一流的支持。
 
@@ -416,6 +416,4 @@ Mako在Python web社区中受到重视。
 
 .. rubric:: References
 
-.. [1] `The mod_python project is now officially dead <http://blog.dscpl.com.au/2010/06/modpython-project-is-now-officially.html>`_
-.. [2] `mod_wsgi vs mod_python <http://www.modpython.org/pipermail/mod_python/2007-July/024080.html>`_
-.. [3] `Benchmark of Python WSGI Servers <http://nichol.as/benchmark-of-python-web-servers>`_
+.. [1] `Benchmark of Python WSGI Servers <http://nichol.as/benchmark-of-python-web-servers>`_

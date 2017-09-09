@@ -91,5 +91,5 @@ XPath是一种在结构化文档（如HTML或XML）中定位信息的方式。�
 我们可以考虑一些更酷的想法：修改这个脚本来遍历该例数据集中剩余的页面，或者
 使用多线程重写这个应用从而提升它的速度。
 
-如果你想学习如何使用python导入数据 - 这个 `DataCamp 数据导入课程https://www.datacamp.com/courses/importing-data-in-r-part-1?tap_a=5644-dce66f&tap_s= 116411-750171>`_
+如果你想学习如何使用python导入数据 - 这个 `DataCamp 数据导入课程 <https://www.datacamp.com/courses/importing-data-in-r-part-1?tap_a=5644-dce66f&tap_s= 116411-750171>`_
 是个开始的好地方。

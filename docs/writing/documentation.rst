@@ -55,10 +55,10 @@ Sphinx_ 无疑是最流行的Python文档工具。**请使用它吧。** 它能�
 运行时，Sphinx_将导入您的代码，并使用Python的内省功能，它将提取所有函数，方法和类签名。
 它还将提取附带的文档字符串，并将其全部编译成结构良好且易于阅读的文档。
 
-.. 笔记::
+.. note::
 
-    Sphinx因API生成而著名，但它也适用于普通的项目文档。本指南是用Sphinx_
-    构建，并托管在 `Read The Docs`_ 上。
+    Sphinx因API生成而著名，但它也适用于普通的项目文档。本指南使用 Sphinx_ 进行构建，
+    并托管在 `Read The Docs`_ 上。
 
 .. _Sphinx: http://sphinx.pocoo.org
 .. _Read The Docs: http://readthedocs.org
@@ -202,9 +202,9 @@ Markdown。
 
 要进一步阅读docstrings，请随时参见 :pep:`257`
 
-.. _thomas-cokelaer.info：http://thomas-cokelaer.info/tutorials/sphinxdocstring_python.html
-.. _sphinx.ext.napoleon：https://sphinxcontrib-napoleon.readthedocs.io/
-.. _`NumPy style`：http://sphinxcontrib-napoleon.readthedocs.io/en/latestexample_numpy.html
+.. _thomas-cokelaer.info: http://thomas-cokelaer.info/tutorials/sphinx/docstring_python.html
+.. _sphinx.ext.napoleon: https://sphinxcontrib-napoleon.readthedocs.io/
+.. _`NumPy style`: http://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_numpy.html
 
 
 其他工具

@@ -9,7 +9,7 @@ Python拥有大量的数据分析、统计和机器学习库，使其成为许�
 一些广泛使用的机器学习和其他数据科学应用程序包被列在下面：
 
 Scipy 栈（Scipy stack）
------------
+---------------------------------
 
 Scipy 栈由数据科学所使用的一组核心帮助包组成，用于统计分析和数据可视化。
 由于其庞大的功能和易用性，scripy栈被认为是大多数数据科学应用的必备条件。
@@ -64,7 +64,7 @@ scikit-learn 也随Anaconda发行（如上所述）。 有关更多安装说明�
 例子
 ~~~~~~~
 
-本例中，我们在 `Iris数据集 <http://en.wikipedia.org/wiki/Iris_flower_data_set`_
+本例中，我们在 `Iris 数据集 <http://en.wikipedia.org/wiki/Iris_flower_data_set>`_
 上训练一个简单的分类器，它与scikit-learn捆绑在一起。
 
 数据集具有花的四个特征：萼片长度，萼片宽度，花瓣长度和花瓣宽度，并将它们分为三个花种

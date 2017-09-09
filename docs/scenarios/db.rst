@@ -28,7 +28,7 @@ SQLAlchemy
 Records
 -------
 
-`Records <https://github.com/kennethreitz/records>`_是极简SQL库，旨在将原始SQL查询发送到各种数据库。 
+`Records <https://github.com/kennethreitz/records>`_ 是极简SQL库，旨在将原始SQL查询发送到各种数据库。 
 数据可以以编程方式使用，也可以导出到一些有用的数据格式。
 
 .. code-block:: console

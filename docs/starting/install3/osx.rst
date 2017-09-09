@@ -23,10 +23,10 @@ OS X自带的Python版本更适合用于学习而不是开发。因为版本与P
 你也可以从Mac应用商店下载完全版的 `XCode <http://developer.apple.com/xcode/>`_， 
 或者更轻巧的 `OSX-GCC-Installer <https://github.com/kennethreitz/osx-gcc-installer#readme>`_ 。
 
-.. 注意::
+.. note::
     如果已经安装了XCode，请不要再安装 OSX-GCC-Installer。两者结合可能会引发难以诊断的问题。
 
-.. 注意::
+.. note::
     执行XCode的全新安装完成后，须在终端执行下述命令 ``xcode-select --install`` 来安装命令行工具。
 
 
