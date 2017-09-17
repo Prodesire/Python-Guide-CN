@@ -17,6 +17,20 @@ Planet Python
 
     `/r/python <http://reddit.com/r/python>`_
 
+Talk Python Podcast
+~~~~~~~~~~~~~~~~~~~
+
+第一个关注 Python 的播客，涵盖了 Python 中的人和想法。
+
+    `Talk Python To Me <https://talkpython.fm>`_
+
+Python Bytes Podcast
+~~~~~~~~~~~~~~~~~~~~
+
+一个简短的 Python 播客，涵盖了最近的开发人员头条。
+
+    `Python Bytes <https://pythonbytes.fm>`_
+
 Pycoder's Weekly
 ~~~~~~~~~~~~~~~~
 
