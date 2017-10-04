@@ -1,14 +1,14 @@
 Python入门
 ---------------
 
-Python新手？让我们正确地设置你的Python环境。
+Python新手？让我们正确地设置你的Python环境：
 
 .. toctree::
    :maxdepth: 2
 
    starting/which-python
 
-- 正确地安装Python
+- 正确地在你的系统上安装 Python
 
  .. toctree::
     :maxdepth: 1
@@ -21,6 +21,26 @@ Python新手？让我们正确地设置你的Python环境。
     starting/install/win
     starting/install/linux
 
+
+- 借助 Pipenv 使用虚拟环境：
+
+.. toctree::
+    :maxdepth: 2
+
+    dev/virtualenvs
+
+
+Python 开发环境
+---------------------------
+
+这部分指南关注 Python 开发环境，以及用于编写 Python 代码的可用且最实用的工具。
+
+.. toctree::
+   :maxdepth: 2
+
+   dev/env
+   dev/virtualenvs
+   dev/pip-virtualenv
 
 
 写出优雅的Python代码
@@ -39,7 +59,6 @@ Python新手？让我们正确地设置你的Python环境。
    writing/logging
    writing/gotchas
    writing/license
-
 
 
 Python应用的场景指南
@@ -80,21 +99,6 @@ Python应用的场景指南
 
    shipping/packaging
    shipping/freezing
-
-
-Python开发环境
----------------------------
-
-这部分指南关注Python开发环境，以及用于编写Python代码的可用且最实用的工具。
-
-.. toctree::
-   :maxdepth: 2
-
-   dev/env
-   dev/virtualenvs
-   dev/pip-virtualenv
-
-
 
 
 额外关注
