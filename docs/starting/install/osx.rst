@@ -10,7 +10,7 @@
 
 最新版本的Mac OS X，Sierra， **自带Python 2.7**。
 
-你不必安装和配置即可直接使用Python进行开发。
+您不必安装和配置即可直接使用Python进行开发。
 话虽如此，我还是强烈建议各位，在正式开始Python应用开发前，安装接下来教程中所介绍的工具和库。
 特别应该安装Setuptools——它将简化安装和使用Python第三方库的流程。
 
@@ -24,7 +24,7 @@ OS X自带的Python版本更适合用于学习而不是开发。因为版本与P
 跟着我一起安装真实版本的Python吧。
 
 在正式安装之前，应先安装C编译器。最快的方式是运行 ``xcode-select --install`` 来安装Xcode命令行工具。
-你也可以从Mac应用商店下载完全版的 `XCode <http://developer.apple.com/xcode/>`_， 
+您也可以从Mac应用商店下载完全版的 `XCode <http://developer.apple.com/xcode/>`_， 
 或者更轻巧的 `OSX-GCC-Installer <https://github.com/kennethreitz/osx-gcc-installer#readme>`_ 。
 
 .. note::
@@ -43,8 +43,8 @@ OS X自带的Python版本更适合用于学习而不是开发。因为版本与P
 
     $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-运行这段脚本将列出它会引起的改变，并在安装开始前提示你。
-安装完成Homebrew后，需将其所在路径插入到 :envvar:`PATH` 环境变量的最前面，即在你所登录用户的
+运行这段脚本将列出它会引起的改变，并在安装开始前提示您。
+安装完成Homebrew后，需将其所在路径插入到 :envvar:`PATH` 环境变量的最前面，即在您所登录用户的
 :file:`~/.profile` 文件末尾加上这一行：
 
 .. code-block:: console
@@ -65,7 +65,7 @@ OS X自带的Python版本更适合用于学习而不是开发。因为版本与P
 
 耗时大概几分钟。
 
-Homebrew命名可执行文件 ``python2``，以便你仍然可以通过可执行文件“python”运行系统Python。
+Homebrew命名可执行文件 ``python2``，以便您仍然可以通过可执行文件“python”运行系统Python。
 
 .. code-block:: console
 

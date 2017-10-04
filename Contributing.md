@@ -1,11 +1,11 @@
 如何贡献
 -----------------
 
-此份指南处于大量的发展阶段，如果你愿意贡献一份力量，请见此：
+此份指南处于大量的发展阶段，如果您愿意贡献一份力量，请见此：
 
 http://docs.python-guide.org/en/latest/notes/contribute/
 
-如何测试你的修改
+如何测试您的修改
 ------------------------
 
 本指南的html版本使用 [sphinx](http://www.sphinx-doc.org/en/stable/) 构建。 

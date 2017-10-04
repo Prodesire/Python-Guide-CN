@@ -55,7 +55,7 @@ Python News是Python官方网站的新闻章节。它简短突出来自Python社
 Import Python Weekly
 ~~~~~~~~~~~~~~~~~~~~
 
-Weekly Python Newsletter包含有Python文章、项目、视频、Tweets，并发送到你的收件箱。能够保持你的Python编程技能持续更新。
+Weekly Python Newsletter包含有Python文章、项目、视频、Tweets，并发送到您的收件箱。能够保持您的Python编程技能持续更新。
 
     `Import Python Weekly Newsletter <http://www.importpython.com/newsletter/>`_
 

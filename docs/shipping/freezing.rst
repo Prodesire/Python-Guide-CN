@@ -1,7 +1,7 @@
 .. _freezing-your-code-ref:
 
 ==============================
-冻结（freezing）你的代码
+冻结（freezing）您的代码
 ==============================
 
 .. image:: https://farm5.staticflickr.com/4227/33907151034_e0a9e53402_k_d.jpg
@@ -21,12 +21,12 @@
 冻结的多种方式
 ------------------------
 
-:ref:`打包你的代码<packaging-your-code-ref>` 是指把你的库或工具分发给其他开发者。
+:ref:`打包您的代码<packaging-your-code-ref>` 是指把您的库或工具分发给其他开发者。
 
 在Linux 一个冻结的待选物是 :ref:`创建一个Linux分发包 <packaging-for-linux-distributions-ref>`
 （比如，对于 Debian 或 Ubuntu 是 .deb文件，而对于 Red Hat 与 SuSE 是 .rpm 文件）
 
-.. todo:: 完善 "冻结你的代码" 部分（stub）。
+.. todo:: 完善 "冻结您的代码" 部分（stub）。
 
 
 比较冻结工具

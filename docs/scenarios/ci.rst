@@ -37,7 +37,7 @@ Tox
 工具，提供如下特性：
 
 * 检查包在不同的Python版本和解释器下安装正确
-* 在每个环境中运行你的测试、配置测试工具的选择
+* 在每个环境中运行您的测试、配置测试工具的选择
 * 作为前端持续集成服务器，减少样板文件，合并了CI和基于shell的测试。
 
 
@@ -46,10 +46,10 @@ Travis-CI
 ---------
 
 `Travis-CI <https://travis-ci.org/>`_ 是一个分布式CI服务器，免费为开源项目构建测试。
-它提供多个worker运行Python测试，并能和GitHub无缝集成。你甚至可以用它对你的Pull Requests
+它提供多个worker运行Python测试，并能和GitHub无缝集成。您甚至可以用它对您的Pull Requests
 评论是否构建这个特定的变更集。Travis-ci是一个很好的、简单的方式去了解持续集成。
 
-作为开始，将 :file:`.travis.yml` 文件加入到你的仓库中，内容如下::
+作为开始，将 :file:`.travis.yml` 文件加入到您的仓库中，内容如下::
 
     language: python
     python:
@@ -64,10 +64,10 @@ Travis-CI
         - master
 
 
-这将会使你的工程在罗列的Python版本中，用给定的脚本进行测试，而且只会构建主干分支。
+这将会使您的工程在罗列的Python版本中，用给定的脚本进行测试，而且只会构建主干分支。
 有许多可供开启的选项，包括通知、步骤前后等。 `Travis-ci docs <http://about.travis-ci.org/docs/>`_ 
 详尽地解释了所有这些操作。
 
-为了激活你的工程的测试，去 `travis-ci 网站 <https://docs.travis-ci.com/user/languages/python/>`_ 登录你的GitHub
-账号。然后在你的profile设置中激活你的工程。现在，每一次push到GitHub上的提交将会运行
-你的工程中的测试。
+为了激活您的工程的测试，去 `travis-ci 网站 <https://docs.travis-ci.com/user/languages/python/>`_ 登录您的GitHub
+账号。然后在您的profile设置中激活您的工程。现在，每一次push到GitHub上的提交将会运行
+您的工程中的测试。

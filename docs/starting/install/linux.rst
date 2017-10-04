@@ -13,7 +13,7 @@
 
     $ python2 --version
 
-尽管如此，随着Python 3的流行，一些发行版，比如Fedora，不再预装Python 2。你可以使用
+尽管如此，随着Python 3的流行，一些发行版，比如Fedora，不再预装Python 2。您可以使用
 发行版的包管理器来安装 ``python2`` ：
 
 .. code-block:: console
@@ -21,7 +21,7 @@
     $ sudo dnf install python2
 
 
-你不必安装和配置即可直接使用Python进行开发。话虽如此，我还是强烈建议各位，在正式开始Python应用
+您不必安装和配置即可直接使用Python进行开发。话虽如此，我还是强烈建议各位，在正式开始Python应用
 开发前，安装接下来教程中所介绍的工具和库。特别应该安装Setuptools和pip，它们将简化安装和使用
 Python第三方库的流程。
 
@@ -52,7 +52,7 @@ Python 2.7.9 以及之后版本(Python2 系列)，和Python 3.4以及之后版�
 
 进一步了解与使用请参考文档 :ref:`虚拟环境 <virtualenvironments-ref>` 。
 
-也可使用 :ref:`virtualenvwrapper <virtualenvwrapper-ref>` 更轻松地管理你的虚拟环境。
+也可使用 :ref:`virtualenvwrapper <virtualenvwrapper-ref>` 更轻松地管理您的虚拟环境。
 
 --------------------------------
 

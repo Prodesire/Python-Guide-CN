@@ -9,7 +9,7 @@
 
 最新版本的Mac OS X，Sierra， **自带Python 2.7**。
 
-你不必安装和配置即可直接使用Python 2。本教程用来说明Python 3的安装。
+您不必安装和配置即可直接使用Python 2。本教程用来说明Python 3的安装。
 
 OS X自带的Python版本更适合用于学习而不是开发。因为版本与Python官网发布的 `官方最新稳定版本 
 <https://www.python.org/downloads/mac-osx/>`_ 相比可能已经过时。
@@ -20,7 +20,7 @@ OS X自带的Python版本更适合用于学习而不是开发。因为版本与P
 跟着我一起安装真实版本的Python吧。
 
 在正式安装之前，应先安装C编译器。最快的方式是运行 ``xcode-select --install`` 来安装Xcode命令行工具。
-你也可以从Mac应用商店下载完全版的 `XCode <http://developer.apple.com/xcode/>`_， 
+您也可以从Mac应用商店下载完全版的 `XCode <http://developer.apple.com/xcode/>`_， 
 或者更轻巧的 `OSX-GCC-Installer <https://github.com/kennethreitz/osx-gcc-installer#readme>`_ 。
 
 .. note::
@@ -39,8 +39,8 @@ OS X自带的Python版本更适合用于学习而不是开发。因为版本与P
 
     $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-运行这段脚本将列出它会引起的改变，并在安装开始前提示你。
-安装完成Homebrew后，需将其所在路径插入到 :envvar:`PATH` 环境变量的最前面，即在你所登录用户的
+运行这段脚本将列出它会引起的改变，并在安装开始前提示您。
+安装完成Homebrew后，需将其所在路径插入到 :envvar:`PATH` 环境变量的最前面，即在您所登录用户的
 :file:`~/.profile` 文件末尾加上这一行：
 
 .. code-block:: console
@@ -59,14 +59,14 @@ OS X自带的Python版本更适合用于学习而不是开发。因为版本与P
 Pip
 ---
 
-Homebrew 会为你安装 ``pip3`` 。
+Homebrew 会为您安装 ``pip3`` 。
 
 ``pip3`` 是Homebrew版Python 3的 ``pip`` 的别名。
 
 使用Python 3
 ---------------------
 
-这个时候，在你系统上可能Python 2.7也是可用的。可能 :ref:`Homebrew 版本的Python 2 <install-osx>`
+这个时候，在您系统上可能Python 2.7也是可用的。可能 :ref:`Homebrew 版本的Python 2 <install-osx>`
 和Python 3都安装了。 
 
 .. code-block:: console

@@ -1,14 +1,14 @@
 Python入门
 ---------------
 
-Python新手？让我们正确地设置你的Python环境：
+Python新手？让我们正确地设置您的Python环境：
 
 .. toctree::
    :maxdepth: 2
 
    starting/which-python
 
-- 正确地在你的系统上安装 Python
+- 正确地在您的系统上安装 Python
 
  .. toctree::
     :maxdepth: 1
@@ -92,7 +92,7 @@ Python应用的场景指南
 部署优雅的Python代码
 --------------------------------
 
-这部分指南关注部署你的Python代码。
+这部分指南关注部署您的Python代码。
 
 .. toctree::
    :maxdepth: 2

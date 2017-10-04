@@ -24,7 +24,7 @@ Web服务网关接口（Web Server Gateway Interface，简称“WSGI”）是一
 框架
 ::::::::::
 
-广义地说，Web框架包含一系列库和一个主要的处理器（handler），这样你就能够构建自己的代码来实现Web应用
+广义地说，Web框架包含一系列库和一个主要的处理器（handler），这样您就能够构建自己的代码来实现Web应用
 （比如说一个交互式的网站）。大多数web框架包含模式和工具，至少实现以下功能：
 
 URL路由（URL Routing）
@@ -61,12 +61,12 @@ Flask
 `Flask <http://flask.pocoo.org/>`_ 是一款针对Python的“微型框架”，它是构建更小应用、API和web服务的极佳选择。
 使用Flask构建应用，除了一些函数附上路由，它和写标准Python模块很相似。它真的很赞。
 
-Flask不会提供一切你可能需要的内容，而是实现了web应用框架中最常用的核心组件，比如说URL路由、请求和响应对象和模板等。
+Flask不会提供一切您可能需要的内容，而是实现了web应用框架中最常用的核心组件，比如说URL路由、请求和响应对象和模板等。
 
-作为Flask的用户，由你来决定选择和集成其他你可能用到的组件。比如说数据库访问或者表单生成和验证就不是Flask内置的功能。
+作为Flask的用户，由您来决定选择和集成其他您可能用到的组件。比如说数据库访问或者表单生成和验证就不是Flask内置的功能。
 
 这挺好的，因为很多web应用并不需要这些特性。
-对于那些需要的，有许多可用的 `扩展 <http://flask.pocoo.org/extensions/>`_ 或许符合你的需求。
+对于那些需要的，有许多可用的 `扩展 <http://flask.pocoo.org/extensions/>`_ 或许符合您的需求。
 
 Flask是任何不适用Django的Python web应用的默认选择。
 
@@ -76,7 +76,7 @@ Tornado
 `Tornado <http://www.tornadoweb.org/>`_ 是一个面向Python的异步web框架，它有自己的事件。
 这就使得它，举个例子，可以原生地支持WebSockets。编写良好的Tornado应用具有卓越的性能特性。
 
-除非你认为自己需要它，我并不建议你使用Tornado。
+除非您认为自己需要它，我并不建议您使用Tornado。
 
 
 Pyramid
@@ -142,7 +142,7 @@ uWSGI既能当作独立的web路由器来运行，也能运行在一个完整web
 配置uWSGI和应用的操作。uWSGI的web服务器支持允许动态配置Python、传递环境变量以及进一步优化。
 要看更多细节，请看 `uWSGI 魔法变量 <https://uwsgi-docs.readthedocs.io/en/latest/Vars.html>`_。
 
-除非你认为自己需要它，我并不建议你使用uWSGI。
+除非您认为自己需要它，我并不建议您使用uWSGI。
 
 .. _server-best-practices-ref:
 
@@ -171,7 +171,7 @@ Heroku 支持所有类型的Python web应用、服务器和框架。在Heroku上
 
 Heroku 维护了使用Python和Heroku交互的 `详细文章 <https://devcenter.heroku.com/categories/python>`_，
 同时也有 `手把手指导 <https://devcenter.heroku.com/articles/getting-started-with-python>`_ 
-来告诉你如何建立第一个应用。
+来告诉您如何建立第一个应用。
 
 Heroku是如今部署Python Web应用程序的推荐PaaS。
 
@@ -330,7 +330,7 @@ Chameleon
 
 Chameleon在Python2.5及以上版本（包括3.x和pypy）都是可用的，并常被 `Pyramid Framework <http://trypyramid.com>`_ 使用。
 
-页面模板是在文档结构中添加特定元素属性和文本标记。使用一系列简单语言概念，你能够控制文档流程、元素重复、文本替换和翻译。
+页面模板是在文档结构中添加特定元素属性和文本标记。使用一系列简单语言概念，您能够控制文档流程、元素重复、文本替换和翻译。
 由于使用了基于属性的语法，未渲染的页面模板是合法的HTML，它可以在浏览器中查看，甚至能够在WYSIWYG编辑器中编辑。
 这使得设计者和原型构建者之间在浏览器是中静态文件上的往复合作变得更加简单。
 
@@ -353,7 +353,7 @@ Chameleon在Python2.5及以上版本（包括3.x和pypy）都是可用的，并�
   
 
 用作文本插入的 `<span tal:replace="expression" />` 形式非常常见。如果在未渲染的模板中并不要求严格的合法性，
-你可以取而代之地使用更加简洁和可读的语法，它使用 `${expression}` 的形式，就像下面这样：
+您可以取而代之地使用更加简洁和可读的语法，它使用 `${expression}` 的形式，就像下面这样：
 
 .. code-block:: html
 
@@ -405,7 +405,7 @@ Mako的一个模板例子如下：
         </tr>
     </%def>
 
-要渲染一个非常基本的模板，你可以像下面这么做：
+要渲染一个非常基本的模板，您可以像下面这么做：
 
 .. code-block:: python
 

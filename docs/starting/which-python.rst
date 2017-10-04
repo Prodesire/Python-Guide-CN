@@ -22,35 +22,35 @@ Python的现状 (2 vs 3)
 ~~~~~~~~~~~~~~~
 
 
-.. note:: 使用 **Python 3** 是 *高度* 优先于 Python 2。如果你发现自己 *仍然* 在生产环境中使用 Python 2，
- 请考虑升级你的应用程序和基础设施。如果你正在使用 Python 3，恭喜你 —— 你确实有很好的品味。
+.. note:: 使用 **Python 3** 是 *高度* 优先于 Python 2。如果您发现自己 *仍然* 在生产环境中使用 Python 2，
+ 请考虑升级您的应用程序和基础设施。如果您正在使用 Python 3，恭喜您 —— 您确实有很好的品味。
  —*Kenneth Reitz*
 
 那我直言不讳：
 
 - 将 Python 3 用于新的 Python 应用程序。
-- 如果你是第一次学习 Python，熟悉 Python 2.7 将是非常有用的，但学习 Python 3 更有用。
+- 如果您是第一次学习 Python，熟悉 Python 2.7 将是非常有用的，但学习 Python 3 更有用。
 - 两者都学。它们都是 “Python”。
 - 已经构建的软件通常依赖于 Python 2.7。
-- 如果你正在编写一个新的开源 Python 库，最好同时为 Python 2 和 3 编写。
-  若新库只支持 Python 3 会是一项政治声明，并将疏远你的许多用户。
+- 如果您正在编写一个新的开源 Python 库，最好同时为 Python 2 和 3 编写。
+  若新库只支持 Python 3 会是一项政治声明，并将疏远您的许多用户。
   这不是一个问题 —— 慢慢地，在未来三年内，这种情况会减少。
 
 所以.... 3？
 ~~~~~~~~~~~~~~~~
 
-如果你想选择一种Python的解释器，你又不是固执己见的人，我推荐你用最新的Python 3.x，
+如果您想选择一种Python的解释器，您又不是固执己见的人，我推荐您用最新的Python 3.x，
 因为每个版本都带来了新的改进了的标准库模块、安全性以及bug修复。进步就是进步。
 
-鉴于此，如果你有一个强有力的理由只用Python 2，比如Python 3 没有足够能替代的Python 2
-的特有库，或者你（像我）非常喜而且受Python 2启发。
+鉴于此，如果您有一个强有力的理由只用Python 2，比如Python 3 没有足够能替代的Python 2
+的特有库，或者您（像我）非常喜而且受Python 2启发。
 
-查看 `Can I Use Python 3? <https://caniusepython3.com/>`_ 来看看是否有你
-依赖的软件阻止你用Python 3。
+查看 `Can I Use Python 3? <https://caniusepython3.com/>`_ 来看看是否有您
+依赖的软件阻止您用Python 3。
 
 `延伸阅读 <http://wiki.python.org/moin/Python2orPython3>`_
 
-写 `能够同时兼容Python 2.6，2.7，和Python 3的代码 <https://docs.python.org/3/howto/pyporting.html>`_ 是可能的。这包括从简单到困难的各种难度，取决于你所写软件的类型；如果你是初学者，其实有更重要的东西要操心。
+写 `能够同时兼容Python 2.6，2.7，和Python 3的代码 <https://docs.python.org/3/howto/pyporting.html>`_ 是可能的。这包括从简单到困难的各种难度，取决于您所写软件的类型；如果您是初学者，其实有更重要的东西要操心。
 
 实现
 ~~~~~~~~~~~~~~~
@@ -64,7 +64,7 @@ CPython
 `CPython <http://www.python.org>`_ 是Python的参考实现，用C编写。它把Python代码编译成
 中间态的字节码，然后由虚拟机解释。CPython为Python包和C扩展模块提供了最大限度的兼容。
 
-如果你正在写开源的Python代码，并希望有尽可能广泛的用户，用CPython是最好的。使用依赖C扩展的包，CPython是你唯一的选择。
+如果您正在写开源的Python代码，并希望有尽可能广泛的用户，用CPython是最好的。使用依赖C扩展的包，CPython是您唯一的选择。
 
 所有版本的Python语言都用C实现，因为CPython是参考实现。
 
@@ -76,7 +76,7 @@ PyPy
 
 PyPy旨在提高性能，同时保持最大兼容性（参考CPython的实现）。
 
-如果你正在寻找提高你的Python代码性能的方法，值得试一试PyPy。在一套的基准测试下，
+如果您正在寻找提高您的Python代码性能的方法，值得试一试PyPy。在一套的基准测试下，
 它目前比CPython的速度快超过5倍 。
 
 PyPy支持Python 2.7。PyPy3 [#pypy_ver]_，发布的Beta版，支持Python 3。
@@ -88,7 +88,7 @@ Jython
 运行在JVM (Java Virtual Machine) 上。另外，它可以像是用Python模块一样，导入
 并使用任何Java类。
 
-如果你需要与现有的Java代码库对接或者基于其他原因需要为JVM编写Python代码，那么
+如果您需要与现有的Java代码库对接或者基于其他原因需要为JVM编写Python代码，那么
 Jython是最好的选择。
 
 Jython现在支持到Python 2.7 [#jython_ver]_。

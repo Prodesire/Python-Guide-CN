@@ -1,4 +1,4 @@
-你的开发环境
+您的开发环境
 ============================
 
 .. image:: https://farm3.staticflickr.com/2930/33175624924_7febc46cc4_k_d.jpg
@@ -8,15 +8,15 @@
 ::::::::::::
 
 任何能够编辑普通文本的编辑器都能够用来编写Python代码，然后，使用一个更加强大的编辑器可能
-使你的生活变得容易点。
+使您的生活变得容易点。
 
 
 Vim
 ---
 
 Vim是一个使用键盘快捷键而不是菜单或图标来编辑的文本编辑器。有许多增强Vim编辑器中
-Python开发环境的插件和设置。如果你只开发Python，使用缩进和换行均符合 :pep:`8` 
-要求的默认设置是一个好的开始。在你的home目录中，打开 :file:`.vimrc` 文件，
+Python开发环境的插件和设置。如果您只开发Python，使用缩进和换行均符合 :pep:`8` 
+要求的默认设置是一个好的开始。在您的home目录中，打开 :file:`.vimrc` 文件，
 添加下面这些内容::
 
     set textwidth=79  " lines longer than 79 columns will be broken
@@ -27,23 +27,23 @@ Python开发环境的插件和设置。如果你只开发Python，使用缩进�
     set shiftround    " round indent to multiple of 'shiftwidth'
     set autoindent    " align the new line indent with the previous line
 
-基于上述设置，新行会在超过79个字符被添加，tab键则会自动转换为4个空格。如果你还使用
+基于上述设置，新行会在超过79个字符被添加，tab键则会自动转换为4个空格。如果您还使用
 Vim编辑其他语言，有一个叫做 indent_ 的便捷插件可以让这个设置只为Python源文件服务。
 
 还有一个方便的语法插件叫做 syntax_ ，改进了Vim 6.1中的语法文件。
 
-这些插件使你拥有一个基本的环境进行Python开发。要最有效的使用Vim，你应该时常检查代码的
-语法错误和是否符合PEP8。幸运的是， pycodestyle_ 和 Pyflakes_ 将会帮你做这些。
-如果你的Vim是用 ``+python`` 编译的，你也可以在编辑器中使用一些非常有用的插件来做这些检查。
+这些插件使您拥有一个基本的环境进行Python开发。要最有效的使用Vim，您应该时常检查代码的
+语法错误和是否符合PEP8。幸运的是， pycodestyle_ 和 Pyflakes_ 将会帮您做这些。
+如果您的Vim是用 ``+python`` 编译的，您也可以在编辑器中使用一些非常有用的插件来做这些检查。
 
-对于PEP8检查和pyflakes，你可以安装 vim-flake8_ 。然后你就可以在Vim中把 ``Flake8`` 
-映射到任何热键或你想要的行为上。这个插件将会在屏幕下方显示出错误，并且提供一个简单的
+对于PEP8检查和pyflakes，您可以安装 vim-flake8_ 。然后您就可以在Vim中把 ``Flake8`` 
+映射到任何热键或您想要的行为上。这个插件将会在屏幕下方显示出错误，并且提供一个简单的
 方式跳转到相关行。在保存文件的时候调用这个功能会是非常方便的。要这么做，
-就把下面一行加入到你的 :file:`.vimrc`::
+就把下面一行加入到您的 :file:`.vimrc`::
 
     autocmd BufWritePost *.py call Flake8()
 
-如果你已经在使用 syntastic_ ，你可以设置它来运行Pyflakes，并在quickfix窗口中显示错误
+如果您已经在使用 syntastic_ ，您可以设置它来运行Pyflakes，并在quickfix窗口中显示错误
 和警告。一个这样做并还会在状态栏中显示状态和警告信息的样例是::
 
     set statusline+=%#warningmsg#
@@ -87,7 +87,7 @@ Emacs
 -----
 
 Emacs是另一个强大的文本编辑器。它是完全可编程的（lisp），但要正确的工作要花些功夫。
-如果你已经是一名Emacs的用户了，在EmacsWiki上的 `Python Programming in Emacs`_ 
+如果您已经是一名Emacs的用户了，在EmacsWiki上的 `Python Programming in Emacs`_ 
 将会是好的开始。
 
 1. Emacs 本身支持Python模式。
@@ -104,7 +104,7 @@ Sublime Text
 ------------
 
 `Sublime Text <http://www.sublimetext.com/>`_ 是一款高级的，用来编写代码、标记和
-文章的文本编辑器。你将会爱上漂亮的用户界面、非凡的特性和惊人的表现。
+文章的文本编辑器。您将会爱上漂亮的用户界面、非凡的特性和惊人的表现。
 
 Sublime Text对编写Python代码支持极佳，而且它使用Python写其插件API。它也拥有大量
 各式各样的插件， `其中一些 <https://github.com/SublimeLinter/SublimeLinter>`_ 
@@ -208,7 +208,7 @@ Python Shell、集成的调试器和灵活的插件系统等功能。它基于Qt
 虚拟环境
 --------------------
 
-虚拟环境提供了隔离项目包依赖的强大方式。这意味着你无须再系统范围内安装Python工程特定的包，
+虚拟环境提供了隔离项目包依赖的强大方式。这意味着您无须再系统范围内安装Python工程特定的包，
 因此就能避免潜在的版本冲突。
 
 To start using and see more information:
@@ -255,13 +255,13 @@ IDLE
 IPython
 -------
 
-`IPython <http://ipython.org/>`_ 提供一个丰富的工具集来帮助你最大限度地和Python交互。
+`IPython <http://ipython.org/>`_ 提供一个丰富的工具集来帮助您最大限度地和Python交互。
 它主要的组件有：
 
 * 强大的Python shell（终端和基于Qt）。
 * 一个基于网络的笔记本，拥有相同的核心特性，但是支持富媒体、文本、代码、数学表达式和内联绘图。
 * 支持交互式的数据可视化和GUI工具集的使用。
-* 灵活、嵌入的解释器载入到你的工程工程中。
+* 灵活、嵌入的解释器载入到您的工程工程中。
 * 支持高级可交互的并行计算的工具。
 
 .. code-block:: console
