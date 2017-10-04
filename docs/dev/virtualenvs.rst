@@ -71,11 +71,18 @@ Ruby 的 `bundler`_，那么它们在思路上与这些工具类似。尽管 ``p
 
 
 .. Note:: 这进行了 `用户安装`_，以防止破坏任何系统范围的包。如果安装后, shell 中没有
-    ``pipenv``，则需要将 `用户基础目录`_ 的 ``bin`` 目录添加到 ``PATH`` 中。您可以通过运行
-    ``python -m site`` 找到用户库，它将打印包括用户基础的站点信息。例如，在 Linux 上，
-    这将返回 ``USER_BASE: '~/.local'``，所以你需要在 ``PATH`` 中添加 ``~/.local/bin``。
-    在 Linux 和 MacOS 上，您可以通过 `修改 ~/.profile`_ 永久地设置 ``PATH``。
-    在 Windows 上，您可以在 `控制面板`_ 中永久设置用户的 ``PATH``。
+    ``pipenv``，则需要将 `用户基础目录`_ 的 二进制文件目录添加到 ``PATH`` 中。
+    
+    在 Linux 和 macOS 上，您可以通过运行 ``python -m site --user-base`` 找到
+    用户基础目录，然后把 ``bin`` 加到目录末尾。比如，上述命令典型地会打印出
+    ``~/.local``（ ``~`` 会扩展为您的家目录的局对路径），然后将 ``~/.local/bin``
+    添加到 ``PATH`` 中。您可以通过 `修改 ~/.profile`_ 永久地设置 ``PATH``。
+
+    在 Windows 上，您通过运行 ``py -m site --user-site`` 找到用户基础目录，然后
+    将 ``site-packages`` 替换为 ``Scripts``。比如，上述命令可能返回为
+    ``C:\Users\Username\AppData\Roaming\Python36\site-packages``，然后您需要在
+    ``PATH`` 中包含 ``C:\Users\Username\AppData\Roaming\Python36\Scripts``。
+    您可以在 `控制面板`_ 中永久设置用户的 ``PATH``。您可能需要登出 ``PATH`` 更改才能生效。
 
 .. _npm: https://www.npmjs.com/
 .. _bundler: http://bundler.io/
