@@ -212,7 +212,7 @@ playbook示例如下：
 
     $ ansible-playbook ping.yml -i hosts.yml --ask-pass
 
-Ansible playbook在 :file:`hosts.yml` 中将会ping所有的服务器。你也可以选择成组的服务器使用Ansible。
+Ansible playbook在 :file:`hosts.yml` 中将会ping所有的服务器。您也可以选择成组的服务器使用Ansible。
 了解更多关于Ansible的信息，请阅读 `Ansible Docs <http://docs.ansible.com/>`_ 。
 
 `Ansible教程 <https://serversforhackers.com/an-ansible-tutorial/>`_ 也是一个很棒的且详细的指引来开始熟悉Ansible。
@@ -221,9 +221,9 @@ Ansible playbook在 :file:`hosts.yml` 中将会ping所有的服务器。你也�
 Chef
 ----
 `Chef <https://www.chef.io/chef/>`_ 是一个系统的云基础设施自动化框架，
-它使部署服务器和应用到任何物理、虚拟或者云终端上变得简单。你可以选择进行配置管理，那将主要使用Ruby去编写你的基础设施代码。
+它使部署服务器和应用到任何物理、虚拟或者云终端上变得简单。您可以选择进行配置管理，那将主要使用Ruby去编写您的基础设施代码。
 
-Chef客户端运行于组成你的基础设施的每台服务器上，这些客户端定期检查Chef服务器来确保系统是均衡并且处于设想的状态。
+Chef客户端运行于组成您的基础设施的每台服务器上，这些客户端定期检查Chef服务器来确保系统是均衡并且处于设想的状态。
 由于每台服务器拥有它自己的独立的Chef客户端，每个服务器配置自己，这种分布式方法使得Chef成为一个可扩展的自动化平台。
 
 Chef通过使用定制的在cookbook中实现的食谱（配置元素）来工作。Cookbook通常作为基础设施的选择项，

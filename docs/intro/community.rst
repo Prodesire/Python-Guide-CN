@@ -51,7 +51,7 @@ PEPs是 *Python 增强提议*。它们描述了Python自身或者相关库的变
 - :pep:`257`: 文档字符串约定.
     给出了与Python文档字符串相关的语义和约定的指导方针。
 
-你可以在 `PEP 索引 <http://www.python.org/dev/peps/>`_ 上了解更多。
+您可以在 `PEP 索引 <http://www.python.org/dev/peps/>`_ 上了解更多。
 
 提交一个 PEP
 ~~~~~~~~~~~~~~~~

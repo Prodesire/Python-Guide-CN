@@ -29,7 +29,7 @@ JSON
     print(parsed_json['first_name'])
     "Guido"
 
-你可以把下面这个对象转为JSON：
+您可以把下面这个对象转为JSON：
 
 .. code-block:: python
 
@@ -46,15 +46,15 @@ JSON
 simplejson
 ----------
 
-JSON库是Python2.6版中加入的。如果你使用更早版本的Python，
+JSON库是Python2.6版中加入的。如果您使用更早版本的Python，
 可以通过PyPI获取 `simplejson <https://simplejson.readthedocs.io/en/latest/>`_ 库。
 
 simplejson类似json标准库，它使得使用老版本Python的开发者们可以使用json库中的最新特性。
 
-如果json库不可用，你可以将simplejson取别名为json来使用：
+如果json库不可用，您可以将simplejson取别名为json来使用：
 
 .. code-block:: python
     
     import simplejson as json
 
-在将simplejson当成json导入后，上面的例子会像你在使用标准json库一样正常运行。
+在将simplejson当成json导入后，上面的例子会像您在使用标准json库一样正常运行。

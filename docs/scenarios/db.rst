@@ -49,7 +49,7 @@ Django ORM 是 `Django <http://www.djangoproject.com>`_ 用来进行数据库访
 
 - 每个model是django.db.models.Model的子类。
 - model的每个属性表示数据库的域（field）。
-- Django给你一个自动生成的数据库访问API，参见
+- Django给您一个自动生成的数据库访问API，参见
   `Making queries <https://docs.djangoproject.com/en/dev/topics/db/queries/>`__。
 
 peewee

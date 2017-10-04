@@ -28,7 +28,7 @@ Readthedocs文档地址 `Python最佳实践指南中文版 <http://pythonguidecn
 - 测试: Jenkins & tox 指南
 - 如何更方便地通过 ``git`` 连接 ``hg``
 
-如果你不习惯阅读reStructuredText形式的文档, 这里有一份同步更新的 `HTML版文档，请戳它 <http://pythonguidecn.readthedocs.org/>`_。
+如果您不习惯阅读reStructuredText形式的文档, 这里有一份同步更新的 `HTML版文档，请戳它 <http://pythonguidecn.readthedocs.org/>`_。
 
 使用指南
 ============================
@@ -52,11 +52,11 @@ Getting Started（开始吧）（完成）
 
 Writing Great Code（写出优雅的代码）（完成）
 ---------------------------
-- Structuring Your Project（结构化你的工程）（完成）
+- Structuring Your Project（结构化您的工程）（完成）
 - Code Style（代码风格）（完成）
 - Reading Great Code（阅读好的代码）（完成）
 - Documentation（文档）（完成）
-- Testing Your Code（测试你的代码）（完成）
+- Testing Your Code（测试您的代码）（完成）
 - Logging（日志）（完成）
 - Common Gotchas（常见陷阱）（完成）
 - Choosing a License（选择一个许可）（完成）
@@ -84,12 +84,12 @@ Scenario Guide（场景/方案指南）（完成）
 
 Shipping Great Code（部署优雅的代码）（完成）
 ---------------------------
-- Packaging Your Code（打包你的代码）（完成）
-- Freezing Your Code（冻结你的代码）（完成）
+- Packaging Your Code（打包您的代码）（完成）
+- Freezing Your Code（冻结您的代码）（完成）
 
 Development Environment（开发环境）（完成）
 ---------------------------
-- Your Development Environment（你的开发环境）（完成）
+- Your Development Environment（您的开发环境）（完成）
 - Virtual Environments（虚拟环境）（完成）
 - Further Configuration of Pip and Virtualenv（Pip和Virtualenv的更多配置）（完成）
 

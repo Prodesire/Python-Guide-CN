@@ -6,7 +6,7 @@
 CPython作为最流行的Python环境，对于CPU密集型任务（CPU bound tasks）较慢，而 `PyPy`_ 则较快。
 
 使用稍作改动的 `David Beazley的`_  CPU密集测试代码（增加了循环进行多轮测试），
-你可以看到CPython与PyPy之间的执行差距。
+您可以看到CPython与PyPy之间的执行差距。
 
 .. code-block:: console
 
@@ -45,7 +45,7 @@ The GIL
 
 David Beazley 有一个关于GIL如何工作的 `指导`_ 。他也讨论了 Python3.2中的 `新GIL`_ 
 他的结论是为了最大化一个Python程序的性能，应该对GIL工作方式有一个深刻的理解 ———
-它如何影响你的特定程序，你拥有多少核，以及你程序瓶颈在哪。
+它如何影响您的特定程序，您拥有多少核，以及您程序瓶颈在哪。
 
 C 扩展
 ------------
@@ -54,7 +54,7 @@ C 扩展
 GIL
 -------
 
-当写一个C扩展时必须 `特别关注`_  在解释器中注册你的线程。
+当写一个C扩展时必须 `特别关注`_  在解释器中注册您的线程。
 
 C 扩展
 ::::::::::::
@@ -63,8 +63,8 @@ C 扩展
 Cython
 ------
 
-`Cython <http://cython.org/>`_ 是Python语言的一个超集，对其你可以为Python写C
-或C++模块。Cython也使得你可以从已编译的C库中调用函数。使用Cython让你得以发挥Python
+`Cython <http://cython.org/>`_ 是Python语言的一个超集，对其您可以为Python写C
+或C++模块。Cython也使得您可以从已编译的C库中调用函数。使用Cython让您得以发挥Python
 的变量与操作的强类型优势。
 
 这是一个Cython中的强类型例子。
@@ -119,7 +119,7 @@ Cython
         return result
 
 
-注意，在Cython版本，在创建一个Python列表时，你声明了会被编译为C类型的整型和整型数组。
+注意，在Cython版本，在创建一个Python列表时，您声明了会被编译为C类型的整型和整型数组。
 
 
 .. code-block:: cython
@@ -140,7 +140,7 @@ Cython
         p = range(1000)
         result = []
 
-有什么差别呢？在上面的Cython版本中，你可以看到变量类型与整型数组像标准C一样被声明。
+有什么差别呢？在上面的Cython版本中，您可以看到变量类型与整型数组像标准C一样被声明。
 作为例子，第三行的 `cdef int n,k,i` 这个附加类型声明（整型）使得Cython编译器得以产生比
 第二个版本更有效率的C代码。标准Python代码以 `*.py` 格式保存，而 Cython 以 `*.pyx` 格式保存。
 
@@ -179,10 +179,10 @@ Cython
 
 
 
-`pyximport` 使得你可以导入 `*.pyx` 文件，（像 `primesCy.pyx` 这样的）。
+`pyximport` 使得您可以导入 `*.pyx` 文件，（像 `primesCy.pyx` 这样的）。
 `pyximport.install()` 命令使Python解释器可以打开Cython编译器直接编译出 `*.so` 格式
-的C库。Cython之后可以导入这个库到你的Python代码中，简便而有效。使用 `time.time()` 函数
-你可以比较两个不同的在查找500个素数的调用长的时间消耗差异。在一个标准笔记本中
+的C库。Cython之后可以导入这个库到您的Python代码中，简便而有效。使用 `time.time()` 函数
+您可以比较两个不同的在查找500个素数的调用长的时间消耗差异。在一个标准笔记本中
 （双核AMD E-450 1.6GHz），测量值是这样的：
  
 

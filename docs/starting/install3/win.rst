@@ -35,7 +35,7 @@ Python将安装到内含版本号信息的路径，例如Python 3.6版本将被�
 使用Python 3
 ---------------------
 
-这个时候，你可能已经安装了Python 2.7。
+这个时候，您可能已经安装了Python 2.7。
 
 .. code-block:: console
 

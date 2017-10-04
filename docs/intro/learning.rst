@@ -17,7 +17,7 @@ Python for beginners
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 thepythonguru.com是一个专注于初学程序员的教程。它深入涵盖了许多python概念。
-它还教你一些Python的高级概念，如lambda表达式、正则表达式等。最后，它以教程
+它还教您一些Python的高级概念，如lambda表达式、正则表达式等。最后，它以教程
 “如何使用python访问MySQL数据库”结束。
 
    `Python for beginners <http://thepythonguru.com/>`_
@@ -37,12 +37,12 @@ Learn Python
 
 Learnpython.org是一个简单易懂的了解Python的途径。网站采用了和流行的 
 `Try Ruby <http://tryruby.org/>`_ 相同的方式，有一个交互式的Python解释器内建于网站中，
-允许你在学习Python课程时不需要在本地安装Python。
+允许您在学习Python课程时不需要在本地安装Python。
 
     `Learn Python <http://www.learnpython.org/>`_
 
 
-如果你想要更加传统的书籍， *Python For You and Me* 是一个极佳的学习Python所有方面的资源。
+如果您想要更加传统的书籍， *Python For You and Me* 是一个极佳的学习Python所有方面的资源。
 
     `Python for You and Me <https://pymbook.readthedocs.io/>`
     `Learn Python Interactively with DataCamp! <https://datacamp.com/>`_
@@ -50,8 +50,8 @@ Learnpython.org是一个简单易懂的了解Python的途径。网站采用了�
 Online Python Tutor
 ~~~~~~~~~~~~~~~~~~~
 
-Online Python Tutor在视觉上向你一步步展示程序是如何运行的。Python Tutor帮助人们克服
-学习编程的基本障碍，让你明白程序源码中的每一行的执行会有怎样的结果。
+Online Python Tutor在视觉上向您一步步展示程序是如何运行的。Python Tutor帮助人们克服
+学习编程的基本障碍，让您明白程序源码中的每一行的执行会有怎样的结果。
 
     `Online Python Tutor <http://pythontutor.com/>`_
 
@@ -93,8 +93,8 @@ Crash into Python
 Dive Into Python 3
 ~~~~~~~~~~~~~~~~~~
 
-Dive Into Python 3对准备使用Python 3的人来说是一本不错的书。如果你是从Python 2迁移到
-Python 3或者你已经有其他语言的编程经验，那么将会很好阅读。
+Dive Into Python 3对准备使用Python 3的人来说是一本不错的书。如果您是从Python 2迁移到
+Python 3或者您已经有其他语言的编程经验，那么将会很好阅读。
 
     `Dive Into Python 3 <http://www.diveinto.org/python3/>`_
 
@@ -244,7 +244,7 @@ Transforming Code into Beautiful, Idiomatic Python
 
 Transforming Code into Beautiful, Idiomatic Python 是由 Raymond Hettinger制作的视频。
 通过它可以学习到更好地使用Python最佳特性，通过一系列的代码转换来改进现有代码，
-“当你看见这个，就那样去做”。
+“当您看见这个，就那样去做”。
 
     `Transforming Code into Beautiful, Idiomatic Python <https://www.youtube.com/watch?v=OSGv2VnC0go>`_
 

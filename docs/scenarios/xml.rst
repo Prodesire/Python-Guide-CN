@@ -26,7 +26,7 @@ untangle
     obj = untangle.parse('path/to/file.xml')
 
 
-然后你可以像这样获取child元素名称：
+然后您可以像这样获取child元素名称：
 
 .. code-block:: python
 
@@ -63,7 +63,7 @@ xmltodict
     with open('path/to/file.xml') as fd:
         doc = xmltodict.parse(fd.read())
 
-你可以访问元素，属性以及值，像这样：
+您可以访问元素，属性以及值，像这样：
 
 .. code-block:: python
 
@@ -72,5 +72,5 @@ xmltodict
     doc['mydocument']['plus']['@a'] # == u'complex'
     doc['mydocument']['plus']['#text'] # == u'element as well'
 
-xmltodict 也有unparse函数让你可以转回XML。该函数有一个streaming模式适合用来
+xmltodict 也有unparse函数让您可以转回XML。该函数有一个streaming模式适合用来
 处理不能放入内存的文件，它还支持命名空间。

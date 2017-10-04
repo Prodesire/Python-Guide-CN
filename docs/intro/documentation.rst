@@ -23,7 +23,7 @@ Read the Docs是一个流行的社区项目，存放着开源软件的文档。�
 pydoc
 -----
 
-:program:`pydoc` 是一个在你安装Python时跟着安装的工具。它允许你在shell中快速检索和查找文档。比如，如果你需要对 :mod:`time` 模块的进行快速回顾，查看文档就是像下面这么简单：
+:program:`pydoc` 是一个在您安装Python时跟着安装的工具。它允许您在shell中快速检索和查找文档。比如，如果您需要对 :mod:`time` 模块的进行快速回顾，查看文档就是像下面这么简单：
 
     .. code-block:: console
 
