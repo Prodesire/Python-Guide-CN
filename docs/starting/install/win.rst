@@ -5,7 +5,7 @@
 
 .. image:: https://farm5.staticflickr.com/4268/34435688560_4cc2a7bcbb_k_d.jpg
 
-首先，从官网下载 `最新版本 <https://www.python.org/ftp/python/2.7.13/python-2.7.13.msi>`_
+首先，从官网下载 `最新版本 <https://www.python.org/ftp/python/2.7.14/python-2.7.14.msi>`_
 的Python 2.7。如果想要确保下载到最新版本，单击 `Python官网 <http://python.org>`_ 的
 Downloads > Windows 链接。
 
