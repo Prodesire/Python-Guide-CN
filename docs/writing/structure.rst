@@ -347,7 +347,7 @@ Python的模块查找功能。就 `my.spam.py` 来说，Python 认为需要在 :
 一般不需要担心include的代码可能造成不好的影响，例如重载同名方法。
 
 
-也可以使用import语句的特殊形式 ``from modu import *`` 模拟更标准的行为。但``import *``通常
+也可以使用import语句的特殊形式 ``from modu import *`` 模拟更标准的行为。但 ``import *`` 通常
 被认为是不好的做法。**使用** ``from modu import *`` **的代码较难阅读而且依赖独立性不足**。
 使用 ``from modu import func`` 能精确定位你想导入的方法并将其放到全局命名空间中。
 比 ``from modu import *`` 要好些，因为它明确地指明往全局命名空间中导入了什么方法，它和
