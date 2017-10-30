@@ -6,7 +6,7 @@
 Python最佳实践指南！
 =================================
 
-你好，地球人！欢迎来到Python漫游指南。
+你好，地球人！欢迎来到Python最佳实践指南。
 
 **这是一份活着的、会呼吸的指南。**  如果您有意一起贡献,
 `在GitHub fork 我 <https://github.com/Prodesire/Python-Guide-CN>`_!
