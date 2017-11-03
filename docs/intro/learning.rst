@@ -45,7 +45,7 @@ Learnpython.org是一个简单易懂的了解Python的途径。网站采用了�
 如果您想要更加传统的书籍， *Python For You and Me* 是一个极佳的学习Python所有方面的资源。
 
     `Python for You and Me <https://pymbook.readthedocs.io/>`
-    `Learn Python Interactively with DataCamp! <https://datacamp.com/>`_
+    `Learn Python Interactively with DataCamp! <https://www.datacamp.com/>`_
 
 Online Python Tutor
 ~~~~~~~~~~~~~~~~~~~
@@ -96,7 +96,7 @@ Dive Into Python 3
 Dive Into Python 3对准备使用Python 3的人来说是一本不错的书。如果您是从Python 2迁移到
 Python 3或者您已经有其他语言的编程经验，那么将会很好阅读。
 
-    `Dive Into Python 3 <http://www.diveinto.org/python3/>`_
+    `Dive Into Python 3 <http://www.diveintopython3.net/>`_
 
 
 Think Python: How to Think Like a Computer Scientist
@@ -137,7 +137,7 @@ A Byte of Python
 
     `A Byte of Python for Python 2.x <http://www.ibiblio.org/swaroopch/byteofpython/read/>`_
     
-    `A Byte of Python for Python 3.x <http://swaroopch.com/notes/Python_en-Preface/>`_
+    `A Byte of Python for Python 3.x <https://python.swaroopch.com/>`_
 
 
 Learn to Program in Python with Codeacademy

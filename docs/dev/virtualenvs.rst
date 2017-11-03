@@ -274,6 +274,7 @@ Pipenv 将在您的项目目录中安装超赞的 `Requests`_ 库并为您创建
 这能帮助确保安装、部署和开发者之间的一致性。
 
 最后，记住在源码版本控制中排除掉虚拟环境文件夹，可在ignore的列表中加上它。
+（查看 :ref:`版本控制忽略<version_control_ignores>`）
 
 .. _virtualenvwrapper-ref:
 
@@ -320,7 +321,7 @@ virtualenvwrapper
 
    $ workon my_project
 
-或者，您可以创建一个项目，它会创建虚拟环境，并在 ``$PROJECT_HOME`` 中创建一个项目目录。
+或者，您可以创建一个项目，它会创建虚拟环境，并在 ``$WORKON_HOME`` 中创建一个项目目录。
 当您使用 ``workon myproject`` 时，会 ``cd`` -ed 到项目目录中。
 
 .. code-block:: console

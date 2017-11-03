@@ -10,7 +10,7 @@ Python新手？让我们正确地设置您的Python环境：
 
 - 正确地在您的系统上安装 Python
 
- .. toctree::
+.. toctree::
     :maxdepth: 1
 
     starting/installation
