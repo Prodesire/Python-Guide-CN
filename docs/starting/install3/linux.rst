@@ -18,9 +18,10 @@
     $ sudo apt-get update
     $ sudo apt-get install python3.6
 
-如果您使用的是其他版本的Ubuntu（比如LTS发行版），我们推荐使用 `deadsnakes PPA <https://launchpad.net/~fkrull/+archive/ubuntu/deadsnakes>`_ 来安装 Python 3.6::
+如果您使用的是其他版本的Ubuntu（比如LTS发行版），我们推荐使用 `deadsnakes PPA <https://launchpad.net/~deadsnakes/+archive/ubuntu/ppa>`_ 来安装 Python 3.6::
 
-    $ sudo add-apt-repository ppa:fkrull/deadsnakes
+    $ sudo apt-get install software-properties-common
+    $ sudo add-apt-repository ppa:deadsnakes/ppa
     $ sudo apt-get update
     $ sudo apt-get install python3.6
 
