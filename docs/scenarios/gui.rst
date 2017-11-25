@@ -77,6 +77,13 @@ Qt
 --
 `Qt <http://qt-project.org/>`_ 是跨平台应用框架，它被广泛用于借GUI开发软件，但是也可用于非GUI应用。
 
+Toga
+----
+`Toga <https://toga.readthedocs.io/en/latest/>`_ 是一个原生Python和操作系统的
+跨平台GUI工具包。Toga由一个具有共享接口的基础组件库组成，以简化与平台无关的GUI开发。
+
+Toga适用于Mac OS、Windows、Linux（GTK）以及Android和iOS等移动平台。
+
 Tk
 --
 Tkinter是Tcl/Tk上的面向对象层。 **它的优势是包括Python标准库，能够使编程更加方便，兼容性更强。**
