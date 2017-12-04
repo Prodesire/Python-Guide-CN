@@ -50,7 +50,9 @@ Python的现状 (2 vs 3)
 
 `延伸阅读 <http://wiki.python.org/moin/Python2orPython3>`_
 
-写 `能够同时兼容Python 2.6，2.7，和Python 3的代码 <https://docs.python.org/3/howto/pyporting.html>`_ 是可能的。这包括从简单到困难的各种难度，取决于您所写软件的类型；如果您是初学者，其实有更重要的东西要操心。
+写 `能够同时兼容Python 2.6，2.7，和Python 3的代码 <https://docs.python.org/3/howto/pyporting.html>`_ 是可能的。
+这包括从简单到困难的各种难度，取决于您所写软件的类型；如果您是初学者，其实有更重要的东西要操心。请注意，Python 2.6
+是生命周期结束的上游，所以您不应该试着编写兼容2.6的代码，除非您被专门安排做这件事。
 
 实现
 ~~~~~~~~~~~~~~~

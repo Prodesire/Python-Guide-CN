@@ -5,6 +5,9 @@
 
 .. image:: https://farm5.staticflickr.com/4268/34435688560_4cc2a7bcbb_k_d.jpg
 
+.. note::
+    查看我们的 :ref:`在Windows上安装Python 3指南<install3-windows>`.
+
 首先，从官网下载 `最新版本 <https://www.python.org/ftp/python/2.7.14/python-2.7.14.msi>`_
 的Python 2.7。如果想要确保下载到最新版本，单击 `Python官网 <http://python.org>`_ 的
 Downloads > Windows 链接。
@@ -38,17 +41,21 @@ Python将安装到内含版本号信息的路径，例如Python 2.7版本将被�
 Setuptools + Pip
 ----------------
 
-Setuptools是一款非常重要的Python第三方工具，它是标准包自带的distutils工具的增强版。一旦安装Setuptools后，
-就可以通过一行指令下载和安装任何可获取到的Python应用包，还可以轻松地将这种网络安装的方式加入到自己开发
+`setuptools <https://pypi.python.org/pypi/setuptools>`_ 和 `pip <https://pip.pypa.io/en/stable/>`_
+是两个最重要的第三方Python包。
+
+安装完成后，您可以使用单个命令下载、安装和卸载任何兼容的Python应用包。还可以轻松地这种网络安装的方式加入到自己开发
 的Python应用中。
 
-通过运行Python脚本 `ez_setup.py <https://bootstrap.pypa.io/ez_setup.py>`_ 获取最新
-Windows版本的Setuptools。
+Python 2.7.9和更高版本（在Python 2系列上），Python 3.4和更高版本默认包含pip。
 
-安装完后就可以使用 **easy_install** 命令，但由于该命令已经被大多数人弃用，我们将安装替代它的 **pip** 命令。
-Pip支持包的卸载，而且与easy_install不同，它一直处于维护下。
+要查看是否安装了pip，请打开命令提示符并运行：
 
-通过运行Python脚本 `get-pip.py <https://raw.github.com/pypa/pip/master/contrib/get-pip.py>`_ 可安装pip
+.. code-block:: console
+
+    $ command -v pip
+
+要安装pip， `请遵照官方的pip安装指南 <https://pip.pypa.io/en/latest/installing/>`_ —— 这将自动安装最新版本的setuptools。
 
 
 虚拟环境

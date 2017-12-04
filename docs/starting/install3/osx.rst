@@ -7,7 +7,7 @@
 
 .. image:: https://farm5.staticflickr.com/4276/34435689480_2e6f358510_k_d.jpg
 
-最新版本的Mac OS X，Sierra， **自带Python 2.7**。
+最新版本的Mac OS X，High Sierra， **自带Python 2.7**。
 
 您不必安装和配置即可直接使用Python 2。本教程用来说明Python 3的安装。
 

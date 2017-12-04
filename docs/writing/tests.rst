@@ -154,19 +154,35 @@ py.test
     `py.test <https://docs.pytest.org/en/latest/>`_
 
 
-Nose
-----
+Hypothesis
+----------
 
-nose继承测试单元，能够使测试更加容易。
-
+Hypothesis 让您编写被示例源码参数化的测试的库。它会生成简单易懂的例子，使您的测试失败，
+让您花更少的力气找到更多的错误。
 
 .. code-block:: console
 
-    $ pip install nose
+    $ pip install hypothesis
 
-nose自动化测试发现并节省人工创建测试组件的麻烦。它也提供各种插件，例如xUnit兼容性测试输出，覆盖度报告和测试选择。
+例如，测试浮动列表要尝试很多例子，但是会报告每个错误的最小例子（区分异常类型和位置）：
 
-    `nose <https://nose.readthedocs.io/en/latest/>`_
+.. code-block:: python
+
+    @given(lists(floats(allow_nan=False, allow_infinity=False), min_size=1))
+    def test_mean(xs):
+        mean = sum(xs) / len(xs)
+        assert min(xs) <= mean(xs) <= max(xs)
+
+.. code-block:: none
+
+    Falsifying example: test_mean(
+        xs=[1.7976321109618856e+308, 6.102390043022755e+303]
+    )
+
+Hypothesis 是实用的，也是非常强大的，能经常会找出被其他所有形式的测试所遗漏的错误。
+它能与py.test很好地集成，在简单和高级场景中都非常注重可用性。
+
+    `hypothesis <https://hypothesis.readthedocs.io/en/latest/>`_
 
 
 tox

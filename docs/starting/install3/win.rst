@@ -53,17 +53,15 @@ Python将安装到内含版本号信息的路径，例如Python 3.6版本将被�
 Setuptools + Pip
 ----------------
 
-Setuptools是一款非常重要的Python第三方工具，它是标准包自带的distutils工具的增强版。一旦安装Setuptools后，
-就可以通过一行指令下载和安装任何可获取到的Python应用包，还可以轻松地将这种网络安装的方式加入到自己开发
+`setuptools <https://pypi.python.org/pypi/setuptools>`_ 和 `pip <https://pip.pypa.io/en/stable/>`_
+是两个最重要的第三方Python包。
+
+安装完成后，您可以使用单个命令下载、安装和卸载任何兼容的Python应用包。还可以轻松地这种网络安装的方式加入到自己开发
 的Python应用中。
 
-通过运行Python脚本 `ez_setup.py <https://bootstrap.pypa.io/ez_setup.py>`_ 获取最新
-Windows版本的Setuptools。
+所有受支持的Python 3版本都包含pip，因此请确保它是最新的::
 
-安装完后就可以使用 **easy_install** 命令，但由于该命令已经被大多数人弃用，我们将安装替代它的 **pip** 命令。
-Pip支持包的卸载，而且与easy_install不同，它一直处于维护下。
-
-通过运行Python脚本 `get-pip.py <https://raw.github.com/pypa/pip/master/contrib/get-pip.py>`_ 可安装pip
+    python -m pip install -U pip
 
 
 Pipenv & 虚拟环境

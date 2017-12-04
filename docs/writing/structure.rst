@@ -144,6 +144,8 @@ Test Suite
 ::::::::::
 
 
+*想了解关于编写测试的建议，请查阅 :doc:`/writing/tests`。*
+
 .. csv-table::
    :widths: 20, 40
 
@@ -349,7 +351,7 @@ Python的模块查找功能。就 `my.spam.py` 来说，Python 认为需要在 :
 
 也可以使用import语句的特殊形式 ``from modu import *`` 模拟更标准的行为。但 ``import *`` 通常
 被认为是不好的做法。**使用** ``from modu import *`` **的代码较难阅读而且依赖独立性不足**。
-使用 ``from modu import func`` 能精确定位你想导入的方法并将其放到全局命名空间中。
+使用 ``from modu import func`` 能精确定位您想导入的方法并将其放到全局命名空间中。
 比 ``from modu import *`` 要好些，因为它明确地指明往全局命名空间中导入了什么方法，它和
 ``import modu`` 相比唯一的优点是之后使用方法时可以少打点儿字。
 

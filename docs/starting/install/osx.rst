@@ -8,7 +8,7 @@
 .. note::
     查看我们的 :ref:`在OS X上安装Python 3指南<install3-osx>`.
 
-最新版本的Mac OS X，Sierra， **自带Python 2.7**。
+最新版本的Mac OS X，High Sierra， **自带Python 2.7**。
 
 您不必安装和配置即可直接使用Python进行开发。
 话虽如此，我还是强烈建议各位，在正式开始Python应用开发前，安装接下来教程中所介绍的工具和库。
