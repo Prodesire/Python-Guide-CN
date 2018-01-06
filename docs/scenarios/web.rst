@@ -50,7 +50,8 @@ Django
 Django拥有非常庞大和活跃的社区。此外，许多预构建的 `可重用模块 <http://djangopackages.com/>`_ 
 可以原样合并到新工程中，或者定制成符合需求的样子。
 
-在 `美国 <http://djangocon.us>`_ 和 `欧洲 <http://djangocon.eu>`_ 均有每年度的Django会议。
+在 `美国 <http://djangocon.us>`_ 、 `欧洲 <http://djangocon.eu>`_ 和 
+`Australia <http://djangocon.com.au>`_ 均有每年度的Django会议。
 
 如今大部分新的Python web应用都是用Django构建的。
 

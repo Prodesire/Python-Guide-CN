@@ -3,6 +3,9 @@
 
 .. image:: https://farm5.staticflickr.com/4173/33907150594_9abba7ad0a_k_d.jpg
 
+.. note::
+    关于编写测试更多的建议，参阅 :doc:`/writing/tests`。
+
 为什么?
 ------------
 
