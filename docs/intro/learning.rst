@@ -25,7 +25,7 @@ thepythonguru.com是一个专注于初学程序员的教程。它深入涵盖了
 交互学习Python数据科学
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-如果您喜欢在线互动环境学习数据科学Python， `DataCamp的免费python教程 <https://www.datacamp.com/courses/intro-to-python-for-data-science?tap_a=5644-dce66f&tap_s=116411-750171>`_ 
+如果您喜欢在线互动环境学习数据科学P ython， `DataCamp的免费python教程 <https://www.datacamp.com/courses/intro-to-python-for-data-science?tap_a=5644-dce66f&tap_s=116411-750171>`_ 
 是一个很好的入门方式。如果您已经在机器学习方面有所进步并且感兴趣，请查看这个 `使用scikit监督学习的课程 <https://www.datacamp.com/courses/supervised-learning-with-scikit-learn?tap_a=5644-dce66f&tap_s=116411-750171>`_，
 由scikit学习的核心开发人员之一提供。
 
@@ -46,6 +46,13 @@ Learnpython.org是一个简单易懂的了解Python的途径。网站采用了�
 
     `Python for You and Me <https://pymbook.readthedocs.io/>`
     `Learn Python Interactively with DataCamp! <https://www.datacamp.com/>`_
+
+Learn Python Step by Step
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Techbeamers.com 提供了手把手的教程讲解Python。每个教程都补充了相关代码段，并配备了关于所学主题的后续测验。里面的 `Python 面试题 <http://www.techbeamers.com/python-interview-questions-programmers>`_ 部分可以帮助求职者。您还可以阅读必备的 `Python 技巧 <http://www.techbeamers.com/essential-python-tips-tricks-programmers>`_ ，并学习编写高质量代码的 `最佳编程实践 <http://www.techbeamers.com/python-code-optimization-tips-tricks>`_ 。在这里，你将获得快速学习Python的正确平台。
+
+`学习 Python 从基础到高级 <http://www.techbeamers.com/python-tutorial-step-by-step>`_
 
 Online Python Tutor
 ~~~~~~~~~~~~~~~~~~~
