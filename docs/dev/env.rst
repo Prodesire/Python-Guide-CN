@@ -136,7 +136,7 @@ IntelliJ IDEA闻名。它们都共享着相同的基础代码，PyCharm中大多
 Python （在 Visual Studio Code中）
 -----------------------------------------
 
-`用于Visual Studio的Python <https://marketplace.visualstudio.com/items?itemName=donjayamanne.python>`_ 
+`用于Visual Studio的Python <https://marketplace.visualstudio.com/items?itemName=ms-python.python>`_ 
 是一款用于 `Visual Studio Code IDE <https://code.visualstudio.com>`_ 的扩展。
 它是一个免费的、轻量的、开源的IDE，支持Mac、Windows和Linux。它以诸如Node.js和Python等
 开源技术构建，具有如Intellisense（自动补全）、本地和远程调试、linting（代码检查）等
