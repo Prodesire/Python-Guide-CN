@@ -82,7 +82,10 @@ Pip和Virtualenv的更多配置
 比如说，您可能在多个不同的项目上使用了 ``requests`` 。
 
 每当您开始一个新项目（并有一个新的虚拟环境）重新下载相同的包/库是没有必要的。幸运的是，
-您能通过下面的方式去配置pip来重用已经安装的库。
+自从6.0版本开始，pip提供 `默认缓存机制
+<https://pip.pypa.io/en/stable/reference/pip_install/#caching>`_ 而无需任何配置。
+
+当使用更老的版本时，你可以用下面的方式来配置pip，以使它尝试重用已安装的包。
 
 在UNIX系统中，您可以添加以下两行到您的 :file:`.bashrc` 或 :file:`.bash_profile` 文件中。
 
