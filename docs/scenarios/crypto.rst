@@ -33,6 +33,49 @@ Cryptography 分为两个层，方法（recipes）层和危险底层（hazardous
 	plain_text = cipher_suite.decrypt(cipher_text)
 
 
+GPGME bindings
+--------------
+
+`GPGME Python 绑定<https://dev.gnupg.org/source/gpgme/browse/master/lang/python/>`_ 提供Pythonic的方式访问 `GPG Made Easy <https://dev.gnupg.org/source/gpgme/browse/master/>`_ ，这是整个GNU Privacy Guard项目套件，包括GPG、libgcrypt和gpgsm（S/MIME 引擎），的C API。它支持Python 2.6、2.7、3.4及以上版本。取决于Python的SWIG C接口以及GnuPG软件和库。
+
+其在与GnuPG其余项目的相同条款（GPLv2和LGPLv2.1，均带有“或更高版本”）下可用。
+
+安装
+~~~~~~~~~~~~
+
+如果配置脚本定位到了所支持的python版本（配置时位于$PATH中），那么在编译GPGME时会默认包含它。
+
+例子
+~~~~~~~
+
+.. code-block:: python3
+
+	import gpg
+	import os
+	
+	# Encryption to public key specified in rkey.
+	rkey = "0xDEADBEEF"
+	text = "Something to hide."
+	plain = gpg.core.Data(text)
+	cipher = gpg.core.Data()
+	c = gpg.core.Context()
+	c.set_armor(1)
+	c.op_keylist_start(rkey, 0)
+	r = c.op_keylist_next()
+	c.op_encrypt([r], 1, plain, cipher)
+	cipher.seek(0, os.SEEK_SET)
+	ciphertext = cipher.read()
+
+	# Decryption with corresponding secret key
+	# invokes gpg-agent and pinentry.
+	plaintext = gpg.Context().decrypt(ciphertext)
+
+	# Matching the data.
+	if text == plaintext[0].decode("utf-8"):
+	    print("Hang on ... did you say *all* of GnuPG?  Yep.")
+	else:
+	    pass
+
 
 PyCrypto
 --------
