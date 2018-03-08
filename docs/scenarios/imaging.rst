@@ -84,8 +84,7 @@ NumPy可以从Python Package Index （PyPI）中下载：
 
 .. code-block:: python
 
-    from cv2 import *
-    import numpy as np
+    import cv2
     #读取图像
     img = cv2.imread('testimg.jpg')
     #显示图像
