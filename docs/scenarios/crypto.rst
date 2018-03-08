@@ -36,7 +36,7 @@ Cryptography 分为两个层，方法（recipes）层和危险底层（hazardous
 GPGME bindings
 --------------
 
-`GPGME Python 绑定<https://dev.gnupg.org/source/gpgme/browse/master/lang/python/>`_ 提供Pythonic的方式访问 `GPG Made Easy <https://dev.gnupg.org/source/gpgme/browse/master/>`_ ，这是整个GNU Privacy Guard项目套件，包括GPG、libgcrypt和gpgsm（S/MIME 引擎），的C API。它支持Python 2.6、2.7、3.4及以上版本。取决于Python的SWIG C接口以及GnuPG软件和库。
+`GPGME Python bindings <https://dev.gnupg.org/source/gpgme/browse/master/lang/python/>`_ 提供Pythonic的方式访问 `GPG Made Easy <https://dev.gnupg.org/source/gpgme/browse/master/>`_ ，这是整个GNU Privacy Guard项目套件，包括GPG、libgcrypt和gpgsm（S/MIME 引擎），的C API。它支持Python 2.6、2.7、3.4及以上版本。取决于Python的SWIG C接口以及GnuPG软件和库。
 
 其在与GnuPG其余项目的相同条款（GPLv2和LGPLv2.1，均带有“或更高版本”）下可用。
 
