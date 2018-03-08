@@ -49,27 +49,25 @@ OS X自带的Python版本更适合用于学习而不是开发。因为版本与P
 
 .. code-block:: console
 
-    export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+    export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
 接下来可以开始安装Python 2.7：
 
 .. code-block:: console
 
-    $ brew install python
+    $ brew install python@2
 
-或者 Python 3:
+因为 ``python@2`` 像一个“桶”，我们需要再次更新我们的``PATH``，以指向我们的新安装：
 
 .. code-block:: console
 
-    $ brew install python3
-
-耗时大概几分钟。
+    export PATH="/usr/local/opt/python@2/libexec/bin:$PATH"
 
 Homebrew命名可执行文件 ``python2``，以便您仍然可以通过可执行文件“python”运行系统Python。
 
 .. code-block:: console
 
-    $ python -V   # 系统Python解释器
+    $ python -V   # Homebrew安装的Python 3解释器（如果安装了）
     $ python2 -V  # Homebrew安装的Python 2解释器
     $ python3 -V  # Homebrew安装的Python 3解释器（如果安装了）
 
@@ -89,7 +87,7 @@ Setuptools提供 ``easy_install`` 命令，实现通过网络（通常Internet�
 .. code-block:: console
 
     $ pip2 -V  # pip指向Homebrew安装的Python 2解释器
-    $ pip3 -V  # pip指向Homebrew安装的Python 3解释器（如果安装了）
+    $ pip -V  # pip指向Homebrew安装的Python 3解释器（如果安装了）
 
 
 

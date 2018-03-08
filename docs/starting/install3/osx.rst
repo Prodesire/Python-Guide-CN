@@ -51,7 +51,7 @@ OS X自带的Python版本更适合用于学习而不是开发。因为版本与P
 
 .. code-block:: console
 
-    $ brew install python3
+    $ brew install python
 
 这将持续几分钟。
 
@@ -73,7 +73,7 @@ Homebrew 会为您安装 ``pip3`` 。
 
     $ python
 
-将打开系统Python解释器。
+将打开通过HomeBrew安装的Python解释器。
 
 .. code-block:: console
 
@@ -88,21 +88,13 @@ Homebrew 会为您安装 ``pip3`` 。
 将会打开使用Homebrew安装的Python 3解释器（如果有）。
 
 如果Homebrew版的Python 2安装了，``pip2`` 指向Python 2。
-如果Homebrew版的Python 3安装了，``pip3`` 指向Python 3。
+如果Homebrew版的Python 3安装了，``pip`` 指向Python 3。
 
-本指南的其余部分假定 ``python`` 指 Python 3。您也可始终调用 ``python3`` 来代替，而且是向后兼容的。尽管如此，执行以下步骤可设置shell中 ``python`` 的默认解释器为Python 3。
+本指南的其余部分假定 ``python`` 指 Python 3。
 
 .. code-block:: console
 
-    # Do I have a Python 2 problem?
-    $ python --version
-    Python 2.7.10 # Referencing OSX system install
-    $ which python
-    /usr/bin/python # Yup, homebrew's would be in /usr/local/bin
-    
-    # Symlink /usr/local/bin/python to python3
-    $ ln -s /usr/local/bin/python3 /usr/local/bin/python
-    
+    # 我安装Python 3了吗？
     $ python --version
     Python 3.6.4 # Success! 
     # If you still see 2.7 ensure in PATH /usr/local/bin/ takes pecedence over /usr/bin/
