@@ -157,6 +157,16 @@ Learn to Program in Python with Codeacademy
     `Learn to Program in Python with Codeacademy <http://www.codecademy.com/en/tracks/python>`_
 
 
+Code the blocks
+~~~~~~~~~~~~~~~
+
+*Code the blocks* 为初学者提供免费的交互式Python教程。它将Python编程与3D环境相结合，
+您可以在其中“放置方块”并构建结构。本教程将教您如何使用Python创建逐渐精细的3D结构，
+从而使得学习Python的过程变得有趣和吸引人。
+
+    `Code the blocks <https://codetheblocks.com/tutorials/introduction>`_
+
+
 中级
 ------------
 
