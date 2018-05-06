@@ -38,6 +38,8 @@ GPGME bindings
 
 `GPGME Python bindings <https://dev.gnupg.org/source/gpgme/browse/master/lang/python/>`_ 提供Pythonic的方式访问 `GPG Made Easy <https://dev.gnupg.org/source/gpgme/browse/master/>`_ ，这是整个GNU Privacy Guard项目套件，包括GPG、libgcrypt和gpgsm（S/MIME 引擎），的C API。它支持Python 2.6、2.7、3.4及以上版本。取决于Python的SWIG C接口以及GnuPG软件和库。
 
+这里有更全面的GPGME Python Bindings HOWTO的 `源码版 <https://dev.gnupg.org/source/gpgme/browse/master/lang/python/docs/GPGMEpythonHOWTOen.org>`_  和 `HTML版 <http://files.au.adversary.org/crypto/GPGMEpythonHOWTOen.html>`_。还提供了Python 3版本的HOWTO示例脚本的源代码，并且可以在 `这里 <https://dev.gnupg.org/source/gpgme/browse/master/lang/python/examples/howto/>`_ 访问。
+
 其在与GnuPG其余项目的相同条款（GPLv2和LGPLv2.1，均带有“或更高版本”）下可用。
 
 安装
@@ -51,27 +53,28 @@ GPGME bindings
 .. code-block:: python3
 
 	import gpg
-	import os
 	
 	# Encryption to public key specified in rkey.
-	rkey = "0xDEADBEEF"
-	text = "Something to hide."
-	plain = gpg.core.Data(text)
-	cipher = gpg.core.Data()
-	c = gpg.core.Context()
-	c.set_armor(1)
-	c.op_keylist_start(rkey, 0)
-	r = c.op_keylist_next()
-	c.op_encrypt([r], 1, plain, cipher)
-	cipher.seek(0, os.SEEK_SET)
-	ciphertext = cipher.read()
-
+	a_key = input("Enter the fingerprint or key ID to encrypt to: ")
+	filename = input("Enter the filename to encrypt: ")
+	with open(filename, "rb") as afile:
+	    text = afile.read()
+	c = gpg.core.Context(armor=True)
+	rkey = list(c.keylist(pattern=a_key, secret=False))
+	ciphertext, result, sign_result = c.encrypt(text, recipients=rkey,
+	                                            always_trust=True,
+						    add_encrypt_to=True)
+	with open("{0}.asc".format(filename), "wb") as bfile:
+	    bfile.write(ciphertext)
 	# Decryption with corresponding secret key
 	# invokes gpg-agent and pinentry.
-	plaintext = gpg.Context().decrypt(ciphertext)
-
+	with open("{0}.asc".format(filename), "rb") as cfile:
+	    plaintext, result, verify_result = gpg.Context().decrypt(cfile)
+	with open("new-{0}".format(filename), "wb") as dfile:
+	    dfile.write(plaintext)
 	# Matching the data.
-	if text == plaintext[0].decode("utf-8"):
+	# Also running a diff on filename and the new filename should match.
+	if text == plaintext:
 	    print("Hang on ... did you say *all* of GnuPG?  Yep.")
 	else:
 	    pass

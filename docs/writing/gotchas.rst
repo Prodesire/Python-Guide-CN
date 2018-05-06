@@ -32,10 +32,10 @@
 .. code-block:: python
 
     my_list = append_to(12)
-    print my_list
+    print(my_list)
 
     my_other_list = append_to(42)
-    print my_other_list
+    print(my_other_list)
 
 每次调用函数时，如果不提供第二个参数，就会创建一个新的列表，所以结果应是这样的：
 
@@ -99,7 +99,7 @@
 .. testcode::
 
     for multiplier in create_multipliers():
-        print multiplier(2)
+        print(multiplier(2))
 
 一个包含五个函数的列表，每个函数有它们自己的封闭变量 ``i`` 乘以它们的参数，得到::
 
