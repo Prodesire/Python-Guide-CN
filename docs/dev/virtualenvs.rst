@@ -40,7 +40,7 @@ Python 用于许多不同的目的。准确地说，您希望如何管理依赖�
     这是因为此命令要在 *shell*（也称为 *终端* 或 *控制台*）中运行。有关使用操作系统的
     shell 并和 Python 进行交互的介绍，请参阅面向 Python 新手的 `入门教程`_。
 
-另外，您需要确保 ``pip`` 是可用的。您可以通过运行以下命令来检查：
+另外，您需要确保 `pip`_ 是可用的。您可以通过运行以下命令来检查：
 
 .. code-block:: bash
 
@@ -52,6 +52,7 @@ Python 用于许多不同的目的。准确地说，您希望如何管理依赖�
 
 .. _入门教程: https://opentechschool.github.io/python-beginners/en/getting_started.html#what-is-python-exactly
 .. _python.org: https://python.org
+.. _pip: https://pypi.org/project/pip/
 .. _Homebrew: https://brew.sh
 .. _安装 Python: http://docs.python-guide.org/en/latest/starting/installation/
 
@@ -59,8 +60,8 @@ Python 用于许多不同的目的。准确地说，您希望如何管理依赖�
 安装 Pipenv
 -----------------
 
-``Pipenv`` 是 Python 项目的依赖管理器。如果您熟悉 Node.js 的 `npm`_ 或
-Ruby 的 `bundler`_，那么它们在思路上与这些工具类似。尽管 ``pip`` 可以安装 Python 包，
+`Pipenv`_ 是 Python 项目的依赖管理器。如果您熟悉 Node.js 的 `npm`_ 或
+Ruby 的 `bundler`_，那么它们在思路上与这些工具类似。尽管 `pip`_ 可以安装 Python 包，
 但仍推荐使用 Pipenv，因为它是一种更高级的工具，可简化依赖关系管理的常见使用情况。
 
 使用 ``pip`` 来安装 Pipenv：
@@ -84,6 +85,7 @@ Ruby 的 `bundler`_，那么它们在思路上与这些工具类似。尽管 ``p
     ``PATH`` 中包含 ``C:\Users\Username\AppData\Roaming\Python36\Scripts``。
     您可以在 `控制面板`_ 中永久设置用户的 ``PATH``。您可能需要登出 ``PATH`` 更改才能生效。
 
+.. _Pipenv: https://docs.pipenv.org/
 .. _npm: https://www.npmjs.com/
 .. _bundler: http://bundler.io/
 .. _用户基础目录: https://docs.python.org/3/library/site.html#site.USER_BASE
@@ -102,9 +104,11 @@ Pipenv 管理每个项目的依赖关系。要安装软件包时，请更改到�
     $ cd myproject
     $ pipenv install requests
 
-Pipenv 将在您的项目目录中安装超赞的 `Requests`_ 库并为您创建一个 ``Pipfile``。
+Pipenv 将在您的项目目录中安装超赞的 `Requests`_ 库并为您创建一个 `Pipfile`_。
 ``Pipfile`` 用于跟踪您的项目中需要重新安装的依赖，例如在与他人共享项目时。
 您应该得到类似的输出（尽管显示的确切路径会有所不同）：
+
+.. _Pipfile: https://github.com/pypa/pipfile
 
 .. code-block:: text
 
