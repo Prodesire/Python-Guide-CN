@@ -72,6 +72,18 @@ Flask不会提供一切您可能需要的内容，而是实现了web应用框架
 Flask是任何不适用Django的Python web应用的默认选择。
 
 
+Falcon
+------
+
+当您的目标是构建快速、可扩展的REST风格API微服务时， `Falcon <https://falconframework.org/>`_ 是个不错的选择。
+
+这是一个可靠的、高性能的Python Web框架，用于构建大规模应用后端和微服务。Falcon鼓励REST架构风格的
+URI到资源的映射，以花费尽可能少的精力同时又保持高效。
+
+Falcon重点关注四个方面：速度、可靠性、灵活性和可调试性。它通过“响应者（responder）”
+（诸如 ``on_get()``、 ``on_put()``等）来实现HTTP。这些响应者接收直接的请求，以及响应对象。
+
+
 Tornado
 --------
 `Tornado <http://www.tornadoweb.org/>`_ 是一个面向Python的异步web框架，它有自己的事件。
@@ -84,7 +96,8 @@ Pyramid
 --------
 
 `Pyramid <https://trypyramid.com/>`_ 是一个非常灵活的框架，重点关注模块化。 它内置少量库（“电池”），
-并鼓励用户扩展其基本功能。
+并鼓励用户扩展其基本功能。它提供一组cookiecutter模板，帮助用户生成新项目。Pyramid驱动了Python基础架构中
+最重要部分之一—— `PyPI <http://pypi.org/>`_。
 
 Pyramid不像Django和Flask，并没有庞大的用户基数。它一个有能力的框架，但如今新Python web 应用程序
 并没有十分青睐它。
