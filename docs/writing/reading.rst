@@ -7,14 +7,6 @@
 
 成为优秀Python编写者的秘诀是去阅读，理解和领会好的代码。
 
-.. raw:: html
-
-    <iframe width="560" 
-            height="315" 
-            src="https://www.youtube.com/embed/Jc8M9-LoEuo" 
-            frameborder="0" allowfullscreen></iframe>
-    
-
 良好的代码需要遵循
 :ref:`code_style` 中概述的指南,尽可能向读者表述简洁清楚。
 
