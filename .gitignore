@@ -10,3 +10,9 @@ docs/_build
 
 # 忽略build产生的文件
 build/
+
+# mac
+.DS_Store
+
+# editor
+.vscode

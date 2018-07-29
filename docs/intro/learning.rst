@@ -13,6 +13,13 @@ The Python Tutorial
 
     `The Python Tutorial <http://docs.python.org/tutorial/index.html>`_
 
+Python Basics
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+pythonbasics.org 是初学者的入门教程，包括练习、涵盖了基础知识，还有深入的课程（如面向对象编程和正则表达式）。
+
+   `Python basics <https://pythonbasics.org/>`_
+
 Python for beginners
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
