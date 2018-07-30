@@ -54,7 +54,7 @@ Python 用于许多不同的目的。准确地说，您希望如何管理依赖�
 .. _python.org: https://python.org
 .. _pip: https://pypi.org/project/pip/
 .. _Homebrew: https://brew.sh
-.. _安装 Python: http://docs.python-guide.org/en/latest/starting/installation/
+.. _安装 Python: https://docs.python-guide.org/starting/installation/
 
 
 安装 Pipenv
@@ -66,7 +66,7 @@ Ruby 的 `bundler`_，那么它们在思路上与这些工具类似。尽管 `pi
 
 使用 ``pip`` 来安装 Pipenv：
 
-.. code-block:: shell
+.. code-block:: console
 
     $ pip install --user pipenv
 

@@ -13,6 +13,13 @@ The Python Tutorial
 
     `The Python Tutorial <http://docs.python.org/tutorial/index.html>`_
 
+Real Python
+~~~~~~~~~~~
+
+Real Python 是由各种专业的Python开发团队创建的免费且深入的Python教程库。在Real Python中，您可以从头开始学习Python的所有内容。从Python的最基础的知识到Web开发和Web爬取，再到数据可视化等等。
+
+    `Real Python <https://realpython.com/>`_
+
 Python Basics
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -29,17 +36,7 @@ thepythonguru.com是一个专注于初学程序员的教程。它深入涵盖了
 
    `Python for beginners <http://thepythonguru.com/>`_
 
-交互学习Python数据科学
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-如果您喜欢在线互动环境学习数据科学P ython， `DataCamp的免费python教程 <https://www.datacamp.com/courses/intro-to-python-for-data-science?tap_a=5644-dce66f&tap_s=116411-750171>`_ 
-是一个很好的入门方式。如果您已经在机器学习方面有所进步并且感兴趣，请查看这个 `使用scikit监督学习的课程 <https://www.datacamp.com/courses/supervised-learning-with-scikit-learn?tap_a=5644-dce66f&tap_s=116411-750171>`_，
-由scikit学习的核心开发人员之一提供。
-
-
-`Python for data science <http://datacamp.com/?tap_a=5644-dce66f&tap_s=116411-750171>`_
-
-Learn Python
+Learn Python Interactive Tutorial
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Learnpython.org是一个简单易懂的了解Python的途径。网站采用了和流行的 
@@ -52,7 +49,6 @@ Learnpython.org是一个简单易懂的了解Python的途径。网站采用了�
 如果您想要更加传统的书籍， *Python For You and Me* 是一个极佳的学习Python所有方面的资源。
 
     `Python for You and Me <https://pymbook.readthedocs.io/>`
-    `Learn Python Interactively with DataCamp! <https://www.datacamp.com/>`_
 
 Learn Python Step by Step
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -177,6 +173,15 @@ Code the blocks
 中级
 ------------
 
+Python Tricks: The Book
+~~~~~~~~~~~~~~~~~~~~~~~
+
+通过简单的示例发现Python的最佳实践，并开始编写更美观的且Pythonic的代码。"Python Tricks: The Book"向您展示了具体方法。
+
+您将通过实际示例和清晰的叙述掌握Python的中级和高级功能：
+
+    `Python Tricks: The Book <https://realpython.com/products/python-tricks-book/>`_
+
 Effective Python
 ~~~~~~~~~~~~~~~~
 
@@ -221,7 +226,6 @@ A Guide to Python's Magic Methods
 
 .. note:: Rafekettler.com目前已关闭，您可以直接访问他们的Github版本。 在这里您可以找到一个PDF版本:
     `A Guide to Python's Magic Methods (repo on GitHub) <https://github.com/RafeKettler/magicmethods/blob/master/magicmethods.pdf>`_
-    
 
 工程师和科学家
 ----------------------------

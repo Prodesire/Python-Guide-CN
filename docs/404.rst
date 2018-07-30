@@ -1,0 +1,25 @@
+404 — Not Found
+===============
+
+**抱歉，我们无法找到您请求的页面.**
+
+看起来有如下原因:
+
+- 使用了错误的地址
+- 使用了过期的链接
+
+`点此返回主页 <http://pythonguidecn.readthedocs.io/zh/latest/>`_
+
+或者尝试 `搜索 <http://pythonguidecn.readthedocs.io/zh/latest/search.html>`_.
+
+.. raw:: html
+
+    <script>
+    ga('send', {
+        hitType: 'event',
+        eventCategory: 'error',
+        eventAction: '404',
+        eventLabel: document.referrer,
+        nonInteraction: true
+      });
+    </script>
