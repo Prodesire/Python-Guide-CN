@@ -16,3 +16,6 @@ build/
 
 # editor
 .vscode
+
+# virutal env
+venv/
