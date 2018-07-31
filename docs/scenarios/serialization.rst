@@ -2,7 +2,7 @@
 数据序列化
 ==================
 
-.. image:: https://farm3.staticflickr.com/2927/33467946364_3e59bd376a_k_d.jpg
+.. image:: /_static/photos/33467946364_3e59bd376a_k_d.jpg
 
 什么是数据序列化？
 ---------------------------

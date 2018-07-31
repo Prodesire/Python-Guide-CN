@@ -1,7 +1,7 @@
 速度
 =====
 
-.. image:: https://farm3.staticflickr.com/2826/33175625804_e225b90f3e_k_d.jpg
+.. image:: /_static/photos/33175625804_e225b90f3e_k_d.jpg
 
 CPython作为最流行的Python环境，对于CPU密集型任务（CPU bound tasks）较慢，而 `PyPy`_ 则较快。
 

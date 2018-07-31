@@ -3,6 +3,9 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+.. meta::
+   :description: Python编程语言的自我主见指南，也是安装、配置和日常使用Python的最佳实践手册。
+
 Python最佳实践指南！
 =================================
 

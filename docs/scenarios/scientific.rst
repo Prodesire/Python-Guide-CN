@@ -2,7 +2,7 @@
 科学应用
 =======================
 
-.. image:: https://farm3.staticflickr.com/2890/33925223870_97e44f5629_k_d.jpg
+.. image:: /_static/photos/33925223870_97e44f5629_k_d.jpg
 
 背景
 :::::::

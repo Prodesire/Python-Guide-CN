@@ -1,4 +1,4 @@
-选择一个 Python 解释器（3 vs. 2）
+选择一个 Python 解释器（3 vs 2）
 ============================================
 
 .. image:: https://farm5.staticflickr.com/4265/34484834733_5b80f65ab1_k_d.jpg

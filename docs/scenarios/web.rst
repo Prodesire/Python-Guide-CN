@@ -2,7 +2,7 @@
 Web 应用 & 框架
 ================
 
-.. image:: https://farm3.staticflickr.com/2891/34309496175_b82d104282_k_d.jpg
+.. image:: /_static/photos/34309496175_b82d104282_k_d.jpg
 
 Python作为一门强大的脚本语言，能够适应快速原型和较大项目的制作，
 它被广泛用于web应用程序的开发中。

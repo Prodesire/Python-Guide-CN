@@ -1,7 +1,7 @@
 您的开发环境
 ============================
 
-.. image:: https://farm3.staticflickr.com/2930/33175624924_7febc46cc4_k_d.jpg
+.. image:: /_static/photos/33175624924_7febc46cc4_k_d.jpg
 
 
 文本编辑器
