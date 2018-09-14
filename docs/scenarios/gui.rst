@@ -51,7 +51,9 @@ PySide
 ------
 PySide是跨平台的Qt GUI工具包的Python绑定。
 
-  pip install pyside
+.. code-block:: console
+
+  $ pip install pyside
 
 https://wiki.qt.io/Category:LanguageBindings::PySide::Downloads
 
@@ -76,6 +78,19 @@ PyjamasDesktop是Pyjamas的端口。PyjamasDesktop是桌面应用工具集，并
 Qt
 --
 `Qt <http://qt-project.org/>`_ 是跨平台应用框架，它被广泛用于借GUI开发软件，但是也可用于非GUI应用。
+
+PySimpleGUI 
+-----------
+`PySimpleGUI <https://pysimplegui.readthedocs.io/>`_ 是 Tkinter 一层包装。
+使用 PySimpleGUI 实现自定义 GUI 所需的代码量要比使用 Tkinter 直接编写相同的 GUI 要少得多。
+使用 Tkinter 作为底层是因为它与其他 GUI 框架相比，能运行在更多的平台上。
+
+.. code-block:: console 
+
+  $ pip install pysimplegui
+
+PySimpleGUI 完全卸载一个 PySimpleGUI.py 文件中。
+如果 pip 安装不可用，可将 PySimpleGUI.py 文件粘贴到项目的文件夹中，就可以直接使用了。
 
 Toga
 ----

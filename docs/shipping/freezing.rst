@@ -108,7 +108,7 @@ py2exe
 ~~~~~~
 
     
-前置要求是安装了 :ref:`Python on Windows <install-windows>`。
+前置要求是安装了 :ref:`Python on Windows <install-windows>`。py2exe 的最后一个版本是从2014年开始的，且没有处于积极的开发中。
 
 1. 下载并且安装 http://sourceforge.net/projects/py2exe/files/py2exe/
 

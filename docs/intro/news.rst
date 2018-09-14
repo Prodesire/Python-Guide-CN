@@ -3,6 +3,21 @@
 
 .. image:: https://farm4.staticflickr.com/3804/33573767786_eececc5d27_k_d.jpg
 
+Pycoder's Weekly
+~~~~~~~~~~~~~~~~
+
+Pycoder's Weekly 是一个面向 Python 开发者的免费的每周简讯，包括项目、文章、新闻和工作。
+
+    `Pycoder's Weekly <http://www.pycoders.com/>`_
+
+Real Python
+~~~~~~~~~~~
+
+在 Real Python 中，您可以通过每周免费且深入的教程从头开始学习 Python 的所有内容，
+包括 Python 最基础的知识，再到 Web 开发和 Web 爬取，再到数据可视化等等。
+
+    `Real Python <https://realpython.com/>`_
+
 Planet Python
 ~~~~~~~~~~~~~
 
@@ -30,13 +45,6 @@ Python Bytes Podcast
 一个简短的 Python 播客，涵盖了最近的开发人员头条。
 
     `Python Bytes <https://pythonbytes.fm>`_
-
-Pycoder's Weekly
-~~~~~~~~~~~~~~~~
-
-Pycoder's Weekly是一个面向Python开发者的免费的每周简讯，包括项目、文章、新闻和工作。
-
-    `Pycoder's Weekly <http://www.pycoders.com/>`_
 
 Python Weekly
 ~~~~~~~~~~~~~
