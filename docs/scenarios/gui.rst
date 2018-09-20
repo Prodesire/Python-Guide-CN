@@ -89,8 +89,8 @@ PySimpleGUI
 
   $ pip install pysimplegui
 
-PySimpleGUI 完全卸载一个 PySimpleGUI.py 文件中。
-如果 pip 安装不可用，可将 PySimpleGUI.py 文件粘贴到项目的文件夹中，就可以直接使用了。
+PySimpleGUI 完全包含在一个 PySimpleGUI.py 文件中。
+如果 pip 安装不可用，将 PySimpleGUI.py 粘贴到项目文件夹中以便引用，即可。
 
 Toga
 ----
