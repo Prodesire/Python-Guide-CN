@@ -1,5 +1,14 @@
 Python最佳实践指南中文版
 ============================
+.. image:: https://opencollective.com/python-guide-cn/backers/badge.svg
+    :alt: Backers on Open Collective
+    :target: #backers
+
+.. image:: https://opencollective.com/python-guide-cn/sponsors/badge.svg
+    :alt: Sponsors on Open Collective
+    :target: #sponsors
+
+
 
 .. image:: https://farm1.staticflickr.com/628/33173824932_58add34581_k_d.jpg
 
@@ -49,3 +58,39 @@ Readthedocs文档地址 `Python最佳实践指南中文版 <http://pythonguidecn
 2. 查看本项目 ``diff.txt`` 中的当前翻译版本对应的原版提交号，在 ``python-guide`` 中比对master分支上最新提交和该提交号的差异，并据此翻译进本项目
 3. 翻译完毕后将 ``python-guide`` 中master分支上的最新提交号更新入 ``diff.txt`` 的当前翻译版本对应的原版提交号
 4. 在本项目中提交修改、推送，并发起合并请求
+
+Credits
+============================
+
+Contributors
+------------
+
+This project exists thanks to all the people who contribute! 
+
+.. image:: https://opencollective.com/python-guide-cn/contributors.svg?width=890&button=false
+
+Backers
+-------
+
+Thank you to all our backers! `Become a backer`__.
+
+.. image:: https://opencollective.com/python-guide-cn/backers.svg?width=890
+    :target: https://opencollective.com/python-guide-cn#backers
+
+__ Backer_
+
+.. _Backer: https://opencollective.com/python-guide-cn#backer
+
+Sponsors
+--------
+
+Support us by becoming a sponsor. Your logo will show up here with a link to your website. `Become a sponsor`__.
+
+.. image:: https://opencollective.com/python-guide-cn/sponsor/0/avatar.svg
+    :target: https://opencollective.com/python-guide-cn/sponsor/0/website
+
+__ Sponsor_
+
+.. _Sponsor: https://opencollective.com/python-guide-cn#sponsor
+
+
