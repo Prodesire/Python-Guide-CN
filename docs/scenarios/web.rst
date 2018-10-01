@@ -102,6 +102,17 @@ Pyramid
 Pyramid不像Django和Flask，并没有庞大的用户基数。它一个有能力的框架，但如今新Python web 应用程序
 并没有十分青睐它。
 
+Masonite
+--------
+
+`Masonite <https://docs.masoniteproject.com>`_ 是一个现代的，以开发人员为中心的“功能齐备”的网络框架。
+
+Masonite 框架遵循 MVC（Model-View-Controller，模型-视图-控制器）架构模式，受到 Rails 和 Laravel 等框架的极大启发，
+因此如果您是从 Ruby 或 PHP 背景来到 Python，那么您将感到宾至如归！
+
+Masonite 提供了许多开箱即用的功能，包括一个功能强大的具有自动解析依赖注入IOC容器、craft 命令行工具和 Active Record 模式的 Orator ORM。
+
+Masonite 非常适合初学者或经验丰富的开发人员。从安装到部署都相当快速和容易。只需尝试一次，你就会爱上它。
 
 Web 服务端
 :::::::::::

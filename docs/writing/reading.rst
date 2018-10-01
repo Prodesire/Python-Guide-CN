@@ -3,8 +3,6 @@
 
 .. image:: https://farm5.staticflickr.com/4221/34689452831_93d7fd0571_k_d.jpg
 
-设计Python的核心理念是创建可读性代码。这种设计的目的非常简单：Python编写者的首要事情是阅读好的代码。
-
 成为优秀Python编写者的秘诀是去阅读，理解和领会好的代码。
 
 良好的代码通常遵循
@@ -22,7 +20,7 @@
 
 - `Diamond <https://github.com/python-diamond/Diamond>`_
   Diamond是python的守护进程，它收集指标，并且将他们发布至Graphite或其它后端。
-  它能够收集cpu,内存，网络，i/o，负载和硬盘指标。除此，它拥有实现自定义收集器的API，该API几乎能
+  它能够收集CPU,内存，网络，I/O，负载和硬盘指标。除此，它拥有实现自定义收集器的API，该API几乎能
   从任何资源中获取指标。
 
 - `Werkzeug <https://github.com/mitsuhiko/werkzeug>`_
