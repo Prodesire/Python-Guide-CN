@@ -522,7 +522,7 @@ PEP 8
 `列表推导
 <http://docs.python.org/tutorial/datastructures.html#list-comprehensions>`_
 提供了一个强大的而又简洁的方式来处理列表。而且， :py:func:`map` 和 
-:py:func:`filter` 函数用用一种不同且更简洁的语法处理列表。
+:py:func:`filter` 函数使用一种不同但是更简洁的语法处理列表。
 
 过滤列表
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
