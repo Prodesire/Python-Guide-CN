@@ -62,3 +62,8 @@ Cement
 `Cement <http://builtoncement.com/>`_ 是一个高级的CLI应用程序框架。
 其目标是为简单和复杂的命令行应用程序引入标准和功能完整的平台，并支持快速开发需求，而不会牺牲质量。
 Cement是灵活的，它的用例范围涵盖了从微框架的简单到巨型框架的复杂。
+
+Python Fire
+-----------
+
+`Python Fire <https://github.com/google/python-fire/>`_ 是一个能根据任意 Python 对象自动生成出命令行接口的库。它能帮助您更轻松地通过命令行调试 Python 代码，根据现有代码创建命令行接口，还能让您以在 REPL 中交互式地浏览 Python 对象，并简化 Python 和 Bash（或任何其他 Shell）之间的转换。

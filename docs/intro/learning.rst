@@ -288,6 +288,13 @@ Fullstack Python为使用Python进行Web开发提供了完整的自顶向下的�
 
     `Fullstack Python <https://www.fullstackpython.com>`_
 
+PythonistaCafe
+~~~~~~~~~~~~~~
+
+PythonistaCafe 是一个邀请式的在线社区，里面的 Python 和软件开发爱好者互帮互助、彼此成长。可以把它看做是 Pythonista 共同进行改进的俱乐部。在这里，每天都会讨论广泛的编程问题、职业建议，同时也会涉及其他主题。
+
+    `PythonistaCafe <https://www.pythonistacafe.com>`_
+
 参考
 ----------
 

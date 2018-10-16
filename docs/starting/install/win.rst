@@ -8,7 +8,7 @@
 .. note::
     查看我们的 :ref:`在Windows上安装Python 3指南<install3-windows>`.
 
-首先，从官网下载 `最新版本 <https://www.python.org/ftp/python/2.7.14/python-2.7.14.msi>`_
+首先，从官网下载 `最新版本 <https://www.python.org/ftp/python/2.7.15/python-2.7.15.msi>`_
 的Python 2.7。如果想要确保下载到最新版本，单击 `Python官网 <http://python.org>`_ 的
 Downloads > Windows 链接。
 
