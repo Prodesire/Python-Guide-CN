@@ -43,15 +43,15 @@ Web服务器开发（Development Web Server）
 Django
 ------
 
-`Django <http://www.djangoproject.com>`_ 是一个功能齐备的web应用框架。它是创建面向内容网站的极佳选择。
+`Django <https://www.djangoproject.com>`_ 是一个功能齐备的web应用框架。它是创建面向内容网站的极佳选择。
 通过提供众多工具和模式，Django使得快速构建复杂的、有数据库支持的web应用成为可能，
 同时鼓励使用它作为编写代码的最佳实践。
 
-Django拥有非常庞大和活跃的社区。此外，许多预构建的 `可重用模块 <http://djangopackages.com/>`_ 
+Django拥有非常庞大和活跃的社区。此外，许多预构建的 `可重用模块 <https://djangopackages.com/>`_ 
 可以原样合并到新工程中，或者定制成符合需求的样子。
 
-在 `美国 <http://djangocon.us>`_ 、 `欧洲 <http://djangocon.eu>`_ 和 
-`Australia <http://djangocon.com.au>`_ 均有每年度的Django会议。
+在 `美国 <https://djangocon.us>`_ 、 `欧洲 <https://djangocon.eu>`_ 和 
+`Australia <https://djangocon.com.au>`_ 均有每年度的Django会议。
 
 如今大部分新的Python web应用都是用Django构建的。
 
@@ -97,7 +97,7 @@ Pyramid
 
 `Pyramid <https://trypyramid.com/>`_ 是一个非常灵活的框架，重点关注模块化。 它内置少量库（“电池”），
 并鼓励用户扩展其基本功能。它提供一组cookiecutter模板，帮助用户生成新项目。Pyramid驱动了Python基础架构中
-最重要部分之一—— `PyPI <http://pypi.org/>`_。
+最重要部分之一—— `PyPI <https://pypi.org/>`_。
 
 Pyramid不像Django和Flask，并没有庞大的用户基数。它一个有能力的框架，但如今新Python web 应用程序
 并没有十分青睐它。
@@ -139,7 +139,7 @@ WSGI 服务器
 Gunicorn
 --------
 
-`Gunicorn <http://gunicorn.org/>`_ （Green Unicorn，绿色独角兽）是一个纯Python WSGI服务器，
+`Gunicorn <https://gunicorn.org/>`_ （Green Unicorn，绿色独角兽）是一个纯Python WSGI服务器，
 用来支持Python应用。不像其他Python web服务器，它有周全的用户界面，十分易于使用和配置。
 
 Gunicorn具有合理的默认配置。 然而，其他一些像uWSGI这样的服务器相较而言过于可定制化，因此更加难以高效使用。
@@ -189,12 +189,12 @@ Hosting
 Heroku
 ------
 
-`Heroku <http://www.heroku.com/python>`_ 为Python 2.7-3.5 应用程序提供一流的支持。
+`Heroku <https://www.heroku.com/python>`_ 为Python 2.7-3.5 应用程序提供一流的支持。
 
 Heroku 支持所有类型的Python web应用、服务器和框架。在Heroku上可以免费开发应用程序。
  一旦您的应用程序准备好面向生产环境，您可以升级到Hobby或专业应用。
 
-Heroku 维护了使用Python和Heroku交互的 `详细文章 <https://devcenter.heroku.com/categories/python>`_，
+Heroku 维护了使用Python和Heroku交互的 `详细文章 <https://devcenter.heroku.com/categories/python-support>`_，
 同时也有 `手把手指导 <https://devcenter.heroku.com/articles/getting-started-with-python>`_ 
 来告诉您如何建立第一个应用。
 
@@ -203,7 +203,7 @@ Heroku是如今部署Python Web应用程序的推荐PaaS。
 Eldarion
 --------
 
-`Eldarion <http://eldarion.cloud/>`_（被称为Gondor）是由Kubernetes、CoreOS和Docker提供的PaaS。
+`Eldarion <https://eldarion.cloud/>`_（被称为Gondor）是由Kubernetes、CoreOS和Docker提供的PaaS。
 它们支持任一WSGI应用程序，并提供了部署 
 `Django项目 <https://eldarion-gondor.github.io/docs/how-to/setup-deploy-first-django-project/>`_ 的指南。
 
@@ -348,12 +348,12 @@ Jinja2是新Python Web应用程序的推荐模板库。
 Chameleon
 ---------
 `Chameleon <https://chameleon.readthedocs.io/>`_ 页面模板是使用 
-`模板属性语言（Template Attribute Language, TAL） <https://en.wikipedia.io/wiki/Template_Attribute_Language>`_、 
+`模板属性语言（Template Attribute Language, TAL） <https://en.wikipedia.org/wiki/Template_Attribute_Language>`_、 
 `TAL表达语法（TAL Expression Syntax,TALES） <https://chameleon.readthedocs.io/en/latest/reference.html#expressions-tales>`_ 和 
 `宏扩展TAL（Macro Expansion TAL, Metal） <https://chameleon.readthedocs.io/en/latest/reference.html#macros-metal>`_ 
 语法的HTML/XML模板引擎实现。
 
-Chameleon在Python2.5及以上版本（包括3.x和pypy）都是可用的，并常被 `Pyramid Framework <http://trypyramid.com>`_ 使用。
+Chameleon在Python2.5及以上版本（包括3.x和pypy）都是可用的，并常被 `Pyramid Framework <https://trypyramid.com>`_ 使用。
 
 页面模板是在文档结构中添加特定元素属性和文本标记。使用一系列简单语言概念，您能够控制文档流程、元素重复、文本替换和翻译。
 由于使用了基于属性的语法，未渲染的页面模板是合法的HTML，它可以在浏览器中查看，甚至能够在WYSIWYG编辑器中编辑。
@@ -441,4 +441,6 @@ Mako在Python web社区中受到重视。
 
 .. rubric:: References
 
-.. [1] `Benchmark of Python WSGI Servers <http://nichol.as/benchmark-of-python-web-servers>`_
+.. [1] `mod_python 项目现在正式终结 <http://blog.dscpl.com.au/2010/06/modpython-project-is-now-officially.html>`_
+.. [2] `mod_wsgi vs mod_python <http://modpython.org/pipermail/mod_python/2007-July/024080.html>`_
+.. [3] `Python WSGI 服务器基准测试 <http://nichol.as/benchmark-of-python-web-servers>`_

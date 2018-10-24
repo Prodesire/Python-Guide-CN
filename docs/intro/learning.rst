@@ -106,7 +106,7 @@ Dive Into Python 3
 Dive Into Python 3对准备使用Python 3的人来说是一本不错的书。如果您是从Python 2迁移到
 Python 3或者您已经有其他语言的编程经验，那么将会很好阅读。
 
-    `Dive Into Python 3 <http://www.diveintopython3.net/>`_
+    `Dive Into Python 3 <http://diveintopython3.problemsolving.io/>`_
 
 
 Think Python: How to Think Like a Computer Scientist
