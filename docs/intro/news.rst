@@ -3,12 +3,12 @@
 
 .. image:: https://farm4.staticflickr.com/3804/33573767786_eececc5d27_k_d.jpg
 
-Pycoder's Weekly
+PyCoder's Weekly
 ~~~~~~~~~~~~~~~~
 
-Pycoder's Weekly 是一个面向 Python 开发者的免费的每周简讯，包括项目、文章、新闻和工作。
+PyCoder's Weekly 是一个面向 Python 开发者的免费的每周简讯，包括项目、文章、新闻和工作。
 
-    `Pycoder's Weekly <http://www.pycoders.com/>`_
+    `PyCoder's Weekly <http://www.pycoders.com/>`_
 
 Real Python
 ~~~~~~~~~~~
