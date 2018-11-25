@@ -75,3 +75,9 @@ Python用户组
 --------------------------
 
 用户组就是一群Python开发者见面现身或讨论感兴趣的Python话题的地方。一系列本地用户组维护在 `Python 软件基金会 Wiki <http://wiki.python.org/moin/LocalUserGroups>`_ 中。
+
+Python 工作公告栏
+-----------------------
+
+`Python Jobs HQ <https://www.pythonjobshq.com>`_ 是一个面向Python开发人员的Python工作公告栏。
+该网站汇总了发布自网络的Python职位，并允许雇主直接在网站上发布Python职位。

@@ -45,6 +45,12 @@ OS X自带的Python版本更适合用于学习而不是开发。因为版本与P
 
 .. code-block:: console
 
+    export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+
+如果您使用的是 OS X 10.12（Sierra）或者更旧的系统，请使用如下命令
+
+.. code-block:: console
+
     export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 接下来可以开始安装Python 3：
