@@ -1,13 +1,17 @@
+
+#############
 文档
-=============
+#############
 
 .. image:: https://farm5.staticflickr.com/4279/35620636012_f66aa88f93_k_d.jpg
 
 可读性是Python开发者需关注的重点，这包括项目和代码文档的可读性。遵循一些
 简单的最佳实践能够帮助您和其他人节省很多时间。
 
+
+*********************
 项目文档
----------------------
+*********************
 
 根目录下的 :file:`README` 文件应该告诉用户和维护者关于项目的基本信息。它应该是
 原始文本，用一些非常容易阅读的标记，比如 :ref:`reStructuredText-ref` 或 Markdown。
@@ -25,8 +29,10 @@
 :file:`CHANGELOG` 文件或者位于 :file:`README` 中的 ``CHANGELOG`` 区域应该呈现对
 代码库的最新修改的简短概述。
 
+
+*********************
 项目发布
--------------------
+*********************
 
 根据项目，您的文档中可能包含下列部分或所有的内容：
 
@@ -79,8 +85,9 @@ Markdown。
 .. _reStructuredText Quick Reference: http://docutils.sourceforge.net/docs/user/rst/quickref.html
 
 
+*************************
 代码文档建议
--------------------------
+*************************
 
 注释能使代码清晰，将其加入到代码中是为了理解代码起来更容易。在Python中，注意以一个hash（数字符号）（“#”）开始。
 
@@ -207,8 +214,9 @@ Markdown。
 .. _`NumPy style`: http://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_numpy.html
 
 
+***********
 其他工具
------------
+***********
 
 您可能在其他场景看到过这些。使用 :ref:`sphinx-ref`。
  

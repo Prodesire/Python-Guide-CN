@@ -1,7 +1,9 @@
 .. _install-linux:
 
+
+############################
 在Linux上安装Python 2
-==========================
+############################
 
 .. image:: https://farm5.staticflickr.com/4268/34435688560_4cc2a7bcbb_k_d.jpg
 
@@ -28,8 +30,10 @@
 开发前，安装接下来教程中所介绍的工具和库。特别应该安装Setuptools和pip，它们将简化安装和使用
 Python第三方库的流程。
 
+
+****************
 Setuptools & Pip
-----------------
+****************
 
 `setuptools <https://pypi.python.org/pypi/setuptools>`_ 和 `pip <https://pip.pypa.io/en/stable/>`_
 是最重要的两个Python第三方软件包。一旦安装了它们，就可以通过一条指令下载、安装和卸载可获取到的
@@ -45,8 +49,10 @@ Python 2.7.9 以及之后版本(Python2 系列)，和Python 3.4以及之后版�
 
 `参考官方pip安装指南 <https://pip.pypa.io/en/latest/installing/>`_ 获取pip工具，并自动安装最新版本的setuptools。
 
+
+****************
 虚拟环境
---------------------
+****************
 
 虚拟环境工具(virturalenv)通过为不同项目创建专属的Python虚拟环境，以实现其依赖的库独立保存在不同的路径。
 这解决了“项目X依赖包版本1.x，但项目Y依赖包版本为4.x”的难题, 并且维持全局的site-packages目录干净、易管理。 

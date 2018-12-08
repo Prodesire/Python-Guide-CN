@@ -1,7 +1,9 @@
 .. _install-windows:
 
+
+##############################
 在Windows上安装Python 2
-============================
+##############################
 
 .. image:: https://farm5.staticflickr.com/4268/34435688560_4cc2a7bcbb_k_d.jpg
 
@@ -38,8 +40,10 @@ Python将安装到内含版本号信息的路径，例如Python 2.7版本将被�
 就可以开始正式使用Python了，但我还是强烈建议各位，在正式开始Python应用开发前，安装接下来教程中所介绍
 的工具和库。特别应该安装Setuptools——它将简化安装和使用Python第三方库的流程。
 
+
+****************
 Setuptools + Pip
-----------------
+****************
 
 `setuptools <https://pypi.python.org/pypi/setuptools>`_ 和 `pip <https://pip.pypa.io/en/stable/>`_
 是两个最重要的第三方Python包。
@@ -58,8 +62,9 @@ Python 2.7.9和更高版本（在Python 2系列上），Python 3.4和更高版�
 要安装pip， `请遵照官方的pip安装指南 <https://pip.pypa.io/en/latest/installing/>`_ —— 这将自动安装最新版本的setuptools。
 
 
+********************
 虚拟环境
---------------------
+********************
 
 虚拟环境工具(通常是指“virturalenv”)通过为不同项目创建专属的Python虚拟环境，以实现其依赖的库独立保存在不同的路径。
 这解决了“项目X依赖包版本1.x，但项目Y依赖包版本为4.x”的难题, 并且维持全局的site-packages目录干净、易管理。 

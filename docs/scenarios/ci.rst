@@ -1,13 +1,16 @@
+######################
 持续集成
-======================
+######################
 
 .. image:: https://farm5.staticflickr.com/4173/33907150594_9abba7ad0a_k_d.jpg
 
 .. note::
     关于编写测试更多的建议，参阅 :doc:`/writing/tests`。
 
+
+************
 为什么?
-------------
+************
 
 Martin Fowler 和 Kent Beck 首次提出 `Continuous Integration <http://martinfowler.com/articles/continuousIntegration.html>`_ 
 （简称：CI），将之描述为：
@@ -17,23 +20,25 @@ Martin Fowler 和 Kent Beck 首次提出 `Continuous Integration <http://martinf
     检测错误。许多团队发现这种方法可以显著的减少集成问题并且可以使团队的开发更加
     快捷。
 
+
+*******
 Jenkins
--------
+*******
 
 `Jenkins CI <http://jenkins-ci.org>`_ 可扩展的持续集成引擎。 使用它吧！
 
 
-
+********
 Buildbot
---------
+********
 
 `Buildbot <http://docs.buildbot.net/current/>`_ 是一个检查代码变化的自动化编译/
 测试的Python系统。
 
 
-
+***
 Tox
----
+***
 
 `Tox <https://tox.readthedocs.io/en/latest/>`_ 是一款为Python软件提供打包、测试和
 开发的自动化工具，基于命令行或CI服务器。它是一个通用的虚拟环境管理和测试的命令行
@@ -44,9 +49,9 @@ Tox
 * 作为前端持续集成服务器，减少样板文件，合并了CI和基于shell的测试。
 
 
-
+*********
 Travis-CI
----------
+*********
 
 `Travis-CI <https://travis-ci.org/>`_ 是一个分布式CI服务器，免费为开源项目构建测试。
 它提供多个worker运行Python测试，并能和GitHub无缝集成。您甚至可以用它对您的Pull Requests

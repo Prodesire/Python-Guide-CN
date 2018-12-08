@@ -1,10 +1,13 @@
+
+######################
 系统管理
-======================
+######################
 
 .. image:: https://farm5.staticflickr.com/4179/34435690580_3afec7d4cd_k_d.jpg
 
+******
 Fabric
-------
+******
 
 `Fabric <http://docs.fabfile.org>`_ 是一个简化系统管理任务的库。
 Chef和Puppet倾向于关注管理服务器和系统库，而Fabric更加关注应用级别的任务，比如说部署。
@@ -65,8 +68,9 @@ and we can deploy with:
 
     `Fabric 文档 <http://docs.fabfile.org>`_
 
+****
 Salt
-----
+****
 
 `Salt <http://saltstack.org/>`_ 是一个开源的基础管理工具。
 它支持从中心节点（主要的主机）到多个主机（指从机）的远程命令执行。
@@ -116,8 +120,9 @@ Salt也提供状态系统。状态能够用来配置从机。
     `Salt 文档 <http://docs.saltstack.com>`_
 
 
+******
 Psutil
-------
+******
 
 `Psutil <https://github.com/giampaolo/psutil/>`_ 是获取不同系统信息
 （比如CPU、内存、硬盘、网络、用户、进程）的接口。
@@ -170,8 +175,10 @@ Psutil
 一个类似于基于psutil并广泛扩展的top，并拥有客服端-服务端监控能力的完全终端应用叫做 
 `glance <https://github.com/nicolargo/glances/>`_ 。
 
+
+*******
 Ansible
--------
+*******
 
 `Ansible <http://ansible.com/>`_ 是一个开源系统自动化工具。
 相比于Puppet或者Chef最大的优点是它不需要客户机上的代理。
@@ -218,8 +225,10 @@ Ansible playbook在 :file:`hosts.yml` 中将会ping所有的服务器。您也�
 `Ansible教程 <https://serversforhackers.com/an-ansible-tutorial/>`_ 也是一个很棒的且详细的指引来开始熟悉Ansible。
 
 
+****
 Chef
-----
+****
+
 `Chef <https://www.chef.io/chef/>`_ 是一个系统的云基础设施自动化框架，
 它使部署服务器和应用到任何物理、虚拟或者云终端上变得简单。您可以选择进行配置管理，那将主要使用Ruby去编写您的基础设施代码。
 
@@ -243,8 +252,10 @@ Chef通过使用定制的在cookbook中实现的食谱（配置元素）来工�
 
 - `Chef 文档 <https://docs.chef.io/>`_
 
+
+******
 Puppet
-------
+******
 
 `Puppet <http://puppetlabs.com>`_ 是来自Puppet Labs的IT自动化和配置管理软件，允许系统管理员定义他们的IT基础设施状态，
 这样就能够提供一种优雅的方式管理他们成群的物理和虚拟机器。
@@ -322,20 +333,25 @@ Puppet有多种资源类型，需要时可以使用包-文件-服务（package-f
 
 了解更多信息，参考 `Puppet Labs 文档 <http://docs.puppetlabs.com>`_ 。
 
+
+*********
 Blueprint
----------
+*********
 
 .. todo:: Write about Blueprint
 
+********
 Buildout
---------
+********
 
 `Buildout <http://www.buildout.org>`_ 是一个开源软件构件工具。Buildout由Python编写。
 它实现了配置和构建脚本分离的原则。Buildout主要用于下载和设置正在开发或部署软件的Python egg格式的依赖。
 在任何环境中构建任务的指南（recipe，原意为“食谱”，引申为“指南”）能被创建，许多早已可用。
 
+
+*******
 Shinken
--------
+*******
 
 `Shinken <http://www.shinken-monitoring.org/>`_ 是一个使用Python编写的现代化的兼容Nagios的监控框架。
 其主要目标是为用户的设计成可扩展到大型环境的监控系统提供灵活的框架。

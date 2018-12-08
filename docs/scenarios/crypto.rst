@@ -1,10 +1,14 @@
+
+############
 密码学
-============
+############
 
 .. image:: https://farm5.staticflickr.com/4220/33907152824_bf91078cc1_k_d.jpg
 
+
+************
 Cryptography
-------------
+************
 
 `Cryptography <https://cryptography.io/en/latest/>`_ 是一个开发活跃的库，它提供
 了加密方法（recipes）和基元（primitives），支持Python 2.6-2.7、Python 3.3+ 和 PyPy。
@@ -33,8 +37,9 @@ Cryptography 分为两个层，方法（recipes）层和危险底层（hazardous
 	plain_text = cipher_suite.decrypt(cipher_text)
 
 
+**************
 GPGME bindings
---------------
+**************
 
 `GPGME Python bindings <https://dev.gnupg.org/source/gpgme/browse/master/lang/python/>`_ 提供Pythonic的方式访问 `GPG Made Easy <https://dev.gnupg.org/source/gpgme/browse/master/>`_ ，这是整个GNU Privacy Guard项目套件，包括GPG、libgcrypt和gpgsm（S/MIME 引擎），的C API。它支持Python 2.6、2.7、3.4及以上版本。取决于Python的SWIG C接口以及GnuPG软件和库。
 
@@ -80,8 +85,9 @@ GPGME bindings
 	    pass
 
 
+********
 PyCrypto
---------
+********
 
 `PyCrypto <https://www.dlitz.net/software/pycrypto/>`_ 是另一个密码库，它提供
 安全的哈希函数和各种加密算法，支持Python 2.1到3.3。

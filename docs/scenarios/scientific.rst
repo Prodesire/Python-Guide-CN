@@ -1,11 +1,14 @@
-=======================
+
+#######################
 科学应用
-=======================
+#######################
 
 .. image:: /_static/photos/33925223870_97e44f5629_k_d.jpg
 
+
+*******
 背景
-:::::::
+*******
 
 
 Python被经常使用在高性能科学应用中。它之所以在学术和科研项目中得到
@@ -19,11 +22,12 @@ Python被经常使用在高性能科学应用中。它之所以在学术和科�
 `Python Scientific Lecture Notes <http://scipy-lectures.github.com/>`_。
 
 
+*****
 工具
-:::::
+*****
 
 IPython
--------
+~~~~~~~
 
 
 `IPython <http://ipython.org/>`_ 是一个加强版Python解释器，它提供了科学工作者
@@ -35,11 +39,12 @@ python 笔记本。这个笔记本允许您保存一些代码块，伴随着它�
 注释（HTML,LaTex,Markdown）。这个笔记本可以被共享并以各种文件格式导出。
 
 
+*****
 库
-:::::::::
+*****
 
 NumPy
------
+~~~~~
 
 `NumPy <http://numpy.scipy.org/>`_ 是一个用C和FORTRAN写的底层库，它提供一些高层
 数学函数。NumPy通过多维数组和操作这些数组的函数巧妙地解决了Python运行算法较慢的问题。
@@ -51,21 +56,21 @@ NumPy是SciPy项目中的一部分，它被发布为一个独立的库，这样�
 NumPy兼容Python 2.4-2.7.2以及3.1+。
 
 Numba
------
+~~~~~
 
 `Numba <http://numba.pydata.org>`_ 是一个针对NumPy的Python编译器（即时编译器,JIT）
 它通过特殊的装饰器，将标注过的Python（以及NumPy）代码编译到LLVM（Low Level Virtual Machine，底层虚拟机）中。简单地说，Python使用一种机制，用LLVM将Python代码编译为
 能够在运行时执行的本地代码。
 
 SciPy
------
+~~~~~
 
 `SciPy <http://scipy.org/>`_ 是基于NumPy并提供了更多的数学函数的库。
 SciPy使用NumPy数组作为基本数据结构，并提供完成各种常见科学编程任务的模块，
 包括线性代数，积分（微积分），常微分方程求解以及信号过程。
 
 Matplotlib
-----------
+~~~~~~~~~~
 
 `Matplotlib <http://matplotlib.sourceforge.net/>`_ 是一个可以灵活绘图的库，它
 能够创建2D、3D交互式图形，并能保存成具有稿件质量（manuscript-quality）的图表。
@@ -73,43 +78,45 @@ Matplotlib
 很容易转移到Python。在 `matplotlib gallery <http://matplotlib.sourceforge.net/gallery.html>`_ 中可以找到很多例子以及实现它们的源代码（可以在此基础上再创造）。
 
 Pandas
-------
+~~~~~~
 
 `Pandas <http://pandas.pydata.org/>`_ 是一个基于NumPy的数据处理库，它提供了
 许多有用的函数能轻松地对数据进行访问、索引、合并以及归类。其主要数据结构（DataFrame）
 与R统计学包十分相近；也就是，使用名称索引的异构数据（heterogeneous data）表、时间序列操作以及对数据的自动对准（auto-alignment）。
 
 Rpy2
-----
+~~~~
 
 `Rpy2 <http://rpy2.bitbucket.org>`_ 是一个对R统计学包的Python绑定，
 它能够让Python执行R函数，并在两个环境中交换数据。Rpy2是
 对 `Rpy <http://rpy.sourceforge.net/rpy.html>`_ 绑定的面向对象实现。
 
 PsychoPy
---------
+~~~~~~~~
 
 `PsychoPy <http://www.psychopy.org/>`_ 是面向认知科学家的库，它允许创建
 认知心理学和神经科学实验（译者注：指的是那种您坐在电脑前，给您一个刺激测
 您反应的实验，基本上就是个UI）。这个库能够处理刺激表示、实验设计脚本以及
 数据收集。
 
+
+*********
 资源
-:::::::::
+*********
 
 安装这些科学计算Python包可能会有些麻烦，因为它们中很多是用Python的C扩展实现的，
 这就意味着需要编译。这一节列举了各种科学计算Python发行版，它们提供了预编译编译
 且易于安装的科学计算Python包。
 
 Python扩展包的非官方Windows二进制文件（库）
----------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 很多人在Windows平台上做科学计算，然而众所周知的是，其中很多科学计算包在该平台上
 难以构建和安装。不过， `Christoph Gohlke <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_ 将一系列有用的Python包编译成了Windows的二进制文件，其数量还在不断增长。如果您在
 Windows上工作，您也许想要看看。
 
 Anaconda
---------
+~~~~~~~~
 
 `Continuum Analytics <http://continuum.io/>`_ 提供了
 `Anaconda Python Distribution <https://store.continuum.io/cshop/anaconda>`_，它
@@ -117,7 +124,7 @@ Anaconda
 而Continuum销售一些专有的额外组件。学术研究者可以获取这些组件的免费许可。
 
 Canopy
-------
+~~~~~~
 
 `Canopy <https://www.enthought.com/products/canopy/>`_ 是另一个Python科学发布版，由
 `Enthought <https://www.enthought.com/>`_ 提供。其受限制的 'Canopy Express' 版本

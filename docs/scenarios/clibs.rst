@@ -1,10 +1,14 @@
+
+################################
 与C/C++库交互
-================================
+################################
 
 .. image:: https://farm5.staticflickr.com/4173/34725951345_c8f5959a2e_k_d.jpg
 
+
+############################
 C语言外部函数接口(CFFI)
-----------------------------
+############################
 
 `CFFI <https://cffi.readthedocs.io/en/latest/>`_ 通过CPython和PyPy给出了和
 C语言交互的简单使用机制。它支持两种模式：一种是内联的ABI兼容模式(示例如下)，
@@ -25,8 +29,10 @@ ABI 交互
     # prints: 23
     print("{}".format(length))
 
+
+******
 ctypes
-------
+******
 
 `ctypes <https://docs.python.org/3/library/ctypes.html>`_ 是CPython中与C/C++
 交互的事实上的库。它不仅能完全访问大多数主流操作系统(比如：Windows上的Kernel32，
@@ -59,8 +65,10 @@ Struct Equivalents
         _fields_ = [("a", c_int),
                     ("b", c_int)]
 
+
+****
 SWIG
-----
+****
 
 `SWIG <http://www.swig.org>`_ 并不仅仅应用于Python(它支持多种脚本语言)，
 它是生成解释性语言和C/C++头文件绑定的工具。它极易使用：使用者只需简单的定义接口文件
@@ -110,8 +118,9 @@ SWIG
     %include "MyClass.h"
 
 
+************
 Boost.Python
-------------
+************
 
 `Boost.Python <http://www.boost.org/doc/libs/1_59_0/libs/python/doc/>`_ 
 需要一些手动工作来展现C++对象的功能，但它可提供SWIG拥有的所有特性。同时，

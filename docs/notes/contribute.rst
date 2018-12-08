@@ -1,5 +1,6 @@
+##########
 贡献
-~~~~~~~~~~
+##########
 
 .. image:: /_static/photos/33573769116_49c1ef51e7_k_d.jpg
 
@@ -10,15 +11,17 @@ Python-guide目前还在开发中，欢迎大家贡献代码。
 `贡献者一览 <https://github.com/kennethreitz/python-guide/contributors>`_ 中。
 
 
+***********
 风格指南
------------
+***********
 
 请戳这里 :ref:`guide-style-guide`.
 
 .. _todo-list-ref:
 
+*********
 要做的事
----------
+*********
 
 如果您想为我们做些贡献，这里有我们的计划。一个简短的 todo_ 列表。
 

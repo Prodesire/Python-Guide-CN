@@ -1,10 +1,13 @@
+
+###########
 XML解析
-===========
+###########
 
 .. image:: /_static/photos/33888714601_a1f7d020a2_k_d.jpg
 
+********
 untangle
---------
+********
 
 `untangle <https://github.com/stchris/untangle>`_ 库可以将XML文档映射为一个Python
 对象，该对象于其结构中包含了原文档的节点与属性信息。
@@ -34,8 +37,9 @@ untangle
 
 untangle也支持从字符串或URL中载入XML。
 
+*********
 xmltodict
----------
+*********
 
 `xmltodict <http://github.com/martinblech/xmltodict>`_ 是另一个简易的库，
 它致力于将XML变得像JSON。

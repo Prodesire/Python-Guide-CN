@@ -2,8 +2,10 @@
 
 .. _install3-osx:
 
+
+###############################
 在Mac OS X上安装Python 3
-================================
+###############################
 
 .. image:: https://farm5.staticflickr.com/4276/34435689480_2e6f358510_k_d.jpg
 
@@ -14,8 +16,10 @@
 OS X自带的Python版本更适合用于学习而不是开发。因为版本与Python官网发布的 `官方最新稳定版本 
 <https://www.python.org/downloads/mac-osx/>`_ 相比可能已经过时。
 
+
+**************
 现在就开始吧！
---------------
+**************
 
 跟着我一起安装真实版本的Python吧。
 
@@ -62,15 +66,18 @@ OS X自带的Python版本更适合用于学习而不是开发。因为版本与P
 这将持续几分钟。
 
 
+***
 Pip
----
+***
 
 Homebrew 会为您安装 ``pip3`` 。
 
 ``pip3`` 是Homebrew版Python 3的 ``pip`` 的别名。
 
+
+*********************
 使用Python 3
----------------------
+*********************
 
 这个时候，在您系统上可能Python 2.7也是可用的。可能 :ref:`Homebrew 版本的Python 2 <install-osx>`
 和Python 3都安装了。 
@@ -105,8 +112,9 @@ Homebrew 会为您安装 ``pip3`` 。
     Python 3.6.4 # Success! 
     # If you still see 2.7 ensure in PATH /usr/local/bin/ takes pecedence over /usr/bin/
 
+*********************
 Pipenv & 虚拟环境
---------------------
+*********************
 
 下一步安装 Pipenv，然后就可以安装依赖关系并管理虚拟环境。
 

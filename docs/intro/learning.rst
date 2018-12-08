@@ -1,10 +1,12 @@
+###############
 学习Python
-===============
+###############
 
 .. image:: /_static/photos/32800783863_11a00db52c_k_d.jpg
 
+********
 初学者
---------
+********
 
 The Python Tutorial
 ~~~~~~~~~~~~~~~~~~~~
@@ -170,8 +172,9 @@ Code the blocks
     `Code the blocks <https://codetheblocks.com/tutorials/introduction>`_
 
 
+************
 中级
-------------
+************
 
 Python Tricks: The Book
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -190,8 +193,9 @@ Effective Python
 
     `Effective Python <http://www.effectivepython.com/>`_
 
+********
 进阶者
---------
+********
 
 Pro Python
 ~~~~~~~~~~
@@ -227,8 +231,10 @@ A Guide to Python's Magic Methods
 .. note:: Rafekettler.com目前已关闭，您可以直接访问他们的Github版本。 在这里您可以找到一个PDF版本:
     `A Guide to Python's Magic Methods (repo on GitHub) <https://github.com/RafeKettler/magicmethods/blob/master/magicmethods.pdf>`_
 
+
+****************************
 工程师和科学家
-----------------------------
+****************************
 
 A Primer on Scientific Programming with Python
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -246,8 +252,10 @@ Numerical Methods in Engineering with Python 由 Jaan Kiusalaas 编写，
 
     `Numerical Methods in Engineering with Python <http://www.cambridge.org/us/academic/subjects/engineering/engineering-mathematics-and-programming/numerical-methods-engineering-python-2nd-edition>`_
 
+
+********************
 各种各样的话题
---------------------
+********************
 
 Problem Solving with Algorithms and Data Structures
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -295,8 +303,10 @@ PythonistaCafe 是一个邀请式的在线社区，里面的 Python 和软件开
 
     `PythonistaCafe <https://www.pythonistacafe.com>`_
 
+
+**********
 参考
-----------
+**********
 
 Python in a Nutshell
 ~~~~~~~~~~~~~~~~~~~~

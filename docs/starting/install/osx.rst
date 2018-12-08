@@ -1,7 +1,9 @@
 .. _install-osx:
 
+
+###############################
 在Mac OS X上安装Python 2
-=============================
+###############################
 
 .. image:: https://farm5.staticflickr.com/4268/34435688560_4cc2a7bcbb_k_d.jpg
 
@@ -18,8 +20,9 @@ OS X自带的Python版本更适合用于学习而不是开发。因为版本与P
 <https://www.python.org/downloads/mac-osx/>`_ 相比可能已经过时。
 
 
+**************
 现在就开始吧！
---------------
+**************
 
 跟着我一起安装真实版本的Python吧。
 
@@ -72,8 +75,9 @@ Homebrew命名可执行文件 ``python2``，以便您仍然可以通过可执行
     $ python3 -V  # Homebrew安装的Python 3解释器（如果安装了）
 
 
+****************
 Setuptools & Pip
-----------------
+****************
 
 Homebrew会自动安装好Setuptools和 ``pip`` 。
 Setuptools提供 ``easy_install`` 命令，实现通过网络（通常Internet）下载和安装第三方Python包。
@@ -90,9 +94,10 @@ Setuptools提供 ``easy_install`` 命令，实现通过网络（通常Internet�
     $ pip -V  # pip指向Homebrew安装的Python 3解释器（如果安装了）
 
 
-
+****************************************
 虚拟环境(Virtual Environment)
---------------------------------------
+****************************************
+
 虚拟环境工具(virturalenv)通过为不同项目创建专属的Python虚拟环境，以实现其依赖的库独立保存在不同的路径。
 这解决了“项目X依赖包版本1.x，但项目Y依赖包版本为4.x”的难题，并且维持全局的site-packages目录干净、易管理。
 

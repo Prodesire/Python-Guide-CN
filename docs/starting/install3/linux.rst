@@ -1,7 +1,9 @@
 .. _install3-linux:
 
+
+############################
 在Linux上安装Python 3
-============================
+############################
 
 .. image:: https://farm5.staticflickr.com/4276/34435689480_2e6f358510_k_d.jpg
 
@@ -39,8 +41,9 @@
 .. _Fedora中可用的多Python版本: https://developer.fedoraproject.org/tech/languages/python/multiple-pythons.html
 
 
+*********************
 使用Python 3
----------------------
+*********************
 
 这个时候，在您系统上可能Python 2.7也是可用的。
 
@@ -56,8 +59,10 @@
 
 将打开Python 3解释器。
 
+
+****************
 Setuptools & Pip
-----------------
+****************
 
 `setuptools <https://pypi.python.org/pypi/setuptools>`_ 和 `pip <https://pip.pypa.io/en/stable/>`_
 是最重要的两个Python第三方软件包。一旦安装了它们，就可以通过一条指令下载、安装和卸载可获取到的
@@ -82,8 +87,9 @@ Python 2.7.9 以及之后版本(Python2 系列)，和Python 3.4以及之后版�
 不过，使用虚拟环境（下面描述）就无需担心这个问题。
 
 
+*****************************
 Pipenv & 虚拟环境
---------------------
+*****************************
 
 下一步安装 Pipenv，然后就可以安装依赖关系并管理虚拟环境。
 

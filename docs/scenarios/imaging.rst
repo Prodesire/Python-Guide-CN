@@ -1,6 +1,6 @@
-==================
+##################
 图像处理
-==================
+##################
 
 .. image:: https://farm5.staticflickr.com/4157/34575689432_3de8e9a348_k_d.jpg
 
@@ -9,8 +9,10 @@ OpenSource Computer Vision (OpenCV)。
 
 下面是这两个库的简略介绍。
 
+
+**********************
 Python 图形库
-----------------------
+**********************
 
  `Python Imaging Library <http://www.pythonware.com/products/pil/>`_ ，或者叫PIL，简略来说，
  是Python图像操作的核心库。不幸的是，它的开发陷入了停滞，最后一次更新是2009年。
@@ -59,8 +61,9 @@ Python 图形库
 `Pillow 教程 <https://pillow.readthedocs.io/en/3.0.x/handbook/tutorial.html>`_。
 
 
+**************************
 开源计算机视觉（OpenCv）
---------------------------
+**************************
 
 OpenSource Computer Vision,其更广为人知的名字是OpenCv，是一个在图像操作与处理上
 比PIL更先进的库。它可以在很多语言上被执行并被广泛使用。

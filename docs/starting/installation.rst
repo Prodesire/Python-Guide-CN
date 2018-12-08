@@ -1,7 +1,9 @@
 .. _installation:
 
+
+##########################
 正确地安装 Python
-==========================
+##########################
 
 .. image:: https://farm5.staticflickr.com/4303/36137232412_fdcb0f84eb_k_d.jpg
 
@@ -13,8 +15,9 @@
   —*Kenneth Reitz*
 
 
+*******************
 安装指南
--------------------
+*******************
 
 这份指南重温了 :ref:`Python <which-python>` 作为开发工具的正确安装方法，也包括 setuptools, pip 和 virtualenv 等工具的安装。
 

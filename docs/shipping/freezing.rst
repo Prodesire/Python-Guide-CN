@@ -1,8 +1,9 @@
 .. _freezing-your-code-ref:
 
-==============================
+
+##############################
 冻结（freezing）您的代码
-==============================
+##############################
 
 .. image:: https://farm5.staticflickr.com/4227/33907151034_e0a9e53402_k_d.jpg
 
@@ -18,8 +19,10 @@
 冻结的一个缺点是它会增加大约2-12MB的发行大小。另外，如果修补了Python的安全漏洞，
 您将负责分发更新版本的应用程序。
 
+
+************************
 冻结的多种方式
-------------------------
+************************
 
 :ref:`打包您的代码<packaging-your-code-ref>` 是指把您的库或工具分发给其他开发者。
 
@@ -29,8 +32,9 @@
 .. todo:: 完善 "冻结您的代码" 部分（stub）。
 
 
+************************
 比较冻结工具
-----------------------
+************************
 
 各解决方案的平台/特性支持性
 
@@ -54,8 +58,9 @@ py2app      no      no    yes  yes      MIT     no            yes            yes
     只有Pyinstaller创建了可以自足运行的exe文件，其绑定了dll，可以传递 ``--onefile`` 到
     :file:`Configure.py`。
 
+*******
 Windows
--------
+*******
 
 bbFreeze
 ~~~~~~~~
@@ -145,8 +150,9 @@ PyInstaller
 - `手册 <https://pyinstaller.readthedocs.io/en/stable/>`_
 
 
+****
 OS X
-----
+****
 
 
 py2app
@@ -209,8 +215,9 @@ PyInstaller可用于在Mac OS X 10.6（Snow Leopard）或更新版本上构建Un
 <http://pythonhosted.org/PyInstaller/spec-files.html#spec-file-options-for-a-mac-os-x-bundle>`_ 。 
 例如，要指定应用程序的图标，请使用 :code:`icon=\path\to\icon.icns` 选项。
 
+*****
 Linux
------
+*****
 
 
 bbFreeze
