@@ -14,11 +14,11 @@ OpenSource Computer Vision (OpenCV)。
 Python 图形库
 **********************
 
- `Python Imaging Library <http://www.pythonware.com/products/pil/>`_ ，或者叫PIL，简略来说，
- 是Python图像操作的核心库。不幸的是，它的开发陷入了停滞，最后一次更新是2009年。
- 
- 对您而言幸运的是，存在一个活跃的PIL开发分支，叫做 `Pillow <http://python-pillow.github.io/>`_ 
- 它很容易安装，运行在各个操作系统上，而且支持Python3。
+`Python Imaging Library <http://www.pythonware.com/products/pil/>`_ ，或者叫PIL，简略来说，
+是Python图像操作的核心库。不幸的是，它的开发陷入了停滞，最后一次更新是2009年。
+
+对您而言幸运的是，存在一个活跃的PIL开发分支，叫做 `Pillow <http://python-pillow.github.io/>`_ 
+它很容易安装，运行在虽有的主流操作系统上，而且支持Python3。
 
 安装
 ~~~~~~~~~~~~

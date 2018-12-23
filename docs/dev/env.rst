@@ -86,7 +86,7 @@ SuperTab_ 是一个小的Vim插件，通过使用 ``<Tab>`` 或任何其他定�
 Emacs
 -----
 
-Emacs是另一个强大的文本编辑器。它是完全可编程的（lisp），但要正确的工作要花些功夫。
+Emacs是另一个强大的文本编辑器。它是完全可编程的（Lisp），但要正确的工作要花些功夫。
 如果您已经是一名Emacs的用户了，在EmacsWiki上的 `Python Programming in Emacs`_ 
 将会是好的开始。
 
@@ -98,7 +98,7 @@ TextMate
 --------
 
 `TextMate <http://macromates.com/>`_ 将苹果操作系统技术带入了文本编辑器的世界。
-通过桥接UNIX和GUI，TextMate将两者中最好的部分带给了脚本专家和新手用户。
+通过桥接Unix和GUI，TextMate将两者中最好的部分带给了脚本专家和新手用户。
 
 Sublime Text
 ------------
@@ -133,7 +133,7 @@ IntelliJ IDEA闻名。它们都共享着相同的基础代码，PyCharm中大多
 带入到IntelliJ中。PyCharm由两个版本：专业版（Professional Edition）（30天试用）和
 拥有相对少特性的社区版（Community Edition）（Apache 2.0 License）。
 
-Python （在 Visual Studio Code中）
+Python （在 Visual Studio Code 中）
 -----------------------------------------
 
 `用于Visual Studio的Python <https://marketplace.visualstudio.com/items?itemName=ms-python.python>`_ 
@@ -166,7 +166,7 @@ Spyder
 ------
 
 `Spyder <https://github.com/spyder-ide/spyder>`_ 是一款专门面向和Python科学库
-（即 `Scipy <http://www.scipy.org/>`_ ）打交道的IDE。它集成了 pyflakes_ 、 
+（即 `SciPy <http://www.scipy.org/>`_ ）打交道的IDE。它集成了 pyflakes_ 、 
 `pylint <http://www.logilab.org/857>`_ 和 `rope <https://github.com/python-rope/rope>`_ 。
 
 Spyder是开源的（免费的），提供了代码补全、语法高亮、类和函数浏览器，以及对象检查的功能。
@@ -222,8 +222,8 @@ pyenv
 `pyenv <https://github.com/yyuu/pyenv>`_ 是一个允许多个Python解释器版本同时安装
 于一台机器的工具。这解决了不同的项目需要不同版本的Python的问题。比如，为了兼容性，
 可以很容易地为一个项目安装Python 2.7，而继续使用Python 3.4作为默认的编辑器。
-pyenv不止限于CPython版本——它还能安装PyPy、anaconda、miniconda、stackless、jython
-和ironpython解释器。
+pyenv不止限于CPython版本——它还能安装PyPy、Anaconda、miniconda、stackless、Jython
+和IronPython解释器。
 
 pyenv的工作原理是在一个叫做 ``shims`` 目录中创建Python解释器（以及其他工具像
 ``pip`` 和 ``2to3`` 等）的假版本。当系统寻找名为 ``python`` 的应用时，
@@ -241,7 +241,7 @@ pyenv不是管理虚拟环境的工具，但是有一个叫做 `pyenv-virtualenv
 IDLE
 ----
 
-:ref:`IDLE <python:idle>` 是一个集成的开发环境，它是Python标准库的一部分。
+:ref:`IDLE <python:idle>` 是一个集成的开发环境，它是Python标准发行的一部分。
 它完全由Python编写，并使用Tkinter GUI工具集。尽管IDLE不适用于作为成熟的Python开发工具，
 但它对尝试小的Python代码和对Python不同特性的实验非常有帮助。
 
@@ -258,11 +258,11 @@ IPython
 `IPython <http://ipython.org/>`_ 提供一个丰富的工具集来帮助您最大限度地和Python交互。
 它主要的组件有：
 
-* 强大的Python shell（终端和基于Qt）。
-* 一个基于网络的笔记本，拥有相同的核心特性，但是支持富媒体、文本、代码、数学表达式和内联绘图。
-* 支持交互式的数据可视化和GUI工具集的使用。
-* 灵活、嵌入的解释器载入到您的工程工程中。
-* 支持高级可交互的并行计算的工具。
+* 强大的Python shell（终端和基于Qt）
+* 一个基于网络的笔记本，拥有相同的核心特性，但是支持富媒体、文本、代码、数学表达式和内联绘图
+* 支持交互式的数据可视化和GUI工具集的使用
+* 灵活、嵌入的解释器载入到您的工程工程中
+* 支持高级可交互的并行计算的工具
 
 .. code-block:: console
 
@@ -280,14 +280,14 @@ BPython
 `bpython <http://bpython-interpreter.org/>`_ 在类Unix操作系统中可替代Python解释器的接口。
 它有以下特性：
 
-* 内联的语法高亮。
-* 行内输入时的自动补全建议。
-* 任何Python函数的期望参数列表。
-* 从内存中pop出代码的最后一行并重新运行（re-evaluate）的“倒带”功能.
-* 将输入的代码发送到pastebin。
-* 将输入的代码保存到一个文件中。
-* 自动缩进。
-* 支持Python 3。
+* 内联的语法高亮
+* 行内输入时的自动补全建议
+* 任何Python函数的期望参数列表
+* 从内存中pop出代码的最后一行并重新运行（re-evaluate）的“倒带”功能
+* 将输入的代码发送到pastebin
+* 将输入的代码保存到一个文件中
+* 自动缩进
+* 支持Python 3
 
 .. code-block:: console
 
@@ -303,9 +303,9 @@ ptpython
 * 语法高亮
 * 自动补全
 * 多行编辑
-* Emacs和VIM模式
+* Emacs和Vim模式
 * 代码中嵌入的REPL
-* 语法合法性
+* 语法校验
 * Tab页
 * 通过安装Ipython ``pip install ipython`` 并运行 ``ptipython`` ，支持集成 IPython_ 的 shell
 

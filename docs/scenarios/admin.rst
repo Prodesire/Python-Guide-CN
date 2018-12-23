@@ -19,7 +19,7 @@ Chef和Puppet倾向于关注管理服务器和系统库，而Fabric更加关注�
     $ pip install fabric
 
 下面的代码将会创建我们可以使用的两个任务： ``memory_usage`` 和 ``deploy``。
-前者将会在每台机器上输出内存使用情况。后者将会ssh到每台服务器，cd到我们的工程目录，
+前者将会在每台机器上输出内存使用情况。后者将会SSH到每台服务器，cd到我们的工程目录，
 激活虚拟环境，拉取最新的代码库，以及重启应用服务器。
 
 .. code-block:: python
@@ -265,7 +265,7 @@ Puppet均可作为开源版和企业版获取到。其模块是小的、可共�
 
 Puppet代理安装于其状态需要被监控或者修改的节点上。作为特定服务器的Puppet Master负责组织代理节点。
 
-代理节点发送系统的基本信息到Puppet Master，比如说操作系统、内核、架构、ip地址、主机名等。
+代理节点发送系统的基本信息到Puppet Master，比如说操作系统、内核、架构、IP地址、主机名等。
 接着，Puppet Master编译携带有节点生成信息的目录，告知每个节点应如何配置，并发送给代理。
 代理便会执行前述目录中的变化，并向Puppet Master发送回一份报告。
 
@@ -356,4 +356,4 @@ Shinken
 `Shinken <http://www.shinken-monitoring.org/>`_ 是一个使用Python编写的现代化的兼容Nagios的监控框架。
 其主要目标是为用户的设计成可扩展到大型环境的监控系统提供灵活的框架。
 
-Shinken与Nagios配置标准和插件向后兼容。它适用于任何支持Python的操作系统和架构，包括Windows、GNU/Linux和FreeBSD。
+Shinken与Nagios配置标准和插件向后兼容。它适用于任何支持Python的操作系统和架构，包括Windows、Linux和FreeBSD。

@@ -9,7 +9,7 @@
 .. image:: https://farm5.staticflickr.com/4276/34435689480_2e6f358510_k_d.jpg
 
 首先，遵照 `Chocolatey <https://chocolatey.org/install>`_ 的安装指引。
-它是 Windows 7+ 的社区系统包管理器（很像Mac OSX上的Homebrew）。
+它是 Windows 7+ 的社区系统包管理器（很像Mac OS X上的Homebrew）。
 
 完成之后，安装Python 3会非常简单，因为Chocolatey将Python 3作为默认设置。
 

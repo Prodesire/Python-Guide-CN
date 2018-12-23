@@ -48,7 +48,7 @@
 
 **请看这里**: 这是 `Kenneth Reitz <http://kennethreitz.org>`_ 推荐的。
 
-这个仓库 `可以在Github上找到 <https://github.com/kennethreitz/samplemod>`__ 。
+这个仓库 `可以在GitHub上找到 <https://github.com/kennethreitz/samplemod>`__ 。
 
 ::
 
@@ -176,7 +176,7 @@ Test Suite
 
 我极力推荐后者。如果使用 ``setup.py develop`` 来测试一个持续更新的代码库，需要为每一个版本的代码库设置一个独立的测试环境.太麻烦了。
 
-可以先创建一个包含上下文环境的文件 tests/context.py。
+可以先创建一个包含上下文环境的文件 ``tests/context.py``。
 file:
 
 ::

@@ -70,6 +70,8 @@
 
 每78个字符进行文字换行。必要时可以超过78个字符，尤其是那种换行使得源内容更难阅读的情况。
 
+使用标准的美式英语，而非英式英语。
+
 `序列逗号（serial comma） <https://en.wikipedia.org/wiki/Serial_comma>`_ 
 （也称为Oxford comma，牛津逗号）的使用是100%没有选择的。 任何尝试以缺少的连续逗号提交内容
 将导致该项目的永久性移除，因为完全缺乏品味。
@@ -184,4 +186,3 @@ Python 例子：
     .. todo::
         Learn the Ultimate Answer to the Ultimate Question
         of Life, The Universe, and Everything
-

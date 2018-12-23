@@ -21,7 +21,7 @@
 
 
 - `Diamond <https://github.com/python-diamond/Diamond>`_
-  Diamond是python的守护进程，它收集指标，并且将他们发布至Graphite或其它后端。
+  Diamond是Python的守护进程，它收集指标，并且将他们发布至Graphite或其它后端。
   它能够收集CPU,内存，网络，I/O，负载和硬盘指标。除此，它拥有实现自定义收集器的API，该API几乎能
   从任何资源中获取指标。
 

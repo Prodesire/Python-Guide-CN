@@ -18,7 +18,7 @@ pip install --user sphinx
 然后导航到makefile的目录，并执行 ```make build``` 或 ```make html``` 。然后，
 Sphinx将在名为 `_build/html` 的文件夹中生成html。
 
-导航到此文件夹后，您可以使用python的内置Web服务器在本地查看更改：
+导航到此文件夹后，您可以使用Python的内置Web服务器在本地查看更改：
 
 ``` bash
 python3 -m http.server

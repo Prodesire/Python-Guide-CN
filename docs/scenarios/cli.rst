@@ -16,11 +16,11 @@
 
 一些流行的命令行应用包括：
 
-* `Grep <http://en.wikipedia.org/wiki/Grep>`_ - 一个纯文本数据搜索工具
+* `grep <http://en.wikipedia.org/wiki/grep>`_ - 一个纯文本数据搜索工具
 * `curl <http://curl.haxx.se/>`_ - 基于URL语法的数据传输工具
 * `httpie <https://github.com/jakubroztocil/httpie>`_ - 一个用户友好的命令行HTTP客户端，可以代替cURL
-* `git <http://git-scm.com/>`_ - 一个分布式版本控制系统
-* `mercurial <https://www.mercurial-scm.org/>`_ - 一个主体是Python的分布式版本控制系统
+* `Git <http://git-scm.com/>`_ - 一个分布式版本控制系统
+* `Mercurial <https://www.mercurial-scm.org/>`_ - 一个主体是Python的分布式版本控制系统
 
 
 *****
@@ -37,7 +37,7 @@ Click
 *****
 
 `click <http://click.pocoo.org/>`_ 是一个以尽可能少的代码，用组合方式创建命令行接口的Python包。
-命令行接口创建工具（“Command-line Interface Creation Kit”, Click）高度可配置，但也有开箱即用的默认值设置。
+命令行接口创建工具（“Command-Line Interface Creation Kit”, Click）高度可配置，但也有开箱即用的默认值设置。
 
 
 ******
@@ -65,7 +65,7 @@ Cliff
 
 `Cliff <http://docs.openstack.org/developer/cliff/>`_  是一个建立命令行程序的框架。
 它使用setuptools入口点（entry points）来提供子命令，输出格式化，以及其他的扩展。这个框架
-可以用来创建多层命令程序，如subversion与git，其主程序要进行一些简单的参数解析然后调用
+可以用来创建多层命令程序，如 ``svn`` 和 ``git``，其主程序要进行一些简单的参数解析然后调用
 一个子命令干活。
 
 

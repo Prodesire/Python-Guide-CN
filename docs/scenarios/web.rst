@@ -248,7 +248,7 @@ Jinja2
 它使用基于文本的模板语言，因此可以用于生成任何类型的标记，而不仅仅是HTML。 
 它允许自定义过滤器，标签，测试和全局变量。 它具有Django模板系统的许多改进。
 
-这里有一些在Jinja2中重要的html标签：
+这里有一些在Jinja2中重要的HTML标签：
 
 .. code-block:: html
 
@@ -363,7 +363,7 @@ Chameleon
 `宏扩展TAL（Macro Expansion TAL, Metal） <https://chameleon.readthedocs.io/en/latest/reference.html#macros-metal>`_ 
 语法的HTML/XML模板引擎实现。
 
-Chameleon在Python2.5及以上版本（包括3.x和pypy）都是可用的，并常被 `Pyramid Framework <https://trypyramid.com>`_ 使用。
+Chameleon在Python2.5及以上版本（包括3.x和PyPy）都是可用的，并常被 `Pyramid Framework <https://trypyramid.com>`_ 使用。
 
 页面模板是在文档结构中添加特定元素属性和文本标记。使用一系列简单语言概念，您能够控制文档流程、元素重复、文本替换和翻译。
 由于使用了基于属性的语法，未渲染的页面模板是合法的HTML，它可以在浏览器中查看，甚至能够在WYSIWYG编辑器中编辑。

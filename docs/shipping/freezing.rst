@@ -54,9 +54,9 @@ py2app      no      no    yes  yes      MIT     no            yes            yes
     `其余的 <http://stackoverflow.com/questions/2950971/cross-compiling-a-python-script-on-linux-into-a-windows-executable#comment11890276_2951046>`_。
 
 .. note::
-    所有解决方案需要目前机器上安装了MS Visual C++ dll。除了py2app以外。
-    只有Pyinstaller创建了可以自足运行的exe文件，其绑定了dll，可以传递 ``--onefile`` 到
-    :file:`Configure.py`。
+    所有解决方案，除了py2app以外，需要在目标机器上安装了Microsoft Visual C++ dll。
+    只有PyInstaller可通过传递 ``--onefile`` 到 :file:`Configure.py` 中，
+    创建绑定了合适dll、可以自运行的exe文件。
 
 *******
 Windows

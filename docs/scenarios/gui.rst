@@ -12,11 +12,11 @@ GUI应用
 Camelot
 *******
 
-除了Python，SQLAlchemy和Qt之外，`Camelot <http://www.python-camelot.com>`_ 
+除了Python、SQLAlchemy和Qt之外，`Camelot <http://www.python-camelot.com>`_ 
 提供构建应用的组件。它的灵感取决于Django的管理接口。
 
 如下是主要的信息资源网站: http://www.python-camelot.com
-，邮件列表网站： http://groups.google.com/forum/#!forum/project-camelot
+，邮件列表网站： http://groups.google.com/forum/#!forum/project-camelot 。
 
 
 *****
@@ -56,7 +56,7 @@ Kivy
 Kivy使用Python编写，并且基于OpenGL，除此，它支持不同的输入设备，
 例如鼠标、双鼠标、WiiMote、WM_TOUCH、HIDtouch和苹果的产品等等。
 
-Kivy由社区积极开发，并且免费使用。它适用于所有主要的平台（Linux，OSX, Windows, Android）
+Kivy由社区积极开发，并且免费使用。它适用于所有主要的平台（Linux，OS X, Windows, Android）
 
 如下是主要的信息资源网站： http://kivy.org
 

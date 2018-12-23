@@ -7,13 +7,13 @@
 
 
 ************
-Cryptography
+cryptography
 ************
 
-`Cryptography <https://cryptography.io/en/latest/>`_ 是一个开发活跃的库，它提供
+`cryptography <https://cryptography.io/en/latest/>`_ 是一个开发活跃的库，它提供
 了加密方法（recipes）和基元（primitives），支持Python 2.6-2.7、Python 3.3+ 和 PyPy。
 
-Cryptography 分为两个层，方法（recipes）层和危险底层（hazardous materials，简称hazmat）。
+cryptography 分为两个层，方法（recipes）层和危险底层（hazardous materials，简称hazmat）。
 方法层提供用于适当的对称加密，hazmat层提供底层的加密基元。
 
 安装

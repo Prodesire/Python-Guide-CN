@@ -190,7 +190,7 @@ Pipenv 将在您的项目目录中安装超赞的 `Requests`_ 库并为您创建
 
   $ pip install virtualenv
 
-测试您的安装
+测试您的安装：
 
 .. code-block:: console
 
@@ -204,20 +204,20 @@ Pipenv 将在您的项目目录中安装超赞的 `Requests`_ 库并为您创建
 .. code-block:: console
 
    $ cd my_project_folder
-   $ virtualenv my_project
+   $ virtualenv venv
 
-``virtualenv my_project`` 将会在当前的目录中创建一个文件夹，包含了Python可执行文件，
-以及 ``pip`` 库的一份拷贝，这样就能安装其他包了。虚拟环境的名字（此例中是 ``my_project`` ）
+``virtualenv venv`` 将会在当前的目录中创建一个文件夹，包含了Python可执行文件，
+以及 ``pip`` 库的一份拷贝，这样就能安装其他包了。虚拟环境的名字（此例中是 ``venv`` ）
 可以是任意的；若省略名字将会把文件均放在当前目录。
 
-在任何您运行命令的目录中，这会创建Python的拷贝，并将之放在叫做 :file:`my_project` 
+在任何您运行命令的目录中，这会创建Python的拷贝，并将之放在叫做 :file:`venv` 
 的文件中。
 
 您可以选择使用一个Python解释器（比如``python2.7``）：
 
 .. code-block:: console
 
-   $ virtualenv -p /usr/bin/python2.7 my_project
+   $ virtualenv -p /usr/bin/python2.7 venv
 
 或者使用``~/.bashrc``的一个环境变量将解释器改为全局性的：
 
@@ -230,10 +230,10 @@ Pipenv 将在您的项目目录中安装超赞的 `Requests`_ 库并为您创建
 
 .. code-block:: console
 
-   $ source my_project/bin/activate
+   $ source venv/bin/activate
 
-当前虚拟环境的名字会显示在提示符左侧（比如说 ``(my_project)您的电脑:您的工程 用户名$）
-以让您知道它是激活的。从现在起，任何您使用pip安装的包将会放在 ``my_project`` 文件夹中，
+当前虚拟环境的名字会显示在提示符左侧（比如说 ``(venv)您的电脑:您的工程 用户名$）
+以让您知道它是激活的。从现在起，任何您使用pip安装的包将会放在 ``venv`` 文件夹中，
 与全局安装的Python隔绝开。
 
 像平常一样安装包，比如：
@@ -250,11 +250,11 @@ Pipenv 将在您的项目目录中安装超赞的 `Requests`_ 库并为您创建
 
 这将会回到系统默认的Python解释器，包括已安装的库也会回到默认的。
 
-要删除一个虚拟环境，只需删除它的文件夹。（要这么做请执行  ``rm -rf my_project`` ）
+要删除一个虚拟环境，只需删除它的文件夹。（要这么做请执行  ``rm -rf venv`` ）
 
 然后一段时间后，您可能会有很多个虚拟环境散落在系统各处，您将有可能忘记它们的名字或者位置。
 
-其他注意
+其他注意事项
 --------------
 
 运行带 ``--no-site-packages`` 选项的 ``virtualenv`` 将不会包括全局安装的包。
@@ -267,7 +267,7 @@ Pipenv 将在您的项目目录中安装超赞的 `Requests`_ 库并为您创建
     $ pip freeze > requirements.txt
 
 这将会创建一个 :file:`requirements.txt` 文件，其中包含了当前环境中所有包及
-各自的版本的简单列表。您可以使用 “pip list”在不产生requirements文件的情况下，
+各自的版本的简单列表。您可以使用 ``pip list`` 在不产生requirements文件的情况下，
 查看已安装包的列表。这将会使另一个不同的开发者（或者是您，如果您需要重新创建这样的环境）
 在以后安装相同版本的相同包变得容易。
 
@@ -306,7 +306,7 @@ virtualenvwrapper
 
   $ pip install virtualenvwrapper-win
 
-在Windows中，WORKON_HOME默认的路径是 %USERPROFILE%\Envs 。
+在Windows中，WORKON_HOME默认的路径是 %USERPROFILE%\\Envs 。
 
 基本使用
 --------------
@@ -326,7 +326,7 @@ virtualenvwrapper
    $ workon my_project
 
 或者，您可以创建一个项目，它会创建虚拟环境，并在 ``$WORKON_HOME`` 中创建一个项目目录。
-当您使用 ``workon myproject`` 时，会 ``cd`` -ed 到项目目录中。
+当您使用 ``workon myproject`` 时，会 ``cd`` 到项目目录中。
 
 .. code-block:: console
 

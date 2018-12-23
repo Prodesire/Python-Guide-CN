@@ -47,6 +47,8 @@ Learnpython.org是一个简单易懂的了解Python的途径。网站采用了�
 
     `Learn Python <http://www.learnpython.org/>`_
 
+Python for You and Me
+~~~~~~~~~~~~~~~~~~~~~
 
 如果您想要更加传统的书籍， *Python For You and Me* 是一个极佳的学习Python所有方面的资源。
 
@@ -128,9 +130,8 @@ Think Python 通过使用Python语言来介绍计算机科学中的基本概念�
 Python Koans
 ~~~~~~~~~~~~
 
-Python Koans是Edgecase's Ruby Koans的迁移版。它使用测试驱动的方法（参阅TEST DRIVEN 
-DESIGN SECTION）提供一个交互式的教程，来讲解基本的Python概念。通过修复在测试脚本中
-失败的断言，从而提供连续的步骤来学习Python。
+Python Koans是Edgecase's Ruby Koans的迁移版。它使用测试驱动的方法提供一个交互式的教程，
+来讲解基本的Python概念。通过修复在测试脚本中失败的断言，从而提供连续的步骤来学习Python。
 
 对于那些使用语言并找出自己的困惑的人来说，这会是个有趣并有吸引力的选择。对于新手来说，
 拥有一个额外的资源或者参考会是很有用的。
@@ -228,7 +229,7 @@ A Guide to Python's Magic Methods
 
     `A Guide to Python's Magic Methods <http://www.rafekettler.com/magicmethods.html>`_
 
-.. note:: Rafekettler.com目前已关闭，您可以直接访问他们的Github版本。 在这里您可以找到一个PDF版本:
+.. note:: Rafekettler.com目前已关闭，您可以直接访问他们的GitHub版本。 在这里您可以找到一个PDF版本:
     `A Guide to Python's Magic Methods (repo on GitHub) <https://github.com/RafeKettler/magicmethods/blob/master/magicmethods.pdf>`_
 
 
@@ -278,8 +279,8 @@ Programming Collective Intelligence介绍了大量基础的机器学习和数据
 Transforming Code into Beautiful, Idiomatic Python
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Transforming Code into Beautiful, Idiomatic Python 是由 Raymond Hettinger制作的视频。
-通过它可以学习到更好地使用Python最佳特性，通过一系列的代码转换来改进现有代码，
+Transforming Code into Beautiful, Idiomatic Python 是由 Raymond Hettinger 制作的视频。
+通过它可以学习到更好地使用Python的最佳特性，通过一系列的代码转换来改进现有代码：
 “当您看见这个，就那样去做”。
 
     `Transforming Code into Beautiful, Idiomatic Python <https://www.youtube.com/watch?v=OSGv2VnC0go>`_

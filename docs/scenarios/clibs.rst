@@ -35,7 +35,7 @@ ctypes
 ******
 
 `ctypes <https://docs.python.org/3/library/ctypes.html>`_ 是CPython中与C/C++
-交互的事实上的库。它不仅能完全访问大多数主流操作系统(比如：Windows上的Kernel32，
+交互的事实上的标准库。它不仅能完全访问大多数主流操作系统(比如：Windows上的Kernel32，
 \*nix上的libc)的纯C接口，并且支持对动态库的加载和交互，如DLL和运行时共享对象。
 它同时涵盖许多可和系统API交互的类型，并允许您以相对简单的方式定义自己的复杂类型，
 如struct和union，并在需要时允许您作出如填充、对齐这样的修改。对它的使用可能稍显复杂，

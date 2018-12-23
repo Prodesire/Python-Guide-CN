@@ -27,17 +27,17 @@ OS X自带的Python版本更适合用于学习而不是开发。因为版本与P
 跟着我一起安装真实版本的Python吧。
 
 在正式安装之前，应先安装C编译器。最快的方式是运行 ``xcode-select --install`` 来安装Xcode命令行工具。
-您也可以从Mac应用商店下载完全版的 `XCode <http://developer.apple.com/xcode/>`_， 
+您也可以从Mac应用商店下载完全版的 `Xcode <http://developer.apple.com/xcode/>`_， 
 或者更轻巧的 `OSX-GCC-Installer <https://github.com/kennethreitz/osx-gcc-installer#readme>`_ 。
 
 .. note::
-    如果已经安装了XCode，请不要再安装 OSX-GCC-Installer。两者结合可能会引发难以诊断的问题。
+    如果已经安装了Xcode，请不要再安装 OSX-GCC-Installer。两者结合可能会引发难以诊断的问题。
 
 .. note::
-    执行XCode的全新安装完成后，须在终端执行下述命令 ``xcode-select --install`` 来安装命令行工具。
+    执行Xcode的全新安装完成后，须在终端执行下述命令 ``xcode-select --install`` 来安装命令行工具。
 
 
-尽管OS X系统附带了大量UNIX工具，熟悉Linux系统的人员使用时会发现缺少一个重要的组件——合适的包管理工具，
+尽管OS X系统附带了大量Unix工具，熟悉Linux系统的人员使用时会发现缺少一个重要的组件——合适的包管理工具，
 `Homebrew <http://brew.sh>`_ 正好填补了这个空缺。
 
 `安装 Homebrew <http://brew.sh/#install>`_ 只需打开 :file:`终端` 或个人常用的终端模拟器并运行：

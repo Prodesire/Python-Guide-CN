@@ -87,7 +87,7 @@ Pip和Virtualenv的更多配置
 
 当使用更老的版本时，你可以用下面的方式来配置pip，以使它尝试重用已安装的包。
 
-在UNIX系统中，您可以添加以下两行到您的 :file:`.bashrc` 或 :file:`.bash_profile` 文件中。
+在Unix系统中，您可以添加以下两行到您的 :file:`.bashrc` 或 :file:`.bash_profile` 文件中。
 
 .. code-block:: console
 
@@ -104,7 +104,7 @@ Pip和Virtualenv的更多配置
 
     download-cache = %HOME%\pip\cache
 
-类似的，如果您使用UNIX，就将下面一行添加到 :file:`pip.conf` 文件中的 ``[global]`` 设置下：
+类似的，如果您使用Unix，就将下面一行添加到 :file:`pip.conf` 文件中的 ``[global]`` 设置下：
 
 .. code-block:: console
 

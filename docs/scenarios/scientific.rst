@@ -16,8 +16,8 @@ Python被经常使用在高性能科学应用中。它之所以在学术和科�
 
 
 由于科学计算对高性能的要求，Python中相关操作经常借用外部库，通常是
-以更快的语言（如C，或者FORTRAN来进行矩阵操作）写的。其主要的库有 `Numpy`_,
-`Scipy`_ 以及 `Matplotlib`_。关于这些库的细节超出了本指南的范围。不过，
+以更快的语言（如C，或者Fortran来进行矩阵操作）写的。其主要的库有 `Numpy`_,
+`SciPy`_ 以及 `Matplotlib`_。关于这些库的细节超出了本指南的范围。不过，
 关于Python的科学计算生态的综合介绍可以在这里找到
 `Python Scientific Lecture Notes <http://scipy-lectures.github.com/>`_。
 
@@ -46,7 +46,7 @@ python 笔记本。这个笔记本允许您保存一些代码块，伴随着它�
 NumPy
 ~~~~~
 
-`NumPy <http://numpy.scipy.org/>`_ 是一个用C和FORTRAN写的底层库，它提供一些高层
+`NumPy <http://numpy.scipy.org/>`_ 是一个用C和Fortran写的底层库，它提供一些高层
 数学函数。NumPy通过多维数组和操作这些数组的函数巧妙地解决了Python运行算法较慢的问题。
 任何算法只要被写成数组中的函数，就可以运行得很快。
 
@@ -118,10 +118,9 @@ Windows上工作，您也许想要看看。
 Anaconda
 ~~~~~~~~
 
-`Continuum Analytics <http://continuum.io/>`_ 提供了
-`Anaconda Python Distribution <https://store.continuum.io/cshop/anaconda>`_，它
-拥有所有常见的Python科学包，也包括与数据分析和大数据相关的包。Anaconda是免费的
-而Continuum销售一些专有的额外组件。学术研究者可以获取这些组件的免费许可。
+`Anaconda Python 发行版 <https://store.continuum.io/cshop/anaconda>`_
+包含所有常见的Python科学包，也包括与数据分析和大数据相关的包。Anaconda是免费的
+也有一些收费的个人插件。学术研究者可以获取这些插件的免费许可。
 
 Canopy
 ~~~~~~

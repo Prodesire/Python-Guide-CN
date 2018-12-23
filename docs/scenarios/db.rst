@@ -11,7 +11,7 @@ DB-API
 ******
 
 Python数据库API（DB-API）定义了一个Python数据库访问模块的标准接口。它的文档在 :pep:`249` 可以查看。
-几乎所有Python数据库模块，诸如 `sqlite3`， `psycopg` 以及 `mysql-python` 都遵循这个接口。
+几乎所有Python数据库模块，诸如 `sqlite3`、 `psycopg` 以及 `mysql-python` 都遵循这个接口。
 
 
 关于如何与遵守这一接口的模块交互的教程可以在这里找到：
@@ -57,10 +57,10 @@ Django ORM 是 `Django <http://www.djangoproject.com>`_ 用来进行数据库访
 
 基础：
 
-- 每个model是django.db.models.Model的子类。
-- model的每个属性表示数据库的域（field）。
+- 每个model是django.db.models.Model的子类
+- model的每个属性表示数据库的域（field）
 - Django给您一个自动生成的数据库访问API，参见
-  `Making queries <https://docs.djangoproject.com/en/dev/topics/db/queries/>`__。
+  `Making queries <https://docs.djangoproject.com/en/dev/topics/db/queries/>`__
 
 
 ******
@@ -68,9 +68,9 @@ peewee
 ******
 
 `peewee <http://docs.peewee-orm.com/en/latest/>`_ 是另一个ORM，它致力于轻量级和支持Python2.6+与3.2+默认支持的
-SQLite，MySQL以及Postgres。 `model layer <https://peewee.readthedocs.io/en/latest/peewee/quickstart.html#model-definition>`_
+SQLite、MySQL以及PostgreSQL。 `model layer <https://peewee.readthedocs.io/en/latest/peewee/quickstart.html#model-definition>`_
 与Django ORM类似并且它拥有 `SQL-like methods <https://peewee.readthedocs.io/en/latest/peewee/quickstart.html#retrieving-data>`_
-来查询数据。除了将SQLite，MySQL以及Postgres变为开箱即用，还有进一步的扩展功能可以在这里找到：
+来查询数据。除了将SQLite、MySQL以及PostgreSQL变为开箱即用，还有进一步的扩展功能可以在这里找到：
 `collection of add-ons <https://peewee.readthedocs.io/en/latest/peewee/playhouse.html#playhouse>`_。
 
 
@@ -80,7 +80,7 @@ PonyORM
 
 `PonyORM <http://ponyorm.com/>`_ 是一个ORM，它使用与众不同的方法查询数据库，有别于
 使用类似SQL的语言或者布尔表达式，它使用Python的生成器达到目的。而且还有一个图形化
-schema编辑器生成PonyORM实体。它支持Python2.6+与3.3+并且可以连接SQLite，MySQL，Postgres与Oracle。
+schema编辑器生成PonyORM实体。它支持Python2.6+与3.3+并且可以连接SQLite、MySQL、PostgreSQL与Oracle。
 
 
 *********
@@ -88,7 +88,7 @@ SQLObject
 *********
 
 `SQLObject <http://www.sqlobject.org/>`_ 是另一个ORM。它支持广泛的数据库，常见的
-MySQL，Postgres以及SQLite与更多的特别系统如SAP DB，SyBase与MSSQL。它只支持Python 2
+MySQL、PostgreSQL以及SQLite与更多的特别系统如SAP DB、SyBase与MSSQL。它只支持Python 2
 
 
 .. There's no official information on this on their page, this information was gathered by looking at their source code

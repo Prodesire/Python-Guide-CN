@@ -78,7 +78,7 @@ Use `pip <http://pypi.python.org/pypi/pip>`_.  More details
    $ python -m SimpleHTTPServer 9000
 
 
-这运行了一个简单的http服务器，其监听端口9000并且将列出所有包（比如 **MyPackage**）。现在
+这运行了一个简单的HTTP服务器，其监听端口9000并且将列出所有包（比如 **MyPackage**）。现在
 您可以使用任何Python包安装器从您的服务器中安装 **MyPackage** 。若使用Pip,您可以这样做：
 
 .. code-block:: console
@@ -103,7 +103,7 @@ pypiserver
 命令（ ``-U`` ），其可以自动更新所有它的包到PyPI上的最新版。
 
 
-S3-Hosted PyPi
+S3-Hosted PyPI
 ++++++++++++++
 
 
@@ -146,7 +146,7 @@ Amazon AWS账号并且有 S3 bucket。
 
 创建一个Linux分发包对于Linux来说是个正确的决定。
 
-因为分发包可以不包含Python解释器，它使得下载与安装这些包可以减小2MB，
+因为分发包可以不包含Python解释器，它使得下载与安装这些包可以减小2-12 MB，
 :ref:`freezing your application <freezing-your-code-ref>`.
 
 并且，如果Python有了更新的版本，则您的应用可以自动使用新版本的Python。
@@ -157,9 +157,9 @@ bdist_rpm命令使得 `producing an RPM file <https://docs.python.org/3/distutil
 
  无论如何，创建和维持不同配置要求给不同的发布格式（如 对于Debian/Ubuntu是.deb，而对于Red
  Hat/Fedora是.rpm等）无疑需要大量的工作。如果您的代码是一个应用，而您计划分发到其他平台上，
- 则您需要创建并维护各个配置要求来冻结您的应用为Windows与OSX。它比创建和
+ 则您需要创建并维护各个配置要求来冻结您的应用为Windows与OS X。它比创建和
  维护一个单独的配置给每个平台要简单的多 :ref:`freezing tools <freezing-your-code-ref>`
- 其将产生独立可执行的文件给所有Linux发布版，就像Windows与OSX上一样，
+ 其将产生独立可执行的文件给所有Linux发布版，就像Windows与OS X上一样，
 
 创建一个对Python版本敏感的分发包也会造成问题。可能需要告诉Ubuntu的 *一些版本* 的
 用户他们需要增加 `the 'dead-snakes' PPA <https://launchpad.net/~fkrull/+archive/ubuntu/deadsnakes>`_
