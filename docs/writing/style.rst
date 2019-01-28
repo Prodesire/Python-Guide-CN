@@ -533,8 +533,63 @@ PEP 8
 
 `列表推导
 <http://docs.python.org/tutorial/datastructures.html#list-comprehensions>`_
-提供了一个强大的而又简洁的方式来处理列表。而且， :py:func:`map` 和 
-:py:func:`filter` 函数使用一种不同但是更简洁的语法处理列表。
+提供了一个强大的而又简洁的方式来处理列表。
+
+`生成器表达式
+<http://docs.python.org/tutorial/classes.html#generator-expressions>`_
+遵循和列表推导几乎相同的语法，但是返回生成器而非列表。
+
+创建一个新的列表需要更多的工作，也需要使用更多的内存。如果你只是遍历这个列表，更好地方式是使用迭代器。
+
+**糟糕**:
+
+.. code-block:: python
+
+    # 不必要地在内存中分配了包含所有对象（gpa, name）的列表
+    valedictorian = max([(student.gpa, student.name) for student in graduates])
+
+**优雅**:
+
+.. code-block:: python
+
+    valedictorian = max((student.gpa, student.name) for student in graduates)
+
+当你确实想要创建新的列表时，比如要多次使用结果，那么就使用列表推导。
+
+如果你的逻辑太过复杂，无法用简短的列表推导或者生成器来简洁地表达，请考虑使用生成器函数而非返回一个列表。
+
+**Good**:
+
+.. code-block:: python
+
+    def make_batches(items, batch_size):
+        """
+        >>> list(make_batches([1, 2, 3, 4, 5], batch_size=3))
+        [[1, 2, 3], [4, 5]]
+        """
+        current_batch = []
+        for item in items:
+            current_batch.append(item)
+            if len(current_batch) == batch_size:
+                yield current_batch
+                current_batch = []
+        yield current_batch
+
+永远不要为了列表推导的副作用而使用它。
+
+**糟糕**:
+
+.. code-block:: python
+
+    [print(x) for x in seqeunce]
+
+**优雅**:
+
+.. code-block:: python
+
+    for x in sequence:
+        print(x) 
+
 
 过滤列表
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -560,51 +615,15 @@ PEP 8
 
 **优雅**:
 
-Python有一些标准的过滤列表的方法。
-您要使用哪种方法取决于：
-
-* Python 2.x vs. 3.x
-* 列表 vs. 迭代器
-* 修改原始列表可能产生的副作用
-
-Python 2.x vs. 3.x
-::::::::::::::::::::::::::::
-
-从 Python 3.0 开始， :py:func:`filter` 函数返回迭代器而不是列表。
-如果你真的需要一个列表，请使用 :py:func:`list` 将其包装。
-
-.. code-block:: python
-
-    list(filter(...))
-
-列表推导和生成器表达式在 2.x 和 3.x 中的工作方式相同（唯一特殊的是在 2.x 中变量“泄漏”到了闭包空间中）
-
-    * 推导会创建一个新的列表对象
-    * 生成器会迭代原始列表
-
-:py:func:`filter` 函数
-
-    * 在 2.x 中返回一个列表（如果你想要一个迭代器，请使用 itertools.ifilter）
-    * 在 3.x 中返回一个迭代器
-
-列表与迭代器
-:::::::::::::::::::
-
-创建新列表需要更多工作,并使用更多内存。如果您只是要遍历列表，请考虑使用迭代器。
+使用列表推导，或生成器表达式。
 
 .. code-block:: python
 
     # 推导创建了一个新的列表对象
     filtered_values = [value for value in sequence if value != x]
-    # 或者 (2.x)
-    filtered_values = filter(lambda i: i != x, sequence) 
 
     # 生成器不会创建新的列表
     filtered_values = (value for value in sequence if value != x)
-    # 或者 (3.x)
-    filtered_values = filter(lambda i: i != x, sequence)
-    # 或者 (2.x)
-    filtered_values = itertools.ifilter(lambda i: i != x, sequence) 
 
 修改原始列表可能产生的副作用
 ::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -615,10 +634,6 @@ Python 2.x vs. 3.x
 
     # 修改原始列表的内容
     sequence[::] = [value for value in sequence if value != x]
-    # 或者
-    sequence[::] = (value for value in sequence if value != x)
-    # 或者
-    sequence[::] = filter(lambda value: value != x, sequence)
 
 在列表中修改值
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -647,10 +662,6 @@ Python 2.x vs. 3.x
     
     # 给变量 "a" 赋值新的列表，而不改变 "b"
     a = [i + 3 for i in a]
-    # 或者 (Python 2.x):
-    a = map(lambda i: i + 3, a)
-    # 或者 (Python 3.x)
-    a = list(map(lambda i: i + 3, a))
 
 使用 :py:func:`enumerate` 获得列表中的当前位置的计数。
 
