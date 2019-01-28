@@ -116,6 +116,19 @@ Masonite 提供了许多开箱即用的功能，包括一个功能强大的具�
 
 Masonite 非常适合初学者或经验丰富的开发人员。从安装到部署都相当快速和容易。只需尝试一次，你就会爱上它。
 
+FastAPI
+-------
+
+`FastAPI <https://fastapi.tiangolo.com>`_ 是一个使用 Python 3.6+ 版本来构建API的现代化 Web 框架。
+
+由于它是基于 `Starlette <https://www.starlette.io>`_ 和 `Pydantic <https://pydantic-docs.helpmanual.io>`_，
+具有非常高的性能。
+
+FastAPI 利用函数参数中标准的 Python 类型声明来声明请求参数和实体、执行数据转换（序列化、分析）、数据验证，
+以及使用 ** OpenAPI 3 **（包括 ** JSON Schema **）自动生成 API 文档。
+
+它包括用于安全性和身份验证的工具和实用程序（包括带有JWT令牌的OAuth2）、依赖注入系统、交互式 API 文档生成器以及其他功能。
+
 
 ***********
 Web 服务端
