@@ -21,7 +21,7 @@ Python 用于许多不同的目的。准确地说，您希望如何管理依赖�
 在您进一步之前，请确保您有 Python，并且可从您的命令行中获得。
 您可以通过简单地运行以下命令来检查：
 
-.. code-block:: bash
+.. code-block:: console
 
     $ python --version
 
@@ -42,7 +42,7 @@ Python 用于许多不同的目的。准确地说，您希望如何管理依赖�
 
 另外，您需要确保 `pip`_ 是可用的。您可以通过运行以下命令来检查：
 
-.. code-block:: bash
+.. code-block:: console
 
     $ pip --version
 
@@ -99,7 +99,7 @@ Ruby 的 `bundler`_，那么它们在思路上与这些工具类似。尽管 `pi
 Pipenv 管理每个项目的依赖关系。要安装软件包时，请更改到您的项目目录（或只是本教程中的
 一个空目录）并运行：
 
-.. code-block:: bash
+.. code-block:: console
 
     $ cd myproject
     $ pipenv install requests
@@ -155,7 +155,7 @@ Pipenv 将在您的项目目录中安装超赞的 `Requests`_ 库并为您创建
 
 然后您就可以使用 ``pipenv run`` 运行这段脚本：
 
-.. code-block:: bash
+.. code-block:: console
 
     $ pipenv run python main.py
 
