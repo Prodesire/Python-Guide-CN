@@ -46,8 +46,6 @@
 Pip vs. easy_install
 --------------------
 
-Use `pip <http://pypi.python.org/pypi/pip>`_.  More details
-`here <http://stackoverflow.com/questions/3220404/why-use-pip-over-easy-install>`_
 
 使用 `pip <http://pypi.python.org/pypi/pip>`_. 更多细节参见
 `here <http://stackoverflow.com/questions/3220404/why-use-pip-over-easy-install>`_
