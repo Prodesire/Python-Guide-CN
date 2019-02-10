@@ -137,7 +137,7 @@ Pipenv 将在您的项目目录中安装超赞的 `Requests`_ 库并为您创建
     Adding requests to Pipfile's [packages]...
     P.S. You have excellent taste! ✨ 🍰 ✨
 
-.. _Requests: https://python-requests.org
+.. _Requests: http://docs.python-requests.org/en/master/
 
 
 使用安装好的包
