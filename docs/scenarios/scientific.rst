@@ -84,6 +84,13 @@ Pandas
 许多有用的函数能轻松地对数据进行访问、索引、合并以及归类。其主要数据结构（DataFrame）
 与R统计学包十分相近；也就是，使用名称索引的异构数据（heterogeneous data）表、时间序列操作以及对数据的自动对准（auto-alignment）。
 
+xarray
+~~~~~~
+
+`xarray <http://xarray.pydata.org/en/stable/>`_ 和 Pandas 类似，但是为包装多维科学数据而生。
+通过给数据标记维度、坐标和属性使得多维操作变得更加清晰和直观。它还包装了matplotlib以快速绘图，还可以通过 
+`dask <http://xarray.pydata.org/en/stable/dask.html>`_ 来并行地进行大多数的操作。
+
 Rpy2
 ~~~~
 
