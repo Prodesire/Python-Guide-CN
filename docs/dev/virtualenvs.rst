@@ -76,7 +76,7 @@ Ruby 的 `bundler`_，那么它们在思路上与这些工具类似。尽管 `pi
     
     在 Linux 和 macOS 上，您可以通过运行 ``python -m site --user-base`` 找到
     用户基础目录，然后把 ``bin`` 加到目录末尾。比如，上述命令典型地会打印出
-    ``~/.local``（ ``~`` 会扩展为您的家目录的局对路径），然后将 ``~/.local/bin``
+    ``~/.local``（ ``~`` 会扩展为您的家目录的绝对路径），然后将 ``~/.local/bin``
     添加到 ``PATH`` 中。您可以通过 `修改 ~/.profile`_ 永久地设置 ``PATH``。
 
     在 Windows 上，您通过运行 ``py -m site --user-site`` 找到用户基础目录，然后
