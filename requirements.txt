@@ -5,7 +5,7 @@ chardet==3.0.4
 docutils==0.14
 idna==2.7
 imagesize==1.0.0
-Jinja2==2.10
+Jinja2>=2.10.1
 MarkupSafe==1.0
 packaging==17.1
 Pygments==2.2.0
