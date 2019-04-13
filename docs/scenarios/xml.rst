@@ -41,7 +41,7 @@ untangle也支持从字符串或URL中载入XML。
 xmltodict
 *********
 
-`xmltodict <http://github.com/martinblech/xmltodict>`_ 是另一个简易的库，
+`xmltodict <https://github.com/martinblech/xmltodict>`_ 是另一个简易的库，
 它致力于将XML变得像JSON。
 
 对于一个像这样的XML文件：

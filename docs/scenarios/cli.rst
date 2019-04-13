@@ -43,11 +43,11 @@ docopt
 Plac
 ****
 
-`Plac <https://pypi.python.org/pypi/plac>`_ Python标准库 
-`argparse <http://docs.python.org/2/library/argparse.html>`_ 的简单封装，
-它隐藏了大量声明接口的细节：参数解析器是被推断的，其优于写命令明确处理。
-这个模块的面向是不想太复杂的用户，程序员，系统管理员，科学家以及只是想
-写个只运行一次的脚本的人们，使用这个命令行接口的理由是它可以快速实现并且简单。
+`Plac <https://pypi.org/project/plac>`_ 是对 Python 标准库 
+`argparse <http://docs.python.org/2/library/argparse.html>`_ 的简单封装。
+它使用声明式接口隐藏其复杂性：参数解析器是被推断出来，而非强制编写。
+此模块面向不熟练的用户、程序员、系统管理员、科学家以及只想
+写个只一次性脚本的人们。他们选择创建命令行界面，因为它快速而简单。
 
 
 *****

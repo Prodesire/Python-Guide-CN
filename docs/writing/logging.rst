@@ -9,6 +9,8 @@
 模块自2.3版本开始便是Python标准库的一部分。它被简洁的描述在 :pep:`282`。
 众所周知，除了 `基础日志指南`_ 部分，该文档并不容易阅读。
 
+`loguru <https://github.com/Delgan/loguru>`_ 作为替代方案，
+提供了一像使用 ``print`` 语句一样简单的日志打印方法。
 
 日志的两个目的：
 
@@ -55,8 +57,8 @@
 应用程序中的日志
 **************************
 
-应用程序开发的权威指南， `应用的12要素 <http://12factor.net>`_ ，也在其中一节描述了 
-`日志的作用 <http://12factor.net/logs>`_ 。它特别强调将日志视为事件流，
+应用程序开发的权威指南， `应用的12要素 <https://12factor.net>`_ ，也在其中一节描述了 
+`日志的作用 <https://12factor.net/logs>`_ 。它特别强调将日志视为事件流，
 并将其发送至由应用环境所处理的标准输出中。
 
 
@@ -169,9 +171,9 @@ Python 2.7中，您可以使用字典实现详细配置。:pep:`391` 包含了�
     logger.debug('often makes a very good meal of %s', 'visiting tourists')
 
 
-.. _基础日志指南: http://docs.python.org/howto/logging.html#logging-basic-tutorial
-.. _日志配置: https://docs.python.org/howto/logging.html#configuring-logging
-.. _日志指南: http://docs.python.org/howto/logging.html
-.. _库日志配置: https://docs.python.org/howto/logging.html#configuring-logging-for-a-library
-.. _日志记录: https://docs.python.org/library/logging.html#logrecord-attributes
+.. _基础日志指南: http://docs.python.org/3/howto/logging.html#logging-basic-tutorial
+.. _日志配置: https://docs.python.org/3/howto/logging.html#configuring-logging
+.. _日志指南: http://docs.python.org/3/howto/logging.html
+.. _库日志配置: https://docs.python.org/3/howto/logging.html#configuring-logging-for-a-library
+.. _日志记录: https://docs.python.org/3/library/logging.html#logrecord-attributes
 .. _requests 资源: https://github.com/kennethreitz/requests

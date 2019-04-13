@@ -10,9 +10,12 @@
 C语言外部函数接口(CFFI)
 ############################
 
-`CFFI <https://cffi.readthedocs.io/en/latest/>`_ 通过CPython和PyPy给出了和
-C语言交互的简单使用机制。它支持两种模式：一种是内联的ABI兼容模式(示例如下)，
-它允许您动态加载和运行可执行模块的函数(本质上与LoadLibrary和dlopen拥有相同的功能)；
+`CFFI <https://cffi.readthedocs.io/en/latest/>`_ 通过 CPython 和 PyPy 给出了和
+C语言交互的简单使用机制。它支持两种模式：一种是内联的 
+`ABI <https://stackoverflow.com/questions/2171177/what-is-an-application-binary-interface-abi>`_  
+兼容模式(示例如下)，它允许您动态加载和运行可执行模块的函数(本质上与 
+`LoadLibrary <https://docs.microsoft.com/en-us/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya>`_ 或 
+`dlopen <https://www.tldp.org/HOWTO/C++-dlopen/index.html>`_ 拥有相同的功能)；
 另一种为API模式，它允许您构建C语言扩展模块。
 
 ABI 交互

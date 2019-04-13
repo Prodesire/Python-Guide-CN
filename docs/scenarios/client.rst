@@ -20,7 +20,7 @@ Python的urllib2标准模块涵盖了所需的大多数HTTP功能，但它的API
 Requests将所有Python HTTP相关的功能剥离了出来，并与网络服务无缝衔接。Requests无需再在URL中添加查询语句或格式编码的POST数据。而集成在Requests中urllib3，则实现了持久连接和HTTP连接池的完全自动化。
 
 - `文档 <http://docs.python-requests.org/en/latest/index.html>`_
-- `PyPI <http://pypi.python.org/pypi/requests>`_
+- `PyPI http://pypi.org/project/requests>`_
 - `GitHub <https://github.com/kennethreitz/requests>`_
 
 

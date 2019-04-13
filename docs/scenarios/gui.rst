@@ -30,9 +30,7 @@ Cocoa
 GTk
 ***
 
-PyGTK提供GTK+工具包的Python绑定。和GTK+库一样，PyGTK当前由GNU LGPL授权。
-PyGTK当前只支持Gtk-2.X的API（Gtk-3.0不支持）。值得一提的是，PyGTK不适用于新项目，
-而已经存在的应用不能从PyGTK移植到PyGObject。
+.. note:: PyGTK提供GTK+工具包的Python绑定。但是，它已被PyGObject取代。 PyGTK不应该用于新项目，现有项目应该移植到PyGObject。
 
 
 ********************
@@ -92,17 +90,16 @@ PyQt提供Qt框架的Python绑定（见如下）
 http://www.riverbankcomputing.co.uk/software/pyqt/download
 
 
-*****************************
-PyjamasDesktop (pyjs Desktop)
-*****************************
+***************************************
+Pyjs Desktop (formerly Pyjamas Desktop)
+***************************************
 
-PyjamasDesktop是Pyjamas的端口。PyjamasDesktop是桌面应用工具集，并且是跨平台框架
-（在发布的v0.6版本之后，PyjamasDesktop是Pyjamas (Pyjs)的一部分）。简而言之，
-它允许完全一样的Python网页应用资源代码能够如独立的桌面应用执行。
+Pyjs Desktop 是一个用于桌面和跨平台框架的应用程序小部件集。
+它允许完全相同的 Python Web 应用程序源代码作为独立的桌面应用程序来执行。
 
 `PyjamasDesktop的Python维基百科 <http://wiki.python.org/moin/PyjamasDesktop>`_.
 
-主要的网址: `pyjs Desktop <http://pyjs.org/>`_.
+主要的网址: `pyjs <http://pyjs.org/>`_。
 
 
 **
@@ -159,4 +156,4 @@ wxPython是Python语言编写的GUI工具包。Python编写人员能够使简单
 把流行的wxWidgets包在跨平台GUI库中，从而作为Python的扩展模块，这用C++编写。
 
 **安装（稳定版）wxPython可以去如下网址**
-http://www.wxpython.org/download.php#stable ，并且下载适用于当前操作系统的安装包。
+https://www.wxpython.org/pages/downloads/ ，并且下载适用于当前操作系统的安装包。

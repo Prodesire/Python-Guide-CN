@@ -132,6 +132,6 @@ Anaconda
 Canopy
 ~~~~~~
 
-`Canopy <https://www.enthought.com/products/canopy/>`_ 是另一个Python科学发布版，由
+`Canopy <https://www.enthought.com/product/canopy/>`_ 是另一个Python科学发布版，由
 `Enthought <https://www.enthought.com/>`_ 提供。其受限制的 'Canopy Express' 版本
 是免费提供的，但是Enthought负责完整版。学术研究者可以获取到免费许可。

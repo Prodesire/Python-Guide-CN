@@ -50,7 +50,7 @@ Records
 Django ORM
 **********
 
-Django ORM 是 `Django <http://www.djangoproject.com>`_ 用来进行数据库访问的接口。
+Django ORM 是 `Django <https://www.djangoproject.com>`_ 用来进行数据库访问的接口。
 
 它的思想建立在 `models <https://docs.djangoproject.com/en/dev/#the-model-layer>`_ ，
 之上。这是一个致力于简化Python中数据操作的抽象层。

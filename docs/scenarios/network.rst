@@ -10,16 +10,16 @@
 Twisted
 *******
 
-`Twisted <http://twistedmatrix.com/trac/>`_ 是一款基于事件驱动的网络引擎框架。
+`Twisted <https://twistedmatrix.com/trac/>`_ 是一款基于事件驱动的网络引擎框架。
 支持创建基于不同网络协议的应用，包括 HTTP 服务器与客户端、SMTP 应用、POP3、IMAP
-或 SSH 协议，即时通讯 `等等 <http://twistedmatrix.com/trac/wiki/Documentation>`_。
+或 SSH 协议，即时通讯 `等等 <https://twistedmatrix.com/trac/wiki/Documentation>`_。
 
 
 *****
 PyZMQ
 *****
 
-`PyZMQ <http://zeromq.github.com/pyzmq/>`_ 是 `ZeroMQ <http://www.zeromq.org/>`_
+`PyZMQ <https://zeromq.github.com/pyzmq/>`_ 是 `ZeroMQ <http://www.zeromq.org/>`_
 的 Python捆绑库 (binding)，ZeroMQ 是一款高效率的异步消息库，它的一个显著优点就是能
 被用做消息队列且不需要消息代理。基本模式包括：
 

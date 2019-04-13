@@ -32,7 +32,7 @@ Planet Python
 
 这是一个聚合的，展示不断增长的开发者内容的Python新闻。
 
-    `Planet Python <http://planet.python.org>`_
+    `Planet Python <https://planetpython.org>`_
 
 
 *********
@@ -41,7 +41,7 @@ Planet Python
 
 /r/python是Reddit的Python社区，在这里用户会贡献和投票出和Python相关的新闻。
 
-    `/r/python <http://reddit.com/r/python>`_
+    `/r/python <https://reddit.com/r/python>`_
 
 
 *******************
@@ -68,7 +68,7 @@ Python Weekly
 
 Python Weekly是一个免费的每周简讯，其特色包括与Python相关的新闻、文章、新的发行版本、工作等。
 
-    `Python Weekly <http://www.pythonweekly.com/>`_
+    `Python Weekly <https://www.pythonweekly.com/>`_
 
 
 ***********
@@ -77,7 +77,7 @@ Python News
 
 Python News是Python官方网站的新闻章节。它简短突出来自Python社区的新闻。
 
-    `Python News <http://www.python.org/news/>`_
+    `Python News <http://www.python.org/blogs/>`_
 
 
 ********************

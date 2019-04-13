@@ -11,7 +11,7 @@
     查看我们的 :ref:`在Windows上安装Python 3指南<install3-windows>`.
 
 首先，从官网下载 `最新版本 <https://www.python.org/ftp/python/2.7.15/python-2.7.15.msi>`_
-的Python 2.7。如果想要确保下载到最新版本，单击 `Python官网 <http://python.org>`_ 的
+的Python 2.7。如果想要确保下载到最新版本，单击 `Python官网 <https://python.org>`_ 的
 Downloads > Windows 链接。
 
 Windows版本是MSI文件格式，双击它即可开始安装。MSI文件格式允许Windows管理员使用标准工具自动
@@ -24,13 +24,13 @@ Python将安装到内含版本号信息的路径，例如Python 2.7版本将被�
 把默认使用的Python版本路径加到 :envvar:`PATH` 环境变量中，避免每次使用时都要冗余地写全Python
 解释器路径。假设安装路径是 :file:`C:\\Python27\\`, 将这段加入到 :envvar:`PATH` 中:
 
-.. code-block:: console
+.. code-block:: doscon
 
     C:\Python27\;C:\Python27\Scripts\
 
 或在 ``powershell`` 中运行:
 
-.. code-block:: console
+.. code-block:: powershell
 
     [Environment]::SetEnvironmentVariable("Path", "$env:Path;C:\Python27\;C:\Python27\Scripts\", "User")
 
@@ -45,7 +45,7 @@ Python将安装到内含版本号信息的路径，例如Python 2.7版本将被�
 Setuptools + Pip
 ****************
 
-`setuptools <https://pypi.python.org/pypi/setuptools>`_ 和 `pip <https://pip.pypa.io/en/stable/>`_
+`setuptools <https://pypi.org/project/setuptools>`_ 和 `pip <https://pip.pypa.io/en/stable/>`_
 是两个最重要的第三方Python包。
 
 安装完成后，您可以使用单个命令下载、安装和卸载任何兼容的Python应用包。还可以轻松地这种网络安装的方式加入到自己开发
@@ -55,9 +55,9 @@ Python 2.7.9和更高版本（在Python 2系列上），Python 3.4和更高版�
 
 要查看是否安装了pip，请打开命令提示符并运行：
 
-.. code-block:: console
+.. code-block:: doscon
 
-    $ command -v pip
+     command -v pip
 
 要安装pip， `请遵照官方的pip安装指南 <https://pip.pypa.io/en/latest/installing/>`_ —— 这将自动安装最新版本的setuptools。
 
@@ -75,5 +75,5 @@ Python 2.7.9和更高版本（在Python 2系列上），Python 3.4和更高版�
 
 --------------------------------
 
-该页是 `另一份指南 <http://www.stuartellis.eu/articles/python-development-windows/>`_ 的混合版本，可通过同一份许可获取。
+该页是 `另一份指南 <https://www.stuartellis.name/articles/python-development-windows/>`_ 的混合版本，可通过同一份许可获取。
 

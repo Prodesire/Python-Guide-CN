@@ -28,5 +28,5 @@ Python-guide目前还在开发中，欢迎大家贡献代码。
     .. include:: ../../TODO.rst
 
 
-.. _GitHub: http://github.com/kennethreitz/python-guide/
+.. _GitHub: https://github.com/kennethreitz/python-guide/
 .. _todo: https://github.com/kennethreitz/python-guide/blob/master/TODO.rst

@@ -538,7 +538,7 @@ CustomOpen 首先被实例化，然后调用它的`__enter__``方法，而且 ``
 ``as f`` 语句中被赋给 ``f`` 。 当 ``with`` 块中的内容执行完后，会调用 `__exit__`` 方法。
 
 而生成器方式使用了Python自带的
-`contextlib <https://docs.python.org/2/library/contextlib.html>`_:
+`contextlib <https://docs.python.org/3/library/contextlib.html>`_:
 
 .. code-block:: python
 
@@ -721,5 +721,5 @@ Runners
 更多阅读
 ***************
 
-- http://docs.python.org/2/library/
-- http://www.diveintopython.net/toc/index.html
+- http://docs.python.org/3/library/
+- https://www.diveinto.org/python3/
