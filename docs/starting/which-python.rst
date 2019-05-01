@@ -50,7 +50,7 @@ Python的现状 (2 vs 3)
 因为每个版本都带来了新的改进了的标准库模块、安全性以及bug修复。进步就是进步。
 
 鉴于此，如果您有一个强有力的理由只用Python 2，比如Python 3 没有足够能替代的Python 2
-的特有库，或者您（像我）非常喜而且受Python 2启发。
+的特有库，或者您（像我）非常喜爱而且受Python 2启发。
 
 查看 `Can I Use Python 3? <https://caniusepython3.com/>`_ 来看看是否有您
 依赖的软件阻止您用Python 3。

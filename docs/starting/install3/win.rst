@@ -13,7 +13,7 @@
 
 完成之后，安装Python 3会非常简单，因为Chocolatey将Python 3作为默认设置。
 
-.. code-block:: console
+.. code-block:: doscon
 
     choco install python
 
@@ -24,13 +24,15 @@
 Setuptools + Pip
 ****************
 
-`setuptools <https://pypi.python.org/pypi/setuptools>`_ 和 `pip <https://pip.pypa.io/en/stable/>`_
+`setuptools <https://pypi.org/project/setuptools>`_ 和 `pip <https://pip.pypa.io/en/stable/>`_
 是两个最重要的第三方Python包。
 
 安装完成后，您可以使用单个命令下载、安装和卸载任何兼容的Python应用包。还可以轻松地这种网络安装的方式加入到自己开发
 的Python应用中。
 
-所有受支持的Python 3版本都包含pip，因此请确保它是最新的::
+所有受支持的Python 3版本都包含pip，因此请确保它是最新的:
+
+.. code-block:: doscon
 
     python -m pip install -U pip
 
@@ -50,5 +52,5 @@ Pipenv & 虚拟环境
 
 --------------------------------
 
-该页是 `另一份指南 <http://www.stuartellis.eu/articles/python-development-windows/>`_ 的混合版本，可通过同一份许可获取。
+该页是 `另一份指南 <https://www.stuartellis.name/articles/python-development-windows/>`_ 的混合版本，可通过同一份许可获取。
 

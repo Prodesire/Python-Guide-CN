@@ -64,7 +64,7 @@
 Setuptools & Pip
 ****************
 
-`setuptools <https://pypi.python.org/pypi/setuptools>`_ 和 `pip <https://pip.pypa.io/en/stable/>`_
+`setuptools <https://pypi.org/project/setuptools>`_ 和 `pip <https://pip.pypa.io/en/stable/>`_
 是最重要的两个Python第三方软件包。一旦安装了它们，就可以通过一条指令下载、安装和卸载可获取到的
 Python应用包，还可以轻松地将这种网络安装的方式加入到自己开发的Python应用中。
 
@@ -102,5 +102,5 @@ Pipenv & 虚拟环境
 
 --------------------------------
 
-该页是 `另一份指南 <http://www.stuartellis.eu/articles/python-development-windows/>`_ 的混合版本，可通过同一份许可获取。
+该页是 `另一份指南 <https://www.stuartellis.name/articles/python-development-windows/>`_ 的混合版本，可通过同一份许可获取。
 

@@ -51,7 +51,7 @@ py2app      no      no    yes  yes      MIT     no            yes            yes
     
 .. note::
     从Linux到Windows的冻结只有PyInstaller支持，
-    `其余的 <http://stackoverflow.com/questions/2950971/cross-compiling-a-python-script-on-linux-into-a-windows-executable#comment11890276_2951046>`_。
+    `其余的 <https://stackoverflow.com/questions/2950971/cross-compiling-a-python-script-on-linux-into-a-windows-executable#comment11890276_2951046>`_。
 
 .. note::
     所有解决方案，除了py2app以外，需要在目标机器上安装了Microsoft Visual C++ dll。
@@ -131,7 +131,7 @@ py2exe
 
 3. (可选) `包含图标 <http://www.py2exe.org/index.cgi/CustomIcons>`_
 
-4. (可选) `单文件模式 <http://stackoverflow.com/questions/112698/py2exe-generate-single-executable-file#113014>`_
+4. (可选) `单文件模式 <https://stackoverflow.com/questions/112698/py2exe-generate-single-executable-file#113014>`_
 
 5. 生成 :file: `.exe` 到 :file:`dist` 目录:
 

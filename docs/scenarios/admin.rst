@@ -345,7 +345,8 @@ Buildout
 ********
 
 `Buildout <http://www.buildout.org>`_ 是一个开源软件构件工具。Buildout由Python编写。
-它实现了配置和构建脚本分离的原则。Buildout主要用于下载和设置正在开发或部署软件的Python egg格式的依赖。
+它实现了配置和构建脚本分离的原则。Buildout主要用于下载和设置正在开发或部署软件的
+`Python eggs <https://stackoverflow.com/questions/2051192/what-is-a-python-egg>` 格式的依赖。
 在任何环境中构建任务的指南（recipe，原意为“食谱”，引申为“指南”）能被创建，许多早已可用。
 
 

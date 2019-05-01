@@ -226,7 +226,7 @@ Unittest2是Python2.7中unittest模型的补丁，它的API有所改善，并且
 
 如果切换到新的Python版本，并且不再需要unittest2模块，您只需要在测试模块中改变import内容，而不必改变其它代码。
 
-    `unittest2 <http://pypi.python.org/pypi/unittest2>`_
+    `unittest2 <http://pypi.org/project/unittest2>`_
 
 
 mock

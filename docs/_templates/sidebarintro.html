@@ -1,35 +1,54 @@
 <p class="logo">
   <a href="{{ pathto(master_doc) }}">
-    <img class="logo" src="{{ pathto('_static/python-guide-logo.png', 1) }}" title="Python最佳实践指南"/>
+    <img
+      class="logo"
+      src="{{ pathto('_static/python-guide-logo.png', 1) }}"
+      title="Python最佳实践指南"
+    />
   </a>
 </p>
 
-<p style="margin-left:auto; margin-right: auto;"><iframe src="https://ghbtns.com/github-btn.html?user=prodesire&repo=python-guide-cn&type=watch&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe></p>
+<p style="margin-left:auto; margin-right: auto;">
+  <iframe
+    src="https://ghbtns.com/github-btn.html?user=prodesire&repo=python-guide-cn&type=watch&count=true&size=large"
+    allowtransparency="true"
+    frameborder="0"
+    scrolling="0"
+    width="200px"
+    height="35px"
+  ></iframe>
+</p>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"
+/>
 <style>
-.algolia-autocomplete{
-  width: 100%;
-  height: 1.5em
-}
-.algolia-autocomplete a{
-  border-bottom: none !important;
-}
-#doc_search{
-  width: 100%;
-  height: 100%;
-}
+  .algolia-autocomplete {
+    width: 100%;
+    height: 1.5em;
+  }
+  .algolia-autocomplete a {
+    border-bottom: none !important;
+  }
+  #doc_search {
+    width: 100%;
+    height: 100%;
+  }
 </style>
-<input id="doc_search" placeholder="Search the Guide" autofocus/>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
-  <script type="text/javascript"> docsearch({
-      apiKey: '512b0d6c0c8578bed7662f5279c2249c',
-      indexName: 'python-guide',
-      inputSelector: "#doc_search",
-      debug: false // Set debug to true if you want to inspect the dropdown
-    });
+<input id="doc_search" placeholder="Search the Guide" autofocus />
+<script
+  type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"
+></script>
+<script type="text/javascript">
+  docsearch({
+    apiKey: "512b0d6c0c8578bed7662f5279c2249c",
+    indexName: "python-guide",
+    inputSelector: "#doc_search",
+    debug: false // Set debug to true if you want to inspect the dropdown
+  });
 </script>
-
 
 <p>
   这份较为主观的指南旨在为Python初学者和专家提供一个关于Python安装、配置、和日常使用的最佳实践手册。
@@ -37,41 +56,85 @@
 
 <div style="display:block;position:relative;margin: 1em 0 1em 0;">
   <div style="display:block;width:100%;padding-top:100%;"></div>
-  <div class="rpad" data-unit="1x1" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;"></div>
+  <div
+    class="rpad"
+    data-unit="1x1"
+    style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;"
+  ></div>
 </div>
 
 <h3>O'Reilly 书籍</h3>
 
 <p>这份指南现在有纸质版啦！</p>
 
-<p><a href="/guide-book" target="_blank"><img style="max-width: 100%; text-align: center;" src="/_static/guide-book-cover.jpg" alt="Python Guide Book Cover"></a></p>
+<p>
+  <a href="/guide-book" target="_blank"
+    ><img
+      style="max-width: 100%; text-align: center;"
+      src="/_static/guide-book-cover.jpg"
+      alt="Python Guide Book Cover"
+  /></a>
+</p>
 
-<p>所有的收入都直接捐赠给 <a href="https://djangogirls.org">DjangoGirls</a> 组织。</p>
+<p>
+  所有的收入都直接捐赠给
+  <a href="https://djangogirls.org">DjangoGirls</a> 组织。
+</p>
 
 <h3>贡献者</h3>
 <p>
   这份指南是世界各地
-  <a href="https://github.com/kennethreitz/python-guide/graphs/contributors">数百人</a>
+  <a href="https://github.com/kennethreitz/python-guide/graphs/contributors"
+    >数百人</a
+  >
   的成果, 也
-  <a href="https://docs.python-guide.org/en/latest/notes/contribute/">欢迎</a>您来贡献!
+  <a href="https://docs.python-guide.org/en/latest/notes/contribute/">欢迎</a
+  >您来贡献!
 </p>
 
 <h3>有用的链接</h3>
 <ul>
   <li><a href="https://docs.python-guide.org/">Python指南英文版</a></li>
-  <li><a href="https://github.com/Prodesire/Python-Guide-CN">Python指南中文版@GitHub</a></li>
-  <li><a href="http://github.com/realpython/python-guide">Python指南英文版@ GitHub</a></li>
-  <li><a href="http://github.com/realpython/python-guide/issues">Issue追踪</a></li>
-  <li><a href="https://media.readthedocs.org/pdf/python-guide/latest/python-guide.pdf">Python指南PDF版</a></li>
+  <li>
+    <a href="https://github.com/Prodesire/Python-Guide-CN"
+      >Python指南中文版@GitHub</a
+    >
+  </li>
+  <li>
+    <a href="https://github.com/realpython/python-guide"
+      >Python指南英文版@ GitHub</a
+    >
+  </li>
+  <li>
+    <a href="https://github.com/realpython/python-guide/issues">Issue追踪</a>
+  </li>
+  <li>
+    <a
+      href="https://media.readthedocs.org/pdf/python-guide/latest/python-guide.pdf"
+      >Python指南PDF版</a
+    >
+  </li>
 </ul>
 
 <h3>翻译</h3>
 <ul>
   <li><a href="https://docs.python-guide.org/en/latest/">English</a></li>
-  <li><a href="https://python-guide-fr.readthedocs.io/fr/latest/">French</a></li>
+  <li>
+    <a href="https://python-guide-fr.readthedocs.io/fr/latest/">French</a>
+  </li>
   <li><a href="https://pythonguidecn.readthedocs.io/zh/latest/">Chinese</a></li>
-  <li><a href="http://python-guideja.readthedocs.io/ja/latest/">Japanese</a></li>
-  <li><a href="https://python-guide-kr.readthedocs.io/ko/latest/">Korean</a></li>
-  <li><a href="http://python-guide-fil.readthedocs.io/en/latest/">Filipino</a></li>
-  <li><a href="http://python-guide-pt-br.readthedocs.io/pt_BR/latest/">Brazilian Portuguese</a></li>
+  <li>
+    <a href="https://python-guideja.readthedocs.io/ja/latest/">Japanese</a>
+  </li>
+  <li>
+    <a href="https://python-guide-kr.readthedocs.io/ko/latest/">Korean</a>
+  </li>
+  <li>
+    <a href="https://python-guide-fil.readthedocs.io/en/latest/">Filipino</a>
+  </li>
+  <li>
+    <a href="https://python-guide-pt-br.readthedocs.io/pt_BR/latest/"
+      >Brazilian Portuguese</a
+    >
+  </li>
 </ul>

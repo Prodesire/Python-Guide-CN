@@ -342,7 +342,7 @@ com/questions/302459/what-is-a-programming-idiom>`_ 上有充足的讨论。
 每个项直到它找到匹配的项。这是耗时的，尤其是对长列表而言。另一方面，在集合中，
 项的哈希值将会告诉Python在集合的哪里去查找匹配的项。结果是，即使集合很大，查询
 的速度也很快。在字典中查询也是同样的原理。想了解更多内容，请见
-`StackOverflow <http://stackoverflow.com/questions/513882/python-list-vs-dict-for-look-up-table>`_ 。想了解在每种数据结构上的多种常见操作的花费时间的详细内容，
+`StackOverflow <https://stackoverflow.com/questions/513882/python-list-vs-dict-for-look-up-table>`_ 。想了解在每种数据结构上的多种常见操作的花费时间的详细内容，
 请见 `此页面 <https://wiki.python.org/moin/TimeComplexity?>`_。
 
 因为这些性能上的差异，在下列场合在使用集合或者字典而不是列表，通常会是个好主意：
@@ -443,7 +443,7 @@ PEP 8
     optparse.py:472:29: E221 multiple spaces before operator
     optparse.py:544:21: W601 .has_key() is deprecated, use 'in'
 
-程序 `autopep8 <https://pypi.python.org/pypi/autopep8/>`_ 能自动将代码格式化
+程序 `autopep8 <https://pypi.org/project/autopep8/>`_ 能自动将代码格式化
 成 PEP 8 风格。用以下指令安装此程序：
 
 .. code-block:: console

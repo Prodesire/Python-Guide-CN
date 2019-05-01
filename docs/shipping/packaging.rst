@@ -40,15 +40,15 @@
 对于Python开发者
 *********************
 
-如果您编写了一个开源的Python模块， `PyPI <http://pypi.python.org>`_
+如果您编写了一个开源的Python模块， `PyPI <http://pypi.org>`_
 , 更多属性参见 *The Cheeseshop*，这是一个放它的地方。
 
 Pip vs. easy_install
 --------------------
 
 
-使用 `pip <http://pypi.python.org/pypi/pip>`_. 更多细节参见
-`here <http://stackoverflow.com/questions/3220404/why-use-pip-over-easy-install>`_
+使用 `pip <http://pypi.org/project/pip>`_. 更多细节参见
+`here <https://stackoverflow.com/questions/3220404/why-use-pip-over-easy-install>`_
 
 
 私人的PyPI
@@ -96,7 +96,7 @@ Pip vs. easy_install
 pypiserver
 ++++++++++
 
-`Pypiserver <https://pypi.python.org/pypi/pypiserver>`_ 是一个精简的PyPI兼容服务器。
+`Pypiserver <https://pypi.org/project/pypiserver>`_ 是一个精简的PyPI兼容服务器。
 它可以被用来让一系列包通过easy_install与pip进行共享。它包含一些有益的命令，诸如管理
 命令（ ``-U`` ），其可以自动更新所有它的包到PyPI上的最新版。
 

@@ -69,7 +69,7 @@ C 扩展
 Cython
 ------
 
-`Cython <http://cython.org/>`_ 是Python语言的一个超集，对其您可以为Python写C
+`Cython <https://cython.org/>`_ 是Python语言的一个超集，对其您可以为Python写C
 或C++模块。Cython也使得您可以从已编译的C库中调用函数。使用Cython让您得以发挥Python
 的变量与操作的强类型优势。
 
@@ -405,14 +405,14 @@ Multiprocessing
 
 
 .. _`PyPy`: http://pypy.org
-.. _`GIL`: http://wiki.python.org/moin/GlobalInterpreterLock
+.. _`GIL`: https://wiki.python.org/moin/GlobalInterpreterLock
 .. _`指导`: http://www.dabeaz.com/python/UnderstandingGIL.pdf
 .. _`新GIL`: http://www.dabeaz.com/python/NewGIL.pdf
-.. _`特别关注`: http://docs.python.org/c-api/init.html#threads
+.. _`特别关注`: https://docs.python.org/c-api/init.html#threads
 .. _`David Beazley的`: http://www.dabeaz.com/GIL/gilvis/measure2.py
 .. _`concurrent.futures`: https://docs.python.org/3/library/concurrent.futures.html
 .. _`Future`: https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.Future
 .. _`threading`: https://docs.python.org/3/library/threading.html
-.. _`stackoverflow post`: http://stackoverflow.com/questions/26688424/python-threads-are-printing-at-the-same-time-messing-up-the-text-output
+.. _`stackoverflow post`: https://stackoverflow.com/questions/26688424/python-threads-are-printing-at-the-same-time-messing-up-the-text-output
 .. _`data race`: https://en.wikipedia.org/wiki/Race_condition
 .. _`Lock`: https://docs.python.org/3/library/threading.html#lock-objects

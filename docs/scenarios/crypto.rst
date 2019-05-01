@@ -83,32 +83,3 @@ GPGME bindings
 	    print("Hang on ... did you say *all* of GnuPG?  Yep.")
 	else:
 	    pass
-
-
-********
-PyCrypto
-********
-
-`PyCrypto <https://www.dlitz.net/software/pycrypto/>`_ 是另一个密码库，它提供
-安全的哈希函数和各种加密算法，支持Python 2.1到3.3。
-
-安装
-~~~~~~~~~~~~
-
-.. code-block:: console
-
-    $ pip install pycrypto
-
-例子
-~~~~~~~
-
-.. code-block:: python
-
-	from Crypto.Cipher import AES
-	# Encryption
-	encryption_suite = AES.new('This is a key123', AES.MODE_CBC, 'This is an IV456')
-	cipher_text = encryption_suite.encrypt("A really secret message. Not for prying eyes.")
-
-	# Decryption
-	decryption_suite = AES.new('This is a key123', AES.MODE_CBC, 'This is an IV456')
-	plain_text = decryption_suite.decrypt(cipher_text)

@@ -77,9 +77,9 @@ SuperTab_ 是一个小的Vim插件，通过使用 ``<Tab>`` 或任何其他定�
 .. _indent: http://www.vim.org/scripts/script.php?script_id=974
 .. _syntax: http://www.vim.org/scripts/script.php?script_id=790
 .. _Pyflakes: http://pypi.python.org/pypi/pyflakes/
-.. _pycodestyle: https://pypi.python.org/pypi/pycodestyle/
-.. _syntastic: https://github.com/scrooloose/syntastic
-.. _Python-mode: https://github.com/klen/python-mode
+.. _pycodestyle: https://pypi.org/project/pycodestyle/
+.. _syntastic: https://github.com/vim-syntastic/syntastic
+.. _Python-mode: https://github.com/python-mode/python-mode
 .. _SuperTab: http://www.vim.org/scripts/script.php?script_id=1643
 .. _vim-flake8: https://github.com/nvie/vim-flake8
 
@@ -92,7 +92,7 @@ Emacs是另一个强大的文本编辑器。它是完全可编程的（Lisp）�
 
 1. Emacs 本身支持Python模式。
 
-.. _Python Programming in Emacs: http://emacswiki.org/emacs/PythonProgrammingInEmacs
+.. _Python Programming in Emacs: https://www.emacswiki.org/emacs/PythonProgrammingInEmacs
 
 TextMate
 --------
@@ -117,7 +117,7 @@ Atom
 所喜欢的编辑器的任何优秀特性，并构建于atom-shell上。
 
 Atom是web原生的（HTML、CSS、JS），专注于模块化的设计和简单的插件开发。它自带本地包管理
-和大量的包。Python开发所推荐的插件是 `Linter <https://github.com/AtomLinter/Linter>`_ 
+和大量的包。Python开发所推荐的插件是 `Linter <https://github.com/steelbrain/linter>`_ 
 和 `linter-flake8 <https://github.com/AtomLinter/linter-flake8>`_ 的组合。
 
 
@@ -146,19 +146,19 @@ MIT 许可证。
 
 Enthought Canopy
 ----------------
-`Enthought Canopy <https://www.enthought.com/products/canopy/>`_ 是一款专门面向科学家
+`Enthought Canopy <https://www.enthought.com/product/canopy/>`_ 是一款专门面向科学家
 和工程师的Python IDE，它预装了为数据分析而用的库。
 
 Eclipse
 -------
 
-Eclipse中进行Python开发最流行的插件是Aptana的 `PyDev <http://pydev.org>`_ 。
+Eclipse中进行Python开发最流行的插件是Aptana的 `PyDev <https://pydev.org>`_ 。
 
 
 Komodo IDE
 ----------
 
-`Komodo IDE <http://www.activestate.com/komodo-ide>`_ 由ActiveState开发，并且是
+`Komodo IDE <https://www.activestate.com/komodo-ide>`_ 由ActiveState开发，并且是
 在Windows、Mac和Linux平台上的商业IDE。
 
 
@@ -166,8 +166,8 @@ Spyder
 ------
 
 `Spyder <https://github.com/spyder-ide/spyder>`_ 是一款专门面向和Python科学库
-（即 `SciPy <http://www.scipy.org/>`_ ）打交道的IDE。它集成了 pyflakes_ 、 
-`pylint <http://www.logilab.org/857>`_ 和 `rope <https://github.com/python-rope/rope>`_ 。
+（即 `SciPy <https://www.scipy.org/>`_ ）打交道的IDE。它集成了 pyflakes_ 、 
+`pylint <https://www.logilab.org/857>`_ 和 `rope <https://github.com/python-rope/rope>`_ 。
 
 Spyder是开源的（免费的），提供了代码补全、语法高亮、类和函数浏览器，以及对象检查的功能。
 
@@ -212,14 +212,14 @@ Python Shell、集成的调试器和灵活的插件系统等功能。它基于Qt
 因此就能避免潜在的版本冲突。
 
 To start using and see more information:
-`Virtual Environments <http://github.com/kennethreitz/python-guide/blob/master/docs/dev/virtualenvs.rst>`_ docs.
+`Virtual Environments <https://github.com/kennethreitz/python-guide/blob/master/docs/dev/virtualenvs.rst>`_ docs.
 开始使用和查阅更多信息：请参阅 `Virtual Environments <http://github.com/kennethreitz/python-guide/blob/master/docs/dev/virtualenvs.rst>`_ 文档。
 
 
 pyenv
 -----
 
-`pyenv <https://github.com/yyuu/pyenv>`_ 是一个允许多个Python解释器版本同时安装
+`pyenv <https://github.com/pyenv/pyenv-virtualenv>`_ 是一个允许多个Python解释器版本同时安装
 于一台机器的工具。这解决了不同的项目需要不同版本的Python的问题。比如，为了兼容性，
 可以很容易地为一个项目安装Python 2.7，而继续使用Python 3.4作为默认的编辑器。
 pyenv不止限于CPython版本——它还能安装PyPy、Anaconda、miniconda、stackless、Jython
@@ -231,7 +231,7 @@ pyenv的工作原理是在一个叫做 ``shims`` 目录中创建Python解释器�
 pyenv基于环境变量、 ``.python-version`` 文件和全局默认设置的信息就知道该运行
 哪个版本的Python。
 
-pyenv不是管理虚拟环境的工具，但是有一个叫做 `pyenv-virtualenv <https://github.com/yyuu/pyenv-virtualenv>`_ 
+pyenv不是管理虚拟环境的工具，但是有一个叫做 `pyenv-virtualenv <https://github.com/pyenv/pyenv-virtualenv>`_ 
 的插件可以自动化不同环境的创建，而且也能够使用现有的pyenv工具，基于环境变量或者 
 ``.python-version`` 文件，来切换不同的环境。
 
@@ -277,7 +277,7 @@ IPython
 BPython
 -------
 
-`bpython <http://bpython-interpreter.org/>`_ 在类Unix操作系统中可替代Python解释器的接口。
+`bpython <https://bpython-interpreter.org/>`_ 在类Unix操作系统中可替代Python解释器的接口。
 它有以下特性：
 
 * 内联的语法高亮
@@ -296,8 +296,8 @@ BPython
 ptpython
 --------
 
-`ptpython <https://github.com/jonathanslenders/ptpython/>`_ 是一个构建在 
-`prompt_toolkit <http://github.com/jonathanslenders/python-prompt-toolkit>`_ 
+`ptpython <https://github.com/prompt-toolkit/ptpython/>`_ 是一个构建在 
+`prompt_toolkit <https://github.com/prompt-toolkit/python-prompt-toolkit>`_ 
 库顶部的REPL。它被视作是 BPython_ 的替代。特性包括：
 
 * 语法高亮

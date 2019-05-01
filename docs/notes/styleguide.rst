@@ -94,7 +94,9 @@
         $ run command --help
         $ ls ..
 
-确保每行前面包含了 ``$`` 前缀。
+Unix 控制台用例中，确保每行前面包含了 ``$`` 前缀。
+
+Windows 控制台用例中，使用 ``doscon`` 或 ``powershell`` 而非 ``console``，并且去掉 ``$`` 前缀。
 
 Python解释器例子：
 

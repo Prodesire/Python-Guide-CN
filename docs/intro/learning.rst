@@ -36,13 +36,13 @@ thepythonguru.com是一个专注于初学程序员的教程。它深入涵盖了
 它还教您一些Python的高级概念，如lambda表达式、正则表达式等。最后，它以教程
 “如何使用python访问MySQL数据库”结束。
 
-   `Python for beginners <http://thepythonguru.com/>`_
+   `Python for beginners <https://thepythonguru.com/>`_
 
 Learn Python Interactive Tutorial
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Learnpython.org是一个简单易懂的了解Python的途径。网站采用了和流行的 
-`Try Ruby <http://tryruby.org/>`_ 相同的方式，有一个交互式的Python解释器内建于网站中，
+`Try Ruby <https://ruby.github.io/TryRuby>`_ 相同的方式，有一个交互式的Python解释器内建于网站中，
 允许您在学习Python课程时不需要在本地安装Python。
 
     `Learn Python <http://www.learnpython.org/>`_
@@ -57,9 +57,9 @@ Python for You and Me
 Learn Python Step by Step
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Techbeamers.com 提供了手把手的教程讲解Python。每个教程都补充了相关代码段，并配备了关于所学主题的后续测验。里面的 `Python 面试题 <http://www.techbeamers.com/python-interview-questions-programmers>`_ 部分可以帮助求职者。您还可以阅读必备的 `Python 技巧 <http://www.techbeamers.com/essential-python-tips-tricks-programmers>`_ ，并学习编写高质量代码的 `最佳编程实践 <http://www.techbeamers.com/python-code-optimization-tips-tricks>`_ 。在这里，你将获得快速学习Python的正确平台。
+Techbeamers.com 提供了手把手的教程讲解Python。每个教程都补充了相关代码段，并配备了关于所学主题的后续测验。里面的 `Python 面试题 <https://www.techbeamers.com/python-interview-questions-programmers>`_ 部分可以帮助求职者。您还可以阅读必备的 `Python 技巧 <https://www.techbeamers.com/essential-python-tips-tricks-programmers>`_ ，并学习编写高质量代码的 `最佳编程实践 <https://www.techbeamers.com/python-code-optimization-tips-tricks>`_ 。在这里，你将获得快速学习Python的正确平台。
 
-`学习 Python 从基础到高级 <http://www.techbeamers.com/python-tutorial-step-by-step>`_
+`学习 Python 从基础到高级 <https://www.techbeamers.com/python-tutorial-step-by-step>`_
 
 Online Python Tutor
 ~~~~~~~~~~~~~~~~~~~
@@ -92,7 +92,7 @@ Learn Python the Hard Way
 
 这是一部极佳的新手编程者的Python指南。它涵盖了从控制台到web的“hello world”。
 
-    `Learn Python the Hard Way <http://learnpythonthehardway.org/book/>`_
+    `Learn Python the Hard Way <https://learnpythonthehardway.org/book/>`_
 
 
 Crash into Python
@@ -101,7 +101,7 @@ Crash into Python
 这个指南也叫 *Python for Programmers with 3 Hours* ，它给有其他语言开发经验的开发人员
 一个关于Python的快速教程。
 
-    `Crash into Python <http://stephensugden.com/crash_into_python/>`_
+    `Crash into Python <https://stephensugden.com/crash_into_python/>`_
 
 
 Dive Into Python 3
@@ -136,11 +136,11 @@ Python Koans是Edgecase's Ruby Koans的迁移版。它使用测试驱动的方�
 对于那些使用语言并找出自己的困惑的人来说，这会是个有趣并有吸引力的选择。对于新手来说，
 拥有一个额外的资源或者参考会是很有用的。
 
-    `Python Koans <http://bitbucket.org/gregmalcolm/python_koans>`_
+    `Python Koans <https://bitbucket.org/gregmalcolm/python_koans>`_
 
 要了解更多关于测试驱动开发的内容，可以查看以下资源：
 
-    `测试驱动开发 <http://en.wikipedia.org/wiki/Test-driven_development>`_
+    `测试驱动开发 <https://en.wikipedia.org/wiki/Test-driven_development>`_
 
 
 A Byte of Python
@@ -153,14 +153,14 @@ A Byte of Python
     `A Byte of Python for Python 3.x <https://python.swaroopch.com/>`_
 
 
-Learn to Program in Python with Codeacademy
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Computer Science Path on Codecademy
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 此Codeacademy课程面向绝对的Python初学者。这门免费、互动的课程提供和教授Python编程的基础
 （和以后）的内容，同时测试用户之间知识的进展。
 本课程还内置了一个解释器，用于获取学习过程中的即时反馈。
 
-    `Learn to Program in Python with Codeacademy <http://www.codecademy.com/en/tracks/python>`_
+    `Computer Science Path on Codecademy <https://www.codecademy.com/learn/paths/computer-science>`_
 
 
 Code the blocks
@@ -192,7 +192,7 @@ Effective Python
 本书包含59种具体方法来改进编写Pythonic代码。在这227页中，这是一个关于程序员需要做的一些
 最常见的程序以成为高效的中级Python程序员的非常简要的概述。
 
-    `Effective Python <http://www.effectivepython.com/>`_
+    `Effective Python <https://effectivepython.com/>`_
 
 ********
 进阶者
@@ -218,7 +218,7 @@ Expert Python Programming讲解编写Python的最佳实践，并专注更高级�
 zc.buildout的一个章节。后面的章节详细讲述了最佳实践，比如编写文档、测试驱动开发、
 版本控制、优化和分析。
 
-    `Expert Python Programming <http://www.packtpub.com/expert-python-programming/book>`_
+    `Expert Python Programming <https://www.packtpub.com/application-development/expert-python-programming>`_
 
 
 A Guide to Python's Magic Methods
@@ -243,7 +243,7 @@ A Primer on Scientific Programming with Python
 A Primer on Scientific Programming with Python 由 Hans Petter Langtangen编写，
 主要涵盖了Python在科学领域的使用。在这本书中，例子是从数学和自然科学中选出的。
 
-    `A Primer on Scientific Programming with Python <http://www.springer.com/mathematics/computational+science+%26+engineering/book/978-3-642-30292-3>`_
+    `A Primer on Scientific Programming with Python <https://www.springer.com/us/book/9783642302930#otherversion=9783642302923>`_
 
 Numerical Methods in Engineering with Python
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -251,7 +251,7 @@ Numerical Methods in Engineering with Python
 Numerical Methods in Engineering with Python 由 Jaan Kiusalaas 编写，
 其重点是数值方法以及如何用Python来实现。
 
-    `Numerical Methods in Engineering with Python <http://www.cambridge.org/us/academic/subjects/engineering/engineering-mathematics-and-programming/numerical-methods-engineering-python-2nd-edition>`_
+    `Numerical Methods in Engineering with Python <https://www.cambridge.org/us/academic/subjects/engineering/engineering-mathematics-and-programming/numerical-methods-engineering-python-2nd-edition>`_
 
 
 ********************
@@ -355,6 +355,6 @@ Writing Idiomatic Python 由 Jeff Knupp 编写，包含了最常见和最重要�
 其形式尽可能地有辨识度和易于理解。每个习语都是编写一些常用代码片段的推荐方式，
 其后会解释为什么这个习语是重要的。每个习语均有两个代码样例：“有害的”方式和“理想的”方式。
 
-	`For Python 2.7.3+ <http://www.amazon.com/Writing-Idiomatic-Python-2-7-3-Knupp/dp/1482372177/>`_
+	`For Python 2.7.3+ <https://www.amazon.com/Writing-Idiomatic-Python-Jeff-Knupp-ebook/dp/B00B5KG0F8/>`_
 	
-	`For Python 3.3+  <http://www.amazon.com/Writing-Idiomatic-Python-Jeff-Knupp-ebook/dp/B00B5VXMRG/>`_
+	`For Python 3.3+  <https://www.amazon.com/Writing-Idiomatic-Python-Jeff-Knupp-ebook/dp/B00B5VXMRG/>`_
