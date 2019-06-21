@@ -416,7 +416,7 @@ PEP 8
 *****
 
 :pep:`8` 是Python事实上的代码风格指南，我们可以在 `pep8.org <http://pep8.org/>`_
-上获得高质量的、一度的PEP 8版本。
+上获得高质量的、易读的PEP 8版本。
 
 强烈推荐阅读这部分。整个Python社区都尽力遵循本文档中规定的准则。一些项目可能受其影响，
 而其他项目可能 `修改其建议 <http://docs.python-equests.org/en/master/dev/contributing/kenneth-reitz-s-code-style>`_。
