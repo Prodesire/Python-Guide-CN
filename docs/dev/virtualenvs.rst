@@ -37,7 +37,7 @@ Python 用于许多不同的目的。准确地说，您希望如何管理依赖�
           File "<stdin>", line 1, in <module>
         NameError: name 'python' is not defined
 
-    这是因为此命令要在 *shell*（也称为 *终端* 或 *控制台*）中运行。有关使用操作系统的
+    这是因为此命令要在 *shell* （也称为 *终端* 或 *控制台*）中运行。有关使用操作系统的
     shell 并和 Python 进行交互的介绍，请参阅面向 Python 新手的 `入门教程`_。
 
 另外，您需要确保 `pip`_ 是可用的。您可以通过运行以下命令来检查：
