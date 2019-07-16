@@ -213,13 +213,13 @@ Pipenv 将在您的项目目录中安装超赞的 `Requests`_ 库并为您创建
 在任何您运行命令的目录中，这会创建Python的拷贝，并将之放在叫做 :file:`venv` 
 的文件中。
 
-您可以选择使用一个Python解释器（比如``python2.7``）：
+您可以选择使用一个Python解释器（比如 ``python2.7`` ）：
 
 .. code-block:: console
 
    $ virtualenv -p /usr/bin/python2.7 venv
 
-或者使用``~/.bashrc``的一个环境变量将解释器改为全局性的：
+或者使用 ``~/.bashrc`` 的一个环境变量将解释器改为全局性的：
 
 .. code-block:: console
 
@@ -232,7 +232,7 @@ Pipenv 将在您的项目目录中安装超赞的 `Requests`_ 库并为您创建
 
    $ source venv/bin/activate
 
-当前虚拟环境的名字会显示在提示符左侧（比如说 ``(venv)您的电脑:项目目录 用户名$）``
+当前虚拟环境的名字会显示在提示符左侧（比如说 ``(venv)您的电脑:项目目录 用户名$``）
 以让您知道它是激活的。从现在起，任何您使用pip安装的包将会放在 ``venv`` 文件夹中，
 与全局安装的Python隔绝开。
 
