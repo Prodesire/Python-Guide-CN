@@ -37,7 +37,7 @@ Python 用于许多不同的目的。准确地说，您希望如何管理依赖�
           File "<stdin>", line 1, in <module>
         NameError: name 'python' is not defined
 
-    这是因为此命令要在 *shell*（也称为 *终端* 或 *控制台*）中运行。有关使用操作系统的
+    这是因为此命令要在 *shell* （也称为 *终端* 或 *控制台*）中运行。有关使用操作系统的
     shell 并和 Python 进行交互的介绍，请参阅面向 Python 新手的 `入门教程`_。
 
 另外，您需要确保 `pip`_ 是可用的。您可以通过运行以下命令来检查：
@@ -76,7 +76,7 @@ Ruby 的 `bundler`_，那么它们在思路上与这些工具类似。尽管 `pi
     
     在 Linux 和 macOS 上，您可以通过运行 ``python -m site --user-base`` 找到
     用户基础目录，然后把 ``bin`` 加到目录末尾。比如，上述命令典型地会打印出
-    ``~/.local``（ ``~`` 会扩展为您的家目录的绝对路径），然后将 ``~/.local/bin``
+    ``~/.local`` （ ``~`` 会扩展为您的家目录的绝对路径），然后将 ``~/.local/bin``
     添加到 ``PATH`` 中。您可以通过 `修改 ~/.profile`_ 永久地设置 ``PATH``。
 
     在 Windows 上，您通过运行 ``py -m site --user-site`` 找到用户基础目录，然后
@@ -213,13 +213,13 @@ Pipenv 将在您的项目目录中安装超赞的 `Requests`_ 库并为您创建
 在任何您运行命令的目录中，这会创建Python的拷贝，并将之放在叫做 :file:`venv` 
 的文件中。
 
-您可以选择使用一个Python解释器（比如``python2.7``）：
+您可以选择使用一个Python解释器（比如 ``python2.7`` ）：
 
 .. code-block:: console
 
    $ virtualenv -p /usr/bin/python2.7 venv
 
-或者使用``~/.bashrc``的一个环境变量将解释器改为全局性的：
+或者使用 ``~/.bashrc`` 的一个环境变量将解释器改为全局性的：
 
 .. code-block:: console
 
@@ -232,7 +232,7 @@ Pipenv 将在您的项目目录中安装超赞的 `Requests`_ 库并为您创建
 
    $ source venv/bin/activate
 
-当前虚拟环境的名字会显示在提示符左侧（比如说 ``(venv)您的电脑:项目目录 用户名$）
+当前虚拟环境的名字会显示在提示符左侧（比如说 ``(venv)您的电脑:项目目录 用户名$``）
 以让您知道它是激活的。从现在起，任何您使用pip安装的包将会放在 ``venv`` 文件夹中，
 与全局安装的Python隔绝开。
 
