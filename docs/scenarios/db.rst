@@ -46,6 +46,18 @@ Records
 还包括用于导出SQL数据的命令行工具。
 
 
+******
+PugSQL
+******
+
+`PugSQL <https://pugsql.org>`_ 是一个简单的用于组织和使用参数化手写SQL的Python接口，。
+它是一个低保真哲学的反ORM，但仍在Python中提供了一个简洁的接口。
+
+.. code-block:: console
+
+    $ pip install pugsql
+
+
 **********
 Django ORM
 **********

@@ -73,7 +73,7 @@ Pip vs. easy_install
 .. code-block:: console
 
    $ cd archive
-   $ python -m SimpleHTTPServer 9000
+   $ python -m http.server 9000
 
 
 这运行了一个简单的HTTP服务器，其监听端口9000并且将列出所有包（比如 **MyPackage**）。现在

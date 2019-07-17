@@ -92,11 +92,12 @@ Python应用的场景指南
 部署优雅的Python代码
 --------------------------------
 
-这部分指南关注部署您的Python代码。
+这部分指南关注分享和部署您的Python代码。
 
 .. toctree::
    :maxdepth: 2
 
+   shipping/publishing
    shipping/packaging
    shipping/freezing
 

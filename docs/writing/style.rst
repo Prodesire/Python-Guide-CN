@@ -581,7 +581,7 @@ PEP 8
 
 .. code-block:: python
 
-    [print(x) for x in seqeunce]
+    [print(x) for x in sequence]
 
 **优雅**:
 

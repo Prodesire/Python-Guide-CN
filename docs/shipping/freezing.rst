@@ -222,6 +222,45 @@ Linux
 
 bbFreeze
 ~~~~~~~~
+.. warning:: bbFreeze 仅在 Python 2.x 环境下工作, 根据以前的维护者的说法已不再进行维护。 如果您对此感兴趣请查看 `这里 <https://github.com/schmir/bbfreeze>`_。
+
+bbFreeze可以与所有已安装Python以及pip2和/或easy_install的发行版一起使用。
+
+对于pip2，请按以下内容进行：
+
+.. code-block:: console
+
+  $ pip2 install bbfreeze
+
+而对于 easy_install，则:
+
+.. code-block:: console
+
+  $ easy_install bbfreeze
+
+安装好bbFreeze后，您就可以冻结应用程序了。
+
+假设您有一个脚本，例如“hello.py”和名为“module.py”的模块，并且您在里面使用了一个函数。
+不费吹灰之力，您就可以通过冻结脚本的主要入口来冻结整个内容：
+
+.. code-block:: console
+
+  $ bbfreeze script.py
+
+这样，它就会创建一个名为dist/的文件夹，其中包含脚本的可执行文件以及Python脚本中使用的库所需.so（共享对象）文件。
+
+或者，您可以创建一个用于执行冻结的脚本。 冻结器的API可从以下库中获得：
+
+.. code-block:: python
+
+   from bbfreeze import Freezer
+
+   freezer = Freezer(distdir='dist')
+   freezer.addScript('script.py', gui_only=True) # 为使用GUI包的应用开启参数 gui_only
+   freezer()
 
 PyInstaller
 ~~~~~~~~~~~
+PyInstaller在Linux上的安装方式与在OS X中类似，参见OS X章节中的对应部分。
+
+不要忘记安装如Python和pip等依赖项。

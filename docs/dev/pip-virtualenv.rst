@@ -41,7 +41,7 @@ Pip和Virtualenv的更多配置
 
 .. code-block:: console
 
-    %HOME%\pip\pip.ini
+    %USERPROFILE%\pip\pip.ini
 
 如果在这些位置中并没有 :file:`pip.conf` 或 :file:`pip.ini` ，
 您可以在对应的操作系统中创建一个正确名字的新文件。
@@ -102,7 +102,7 @@ Pip和Virtualenv的更多配置
 
 .. code-block:: console
 
-    download-cache = %HOME%\pip\cache
+    download-cache = %USERPROFILE%\pip\cache
 
 类似的，如果您使用Unix，就将下面一行添加到 :file:`pip.conf` 文件中的 ``[global]`` 设置下：
 

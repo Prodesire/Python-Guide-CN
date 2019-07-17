@@ -156,7 +156,7 @@ A Byte of Python
 Computer Science Path on Codecademy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-此Codeacademy课程面向绝对的Python初学者。这门免费、互动的课程提供和教授Python编程的基础
+此Codecademy课程面向绝对的Python初学者。这门免费、互动的课程提供和教授Python编程的基础
 （和以后）的内容，同时测试用户之间知识的进展。
 本课程还内置了一个解释器，用于获取学习过程中的即时反馈。
 

@@ -381,20 +381,15 @@ virtualenv-burrito
 有了 `virtualenv-burrito <https://github.com/brainsik/virtualenv-burrito>`_ ，
 您就能使用单行命令拥有virtualenv + virtualenvwrapper的环境。
 
-autoenv
+direnv
 -------
-当您 ``cd`` 进入一个包含 :file:`.env` 的目录中，就会 `autoenv <https://github.com/kennethreitz/autoenv>`_ 
+当您 ``cd`` 进入一个包含 :file:`.env` 的目录中，就会 `direnv <https://direnv.net>`_ 
 自动激活那个环境。
 
 使用 ``brew`` 在Mac OS X上安装它：
 
 .. code-block:: console
 
-   $ brew install autoenv
+   $ brew install direnv
 
-在Linux上:
-
-.. code-block:: console
-
-   $ git clone git://github.com/kennethreitz/autoenv.git ~/.autoenv
-   $ echo 'source ~/.autoenv/activate.sh' >> ~/.bashrc
+在Linux上，根据 `direnv.net <https://direnv.net>` 上的指南进行。

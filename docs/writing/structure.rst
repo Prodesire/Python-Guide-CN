@@ -46,7 +46,7 @@
 仓库样例
 :::::::::::::::::
 
-**请看这里**: 这是 `Kenneth Reitz <http://kennethreitz.org>`_ 推荐的。
+**请看这里**: 这是 `Kenneth Reitz在2013年推荐的 <https://www.kennethreitz.org/essays/repository-structure-and-python>`_ 。
 
 这个仓库 `可以在GitHub上找到 <https://github.com/kennethreitz/samplemod>`__ 。
 
