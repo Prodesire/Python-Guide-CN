@@ -85,7 +85,7 @@ Ruby 的 `bundler`_，那么它们在思路上与这些工具类似。尽管 `pi
     ``PATH`` 中包含 ``C:\Users\Username\AppData\Roaming\Python36\Scripts``。
     您可以在 `控制面板`_ 中永久设置用户的 ``PATH``。您可能需要登出 ``PATH`` 更改才能生效。
 
-.. _Pipenv: https://docs.pipenv.org/
+.. _Pipenv: https://pipenv.kennethreitz.org/
 .. _npm: https://www.npmjs.com/
 .. _bundler: http://bundler.io/
 .. _用户基础目录: https://docs.python.org/3/library/site.html#site.USER_BASE

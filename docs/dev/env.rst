@@ -219,7 +219,7 @@ To start using and see more information:
 pyenv
 -----
 
-`pyenv <https://github.com/pyenv/pyenv-virtualenv>`_ 是一个允许多个Python解释器版本同时安装
+`pyenv <https://github.com/pyenv/pyenv>`_ 是一个允许多个Python解释器版本同时安装
 于一台机器的工具。这解决了不同的项目需要不同版本的Python的问题。比如，为了兼容性，
 可以很容易地为一个项目安装Python 2.7，而继续使用Python 3.4作为默认的编辑器。
 pyenv不止限于CPython版本——它还能安装PyPy、Anaconda、miniconda、stackless、Jython

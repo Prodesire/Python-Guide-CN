@@ -22,7 +22,7 @@
 
 * 避免在主题中包含太多与Python开发并不直接相关的信息。
 * 如果其他资源已存在，最好以链接的形式来展示。确保描述出您所链接的内容和原因。
-* `Cite <http://sphinx.pocoo.org/rest.html?highlight=citations#citations>`_
+* `Cite <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#citations>`_
   引用在需要的地方。
 * 如果某主题并不与Python直接相关，但是和Python之间的关联又很有用（比如Git、GitHub、数据库等），以链接的形式引用这些资源，并描述为什么它对Python有用。
 * 如果疑问，就去询问。
@@ -129,13 +129,13 @@ Python 例子：
 
       Sphinx_ 通常用来文档化Python。
 
-      .. _Sphinx: http://sphinx.pocoo.org
+      .. _Sphinx: https://www.sphinx-doc.org
 
 * 最好使用带有内联链接的描述性标签，而不是单纯的链接:
 
   .. code-block:: rest
 
-      阅读 `Sphinx 教程 <http://sphinx.pocoo.org/tutorial.html>`_
+      阅读 `Sphinx 教程 <https://www.sphinx-doc.org/en/master/usage/quickstart.html>`_
 
 * 避免使用诸如“点击这里”、“这个”等标签。最好使用描述性标签（值得搜索引擎优化，SEO worthy）。
 
@@ -144,7 +144,7 @@ Python 例子：
 ********************************
 
 要交叉引用本文档的其他部分，使用 `:ref:
-<http://sphinx.pocoo.org/markup/inline.html#cross-referencing-arbitrary-locations>`_ 关键字和标签。
+<https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#role-ref>`_ 关键字和标签。
 
 要使引用标签更加清晰和独特，通常加上一个 ``-ref`` 后缀：
 
@@ -160,7 +160,7 @@ Python 例子：
 注意和警告
 ******************
 
-使用适当的 `警告指示 <http://sphinx.pocoo.org/rest.html#directives>`_ 来说明注意内容。
+使用适当的 `警告指示 <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#directives>`_ 来说明注意内容。
 
 注意:
 
@@ -181,7 +181,7 @@ Python 例子：
 要做的事
 ***************
 
-请用 `todo 指示 <http://sphinx.pocoo.org/ext/todo.html?highlight=todo#directive-todo>`_ 来标记本指南中任何未完成的部分。避免使 :ref:`todo-list-ref` 混乱，为未完的文档或者大量未完的小节使用单独的 ``todo``。
+请用 `todo 指示 <https://www.sphinx-doc.org/en/master/usage/extensions/todo.html>`_ 来标记本指南中任何未完成的部分。避免使 :ref:`todo-list-ref` 混乱，为未完的文档或者大量未完的小节使用单独的 ``todo``。
 
 .. code-block:: rest
 
