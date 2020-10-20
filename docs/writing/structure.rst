@@ -148,7 +148,7 @@ Test Suite
 ::::::::::
 
 
-*想了解关于编写测试的建议，请查阅 :doc:`/writing/tests`。*
+*想了解关于编写测试的建议，请查阅* :doc:`/writing/tests`。
 
 .. csv-table::
    :widths: 20, 40
