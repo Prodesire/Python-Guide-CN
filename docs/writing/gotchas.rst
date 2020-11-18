@@ -223,7 +223,7 @@ Python的闭包是 *迟绑定* 。
 流行的版本控制系统能够使用文件中定义的通配符来应用特殊规则。
 
 一份忽略文件将确保匹配的文件未被检入存储库。
-Git_ 使用 ``.gitignore``，而 Mercurial_ 使用``.hgignore```。
+Git_ 使用 ``.gitignore``，而 Mercurial_ 使用 ``.hgignore``。
 
 .. _Git: https://git-scm.com/
 .. _Mercurial: https://www.mercurial-scm.org/
