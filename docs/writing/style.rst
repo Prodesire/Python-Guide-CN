@@ -407,7 +407,7 @@ Python之禅
     命名空间是一种绝妙的理念，我们应当多加利用（倡导与号召）
 
 想要了解一些Python优雅风格的例子，请见 `这些来自于Python用户的幻灯片 
-<http://artifex.org/~hblanks/talks/2011/pep20_by_example.pdf>`_.
+<https://github.com/hblanks/zen-of-python-by-example>`_.
 
 
 

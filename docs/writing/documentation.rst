@@ -66,7 +66,7 @@ Sphinx_ 无疑是最流行的Python文档工具。**请使用它吧。** 它能�
     Sphinx因API生成而著名，但它也适用于普通的项目文档。本指南使用 Sphinx_ 进行构建，
     并托管在 `Read The Docs`_ 上。
 
-.. _Sphinx: http://sphinx.pocoo.org
+.. _Sphinx: https://www.sphinx-doc.org
 .. _Read The Docs: http://readthedocs.org
 
 .. _restructuredtext-ref:
@@ -81,7 +81,7 @@ Markdown。
 您熟悉它的语法。
 
 .. _reStructuredText: http://docutils.sourceforge.net/rst.html
-.. _reStructuredText Primer: http://sphinx.pocoo.org/rest.html
+.. _reStructuredText Primer: https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html
 .. _reStructuredText Quick Reference: http://docutils.sourceforge.net/docs/user/rst/quickref.html
 
 
@@ -89,7 +89,7 @@ Markdown。
 代码文档建议
 *************************
 
-注释能使代码清晰，将其加入到代码中是为了理解代码起来更容易。在Python中，注意以一个hash（数字符号）（“#”）开始。
+注释能使代码清晰，将其加入到代码中是为了理解代码起来更容易。在Python中，注释以一个hash（数字符号）（“#”）开始。
 
 .. _docstring-ref:
 

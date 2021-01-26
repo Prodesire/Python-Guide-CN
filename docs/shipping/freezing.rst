@@ -36,17 +36,19 @@
 比较冻结工具
 ************************
 
+写于2019年10月5日
+
 各解决方案的平台/特性支持性
 
-=========== ======= ===== ==== ======== ======= ============= ============== ==== =====================
-Solution    Windows Linux OS X Python 3 License One-file mode Zipfile import Eggs pkg_resources support
-=========== ======= ===== ==== ======== ======= ============= ============== ==== =====================
-bbFreeze    yes     yes   yes  no       MIT     no            yes            yes  yes
-py2exe      yes     no    no   yes      MIT     yes           yes            no   no
-pyInstaller yes     yes   yes  yes      GPL     yes           no             yes  no
-cx_Freeze   yes     yes   yes  yes      PSF     no            yes            yes  no
-py2app      no      no    yes  yes      MIT     no            yes            yes  yes
-=========== ======= ===== ==== ======== ======= ============= ============== ==== =====================
+=========== ======= ===== ==== ======== ======= ============= ============== ==== ===================== =====================
+Solution    Windows Linux OS X Python 3 License One-file mode Zipfile import Eggs pkg_resources support Latest release date
+=========== ======= ===== ==== ======== ======= ============= ============== ==== ===================== =====================
+bbFreeze    yes     yes   yes  no       MIT     no            yes            yes  yes                   Jan 20, 2014
+py2exe      yes     no    no   yes      MIT     yes           yes            no   no                    Oct 21, 2014
+pyInstaller yes     yes   yes  yes      GPL     yes           no             yes  no                    Jul 9, 2019
+cx_Freeze   yes     yes   yes  yes      PSF     no            yes            yes  no                    Aug 29, 2019
+py2app      no      no    yes  yes      MIT     no            yes            yes  yes                   Mar 25, 2019
+=========== ======= ===== ==== ======== ======= ============= ============== ==== ===================== =====================
 
     
 .. note::
