@@ -392,4 +392,4 @@ direnv
 
    $ brew install direnv
 
-在Linux上，根据 `direnv.net <https://direnv.net>` 上的指南进行。
+在 Linux 上，根据 `direnv.net <https://direnv.net>`_ 上的指南进行。

@@ -74,8 +74,8 @@ XPath是一种在结构化文档（如HTML或XML）中定位信息的方式。�
 
 .. code-block:: python
 
-    print 'Buyers: ', buyers
-    print 'Prices: ', prices
+    print('Buyers: ', buyers)
+    print('Prices: ', prices)
 
 ::
 

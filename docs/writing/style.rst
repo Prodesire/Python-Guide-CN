@@ -60,9 +60,9 @@ Python代码具有高可读性的其中一个原因是它的相对完整的代�
 
 .. code-block:: python
 
-    print 'one'; print 'two'
+    print('one'); print('two')
 
-    if x == 1: print 'one'
+    if x == 1: print('one')
 
     if <complex comparison> and <other complex comparison>:
         # do something
@@ -71,11 +71,11 @@ Python代码具有高可读性的其中一个原因是它的相对完整的代�
 
 .. code-block:: python
 
-    print 'one'
-    print 'two'
+    print('one')
+    print('two')
 
     if x == 1:
-        print 'one'
+        print('one')
 
     cond1 = <complex comparison>
     cond2 = <other complex comparison>
@@ -303,9 +303,7 @@ com/questions/302459/what-is-a-programming-idiom>`_ 上有充足的讨论。
 
 .. code-block:: python
 
-    four_lists = [[] for __ in xrange(4)]
-
-注意：在 Python 3 中使用 range() 而不是 xrange()
+    four_lists = [[] for __ in range(4)]
 
 根据列表来创建字符串
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -443,22 +441,63 @@ PEP 8
     optparse.py:472:29: E221 multiple spaces before operator
     optparse.py:544:21: W601 .has_key() is deprecated, use 'in'
 
-程序 `autopep8 <https://pypi.org/project/autopep8/>`_ 能自动将代码格式化
-成 PEP 8 风格。用以下指令安装此程序：
+自动格式化
+~~~~~~~~~~~~~~~~~~
+
+有许多满足PEP 8规范的自动格式化代码工具。
+
+**autopep8**
+
+`autopep8 <https://pypi.org/project/autopep8/>`_ 程序能自动将代码格式化
+成 PEP 8 风格。用以下命令安装此程序：
 
 .. code-block:: console
 
     $ pip install autopep8
 
-用以下指令格式化一个文件：
+用以下命令格式化一个文件：
 
 .. code-block:: console
 
     $ autopep8 --in-place optparse.py
 
-不包含 ``--in-place`` 标志将会使得程序直接将更改的代码输出到控制台，以供审查。
+不包含 ``--in-place`` 选项将会使得程序直接将更改的代码输出到控制台，以供审查。
 ``--aggressive`` 标志则会执行更多实质性的变化，而且可以多次使用以达到更佳的效果。
 
+**yapf**
+
+autopep8专注于解决PEP 8的合规性，而 `yapf <https://github.com/google/yapf>`_ 除了满足PEP 8规范，还能够优化代码格式。
+它旨在提供编写PEP 8兼容代码的同时还能保持美观。用以下命令安装此程序:
+
+.. code-block:: console
+
+    $ pip install yapf
+
+用以下命令格式化一个文件:
+
+.. code-block:: console
+
+    $ yapf --in-place optparse.py
+
+与 autopep8 类似，运行不带 ``--in-place`` 选项的命令将输出差异以供审查，而不会应用格式化结果。
+
+**black**
+
+自动格式化程序 `black <https://github.com/psf/black>`_ 对代码库进行确定的格式化。
+它专注于提供统一的代码风格，而无需用户进行配置。因此，black 的用户可以完全忘记格式化。
+此外，得益于确定的实现，可以保证git diff时只有最小化的改动。用以下命令安装此程序:
+
+.. code-block:: console
+
+    $ pip install black
+
+用以下命令格式化一个文件:
+
+.. code-block:: console
+
+    $ black optparse.py
+
+添加 ``--diff`` 选项的命令将输出差异以供审查，而不会应用格式化结果。
 
 ***********
 约定
@@ -478,10 +517,10 @@ PEP 8
 .. code-block:: python
 
     if attr == True:
-        print 'True!'
+        print('True!')
 
     if attr == None:
-        print 'attr is None!'
+        print('attr is None!')
 
 **优雅**:
 
@@ -489,15 +528,15 @@ PEP 8
 
     # 检查值
     if attr:
-        print 'attr is truthy!'
+        print('attr is truthy!')
 
     # 或者做相反的检查
     if not attr:
-        print 'attr is falsey!'
+        print('attr is falsey!')
 
     # or, since None is considered false, explicitly check for it
     if attr is None:
-        print 'attr is None!'
+        print('attr is None!')
 
 访问字典元素
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -511,9 +550,9 @@ PEP 8
 
     d = {'hello': 'world'}
     if d.has_key('hello'):
-        print d['hello']    # 打印 'world'
+        print(d['hello'])    # 打印 'world'
     else:
-        print 'default_value'
+        print('default_value')
 
 **优雅**:
 
@@ -521,12 +560,12 @@ PEP 8
 
     d = {'hello': 'world'}
 
-    print d.get('hello', 'default_value') # 打印 'world'
-    print d.get('thingy', 'default_value') # 打印 'default_value'
+    print(d.get('hello', 'default_value')) # 打印 'world'
+    print(d.get('thingy', 'default_value')) # 打印 'default_value'
 
     # Or:
     if 'hello' in d:
-        print d['hello']
+        print(d['hello'])
 
 维护列表的捷径
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -669,7 +708,7 @@ PEP 8
 
     a = [3, 4, 5]
     for i, item in enumerate(a):
-        print i, item
+        print(i, item)
     # 打印
     # 0 3
     # 1 4
@@ -689,7 +728,7 @@ PEP 8
 
     f = open('file.txt')
     a = f.read()
-    print a
+    print(a)
     f.close()
 
 **优雅**:
@@ -698,7 +737,7 @@ PEP 8
 
     with open('file.txt') as f:
         for line in f:
-            print line
+            print(line)
 
 ``with`` 语句会更好，因为它能确保您总是关闭文件，即使是在 ``with`` 的区块中
 抛出一个异常。

@@ -67,7 +67,7 @@ Pip和Virtualenv的更多配置
 .. code-block:: console
 
     gpip() {
-        PIP_REQUIRE_VIRTUALENV="" pip "$@"
+        PIP_REQUIRE_VIRTUALENV=false pip "$@"
     }
 
 在保存完这个修改以及使用 ``source ~/.bashrc`` 来source一下 :file:`~/.bashrc` 

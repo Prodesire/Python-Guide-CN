@@ -41,7 +41,7 @@ OS X自带的Python版本更适合用于学习而不是开发。因为版本与P
 
 .. code-block:: console
 
-    $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 运行这段脚本将列出它会引起的改变，并在安装开始前提示您。
 安装完成Homebrew后，需将其所在路径插入到 :envvar:`PATH` 环境变量的最前面，即在您所登录用户的

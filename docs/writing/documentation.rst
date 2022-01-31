@@ -74,8 +74,7 @@ Sphinx_ 无疑是最流行的Python文档工具。**请使用它吧。** 它能�
 reStructuredText
 ~~~~~~~~~~~~~~~~
 
-大多数Python文档是用 reStructuredText_ 编写的。它就像是内建了所有可选扩展的
-Markdown。
+大多数Python文档是用 reStructuredText_ 编写的。它和Markdown类似，但内建了所有可选扩展。
 
 `reStructuredText Primer`_ 和 `reStructuredText Quick Reference`_ 应该会帮助
 您熟悉它的语法。

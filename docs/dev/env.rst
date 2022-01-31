@@ -120,6 +120,14 @@ Atom是web原生的（HTML、CSS、JS），专注于模块化的设计和简单�
 和大量的包。Python开发所推荐的插件是 `Linter <https://github.com/steelbrain/linter>`_ 
 和 `linter-flake8 <https://github.com/AtomLinter/linter-flake8>`_ 的组合。
 
+Python (on Visual Studio Code)
+------------------------------
+
+`Python for Visual Studio Code <https://marketplace.visualstudio.com/items?itemName=ms-python.python>`_ 是 `Visual Studio Code <https://code.visualstudio.com>`_ 的扩展。
+它是一个免费、轻量级的开源编辑器，支持 Mac、Windows 和 Linux。
+使用 Node.js 和 Python 等开源技术构建，具有 Intellisense（自动完成）、本地和远程调试、linting 等引人注目的功能。
+
+MIT 许可。
 
 IDEs
 ::::
@@ -199,6 +207,16 @@ Eric (The Eric Python IDE)
 提供源代码自动补全、语法高亮、对版本控制系统的支持、对Python 3的支持、集成的web浏览器、
 Python Shell、集成的调试器和灵活的插件系统等功能。它基于Qt GUI工具集，使用Python编写，
 集成了Scintilla编辑器控制。Eric是一款超过10年活跃开发的开源软件工程（GPLv3许可）。
+
+Mu
+--
+
+`Mu <https://codewith.mu/>`_ 是一个极简的 Python IDE，它可以在本地运行 Python 3 代码，也可以将代码部署到 BBC micro:bit
+和运行 CircuitPython 的 Adafruit 板上。
+
+Mu 为初学者设计，包含一个 Python 3 解释器，易于安装在 Windows、OS/X 和 Linux 上，还能在 Raspberry Pi 上很好地运行。
+
+gitter 上有一个 Mu 活跃的支持社区。
 
 
 解释器工具

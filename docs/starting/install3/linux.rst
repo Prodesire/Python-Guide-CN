@@ -7,7 +7,7 @@
 
 .. image:: https://farm5.staticflickr.com/4276/34435689480_2e6f358510_k_d.jpg
 
-这份文档描述了如何在Ubuntu Linux机器上安装Python 3.6。
+这份文档描述了如何在Ubuntu Linux机器上安装Python 3.6 或 3.8。
 
 想要获取已安装的Python 3版本号，可以通过终端运行命令：
 
@@ -20,12 +20,12 @@
     $ sudo apt-get update
     $ sudo apt-get install python3.6
 
-如果您使用的是其他版本的Ubuntu（比如LTS发行版），我们推荐使用 `deadsnakes PPA <https://launchpad.net/~deadsnakes/+archive/ubuntu/ppa>`_ 来安装 Python 3.6::
+如果您使用的是其他版本的Ubuntu（例如最新的 LTS 版本）或者您想使用更新的Python，我们建议使用 `deadsnakes PPA <https://launchpad.net/~deadsnakes/+archive/ubuntu/ ppa>`_ 安装Python 3.8::
 
     $ sudo apt-get install software-properties-common
     $ sudo add-apt-repository ppa:deadsnakes/ppa
     $ sudo apt-get update
-    $ sudo apt-get install python3.6
+    $ sudo apt-get install python3.8
 
 如果您使用的是其他Linux发行版，有可能已经预装了Python 3。如果没有，使用发行版的包管理器。
 比如，在Fedora上您可以使用 `dnf`：
@@ -35,7 +35,7 @@
     $ sudo dnf install python3
 
 注意，如果 ``python3`` 包的版本不够新，还有其他方式安装更新的版本，这取决于所在的发行版。
-比如在Fedora 25上安装 ``python36`` 包来获取Python 3.6。如果您是Fedora用户，您可能想
+比如在Fedora 32上安装 ``python3.9`` 包来获取Python 3.9。如果您是Fedora用户，您可能想
 阅读 `Fedora中可用的多Python版本`_ 。
 
 .. _Fedora中可用的多Python版本: https://developer.fedoraproject.org/tech/languages/python/multiple-pythons.html
@@ -45,19 +45,19 @@
 使用Python 3
 *********************
 
-这个时候，在您系统上可能Python 2.7也是可用的。
+这个时候，在您系统上Python 2.7可能也是可用的。
 
 .. code-block:: console
 
     $ python
 
-将打开Python 2解释器。
+可能打开Python 2解释器。
 
 .. code-block:: console
 
     $ python3
 
-将打开Python 3解释器。
+将会打开Python 3解释器。
 
 
 ****************

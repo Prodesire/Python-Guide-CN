@@ -46,7 +46,7 @@
 仓库样例
 :::::::::::::::::
 
-**请看这里**: 这是 `Kenneth Reitz在2013年推荐的 <https://www.kennethreitz.org/essays/repository-structure-and-python>`_ 。
+**请看这里**: 这是 `Kenneth Reitz在2013年推荐的 <https://kennethreitz.org/essays/2013/01/27/repository-structure-and-python>`_ 。
 
 这个仓库 `可以在GitHub上找到 <https://github.com/kennethreitz/samplemod>`__ 。
 
@@ -104,7 +104,7 @@ License
 
 如果您不太清楚您应该使用哪种许可方式，请查看 `choosealicense.com <http://choosealicense.com>`_.
 
-当然，您也可以在发布您的代码时不做任何许可说明，但是这显然阻碍潜在的用户使用您的代码。
+当然，您也可以在发布您的代码时不做任何许可说明，但是这会阻碍潜在的用户使用或参与贡献您的代码。
 
 Setup.py
 ::::::::
@@ -630,7 +630,7 @@ Python提供两种内置或用户定义的类型。可变类型允许内容的�
 
     my_list = [1, 2, 3]
     my_list[0] = 4
-    print my_list  # [4, 2, 3] <- 原列表改变了
+    print(my_list)  # [4, 2, 3] <- 原列表改变了
 
     x = 6
     x = x + 1  # x 变量是一个新的变量
@@ -655,7 +655,7 @@ Python 中一个可能会让初学者惊讶的特性是：字符串是不可变�
     nums = ""
     for n in range(20):
         nums += str(n)   # 慢且低效
-    print nums
+    print(nums)
 
 **更好**
 
@@ -665,7 +665,7 @@ Python 中一个可能会让初学者惊讶的特性是：字符串是不可变�
     nums = []
     for n in range(20):
         nums.append(str(n))
-    print "".join(nums)  # 更高效
+    print("".join(nums))  # 更高效
 
 **最好**
 
@@ -673,7 +673,7 @@ Python 中一个可能会让初学者惊讶的特性是：字符串是不可变�
 
     # 创建将0到19连接起来的字符串 (例 "012..1819")
     nums = [str(n) for n in range(20)]
-    print "".join(nums)
+    print("".join(nums))
 
 
 最后关于字符串的说明的一点是，使用 ``join()`` 并不总是最好的选择。比如当用预先

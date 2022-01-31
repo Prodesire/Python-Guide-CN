@@ -221,14 +221,6 @@ Heroku 维护了使用Python和Heroku交互的 `详细文章 <https://devcenter.
 
 Heroku是如今部署Python Web应用程序的推荐PaaS。
 
-Eldarion
---------
-
-`Eldarion <https://eldarion.cloud/>`_（被称为Gondor）是由Kubernetes、CoreOS和Docker提供的PaaS。
-它们支持任一WSGI应用程序，并提供了部署 
-`Django项目 <https://eldarion-gondor.github.io/docs/how-to/setup-deploy-first-django-project/>`_ 的指南。
-
-
 
 **********
 模板

@@ -178,4 +178,4 @@ bdist_rpm命令使得 `producing an RPM file <https://docs.python.org/3/distutil
 
 - `fpm <https://github.com/jordansissel/fpm>`_
 - `alien <http://joeyh.name/code/alien/>`_
-- `dh-virtualenv <https://dh-virtualenv.readthedocs.io/en/latest/info.html>`_ (for APT/DEB omnibus packaging)
+- `dh-virtualenv <https://dh-virtualenv.readthedocs.io/>`_ (用于 APT/DEB 综合打包)

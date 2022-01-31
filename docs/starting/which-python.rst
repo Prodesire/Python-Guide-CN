@@ -8,7 +8,7 @@
 .. _which-python:
 
 ***************************
-Python的现状 (2 vs 3)
+Python的现状 (3 vs 2)
 ***************************
 
 当选择Python解释器的时候，一个首先要面对的问题是：“我应该选择Python 2还是Python 3？” 答案并不像人们想象的那么明显。
@@ -16,9 +16,9 @@ Python的现状 (2 vs 3)
 
 现状的基本要点如下：
 
-1. 如今大部分生产应用使用 Python 2.7。
+1. 如今大部分生产应用使用 Python 3。
 2. Python 3 已准备好用于生产应用的部署。
-3. Python 2.7 直到 2020 前只会得到必要的安全更新 [#pep373_eol]_。
+3. Python 2.7 已在 2020 年 1 月终止维护 [#pep373_eol]_。
 4. “Python” 涵盖了 Python 3 和 Python 2。
 
 
@@ -36,10 +36,6 @@ Python的现状 (2 vs 3)
 - 将 Python 3 用于新的 Python 应用程序。
 - 如果您是第一次学习 Python，熟悉 Python 2.7 将是非常有用的，但学习 Python 3 更有用。
 - 两者都学。它们都是 “Python”。
-- 已经构建的软件通常依赖于 Python 2.7。
-- 如果您正在编写一个新的开源 Python 库，最好同时为 Python 2 和 3 编写。
-  若新库只支持 Python 3 会是一项政治声明，并将疏远您的许多用户。
-  这不是一个问题 —— 慢慢地，在未来三年内，这种情况会减少。
 
 
 ******************
@@ -52,14 +48,10 @@ Python的现状 (2 vs 3)
 鉴于此，如果您有一个强有力的理由只用Python 2，比如Python 3 没有足够能替代的Python 2
 的特有库，或者您（像我）非常喜爱而且受Python 2启发。
 
-查看 `Can I Use Python 3? <https://caniusepython3.com/>`_ 来看看是否有您
-依赖的软件阻止您用Python 3。
-
 `延伸阅读 <http://wiki.python.org/moin/Python2orPython3>`_
 
 写 `能够同时兼容Python 2.6，2.7，和Python 3的代码 <https://docs.python.org/3/howto/pyporting.html>`_ 是可能的。
-这包括从简单到困难的各种难度，取决于您所写软件的类型；如果您是初学者，其实有更重要的东西要操心。请注意，Python 2.6
-是生命周期结束的上游，所以您不应该试着编写兼容2.6的代码，除非您被专门安排做这件事。
+这包括从简单到困难的各种难度，取决于您所写软件的类型；如果您是初学者，其实有更重要的东西要操心。
 
 
 ***************
@@ -102,7 +94,7 @@ Jython
 如果您需要与现有的Java代码库对接或者基于其他原因需要为JVM编写Python代码，那么
 Jython是最好的选择。
 
-Jython现在支持到Python 2.7 [#jython_ver]_。
+Jython现在支持到Python 2.7 [#jython_ver]_ 。 IronPython 3 [#iron_ver3]_ 正在开发中，但截止到 2020 年 9 月尚未准备好。
 
 IronPython
 ----------
@@ -115,23 +107,26 @@ IronPython到Visual Studio开发环境中，使之成为Windows开发者的理�
 
 IronPython支持Python 2.7 [#iron_ver]_。
 
-PythonNet
----------
+Python.Net
+----------
 
 `Python for .NET <http://pythonnet.github.io/>`_ 是一个近乎无缝集成的，
 提供给本机已安装的Python .NET公共语言运行时（CLR）包。它采取与IronPython
 （见上文）相反的方法，与其说是竞争，不如说是互补。
 
-PythonNet与Mono相结合使用，通过.NET框架，能使Python在非windows系统上（如OS X和Linux）完成操作。它可以在除外IronPython的环境中无冲突运行。
+Python.Net与Mono相结合使用，通过.NET框架，能使Python在非windows系统上（如OS X和Linux）完成操作。它可以在除外IronPython的环境中无冲突运行。
 
-PythonNet支持Python 2.3到2.7 [#pythonnet_ver]_。
+Python.Net兼容Python 2.7和3.5-3.8 [#pythonnet_ver1]_ 。
 
-.. [#pep373_eol] https://www.python.org/dev/peps/pep-0373/#id2
 
-.. [#pypy_ver] http://pypy.org/compat.html
+.. [#pypy_ver] https://pypy.org/compat.html
 
 .. [#jython_ver] https://hg.python.org/jython/file/412a8f9445f7/NEWS
 
-.. [#iron_ver] http://ironpython.codeplex.com/releases/view/81726
+.. [#iron_ver] https://ironpython.net/download/
 
-.. [#pythonnet_ver] http://pythonnet.github.io/readme.html
+.. [#iron_ver3] https://github.com/IronLanguages/ironpython3
+
+.. [#pythonnet_ver1] https://pythonnet.github.io/
+
+.. [#pep373_eol] https://www.python.org/dev/peps/pep-0373/#id2

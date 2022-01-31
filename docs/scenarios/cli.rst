@@ -27,7 +27,7 @@
 Click
 *****
 
-`click <http://click.pocoo.org/>`_ 是一个以尽可能少的代码，用组合方式创建命令行接口的Python包。
+`click <https://click.palletsprojects.com>`_ 是一个以尽可能少的代码，用组合方式创建命令行接口的Python包。
 命令行接口创建工具（“Command-Line Interface Creation Kit”, Click）高度可配置，但也有开箱即用的默认值设置。
 
 

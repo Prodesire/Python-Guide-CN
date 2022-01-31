@@ -204,30 +204,6 @@ tox允许通过简单的初始化样式配置文件，配置复杂的多参数�
 
     `tox <https://tox.readthedocs.io/en/latest/>`_
 
-Unittest2
----------
-
-Unittest2是Python2.7中unittest模型的补丁，它的API有所改善，并且对Python之前版本中已有的内容有了更好的说明。
-
-如果使用Python2.6版本或者以下，需要使用pip安装unittest2。
-
-.. code-block:: console
-
-    $ pip install unittest2
-
-将来您可能想要以unittest之名导入模块，目的是更容易地把代码移植到新的版本中。
-
-.. code-block:: python
-
-    import unittest2 as unittest
-
-    class MyTest(unittest.TestCase):
-        ...
-
-如果切换到新的Python版本，并且不再需要unittest2模块，您只需要在测试模块中改变import内容，而不必改变其它代码。
-
-    `unittest2 <http://pypi.org/project/unittest2>`_
-
 
 mock
 ----

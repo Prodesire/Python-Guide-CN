@@ -71,12 +71,14 @@ PySide
 ******
 
 PySide是跨平台的Qt GUI工具包的Python绑定。
+它的包名取决于主要的 Qt 版本（`PySide` 用于 Qt4，`PySide2` 用于 Qt5，`PySide6` 用于 Qt6）。
+这组绑定由 `Qt 公司 <https://qt.io>`_ 开发。
 
 .. code-block:: console
 
-  $ pip install pyside
+  $ pip install pyside6
 
-https://wiki.qt.io/Category:LanguageBindings::PySide::Downloads
+https://pyside.org
 
 
 ****

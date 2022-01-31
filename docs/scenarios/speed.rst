@@ -155,25 +155,25 @@ Cython
 .. code-block:: python
 
 	import time
-	#启动pyx编译器
+	# 启动pyx编译器
 	import pyximport
 	pyximport.install()
-	#Cython的素数算法实现
+	# Cython的素数算法实现
 	import primesCy
-	#Python的素数算法实现
+	# Python的素数算法实现
 	import primes
 
-	print "Cython:"
+	print("Cython:")
 	t1= time.time()
-	print primesCy.primes(500)
+	print(primesCy.primes(500))
 	t2= time.time()
-	print "Cython time: %s" %(t2-t1)
-	print ""
-	print "Python"
+	print("Cython time: %s" %(t2-t1))
+	print("")
+	print("Python")
 	t1= time.time()
-	print primes.primes(500)
+	print(primes.primes(500))
 	t2= time.time()
-	print "Python time: %s" %(t2-t1)
+	print("Python time: %s" %(t2-t1))
 
 
 这两行代码需要一些说明：

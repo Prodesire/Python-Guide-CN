@@ -136,7 +136,7 @@ Python Koans是Edgecase's Ruby Koans的迁移版。它使用测试驱动的方�
 对于那些使用语言并找出自己的困惑的人来说，这会是个有趣并有吸引力的选择。对于新手来说，
 拥有一个额外的资源或者参考会是很有用的。
 
-    `Python Koans <https://bitbucket.org/gregmalcolm/python_koans>`_
+    `Python Koans <https://github.com/gregmalcolm/python_koans>`_
 
 要了解更多关于测试驱动开发的内容，可以查看以下资源：
 
@@ -204,7 +204,7 @@ Pro Python
 本书是面向从中级到高级，想明白Python是如何以及为何这样工作，如何将代码水平提高一级的
 Python程序员。
 
-    `Pro Python <http://propython.com>`_
+    `Pro Python <https://www.apress.com/gp/book/9781430227571>`_
 
 
 Expert Python Programming
@@ -218,7 +218,7 @@ Expert Python Programming讲解编写Python的最佳实践，并专注更高级�
 zc.buildout的一个章节。后面的章节详细讲述了最佳实践，比如编写文档、测试驱动开发、
 版本控制、优化和分析。
 
-    `Expert Python Programming <https://www.packtpub.com/application-development/expert-python-programming>`_
+    `Expert Python Programming <https://www.packtpub.com/product/expert-python-programming-third-edition/9781789808896>`_
 
 
 A Guide to Python's Magic Methods
