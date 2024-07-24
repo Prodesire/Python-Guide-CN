@@ -78,3 +78,30 @@ xmltodict
 
 xmltodict 也有unparse函数让您可以转回XML。该函数有一个streaming模式适合用来
 处理不能放入内存的文件，它还支持命名空间。
+
+**********
+xmlschema
+**********
+
+`xmlschema <https://github.com/sissaschool/xmlschema>`_ 提供了在Python中使用XSD模式的支持。
+与其他XML库不同，它提供了自动类型解析功能。因此，例如，如果模式定义一个元素为 ``int`` 类型，解析后的 ``dict`` 也将包含该元素的 ``int`` 值。
+此外，该库支持自动和显式验证XML文档是否符合模式。
+
+.. code-block:: python
+
+    from xmlschema import XMLSchema, etree_tostring
+
+    # 加载XSD模式文件
+    schema = XMLSchema("your_schema.xsd")
+
+    # 验证是否符合模式
+    schema.validate("your_file.xml")
+
+    # 或者
+    schema.is_valid("your_file.xml")
+
+    # 解码文件
+    data = schmema.decode("your_file.xml")
+
+    # 编码为字符串
+    s = etree_tostring(schema.encode(data))

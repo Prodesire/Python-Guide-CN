@@ -32,7 +32,7 @@
 - `Requests <https://github.com/kennethreitz/requests>`_
   Requests是Apache2许可的HTTP库，使用Python编写。
 
-- `Tablib <https://github.com/kennethreitz/tablib>`_
+- `Tablib <https://github.com/jazzband/tablib>`_
   Tablib是无格式的表格数据集库，使用Python编写。
 
 

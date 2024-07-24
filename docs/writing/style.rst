@@ -416,8 +416,7 @@ PEP 8
 :pep:`8` 是Python事实上的代码风格指南，我们可以在 `pep8.org <http://pep8.org/>`_
 上获得高质量的、易读的PEP 8版本。
 
-强烈推荐阅读这部分。整个Python社区都尽力遵循本文档中规定的准则。一些项目可能受其影响，
-而其他项目可能 `修改其建议 <http://docs.python-equests.org/en/master/dev/contributing/kenneth-reitz-s-code-style>`_。
+强烈推荐阅读这部分。整个Python社区都尽力遵循本文档中规定的准则。一些项目可能受其影响，而其他项目可能修改其建议。
 
 也就是说，让您的 Python 代码遵循 PEP 8 通常是个好主意，这也有助于在与其他开发人员
 一起工作时使代码更加具有可持续性。命令行程序 pycodestyle `<https://github.com/PyCQA/pycodestyle>`_ 

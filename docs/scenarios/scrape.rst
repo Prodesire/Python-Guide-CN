@@ -23,7 +23,7 @@ lxml和Requests
 *****************
 
 `lxml <http://lxml.de/>`_ 是一个优美的扩展库，用来快速解析XML以及HTML文档
-即使所处理的标签非常混乱。我们也将使用 `Requests <http://docs.python-requests.org/en/latest/>`_ 
+即使所处理的标签非常混乱。我们也将使用 `Requests <https://requests.readthedocs.io/en/latest/>`_
 模块取代内建的urllib2模块，因为其速度更快而且可读性更好。您可以通过使用
 ``pip install lxml`` 与 ``pip install requests`` 命令来安装这两个模块。
 

@@ -138,42 +138,42 @@ Psutil
     # 用于email服务的包:
     import smtplib
     import string
-    MAX_NET_USAGE = 400000
+    MAX_NET_USAGE = 400000  # 每秒字节数
     MAX_ATTACKS = 4
     attack = 0
-    counter = 0
     while attack <= MAX_ATTACKS:
         sleep(4)
-        counter = counter + 1
-        # Check the cpu usage
-        if cpu_percent(interval = 1) > 70:
-            attack = attack + 1
-        # Check the net usage
-        neti1 = net_io_counters()[1]
-        neto1 = net_io_counters()[0]
+
+        # 使用命名元组检查网络使用情况
+        neti1 = net_io_counters().bytes_recv
+        neto1 = net_io_counters().bytes_sent
         sleep(1)
-        neti2 = net_io_counters()[1]
-        neto2 = net_io_counters()[0]
-        # Calculate the bytes per second
+        neti2 = net_io_counters().bytes_recv
+        neto2 = net_io_counters().bytes_sent
+
+        # 计算每秒字节数
         net = ((neti2+neto2) - (neti1+neto1))/2
-        if net > MAX_NET_USAGE:
-            attack = attack + 1
-        if counter > 25:
-            attack = 0
-            counter = 0
+
+        # 检查网络和cpu使用
+        if (net > MAX_NET_USAGE) or (cpu_percent(interval = 1) > 70):
+            attack+=1
+        elif attack > 1:
+            attack-=1
+
     # 如果attack大于4，就编写一封十分重要的email
     TO = "you@your_email.com"
     FROM = "webmaster@your_domain.com"
     SUBJECT = "Your domain is out of system resources!"
     text = "Go and fix your server!"
-    BODY = string.join(("From: %s" %FROM,"To: %s" %TO,"Subject: %s" %SUBJECT, "",text), "\r\n")
+    string="\r\n"
+    BODY = string.join(("From: %s" %FROM,"To: %s" %TO,
+                        "Subject: %s" %SUBJECT, "",text))
     server = smtplib.SMTP('127.0.0.1')
     server.sendmail(FROM, [TO], BODY)
     server.quit()
 
 
-一个类似于基于psutil并广泛扩展的top，并拥有客服端-服务端监控能力的完全终端应用叫做 
-`glance <https://github.com/nicolargo/glances/>`_ 。
+一个基于psutil，类似于top命令并广泛扩展的功能全面的终端应用程序叫做 `glance <https://github.com/nicolargo/glances/>`_ ，它具备客户端-服务端监控能力。
 
 
 *******
@@ -348,13 +348,3 @@ Buildout
 它实现了配置和构建脚本分离的原则。Buildout主要用于下载和设置正在开发或部署软件的
 `Python eggs <https://stackoverflow.com/questions/2051192/what-is-a-python-egg>` 格式的依赖。
 在任何环境中构建任务的指南（recipe，原意为“食谱”，引申为“指南”）能被创建，许多早已可用。
-
-
-*******
-Shinken
-*******
-
-`Shinken <http://www.shinken-monitoring.org/>`_ 是一个使用Python编写的现代化的兼容Nagios的监控框架。
-其主要目标是为用户的设计成可扩展到大型环境的监控系统提供灵活的框架。
-
-Shinken与Nagios配置标准和插件向后兼容。它适用于任何支持Python的操作系统和架构，包括Windows、Linux和FreeBSD。

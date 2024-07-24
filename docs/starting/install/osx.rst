@@ -10,9 +10,9 @@
 .. note::
     查看我们的 :ref:`在OS X上安装Python 3指南<install3-osx>`.
 
-Mac OS X 自带 Python 2.7。
+Mac OS X的 10.8~12.3 版本自带 Python 2.7。
 
-您不必安装和配置即可直接使用Python进行开发。
+如果您的Mac OS X版本在上述版本之间，不必安装和配置即可直接使用Python进行开发。
 话虽如此，我还是强烈建议各位，在正式开始Python应用开发前，安装接下来教程中所介绍的工具和库。
 特别应该安装Setuptools——它将简化安装和使用Python第三方库的流程。
 
