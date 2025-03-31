@@ -138,7 +138,7 @@ PyCharm / IntelliJ IDEA
 `PyCharm <http://www.jetbrains.com/pycharm/>`_ 由JetBrains公司开发，此公司还以
 IntelliJ IDEA闻名。它们都共享着相同的基础代码，PyCharm中大多数特性能通过免费的 
 `Python 插件 <https://plugins.jetbrains.com/plugin/?idea&pluginId=631>`_ 
-带入到IntelliJ中。PyCharm由两个版本：专业版（Professional Edition）（30天试用）和
+带入到IntelliJ中。PyCharm有两个版本：专业版（Professional Edition）（30天试用）和
 拥有相对少特性的社区版（Community Edition）（Apache 2.0 License）。
 
 Python （在 Visual Studio Code 中）
