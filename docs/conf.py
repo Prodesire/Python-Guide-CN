@@ -51,7 +51,8 @@ project = u'pythonguide'
 current_year = datetime.datetime.now().year
 project = u'pythonguide'
 copyright = (u'2011-{} <a href="https://www.kennethreitz.org/projects">Kenneth Reitz</a>'
-             ' &amp; <a href="https://realpython.com">Real Python</a>.'
+             ' &amp; <a href="https://realpython.com">Real Python</a>'
+             ' &amp; <a href="http://github.com/Prodesire">Prodesire</a>.'
              ' <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">CC BY-NC-SA 3.0</a>').format(current_year)
 
 # The version info for the project you're documenting, acts as replacement for
@@ -247,7 +248,7 @@ man_pages = [
 epub_title = u'pythonguide'
 epub_author = u'Kenneth Reitz'
 epub_publisher = u'Kenneth Reitz'
-epub_copyright = u'2011–{}, Kenneth Reitz & Real Python'.format(current_year)
+epub_copyright = u'2011–{}, Kenneth Reitz & Real Python & Prodesire'.format(current_year)
 
 # The language of the text. It defaults to the language option
 # or en if the language is not set.

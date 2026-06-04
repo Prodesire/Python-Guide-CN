@@ -19,3 +19,4 @@ build/
 
 # virutal env
 venv/
+.venv/

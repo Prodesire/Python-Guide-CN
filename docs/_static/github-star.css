@@ -1,0 +1,91 @@
+.github-star {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 35px;
+  margin: 0 auto 1em;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+}
+
+.github-star a {
+  border-bottom: 0;
+}
+
+.github-star__button,
+.github-star__count {
+  box-sizing: border-box;
+  color: #333;
+  text-decoration: none;
+  white-space: nowrap;
+  border: 1px solid #d5d5d5;
+  border-radius: 4px;
+}
+
+.github-star__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px 3px 8px;
+  background-color: #eee;
+  background-image: linear-gradient(to bottom, #fcfcfc 0, #eee 100%);
+}
+
+.github-star__button:hover,
+.github-star__button:focus,
+.github-star__count:hover,
+.github-star__count:focus {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.github-star__button:hover,
+.github-star__button:focus {
+  background-color: #ddd;
+  background-image: linear-gradient(to bottom, #eee 0, #ddd 100%);
+  border-color: #ccc;
+}
+
+.github-star__icon {
+  flex: 0 0 auto;
+}
+
+.github-star__count {
+  position: relative;
+  display: inline-block;
+  min-width: 56px;
+  margin-left: 6px;
+  padding: 3px 10px;
+  text-align: center;
+  background-color: #fafafa;
+  border-color: #d4d4d4;
+}
+
+.github-star__count::before,
+.github-star__count::after {
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  content: "";
+  border-color: transparent;
+  border-style: solid;
+}
+
+.github-star__count::before {
+  left: -5px;
+  margin-top: -6px;
+  border-width: 6px 6px 6px 0;
+  border-right-color: #fafafa;
+}
+
+.github-star__count::after {
+  left: -6px;
+  z-index: -1;
+  margin-top: -7px;
+  border-width: 7px 7px 7px 0;
+  border-right-color: #d4d4d4;
+}

@@ -11,9 +11,9 @@
 - 使用了错误的地址
 - 使用了过期的链接
 
-`点此返回主页 <http://pythonguidecn.readthedocs.io/zh/latest/>`_
+`点此返回主页 <https://prodesire.github.io/Python-Guide-CN/>`_
 
-或者尝试 `搜索 <http://pythonguidecn.readthedocs.io/zh/latest/search.html>`_.
+或者尝试 `搜索 <https://prodesire.github.io/Python-Guide-CN/search.html>`_.
 
 .. raw:: html
 
