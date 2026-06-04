@@ -23,16 +23,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v8
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.8"
+          python-version: "3.12"
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
       - name: Install dependencies
-        run: make install
+        run: uv sync --python 3.12 --frozen --no-install-project
 
       - name: Build documentation
         run: make html

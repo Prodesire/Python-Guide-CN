@@ -1,7 +1,7 @@
 .DEFAULT_GOAL := help
 
-PYENV_PYTHON := $(shell if command -v pyenv >/dev/null 2>&1 && pyenv versions --bare | grep -qx '3.8.13'; then printf 'PYENV_VERSION=3.8.13 pyenv exec python'; fi)
-PYTHON ?= $(if $(PYENV_PYTHON),$(PYENV_PYTHON),python3)
+UV ?= uv
+PYTHON_VERSION ?= 3.12
 VENV ?= .venv
 PORT ?= 8005
 
@@ -16,7 +16,7 @@ DOC_TARGETS := dirhtml singlehtml pickle json htmlhelp qthelp devhelp epub latex
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
-	@echo "  install   create $(VENV) and install dependencies"
+	@echo "  install   create $(VENV) with uv and install dependencies"
 	@echo "  html      build standalone HTML files"
 	@echo "  serve     build and serve docs at http://localhost:$(PORT)/"
 	@echo "  clean     remove generated documentation files"
@@ -25,11 +25,9 @@ help:
 
 install: $(INSTALL_STAMP)
 
-$(INSTALL_STAMP): requirements.txt
-	@test -n "$(PYTHON)" || (echo "python3 is required" && exit 1)
-	$(PYTHON) -m venv $(VENV)
-	$(VENV_PYTHON) -m pip install --upgrade pip
-	$(VENV_PYTHON) -m pip install -r requirements.txt
+$(INSTALL_STAMP): pyproject.toml uv.lock Makefile
+	@command -v $(UV) >/dev/null 2>&1 || (echo "uv is required. Install it from https://docs.astral.sh/uv/" && exit 1)
+	$(UV) sync --python $(PYTHON_VERSION) --frozen --no-install-project
 	@touch $(INSTALL_STAMP)
 
 build: html

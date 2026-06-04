@@ -14,7 +14,7 @@ Python最佳实践指南中文版
 
 项目翻译来自 `Hitchhiker's Guide to Python <https://github.com/kennethreitz/python-guide>`_。
 
-GitHub Pages 文档地址 `Python最佳实践指南中文版 <https://prodesire.github.io/Python-Guide-CN/>`_。
+文档地址 `Python最佳实践指南中文版 <https://prodesire.github.io/Python-Guide-CN/>`_。
 
 -----------
 
@@ -37,21 +37,13 @@ GitHub Pages 文档地址 `Python最佳实践指南中文版 <https://prodesire.
 - 测试: Jenkins & tox 指南
 - 如何更方便地通过 ``git`` 连接 ``hg``
 
-如果您不习惯阅读reStructuredText形式的文档, 这里有一份同步更新的 `HTML版文档，请戳它 <https://prodesire.github.io/Python-Guide-CN/>`_。
-
-
 使用指南
 ============================
 1. 下载zip文件或clone到本地，并进入到项目根目录
 2. 打开命令行，运行 ``make help`` 查看可用命令
-3. 打开命令行，运行 ``make install`` 创建虚拟环境并安装依赖
+3. 打开命令行，运行 ``make install`` 使用 uv 根据 ``pyproject.toml`` 创建虚拟环境并安装依赖
 4. 打开命令行，运行 ``make html`` 构建文档；或运行 ``make serve`` 构建并启动本地文档网站
 5. ``make html`` 会在 ``docs/_build/html`` 中生成 HTML 文件，``make serve`` 默认会在 ``http://localhost:8005/`` 运行文档网站
-
-或者
----------------------------
-- 直接访问 `Python最佳实践指南中文版 <https://prodesire.github.io/Python-Guide-CN/>`_。
-
 
 翻译指南
 ============================

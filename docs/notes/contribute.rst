@@ -23,10 +23,7 @@ Python-guide目前还在开发中，欢迎大家贡献代码。
 要做的事
 *********
 
-如果您想为我们做些贡献，这里有我们的计划。一个简短的 todo_ 列表。
-
-    .. include:: ../../TODO.rst
+如果您想为我们做些贡献，请查看 GitHub_ 上的 issue 列表。
 
 
 .. _GitHub: https://github.com/kennethreitz/python-guide/
-.. _todo: https://github.com/kennethreitz/python-guide/blob/master/TODO.rst
