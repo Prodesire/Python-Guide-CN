@@ -58,7 +58,7 @@ Python 图形库
 
 
 这里有一些Pillow库的例子：
-`Pillow 教程 <https://pillow.readthedocs.io/en/stable/handbook/tutorial.html>`_。
+`Pillow 教程 <https://pillow.readthedocs.io/en/3.0.x/handbook/tutorial.html>`_。
 
 
 **************************
@@ -104,4 +104,4 @@ NumPy可以从Python Package Index （PyPI）中下载：
 更多的OpenCV在Python运行例子在这里可以找到：
 `collection of
 tutorials
-<https://opencv-tutorial.readthedocs.io/en/latest/>`_.
+<https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_tutorials.html>`_.

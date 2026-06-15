@@ -348,3 +348,14 @@ Buildout
 它实现了配置和构建脚本分离的原则。Buildout主要用于下载和设置正在开发或部署软件的
 `Python eggs <https://stackoverflow.com/questions/2051192/what-is-a-python-egg>` 格式的依赖。
 在任何环境中构建任务的指南（recipe，原意为“食谱”，引申为“指南”）能被创建，许多早已可用。
+
+
+*******
+Shinken
+*******
+
+`Shinken <http://www.shinken-monitoring.org/>`_ 是一个由 Python 编写的现代化、兼容 Nagios
+的监控框架。它的主要目标是为用户的监控系统提供灵活的架构，并且这个架构被设计为可扩展到大型环境。
+
+Shinken 向后兼容 Nagios 的配置标准和插件。它可以在任何支持 Python 的操作系统和架构上运行，
+包括 Windows、Linux 和 FreeBSD。

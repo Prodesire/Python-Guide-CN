@@ -9,9 +9,9 @@
 
 .. image:: https://farm5.staticflickr.com/4276/34435689480_2e6f358510_k_d.jpg
 
-Mac OS X的 10.8~12.3 版本自带 Python 2.7。
+Mac OS X 自带 Python 2.7。
 
-如果您的Mac OS X版本在上述版本之间，不必安装和配置即可直接使用Python 2。本教程用来说明Python 3的安装。
+不必安装和配置即可直接使用Python 2。本教程用来说明Python 3的安装。
 
 OS X自带的Python版本更适合用于学习而不是开发。因为版本与Python官网发布的 `官方最新稳定版本 
 <https://www.python.org/downloads/mac-osx/>`_ 相比可能已经过时。
@@ -128,4 +128,3 @@ Pipenv & 虚拟环境
 --------------------------------
 
 该页是 `另一份指南 <https://www.stuartellis.name/articles/python-development-windows/>`_ 的混合版本，可通过同一份许可获取。
-
