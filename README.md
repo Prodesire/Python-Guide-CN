@@ -5,7 +5,7 @@
 
 ![Python 指南配图](https://farm1.staticflickr.com/628/33173824932_58add34581_k_d.jpg)
 
-项目翻译来自 [Hitchhiker's Guide to Python](https://github.com/kennethreitz/python-guide)。
+项目翻译来自 [Hitchhiker's Guide to Python](https://github.com/realpython/python-guide)。
 
 文档地址：[Python最佳实践指南中文版](https://prodesire.github.io/Python-Guide-CN/)
 
@@ -36,7 +36,7 @@
 
 ## 翻译指南
 
-1. 将 [python-guide](https://github.com/kennethreitz/python-guide) 项目和本项目的 `master` 分支更新。
+1. 将 [python-guide](https://github.com/realpython/python-guide) 项目和本项目的 `master` 分支更新。
 2. 查看本项目 `diff.txt` 中的当前翻译版本对应的原版提交号，在 `python-guide` 中比对 `master` 分支上最新提交和该提交号的差异，并据此翻译进本项目。
 3. 翻译完毕后将 `python-guide` 中 `master` 分支上的最新提交号更新入 `diff.txt` 的当前翻译版本对应的原版提交号。
 4. 在本项目中提交修改、推送，并发起合并请求。
