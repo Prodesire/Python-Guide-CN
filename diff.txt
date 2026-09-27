@@ -1,2 +1,2 @@
-当前翻译版本对应的原版提交为： 9715682d556b13e5a182aaac2a0428da7b31003e
+当前翻译版本对应的原版提交为： a4d4fa63489b4fcce30c34a9a4aba7599969afe1 (realpython/python-guide)
 当前要翻译版本对应的原版提交为： 无

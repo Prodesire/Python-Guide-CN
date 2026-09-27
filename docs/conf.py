@@ -47,13 +47,13 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'pythonguide'
+project = 'pythonguide'
 current_year = datetime.datetime.now().year
-project = u'pythonguide'
+project = 'pythonguide'
 copyright = (u'2011-{} <a href="https://www.kennethreitz.org/projects">Kenneth Reitz</a>'
              ' &amp; <a href="https://realpython.com">Real Python</a>'
              ' &amp; <a href="http://github.com/Prodesire">Prodesire</a>.'
-             ' <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">CC BY-NC-SA 3.0</a>').format(current_year)
+             ' <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/">CC BY-NC-SA 3.0</a>').format(current_year)
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the

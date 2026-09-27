@@ -18,7 +18,7 @@ Python是一门通用的高级编程语言，类似于Tcl、Perl、Ruby、Scheme
 
   Python有时被描述为“自带电池（batteries included）”（引申为“功能完备”），就是因为它拥有大量的 `标准库 <http://docs.python.org/library/>`_ ，这包括正则表达式、文件IO、分数处理、对象序列化等。
 
-  此外，`Python Package Index <https://pypi.org>`_ 允许用户提交他们的包以得到更广泛的使用，类似于Perl的 `CPAN <https://www.cpan.org>`_ 。Python拥有生机蓬勃的社区，他们开发出非常强大的Python框架和工具，比如 `Django <https://www.djangoproject.com>`_ 网络框架和 `NumPy <http://numpy.scipy.org>`_ 数学库。
+  此外，`Python Package Index <https://pypi.org>`_ 允许用户提交他们的包以得到更广泛的使用，类似于Perl的 `CPAN <https://www.cpan.org>`_ 。Python拥有生机蓬勃的社区，他们开发出非常强大的Python框架和工具，比如 `Django <https://www.djangoproject.com>`_ 网络框架和 `NumPy <https://numpy.org/>`_ 数学库。
 
 * **和其他系统集成**
 

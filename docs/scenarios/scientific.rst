@@ -46,7 +46,7 @@ python 笔记本。这个笔记本允许您保存一些代码块，伴随着它�
 NumPy
 ~~~~~
 
-`NumPy <http://numpy.scipy.org/>`_ 是一个用C和Fortran写的底层库，它提供一些高层
+`NumPy <https://numpy.org/>`_ 是一个用C和Fortran写的底层库，它提供一些高层
 数学函数。NumPy通过多维数组和操作这些数组的函数巧妙地解决了Python运行算法较慢的问题。
 任何算法只要被写成数组中的函数，就可以运行得很快。
 
