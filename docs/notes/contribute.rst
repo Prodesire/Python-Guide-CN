@@ -8,7 +8,7 @@ Python-guide目前还在开发中，欢迎大家贡献代码。
 
 如果您有feature request，修改建议，或者bug报告，请在 GitHub_ 上新建issue。如果想要提交补丁，请直接pull request到 GitHub_。
 一旦您的修改被merge，您会被自动添加到
-`贡献者一览 <https://github.com/kennethreitz/python-guide/contributors>`_ 中。
+`贡献者一览 <https://github.com/realpython/python-guide/contributors>`_ 中。
 
 
 ***********
@@ -26,4 +26,4 @@ Python-guide目前还在开发中，欢迎大家贡献代码。
 如果您想为我们做些贡献，请查看 GitHub_ 上的 issue 列表。
 
 
-.. _GitHub: https://github.com/kennethreitz/python-guide/
+.. _GitHub: https://github.com/realpython/python-guide/

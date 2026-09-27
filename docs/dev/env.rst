@@ -230,8 +230,8 @@ gitter 上有一个 Mu 活跃的支持社区。
 因此就能避免潜在的版本冲突。
 
 To start using and see more information:
-`Virtual Environments <https://github.com/kennethreitz/python-guide/blob/master/docs/dev/virtualenvs.rst>`_ docs.
-开始使用和查阅更多信息：请参阅 `Virtual Environments <http://github.com/kennethreitz/python-guide/blob/master/docs/dev/virtualenvs.rst>`_ 文档。
+`Virtual Environments <https://github.com/realpython/python-guide/blob/master/docs/dev/virtualenvs.rst>`_ docs.
+开始使用和查阅更多信息：请参阅 `Virtual Environments <https://github.com/realpython/python-guide/blob/master/docs/dev/virtualenvs.rst>`_ 文档。
 
 
 pyenv
